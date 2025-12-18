@@ -1,0 +1,25 @@
+{
+  "id": "01KCHNX0HKAAAZD4ZMTY35P8XJ",
+  "status": "STATUS_RECEIVED",
+  "created_at": "2025-12-15T18:55:59.748719972Z",
+  "type": "EVENT_TYPE_ORDER",
+  "category": "EVENT_CATEGORY_ORDER",
+  "sub": "EVENT_SUB_ORDER_STATUS",
+  "attributes": {
+    "device": {
+      "id": "01KBJ38J7DG4831CW327H1C908",
+      "correlation_id": "01KBJ38J7D369CAFVGNWM6H2QX",
+      "uid": "862798052131337",
+      "account_id": "01GZXXCVVPEKM7E830XAMJKA14"
+    },
+    "order": {
+      "id": "01KCHNWZGS5VXG8EY5SDZ9EVHW",
+      "correlation_id": "01KCHNX0HKAAAZD4ZMTY35P8XJ",
+      "group": "ORDER_GROUP_CONFIG",
+      "status": "ORDER_STATUS_ACK",
+      "type": "CONFIG",
+      "created_at": "2025-12-15T18:55:53Z",
+      "updated_at": "2025-12-15T18:55:54Z"
+    }
+  }
+}

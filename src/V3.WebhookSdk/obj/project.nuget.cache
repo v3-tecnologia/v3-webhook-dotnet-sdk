@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "6AwrVh/cY5KKh76jg3+48xI0OSwXEzUUBPGO+SjgIah8ZKO7JUm7iYCCOgwa3lFjOguFUD2nNIKv1Kf6aeva0w==",
+  "success": true,
+  "projectFilePath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+  "expectedPackageFiles": [
+    "/home/adrianosantos/.nuget/packages/google.protobuf/3.33.2/google.protobuf.3.33.2.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/grpc.core.api/2.66.0/grpc.core.api.2.66.0.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/grpc.tools.2.76.0.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/microsoft.netcore.platforms/2.1.0/microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/protobuf-net/2.4.8/protobuf-net.2.4.8.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/protobuf-net.grpc/1.2.2/protobuf-net.grpc.1.2.2.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.io.pipelines/10.0.1/system.io.pipelines.10.0.1.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.private.servicemodel/4.5.3/system.private.servicemodel.4.5.3.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.reflection.dispatchproxy/4.5.0/system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.servicemodel.primitives/4.5.3/system.servicemodel.primitives.4.5.3.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.text.encodings.web/10.0.1/system.text.encodings.web.10.0.1.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/system.text.json/10.0.1/system.text.json.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

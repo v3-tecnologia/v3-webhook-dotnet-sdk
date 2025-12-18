@@ -1,0 +1,73 @@
+{
+  "id": "01KCHQ6P90046BCYG5JF9XAH74",
+  "status": "STATUS_RECEIVED",
+  "type": "EVENT_TYPE_GENERAL",
+  "category": "EVENT_CATEGORY_SYSTEM",
+  "sub": "EVENT_SUB_TELEMETRY_LOCATION",
+  "created_at": "2025-12-15T19:20:56.537441613Z",
+  "attributes": {
+    "device": {
+      "id": "01KBZJ4WWBE5N78S4F3DASW1WJ",
+      "correlation_id": "01KBZJ4WWBEA7TK7JGR5CD7S20",
+      "uid": "862798051074124",
+      "account_id": "01GZXXCVVPEKM7E830XAMJKA14"
+    },
+    "data": {
+      "telemetry": {
+        "id": "01KCHQ6P90046BCYG5JF9XAH74",
+        "status": "IGNITION_STATUS_OFF",
+        "hardware": {
+          "model": {
+            "vendor": "jimi-iot",
+            "version": {}
+          },
+          "firmware_version": {},
+          "pid": {}
+        },
+        "connection": {
+          "type": "CONNECTION_TYPE_WIFI",
+          "area": -1,
+          "cell_id": -1,
+          "mcc": "-1",
+          "mnc": "-1",
+          "imei": "862798051074124",
+          "signal_strength": "-2147483648"
+        },
+        "connectivity": {
+          "signal_strength": -2147483648
+        },
+        "timestamp": "2025-12-15T19:18:40.672Z"
+      },
+      "group_name": "STANDALONE_EVENT",
+      "standalone_event": {
+        "event_group_name": "TELEMETRY",
+        "telemetry": {
+          "id": "01KCHQ6P90046BCYG5JF9XAH74",
+          "event_name": "PERIODIC",
+          "periodic": {
+            "name": "PERIODIC_EVENT",
+            "location": {
+              "method": "LOCATION_METHOD_GPS",
+              "coordinates": {
+                "altitude": 604.114990234375
+              },
+              "gnss": {
+                "hdop": 127
+              },
+              "connectivity": {
+                "connection_type": "20",
+                "signal_strength": -2147483648,
+                "cell_id": "18446744073709551615",
+                "timing_advance": -1
+              },
+              "fix": {
+                "timestamp": "1765826320672"
+              }
+            }
+          },
+          "timestamp": "2025-12-15T19:18:40.672Z"
+        }
+      }
+    }
+  }
+}

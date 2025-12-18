@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.location";
+option java_outer_classname = "LocationProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/location;location";
+option optimize_for = CODE_SIZE;
+
+package domain.location.v1;
+
+enum GnssClass {
+  option allow_alias = true;
+  // Unspecified GNSS class
+  GNSS_CLASS_UNSPECIFIED = 0;
+  // EUA
+  GNSS_CLASS_GPS = 1;
+
+  // Russia
+  GNSS_CLASS_GLONASS = 2;
+
+  // Europa
+  GNSS_CLASS_GALILEO = 3;
+
+  // China
+  GNSS_CLASS_BEIDOU = 4;
+
+  // Japão
+  GNSS_CLASS_QZSS = 5;
+
+  // For compatibility with JSON naming conventions
+  GNSS_GPS = 1;
+  GNSS_GLONASS = 2;
+  GNSS_GALILEO = 3;
+  GNSS_BEIDOU = 4;
+  GNSS_QZSS = 5;
+}
+
+enum LocationMethod {
+  option allow_alias = true;
+  LOCATION_METHOD_UNSPECIFIED = 0;
+  LOCATION_METHOD_GPS = 1;
+  LOCATION_METHOD_ANDROID_FUSE = 2;
+  LOCATION_METHOD_WIFI = 3;
+
+  // For compatibility with JSON naming conventions
+  LOCATION_GPS = 1;
+  LOCATION_ANDROID_FUSE = 2;
+  LOCATION_WIFI = 3;
+}
+
+message GnssMetadata {
+  GnssClass gnss_class = 1;
+  uint32 satellites = 2;
+  bool fixed = 3;
+  double gps_heading = 4;
+  float hdop = 5;
+  float vdop = 6;
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+  double altitude = 3;
+  double speed = 4;
+}
+
+message Connectivity {
+  string connection_type = 1; // e.g., "4G", "LTE", "WiFi"
+  int32 signal_strength = 2;  // e.g., in dBm
+  uint64 cell_id = 3;
+  int32 timing_advance = 4;
+}
+
+message FixInfo {
+  int64 timestamp = 1; // Epoch millis
+  int64 last_timestamp_of_fix = 2; // Epoch millis
+}
+
+// Messages
+message Location {
+
+  LocationMethod method = 1;
+
+  Coordinates coordinates = 2;
+
+  GnssMetadata gnss = 3;
+
+  Connectivity connectivity = 4;
+
+  FixInfo fix = 5;
+}

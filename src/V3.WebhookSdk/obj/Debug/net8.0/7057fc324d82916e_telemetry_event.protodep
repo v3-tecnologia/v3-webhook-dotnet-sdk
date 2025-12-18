@@ -1,0 +1,10 @@
+Generated/Protos/domain/v1/events/TelemetryEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/duration.proto\
+ Protos/buf/validate/validate.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/struct.proto\
+ Protos/domain/v1/orders/order.proto\
+ Protos/domain/v1/orders/device.proto\
+ Protos/domain/v1/location/location.proto\
+ Protos/domain/v1/events/connection_event.proto\
+ Protos/domain/v1/events/telemetry_event.proto

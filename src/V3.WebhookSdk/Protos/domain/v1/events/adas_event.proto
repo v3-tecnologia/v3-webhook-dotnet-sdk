@@ -1,0 +1,154 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/adas/adas.proto";
+import "domain/v1/events/vision_event.proto"; 
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "ADASEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message ForwardCollisionWarningEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message PedestrianDetectionEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message CyclistDetectionEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message TrafficSignEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message LaneDepartureEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message LaneKeepingAssistEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+  
+  domain.location.v1.Location location = 6;
+}
+
+message LicensePlateDetectionEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  repeated string plates = 3;
+
+  repeated DetectedObject detected_objects = 4;
+
+  map<string,string> attributes = 5; // "front", "rear", "left", "right"
+
+  domain.location.v1.Location location = 6;
+}
+
+
+message GenericAdasEvent {
+  string name = 1  [(buf.validate.field).string.min_len = 1];
+
+  float confidence = 2;
+
+  domain.adas.v1.Side side = 3;
+
+  repeated domain.events.v1.DetectedObject objects = 4;
+
+  map<string,string> attributes = 5; 
+
+  domain.location.v1.Location location = 6;
+}
+
+message Adas {
+  string id = 1  [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1];
+
+  oneof type {
+    ForwardCollisionWarningEvent forward_collision = 3;
+
+    PedestrianDetectionEvent pedestrian_detection = 4;
+
+    CyclistDetectionEvent cyclist_detection = 5;
+
+    TrafficSignEvent traffic_sign = 6;
+
+    LaneDepartureEvent lane_departure = 7;
+
+    LaneKeepingAssistEvent lane_keeping = 8;
+
+    LicensePlateDetectionEvent license_plate_detection = 9;
+    
+    GenericAdasEvent generic = 10;
+  }
+
+  google.protobuf.Timestamp timestamp = 100 
+      [(buf.validate.field).timestamp.lt_now = true];
+}

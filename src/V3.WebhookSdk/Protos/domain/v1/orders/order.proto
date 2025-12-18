@@ -1,0 +1,244 @@
+/*
+ * Domain Protocol Buffers Definition
+ *
+ * This file defines the core messages used for device order processing and configuration in the `V3Go protocol`.
+ * The primary entities include `Order`, `Device`, and `OrderMessage`, facilitating structured communication
+ * between distributed services.
+ *
+ * ## Business Overview
+ *
+ * The protocol enables device management by defining commands (`Command`) and configurations (`Config`) that
+ * can be issued as orders (`Order`). Each device (`Device`) maintains a queue of orders, which are packaged
+ * within `OrderMessage` for transport.
+ *
+ * ## Example Usage in Go
+ *
+ * ### Serializing an OrderMessage
+ * ```go
+ * import (
+ *     "fmt"
+ *     "github.com/golang/protobuf/proto"
+ *     order "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain"
+ *     "google.golang.org/protobuf/types/known/timestamppb"
+ *     "time"
+ * )
+ *
+ * func main() {
+ *     order := &domain.Order{
+ *         Id: "12345",
+ *         Operation: domain.OrderOperationType_CREATE,
+ *         OrderType: &domain.Order_Command{
+ *             Command: &domain.Command{
+ *                 Name: "Reboot",
+ *                 Parameters: []*domain.Parameter{
+ *                     {Module: "system", Key: "action", Value: "restart", Type: "string"},
+ *                 },
+ *             },
+ *         },
+ *     }
+ *
+ *     device := &domain.Device{
+ *         Id: "device-001",
+ *         AccountId: "account-xyz",
+ *         Orders: []*domain.Order{order},
+ *     }
+ *
+ *     message := &domain.OrderMessage{
+ *         Id: "msg-001",
+ *         Timestamp: timestamppb.New(time.Now()),
+ *         Metadata: map[string]string{"source": "backend"},
+ *         Device: device,
+ *     }
+ *
+ *     data, err := proto.Marshal(message)
+ *     if err != nil {
+ *         fmt.Println("Failed to serialize:", err)
+ *         return
+ *     }
+ *
+ *     fmt.Println("Serialized Data:", data)
+ * }
+ * ```
+ *
+ * ### Deserializing an OrderMessage
+ *
+ * ```go
+ * func deserialize(data []byte) {
+ *     var message domain.OrderMessage
+ *     err := proto.Unmarshal(data, &message)
+ *     if err != nil {
+ *         fmt.Println("Failed to deserialize:", err)
+ *         return
+ *     }
+ *     fmt.Printf("Deserialized OrderMessage: %+v\n", message)
+ * }
+ * ```
+ *
+ * ### Validation with Buf protoc-gen-validate
+ *
+ * The `buf/validate` plugin (https://github.com/bufbuild/protovalidate) is used to enforce validation rules on the protocol buffer messages.
+ * The validation rules are defined in the `buf/validate/validate.proto` file.
+ * The `buf/validate` plugin generates validation code for the messages during compilation.
+ * The generated code can be used to validate the messages at runtime.
+ */
+
+syntax = "proto3";
+
+import "google/protobuf/struct.proto";
+import "buf/validate/validate.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.orders";
+option java_outer_classname = "OrderProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/orders;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.orders.v1;
+
+// OrderOperationType defines possible operations on an order.
+enum OrderOperationType {
+
+    // Unspecified operation.
+    ORDER_OPERATION_TYPE_UNSPECIFIED = 0;
+
+    // Create an order.
+    ORDER_OPERATION_TYPE_CREATE = 1;
+
+    // Delete an order.
+    ORDER_OPERATION_TYPE_DELETE = 2;
+
+    // Update an order.
+    ORDER_OPERATION_TYPE_UPDATE = 3;
+}
+
+enum OrderStatus {
+  option allow_alias = true;
+  ORDER_STATUS_UNSPECIFIED = 0;
+
+  ORDER_STATUS_PENDING = 1;
+
+  ORDER_STATUS_SENT = 2;
+
+  ORDER_STATUS_FAILED = 3;
+
+  ORDER_STATUS_ACK = 4;
+
+  ORDER_STATUS_NACK = 5;
+
+  ORDER_STATUS_DELETED = 6;
+
+  // For compatibility with JSON names and conventions.
+  PENDING = 1;
+  SENT = 2;
+  FAILED = 3;
+  ACK = 4;
+  NACK = 5;
+  DELETED = 6;
+}
+
+enum OrderGroup {
+  option allow_alias = true;
+  // Unspecified order group.
+  ORDER_GROUP_UNSPECIFIED = 0; 
+
+  // Command-based order group.
+  ORDER_GROUP_COMMAND = 1; 
+
+  // Configuration-based order group.
+  ORDER_GROUP_CONFIG = 2; 
+
+  // For compatibility with JSON names and conventions.
+  COMMAND = 1;
+  CONFIG = 2;
+}
+
+// Parameter represents a key-value pair with additional type and metadata.
+message Parameter {
+
+    string module = 1;
+
+    string key = 2;
+
+    string value = 3;
+
+    // Data type (e.g., string, int, bool).
+    string type = 4;
+
+    // Additional metadata.
+    // Users can add custom metadata to parameters for additional context,
+    // or they can send only additional metadata, or both.
+    // This is useful for flexibility and support for different command types.
+    map<string, string> additional_params = 5;
+}
+
+// Command encapsulates an operation with parameters.
+message Command {
+
+    // Command name. (ADD_WIFI, REBOOT, etc.)
+    string name = 1 [(buf.validate.field).string.min_len = 1];
+
+    // List of parameters for execution.
+    repeated Parameter parameters = 2;
+}
+
+// Config holds configuration settings using a list of parameters.
+message Config {
+
+    // Configuration parameters.
+    repeated Parameter parameters = 1;
+}
+
+// Ack to confirm status of order message. This is sent by R2 via firmware-protocol.
+message Ack {
+    // Any parameter sent by the source is passed onwards in the information pipeline.
+    repeated Parameter parameters = 1;
+}
+
+message Metadata {
+
+    OrderStatus status = 1;
+
+    string correlation_id = 2 [(buf.validate.field).string.min_len = 1];
+
+    string device_id = 3 [(buf.validate.field).string.min_len = 1];
+
+    string device_correlation_id = 4;
+
+    // Unique device identifier (e.g., IMEI).
+    string uid = 5 [(buf.validate.field).string.min_len = 1];
+
+    google.protobuf.Struct additional_metadata = 6;
+}
+
+// Order represents an actionable instruction or configuration for a device.
+message Order {
+
+    // Unique identifier for the order.
+    string id = 1 [(buf.validate.field).string.min_len = 1];
+
+    // ADD_WIFI, REBOOT, etc.
+    string type = 2 [(buf.validate.field).string.min_len = 1];
+
+    // Grouping of orders (e.g., command, config).
+    OrderGroup group = 3;
+
+    // metadata contains additional information about the order.
+    Metadata metadata = 4;
+
+    // Type of operation to perform.
+    OrderOperationType operation = 5;
+
+    repeated google.protobuf.Struct parameters = 6;
+
+    oneof order_type {
+
+        // Command-based order.
+        Command command = 7;
+
+        // Configuration-based order.
+        Config config = 8;
+
+        // Confirms the processing status
+        Ack ack = 9;
+    }
+}

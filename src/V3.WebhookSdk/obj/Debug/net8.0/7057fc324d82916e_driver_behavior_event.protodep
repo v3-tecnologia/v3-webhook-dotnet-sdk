@@ -1,0 +1,6 @@
+Generated/Protos/domain/v1/events/DriverBehaviorEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/duration.proto\
+ Protos/buf/validate/validate.proto\
+ Protos/domain/v1/location/location.proto\
+ Protos/domain/v1/events/driver_behavior_event.proto

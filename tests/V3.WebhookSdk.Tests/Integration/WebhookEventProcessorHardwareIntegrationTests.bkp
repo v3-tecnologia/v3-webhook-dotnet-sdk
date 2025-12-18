@@ -1,0 +1,55 @@
+using System.IO;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Xunit;
+using V3.WebhookSdk.Processing;
+using V3.WebhookSdk.Events;
+using Domain.Events.V1;
+
+namespace V3.WebhookSdk.Tests.Integration;
+
+public class WebhookEventProcessorHardwareIntegrationTests
+{
+    [Theory]
+    [InlineData("hardware-device-state.json", "DEVICE_STATE")]
+    [InlineData("hardware-order-processed.json", "ORDER_PROCESSED")]
+    [InlineData("hardware-r2-restart.json", "R2_RESTART")]
+    [InlineData("hardware-reboot.json", "REBOOT")]
+    [InlineData("hardware-report-sent.json", "REPORT_SENT")]
+    [InlineData("hardware-sdcard-mounted.json", "SDCARD_MOUNTED")]
+    [InlineData("hardware-sdcard-unmounted.json", "SDCARD_UNMOUNTED")]
+    [InlineData("hardware-simcard-inserted.json", "SIMCARD_INSERTED")]
+    [InlineData("hardware-simcard-present.json", "SIMCARD_PRESENT")]
+    [InlineData("hardware-simcard-removed.json", "SIMCARD_REMOVED")]
+    [InlineData("hardware-vehicle-battery-connected.json", "VEHICLE_BATTERY_CONNECTED")]
+    [InlineData("hardware-vehicle-battery-disconnected.json", "VEHICLE_BATTERY_DISCONNECTED")]
+    [InlineData("hardware-wifi-connected.json", "WIFI_CONNECTED")]
+    [InlineData("hardware-wifi-disconnected.json", "WIFI_DISCONNECTED")]
+    public async Task Should_process_hardware_events(string fileName, string eventName)
+    {
+        var attrJson = await File.ReadAllTextAsync($"../../../../examples/payloads/events/hardware-events/{fileName}");
+
+        var attributes = JsonSerializer.Deserialize<object[]>(attrJson);
+        var jsonObj = new
+        {
+            id = "hook-1",
+            created_at = "2024-07-29T15:51:28.071Z",
+            attributes
+        };
+        var json = JsonSerializer.Serialize(jsonObj);
+
+        var handled = false;
+
+        var processor = new WebhookEventProcessorBuilder()
+            .OnHardwareEvent(eventName, async (ctx, evt) =>
+            {
+                handled = true;
+                await Task.CompletedTask; 
+            })
+            .Build();
+
+        await processor.ProcessWebhookAsync(json);
+
+        Assert.True(handled);
+    }
+}

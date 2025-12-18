@@ -1,0 +1,122 @@
+{
+  "id": "01HXXXXXXXXXXXXXXXXXXXXX",
+  "status": "STATUS_RECEIVED",
+  "type": "EVENT_TYPE_GENERAL",
+  "category": "EVENT_CATEGORY_VEHICLE",
+  "sub": "EVENT_SUB_TELEMETRY_IGNITION",
+  "created_at": "2024-12-15T10:30:00Z",
+  "attributes": {
+    "device": {
+      "id": "device-123",
+      "correlation_id": "device-corr-123",
+      "uid": "IMEI123456789012345",
+      "account_id": "account-456",
+      "orders": []
+    },
+    "data": {
+      "telemetry": {
+        "id": "telemetry-789",
+        "status": "IGNITION_STATUS_ON",
+        "hardware": {
+          "model": {
+            "name": "V3_DEVICE_PRO",
+            "vendor": "V3_TECHNOLOGIA",
+            "version": {
+              "major": 2,
+              "minor": 1,
+              "patch": 0
+            },
+            "attributes": {
+              "android": "8.0",
+              "linux": "5.4"
+            }
+          },
+          "firmware_version": {
+            "name": "v3-firmware",
+            "version": {
+              "major": 2,
+              "minor": 1,
+              "patch": 0
+            }
+          },
+          "pid": {
+            "main": "PID123",
+            "sub": "SUB456"
+          },
+          "details": "Device metadata details",
+          "uptime": 3600000
+        },
+        "connection": {
+          "type": "CELLULAR",
+          "area": 12345,
+          "cell_id": 67890,
+          "mcc": "724",
+          "mnc": "10",
+          "imei": "IMEI123456789012345",
+          "signal_strength": "-75dBm"
+        },
+        "connectivity": {
+          "ssid": "CompanyWiFi",
+          "signal_strength": -45
+        },
+        "metrics": {
+          "device_battery": {
+            "component": "BATTERY_COMPONENT_DEVICE",
+            "status": "BATTERY_ONLINE",
+            "voltage": 4.2
+          },
+          "vehicle_battery": {
+            "component": "BATTERY_COMPONENT_VEHICLE",
+            "status": "BATTERY_ONLINE",
+            "voltage": 12.8
+          },
+          "odometer": {
+            "value": 125000
+          }
+        },
+        "timestamp": "2024-12-15T10:30:00Z"
+      },
+      "group_name": "TRIP_EVENT",
+      "trip_event": {
+        "trip_id": "trip-001",
+        "event_group_name": "TELEMETRY",
+        "telemetry": {
+          "id": "telemetry-789",
+          "event_name": "IGNITION",
+          "ignition": {
+            "name": "IGNITION",
+            "status": "IGNITION_STATUS_ON",
+            "location": {
+              "method": "LOCATION_GPS",
+              "coordinates": {
+                "latitude": -23.55052,
+                "longitude": -46.633308,
+                "altitude": 800.5,
+                "speed": 0.0
+              },
+              "gnss": {
+                "gnss_class": "GNSS_GPS",
+                "satellites": 8,
+                "fixed": true,
+                "gps_heading": 90.5,
+                "hdop": 1.2,
+                "vdop": 1.8
+              },
+              "connectivity": {
+                "connection_type": "4G",
+                "signal_strength": -75,
+                "cell_id": 123456789,
+                "timing_advance": 12
+              },
+              "fix": {
+                "timestamp": 1734258600000,
+                "last_timestamp_of_fix": 1734258600000
+              }
+            }
+          },
+          "timestamp": "2024-12-15T10:30:00Z"
+        }
+      }
+    }
+  }
+}

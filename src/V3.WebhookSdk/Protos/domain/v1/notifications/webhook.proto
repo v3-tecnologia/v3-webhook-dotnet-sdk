@@ -1,0 +1,99 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+import "domain/v1/events/event.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.notifications";
+option java_outer_classname = "WebhookNotificationProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/notifications;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.notifications.v1;
+
+// Status of the operation.
+// The code is a string representation of the status code.
+// The message is a human-readable message.
+message Status {
+    string code = 1;
+
+    string message = 2;
+}
+
+enum MimeType {
+    // Unspecified operation.
+   MIMETYPE_UNSPECIFIED = 0;
+    
+   MIMETYPE_APPLICATION_JSON = 1;
+    
+   MIMETYPE_TEXT_PLAIN = 2; 
+
+   MIMETYPE_APPLICATION_OCTET_STREAM = 3;
+}
+
+message HookData {
+    // MIME type of the payload. 
+    // Example: text/plain, application/json, application/octet-stream.
+    MimeType request_mime_type = 1;
+
+    // MIME type of the response payload.
+    // Example: text/plain, application/json, application/octet-stream.
+    MimeType response_mime_type = 2;
+
+    map<string, string> headers = 3;
+
+    oneof request {
+        // for text plain messages
+        string tenant_raw_data = 4;
+        // for json messages
+        google.protobuf.Struct tenant_json_data = 5;
+        // for binary messages
+        bytes tenant_binary_data = 6; // if necessary at time
+    }
+
+    oneof response {
+        // for text plain messages
+        string raw_data = 7;
+        // for json messages
+        google.protobuf.Struct json_data = 8;
+        // for binary messages
+        bytes binary_data = 9; // if necessary at time
+    }
+}
+
+// Event hook message.
+// This message is used to send event data to the tenant.
+// e.g., order created, order updated, order deleted.
+// The tenant_id is used to identify the tenant that will receive the event.
+// The payload contains the event data.
+message HookEvent {
+    string id = 1;
+
+    string tenant_id = 2;
+
+    string source_id = 3; // order service, events service, etc.
+
+    google.protobuf.Timestamp timestamp = 4;
+
+    HookData payload = 5;
+}
+
+// Persisted hook event message.
+// This message is used to store event data in the database.
+// The source_event contains the event data.
+message PersistedHookEvent {
+    string id = 1;
+
+    Status status = 2;
+
+    HookEvent event = 3;
+}
+
+message Webhook {
+  string id = 1;
+
+  google.protobuf.Timestamp created_at = 2;
+
+  repeated domain.events.v1.Event attributes = 3;
+}

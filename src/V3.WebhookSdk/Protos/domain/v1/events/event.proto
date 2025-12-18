@@ -1,0 +1,218 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/orders/device.proto";
+import "domain/v1/events/alert_event.proto";
+import "domain/v1/events/connection_event.proto";
+import "domain/v1/events/dms_event.proto";
+import "domain/v1/events/driver_behavior_event.proto";
+import "domain/v1/events/health_event.proto";
+import "domain/v1/events/order_status_event.proto";
+import "domain/v1/events/system_event.proto";
+import "domain/v1/events/telemetry_event.proto";
+import "domain/v1/events/vehicle_event.proto";
+import "domain/v1/events/vision_event.proto";
+import "domain/v1/events/adas_event.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "EventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+enum Status {
+  // Default status, used when no specific status is assigned
+  STATUS_UNSPECIFIED = 0;
+
+  // Event is received
+  STATUS_RECEIVED = 1;
+
+  // Event has been delivered
+  STATUS_DELIVERED = 2;
+
+  // Event has failed
+  STATUS_FAILED = 3;
+}
+
+enum EventType {
+  option allow_alias = true;
+  // Default type, used when no specific type is assigned
+  EVENT_TYPE_UNSPECIFIED = 0;
+
+  // Order-related events
+  EVENT_TYPE_ORDER = 1;
+
+  // General events
+  EVENT_TYPE_GENERAL = 2; 
+
+  // For compatibility with JSON naming conventions
+  ORDER = 1;
+  GENERAL = 2;
+}
+
+enum EventCategory {
+  option allow_alias = true;
+  // Default category, used when no specific category is assigned
+  EVENT_CATEGORY_UNSPECIFIED = 0;
+
+  // Advanced Driver Assistance System events
+  EVENT_CATEGORY_ADAS = 1; 
+
+  // Alert events
+  EVENT_CATEGORY_ALERT = 2; 
+  
+  // Connection-related events
+  EVENT_CATEGORY_CONNECTION = 3; 
+  
+  // Driver Monitoring System events
+  EVENT_CATEGORY_DMS = 4;
+
+  // Driver behavior events
+  EVENT_CATEGORY_DRIVER_BEHAVIOR = 5; 
+
+  // Health-related events
+  EVENT_CATEGORY_HEALTH = 6; 
+  
+  // Order-related events
+  EVENT_CATEGORY_ORDER = 7; 
+  
+  // System events
+  EVENT_CATEGORY_SYSTEM = 8; 
+  
+  // Telemetry events
+  EVENT_CATEGORY_TELEMETRY = 9; 
+  
+  // Vehicle-related events
+  EVENT_CATEGORY_VEHICLE = 10; 
+  
+  // Vision-related events
+  EVENT_CATEGORY_VISION = 11;
+
+  // For compatibility with JSON naming conventions
+  CATEGORY_ADAS = 1;
+  CATEGORY_ALERT = 2;
+  CATEGORY_CONNECTION = 3;
+  CATEGORY_DMS = 4;
+  CATEGORY_DRIVER_BEHAVIOR = 5;
+  CATEGORY_HEALTH = 6;
+  CATEGORY_ORDER = 7;
+  CATEGORY_SYSTEM = 8;
+  CATEGORY_TELEMETRY = 9;
+  CATEGORY_VEHICLE = 10;
+  CATEGORY_VISION = 11;
+}
+
+enum EventSub {
+  option allow_alias = true;
+  // Default subcategory, used when no specific subcategory is assigned
+  EVENT_SUB_UNSPECIFIED = 0;
+
+  EVENT_SUB_ALERT_INFO = 1;
+  EVENT_SUB_ALERT_CRITICAL = 2;
+  EVENT_SUB_ALERT_WARNING = 3;
+  
+  EVENT_SUB_CONNECTION_STATUS_CHANGED = 4;
+
+  EVENT_SUB_DMS_ADVANCED = 5;
+  EVENT_SUB_DMS_BASIC = 6;
+
+  EVENT_SUB_DRIVER_BEHAVIOR_ADVANCED = 7;
+  EVENT_SUB_DRIVER_BEHAVIOR_BASIC = 8;
+
+  EVENT_SUB_HEALTH = 9;
+
+  EVENT_SUB_ORDER_STATUS = 10;
+
+  EVENT_SUB_SYSTEM_UPLOAD = 11;
+
+  EVENT_SUB_TELEMETRY_BATTERY = 12;
+  EVENT_SUB_TELEMETRY_IGNITION = 13;
+  EVENT_SUB_TELEMETRY_LOCATION = 14;
+
+  EVENT_SUB_VEHICLE_BLOCK = 15;
+
+  EVENT_SUB_VISION_ADVANCED = 16;
+  EVENT_SUB_VISION_BASIC = 17;
+
+  // For compatibility with JSON naming conventions
+  SUB_ALERT_INFO = 1;
+  SUB_ALERT_CRITICAL = 2;
+  SUB_ALERT_WARNING = 3;
+  SUB_CONNECTION_STATUS_CHANGED = 4;
+  SUB_DMS_ADVANCED = 5;
+  SUB_DMS_BASIC = 6;
+  SUB_DRIVER_BEHAVIOR_ADVANCED = 7;
+  SUB_DRIVER_BEHAVIOR_BASIC = 8;
+  SUB_HEALTH = 9;
+  SUB_ORDER_STATUS = 10;
+  SUB_SYSTEM_UPLOAD = 11;
+  SUB_TELEMETRY_BATTERY = 12;
+  SUB_TELEMETRY_IGNITION = 13;
+  SUB_TELEMETRY_LOCATION = 14;
+  SUB_VEHICLE_BLOCK = 15;
+  SUB_VISION_ADVANCED = 16;
+  SUB_VISION_BASIC = 17;
+}
+
+message EventData {
+  domain.events.v1.TelemetryDetails telemetry = 1;
+  string group_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "TRIP_EVENT"
+  oneof data {
+    TripEvent trip_event = 3;
+    StandaloneEvent standalone_event = 4;
+  }
+}
+
+message TripEvent {
+  string trip_id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_group_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
+  domain.location.v1.Location location = 100;
+  oneof event_group {
+    domain.events.v1.Adas adas = 3;
+    domain.events.v1.Dms dms = 4;
+    domain.events.v1.DriverBehavior driver_behavior = 5;
+    domain.events.v1.Telemetry telemetry = 6;
+    domain.events.v1.Vehicle vehicle = 7;
+    domain.events.v1.Vision vision = 8;
+  }
+}
+
+message StandaloneEvent {
+  string event_group_name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
+  domain.location.v1.Location location = 100;
+  oneof event_group {
+    domain.events.v1.Alert alert = 2;
+    domain.events.v1.Connection connection = 3;
+    domain.events.v1.Health health = 4;
+    domain.events.v1.Telemetry telemetry = 5;
+    domain.events.v1.System system = 6;
+  }
+}
+
+message Attributes {
+  domain.orders.v1.Device device = 1;
+  domain.events.v1.OrderStatus order = 2;
+  EventData data = 3;
+}
+
+message Event {
+  // Unique identifier for the Event.
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+
+  Status status = 7;
+
+  google.protobuf.Timestamp created_at = 2 [(buf.validate.field).timestamp.lt_now = true]; 
+
+  // ORDER, EVENT
+  EventType type = 3;
+
+  EventCategory category = 4;
+
+  EventSub sub = 5;
+
+  Attributes attributes = 6;
+}

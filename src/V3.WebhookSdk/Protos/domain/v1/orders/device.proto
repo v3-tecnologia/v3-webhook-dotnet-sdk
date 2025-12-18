@@ -1,0 +1,144 @@
+/*
+ * Domain Protocol Buffers Definition
+ * 
+ * This file defines the core messages used for device order processing and configuration in the `V3Go protocol`.
+ * The primary entities include `Order`, `Device`, and `OrderMessage`, facilitating structured communication 
+ * between distributed services. 
+ *
+ * ## Business Overview
+ *
+ * The protocol enables device management by defining commands (`Command`) and configurations (`Config`) that 
+ * can be issued as orders (`Order`). Each device (`Device`) maintains a queue of orders, which are packaged 
+ * within `OrderMessage` for transport.
+ *
+ * ## Example Usage in Go
+ * 
+ * ### Serializing an OrderMessage
+ * ```go
+ * import (
+ *     "fmt"
+ *     "github.com/golang/protobuf/proto"
+ *     order "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain"
+ *     "google.golang.org/protobuf/types/known/timestamppb"
+ *     "time"
+ * )
+ * 
+ * func main() {
+ *     order := &domain.Order{
+ *         Id: "12345",
+ *         Operation: domain.OrderOperationType_CREATE,
+ *         OrderType: &domain.Order_Command{
+ *             Command: &domain.Command{
+ *                 Name: "Reboot",
+ *                 Parameters: []*domain.Parameter{
+ *                     {Module: "system", Key: "action", Value: "restart", Type: "string"},
+ *                 },
+ *             },
+ *         },
+ *     }
+ * 
+ *     device := &domain.Device{
+ *         Id: "device-001",
+ *         AccountId: "account-xyz",
+ *         Orders: []*domain.Order{order},
+ *     }
+ * 
+ *     message := &domain.OrderMessage{
+ *         Id: "msg-001",
+ *         Timestamp: timestamppb.New(time.Now()),
+ *         Metadata: map[string]string{"source": "backend"},
+ *         Device: device,
+ *     }
+ * 
+ *     data, err := proto.Marshal(message)
+ *     if err != nil {
+ *         fmt.Println("Failed to serialize:", err)
+ *         return
+ *     }
+ * 
+ *     fmt.Println("Serialized Data:", data)
+ * }
+ * ```
+ *
+ * ### Deserializing an OrderMessage
+ *
+ * ```go
+ * func deserialize(data []byte) {
+ *     var message domain.OrderMessage
+ *     err := proto.Unmarshal(data, &message)
+ *     if err != nil {
+ *         fmt.Println("Failed to deserialize:", err)
+ *         return
+ *     }
+ *     fmt.Printf("Deserialized OrderMessage: %+v\n", message)
+ * }
+ * ```
+ *
+ * ### Validation with Buf protoc-gen-validate
+ *
+ * The `buf/validate` plugin (https://github.com/bufbuild/protovalidate) is used to enforce validation rules on the protocol buffer messages.
+ * The validation rules are defined in the `buf/validate/validate.proto` file.
+ * The `buf/validate` plugin generates validation code for the messages during compilation.
+ * The generated code can be used to validate the messages at runtime.
+ */
+
+syntax = "proto3";
+
+import "buf/validate/validate.proto";
+import "domain/v1/orders/order.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain";
+option java_outer_classname = "DeviceOrderProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/orders;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.orders.v1;
+
+message Pid {
+  string main = 1;
+  string sub = 2;
+}
+
+message Version {
+  int32 major = 1;
+  int32 minor = 2;
+  int32 patch = 3;
+}
+
+message FirmwareVersion {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  Version version = 2;
+}
+
+message Model {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  string vendor = 2 [(buf.validate.field).string.min_len = 1];
+  Version version = 3;
+  map<string, string> attributes = 4; // e.g., android-8, linux-5.4
+}
+
+message DeviceMetadata {
+  Model model = 1;
+  FirmwareVersion firmware_version = 2;
+  Pid pid = 3;
+  string details = 4;
+  int64 uptime = 5; // Time since boot in milliseconds.
+}
+
+// Device represents a managed device and its associated orders.
+message Device {
+
+    // Unique device identifier (e.g., ULID, UUID).
+    string id = 1 [(buf.validate.field).string.min_len = 1]; 
+
+    string correlation_id = 2; // Correlation ID for tracking.
+
+    string uid = 3 [(buf.validate.field).string.min_len = 1]; // Unique device identifier (e.g., IMEI).
+
+    // Associated account ID.
+    string account_id = 4 [(buf.validate.field).string.min_len = 1]; 
+
+    // Associated account ID.
+    repeated domain.orders.v1.Order orders = 5; // List of pending orders.
+}

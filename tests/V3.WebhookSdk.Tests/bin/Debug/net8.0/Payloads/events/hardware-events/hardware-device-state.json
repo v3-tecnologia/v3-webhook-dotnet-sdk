@@ -1,0 +1,56 @@
+{
+  "id": "01KCHNFZWN4YPSM0A4YFMH09T2",
+  "status": "STATUS_RECEIVED",
+  "type": "EVENT_TYPE_GENERAL",
+  "category": "EVENT_CATEGORY_SYSTEM",
+  "sub": "EVENT_SUB_ALERT_WARNING",
+  "created_at": "2025-12-15T19:02:27.853477693Z",
+  "attributes": {
+    "device": {
+      "id": "01KBZJ4WWBE5N78S4F3DASW1WJ",
+      "correlation_id": "01KBZJ4WWBEA7TK7JGR5CD7S20",
+      "uid": "862798051074124",
+      "account_id": "01GZXXCVVPEKM7E830XAMJKA14"
+    },
+    "data": {
+      "telemetry": {
+        "id": "01KCHNFZWN4YPSM0A4YFMH09T2",
+        "status": "IGNITION_STATUS_ON",
+        "hardware": {
+          "model": {
+            "vendor": "jimi-iot",
+            "version": {}
+          },
+          "firmware_version": {},
+          "pid": {}
+        },
+        "connection": {
+          "type": "CONNECTION_TYPE_WIFI",
+          "area": 49143,
+          "cell_id": 110091269,
+          "mcc": "724",
+          "mnc": "5",
+          "imei": "862798051074124",
+          "signal_strength": "-101"
+        },
+        "connectivity": {
+          "signal_strength": -101
+        },
+        "timestamp": "2025-12-15T18:48:48.277Z"
+      },
+      "group_name": "STANDALONE_EVENT",
+      "standalone_event": {
+        "event_group_name": "SYSTEM",
+        "system": {
+          "id": "01KCHNFZWN4YPSM0A4YFMH09T2",
+          "event_name": "DEVICE_STATE",
+          "device_state": {
+            "name": "DEVICE_STATE",
+            "state": "ONLINE"
+          },
+          "timestamp": "2025-12-15T18:48:48.277Z"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/vision/vision.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "DMSEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message DrowsinessEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "DROWSINESS_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message EyeClosureEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "EYE_CLOSURE_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message GazeDistractionEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "GAZE_DISTRACTION_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message GazeFixationEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "GAZE_FIXATION_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message PoseDistractionPitchEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "POSE_DISTRACTION_PITCH_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message PoseDistractionYawEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "POSE_DISTRACTION_YAW_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message YawningEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "YAWNING_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message EatingEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "EATING_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message DrinkingEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "DRINKING_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message OnPhoneEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ON_PHONE_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message SmokingEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SMOKING_EVENT"
+  float confidence = 2; // Confidence score (0–1)
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  map<string, string> attributes = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message Dms {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "DROWSINESS_EVENT"
+  oneof type {
+    DrowsinessEvent drowsiness = 3;
+    EyeClosureEvent eye_closure = 4;
+    GazeDistractionEvent gaze_distraction = 5;
+    GazeFixationEvent gaze_fixation = 6;
+    PoseDistractionPitchEvent pose_distraction_pitch = 7;
+    PoseDistractionYawEvent pose_distraction_yaw = 8;
+    YawningEvent yawning = 9;
+    EatingEvent eating = 11;
+    DrinkingEvent drinking = 12;
+    OnPhoneEvent on_phone = 13;
+    SmokingEvent smoking = 14;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "ConnectionEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+enum ConnectionType {
+  option allow_alias = true;
+  CONNECTION_TYPE_UNSPECIFIED = 0;
+  CONNECTION_TYPE_CELLULAR = 1;
+  CONNECTION_TYPE_WIFI = 2;
+  CONNECTION_TYPE_ETHERNET = 3;
+  CONNECTION_TYPE_BLUETOOTH = 4;
+  CONNECTION_TYPE_SATELLITE = 5;
+
+  // For compatibility with JSON naming conventions
+  CELLULAR = 1;
+  WIFI = 2;
+  ETHERNET = 3;
+  BLUETOOTH = 4;
+  SATELLITE = 5;
+}
+
+enum SimCardStatus {
+  option allow_alias = true;
+  SIM_CARD_STATUS_UNSPECIFIED = 0;
+  SIM_CARD_STATUS_PRESENT = 1;
+  SIM_CARD_STATUS_ABSENT = 2;
+  SIM_CARD_STATUS_ERROR = 3;
+
+  // For compatibility with JSON naming conventions
+  PRESENT = 1;
+  ABSENT = 2;
+  ERROR = 3;
+}
+
+enum WifiStatus {
+  option allow_alias = true;
+  WIFI_STATUS_UNSPECIFIED = 0;
+  WIFI_STATUS_CONNECTED = 1;
+  WIFI_STATUS_DISCONNECTED = 2;
+  WIFI_STATUS_CONNECTING = 3;
+  WIFI_STATUS_FAILED = 4;
+
+  // For compatibility with JSON naming conventions
+  CONNECTED = 1;
+  DISCONNECTED = 2;
+  CONNECTING = 3;
+  FAILED = 4;
+}
+
+message ConnectionDetails {
+  ConnectionType type = 1;
+  int32 area = 2; // Area code for cellular connections
+  int32 cell_id = 3; // Cell ID for cellular connections
+  string mcc = 4;
+  string mnc = 5;
+  string imei = 6;
+  string signal_strength = 7;
+}
+
+message WifiDetails {
+  string ssid = 1 [(buf.validate.field).string.min_len = 1];
+  int32 signal_strength = 2; // Signal strength in dBm
+}
+
+message DataPlaneConsumptionEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "DATA_PLANE_CONSUMPTION"
+  int64 total = 2; // Total bytes sent
+  domain.location.v1.Location location = 3;
+  google.protobuf.Timestamp reset_at = 4 [(buf.validate.field).timestamp.lt_now = true];
+}
+
+message SimCardEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SIM_CARD_EVENT"
+    SimCardStatus status = 2;
+    domain.location.v1.Location location = 3;
+}
+
+message WifiConnectionEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "WIFI_CONNECTION_EVENT"
+  WifiDetails wifi_details = 2;
+  WifiStatus status = 3;
+  domain.location.v1.Location location = 4;
+}
+
+message Connection {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  ConnectionDetails details = 2;
+  string event_name = 3 [(buf.validate.field).string.min_len = 1]; // e.g., "WIFI_CONNECTION_EVENT"
+  oneof event {
+    DataPlaneConsumptionEvent data_plane_consumption = 4;
+    SimCardEvent sim_card = 5;
+    WifiConnectionEvent wifi_connection = 6;
+  }
+
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

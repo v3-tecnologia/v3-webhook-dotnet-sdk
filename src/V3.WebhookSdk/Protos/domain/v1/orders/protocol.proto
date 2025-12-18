@@ -1,0 +1,157 @@
+/*
+ * Domain Protocol Buffers Definition
+ * 
+ * This file defines the core messages used for device order processing and configuration in the `V3Go protocol`.
+ * The primary entities include `Order`, `Device`, and `OrderMessage`, facilitating structured communication 
+ * between distributed services. 
+ *
+ * ## Business Overview
+ *
+ * The protocol enables device management by defining commands (`Command`) and configurations (`Config`) that 
+ * can be issued as orders (`Order`). Each device (`Device`) maintains a queue of orders, which are packaged 
+ * within `OrderMessage` for transport.
+ *
+ * ## Example Usage in Go
+ * 
+ * ### Serializing an OrderMessage
+ * ```go
+ * import (
+ *     "fmt"
+ *     "github.com/golang/protobuf/proto"
+ *     order "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain"
+ *     "google.golang.org/protobuf/types/known/timestamppb"
+ *     "time"
+ * )
+ * 
+ * func main() {
+ *     order := &domain.Order{
+ *         Id: "12345",
+ *         Operation: domain.OrderOperationType_CREATE,
+ *         OrderType: &domain.Order_Command{
+ *             Command: &domain.Command{
+ *                 Name: "Reboot",
+ *                 Parameters: []*domain.Parameter{
+ *                     {Module: "system", Key: "action", Value: "restart", Type: "string"},
+ *                 },
+ *             },
+ *         },
+ *     }
+ * 
+ *     device := &domain.Device{
+ *         Id: "device-001",
+ *         AccountId: "account-xyz",
+ *         Orders: []*domain.Order{order},
+ *     }
+ * 
+ *     message := &domain.OrderMessage{
+ *         Id: "msg-001",
+ *         Timestamp: timestamppb.New(time.Now()),
+ *         Metadata: map[string]string{"source": "backend"},
+ *         Device: device,
+ *     }
+ * 
+ *     data, err := proto.Marshal(message)
+ *     if err != nil {
+ *         fmt.Println("Failed to serialize:", err)
+ *         return
+ *     }
+ * 
+ *     fmt.Println("Serialized Data:", data)
+ * }
+ * ```
+ *
+ * ### Deserializing an OrderMessage
+ *
+ * ```go
+ * func deserialize(data []byte) {
+ *     var message domain.OrderMessage
+ *     err := proto.Unmarshal(data, &message)
+ *     if err != nil {
+ *         fmt.Println("Failed to deserialize:", err)
+ *         return
+ *     }
+ *     fmt.Printf("Deserialized OrderMessage: %+v\n", message)
+ * }
+ * ```
+ *
+ * ### Validation with Buf protoc-gen-validate
+ *
+ * The `buf/validate` plugin (https://github.com/bufbuild/protovalidate) is used to enforce validation rules on the protocol buffer messages.
+ * The validation rules are defined in the `buf/validate/validate.proto` file.
+ * The `buf/validate` plugin generates validation code for the messages during compilation.
+ * The generated code can be used to validate the messages at runtime.
+ */
+
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/orders/order.proto";
+import "domain/v1/orders/device.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.orders";
+option java_outer_classname = "ProtocolOrderProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/orders;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.orders.v1;
+
+// OrderMessage is the transport structure for sending orders to devices.
+message OrderMessage {
+    // Unique message identifier.
+    string id = 1 [(buf.validate.field).string.min_len = 1]; 
+  
+    // Creation timestamp.
+    google.protobuf.Timestamp timestamp = 2 [(buf.validate.field).timestamp.lt_now = true]; 
+  
+    // Additional metadata (e.g., claims).
+    Metadata metadata = 3; 
+  
+    // Device and associated orders.
+    domain.orders.v1.Device device = 4; 
+
+    option (buf.validate.message).cel = {
+        id: "order_message.device",
+        message: "Device not to be null",
+        expression: "this.device != null"
+    };
+}
+
+message GetDeviceRequest {
+    string id = 1; // The ID of the device to retrieve
+    string correlation_id = 2; // Optional correlation ID for tracking
+}
+
+message GetDeviceResponse {
+    string status = 1; // e.g., "success", "not_found"
+    domain.orders.v1.Device device = 2; // The device details if found
+}
+
+message GetOrderRequest {
+    string id = 1;
+    string correlation_id = 2; // Optional correlation ID for tracking
+}
+
+message GetOrderResponse {
+    string status = 1; // e.g., "success", "not_found"
+    OrderMessage order = 2; // The order details if found
+}
+
+message GetOrderByDeviceRequest {
+   string id = 1; // The device for which to list orders
+   string correlation_id = 2; // Optional correlation ID for tracking
+}
+
+service V3Service {
+    // Management
+    // GetDevice retrieves a device by its ID.
+    rpc GetDevice(GetDeviceRequest) returns (GetDeviceResponse);
+    
+    // Orders
+    // GetOrder retrieves an order message by ID.
+    rpc GetOrder(GetOrderRequest) returns (GetOrderResponse);
+
+    // ListOrders lists all order messages for a device.
+    rpc ListOrdersByDevice(GetOrderByDeviceRequest) returns (stream GetOrderResponse);
+}

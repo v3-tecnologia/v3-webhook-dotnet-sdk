@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/vision/vision.proto";
+import "domain/v1/faces/face.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "VisionEventEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message DetectedObject {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string name = 2 [(buf.validate.field).string.min_len = 1]; // Object name (e.g., "car", "person")
+  float confidence = 3; // Confidence score (0–1)
+  repeated domain.vision.v1.BoundingBox bounding_boxes = 4;
+  map<string, string> attributes = 5;
+}
+
+message CameraObstructedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "CAMERA_OBSTRUCTED_EVENT"
+  domain.location.v1.Location location = 2;
+}
+
+message ObjectDetectedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "OBJECT_DETECTED_EVENT"
+  repeated DetectedObject objects = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message FaceDetectedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  domain.faces.v1.FaceDetectState state = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message NoFaceDetectedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  domain.location.v1.Location location = 2;
+}
+
+message GenericFaceEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "CAMERA_OBSTRUCTED_EVENT"
+  enum FaceEventType {
+    FACE_EVENT_TYPE_UNSPECIFIED = 0;
+    FACE_EVENT_TYPE_FACE_TRACKED = 1;
+    FACE_EVENT_TYPE_FACE_LOST = 2;
+  }
+  FaceEventType type = 2;
+  string description = 3;
+  domain.faces.v1.FaceDetectState state = 4;
+  domain.location.v1.Location location = 5;
+}
+
+message Vision {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "VISION_EVENT"
+  oneof event {
+    CameraObstructedEvent camera_obstructed = 3;
+    GenericFaceEvent face_tracking = 4;
+    FaceDetectedEvent face_detected = 5;
+    NoFaceDetectedEvent no_face_detected = 6;
+    ObjectDetectedEvent object_detected = 7;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

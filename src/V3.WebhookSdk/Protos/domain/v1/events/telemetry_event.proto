@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/orders/device.proto";
+import "domain/v1/events/connection_event.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "TelemetryEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+enum BatteryComponent {
+  option allow_alias = true;
+  BATTERY_COMPONENT_UNSPECIFIED = 0;
+  BATTERY_COMPONENT_DEVICE = 1;
+  BATTERY_COMPONENT_VEHICLE = 2;
+  // For compatibility with JSON naming conventions
+  BATTERY_DEVICE = 1;
+  BATTERY_VEHICLE = 2;
+}
+
+enum BatteryEventType {
+  option allow_alias = true;
+  BATTERY_EVENT_UNSPECIFIED = 0;
+  BATTERY_EVENT_CONNECTED = 1; // Normal battery status
+  BATTERY_EVENT_DISCONNECTED = 2; // Battery is disconnected
+  BATTERY_EVENT_LOW = 3; // Battery is low
+  BATTERY_EVENT_CRITICAL = 4; // Battery is critical
+  BATTERY_EVENT_CHARGING = 5; // Battery is charging
+  
+  // For compatibility with JSON naming conventions
+  BATTERY_CONNECTED = 1;
+  BATTERY_DISCONNECTED = 2;
+  BATTERY_LOW = 3;
+  BATTERY_CRITICAL = 4;
+  BATTERY_CHARGING = 5;
+}
+
+enum BatteryStatus {
+  option allow_alias = true;
+  BATTERY_STATUS_UNSPECIFIED = 0;
+  BATTERY_STATUS_ONLINE = 1; // Battery is online
+  BATTERY_STATUS_OFFLINE = 2; // Battery is offline
+
+  // For compatibility with JSON naming conventions
+  BATTERY_ONLINE = 1;
+  BATTERY_OFFLINE = 2;
+}
+
+enum IgnitionStatus {
+  option allow_alias = true;
+  IGNITION_STATUS_UNSPECIFIED = 0;
+  IGNITION_STATUS_ON = 1; // Ignition is on
+  IGNITION_STATUS_OFF = 2; // Ignition is off
+
+  // For compatibility with JSON naming conventions
+  IGNITION_ON = 1;
+  IGNITION_OFF = 2;
+}
+
+message TelemetryDetails {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  IgnitionStatus status = 2;
+  domain.orders.v1.DeviceMetadata hardware = 3;
+  domain.events.v1.ConnectionDetails connection = 4;
+  domain.events.v1.WifiDetails connectivity = 5;
+  Metrics metrics = 7;
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}
+
+// Metrics
+message BatteryMeasure {
+  BatteryComponent component = 1;
+  BatteryStatus status = 2;
+  float voltage = 3;
+}
+
+message OdometerMeasure {
+    uint64 value = 1;
+}
+
+message Metrics {
+  BatteryMeasure device_battery = 1;
+  BatteryMeasure vehicle_battery = 2;
+  OdometerMeasure odometer = 3;
+}
+
+// Events
+message BatteryEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  BatteryStatus status = 2;
+  BatteryComponent component = 3;
+  domain.location.v1.Location location = 4;
+}
+
+message IgnitionEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+  IgnitionStatus status = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message PeriodicEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "PERIODIC_EVENT"
+  domain.location.v1.Location location = 4;
+}
+
+message Telemetry {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 6 [(buf.validate.field).string.min_len = 1]; // e.g., "BATTERY_EVENT"
+  oneof event {
+    BatteryEvent battery = 7;
+    IgnitionEvent ignition = 8;
+    PeriodicEvent periodic = 9;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

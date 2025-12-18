@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/orders/order.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "OrderStatusEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message OrderStatus {
+    string id = 1 [(buf.validate.field).string.min_len = 1];
+    string correlation_id = 2 [(buf.validate.field).string.min_len = 1];
+    domain.orders.v1.OrderGroup group = 3;
+    domain.orders.v1.OrderStatus status = 4;
+    string type = 5 [(buf.validate.field).string.min_len = 1]; // e.g., ADD_WIFI, REBOOT, etc.
+    google.protobuf.Timestamp created_at = 6 [(buf.validate.field).timestamp.lt_now = true];
+    google.protobuf.Timestamp updated_at = 7 [(buf.validate.field).timestamp.lt_now = true];
+    google.protobuf.Timestamp deleted_at = 8;
+}

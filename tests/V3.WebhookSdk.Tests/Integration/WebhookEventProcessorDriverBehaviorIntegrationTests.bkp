@@ -1,0 +1,44 @@
+using System.IO;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Xunit;
+using V3.WebhookSdk.Processing;
+using V3.WebhookSdk.Events;
+using Domain.Events.V1;
+
+namespace V3.WebhookSdk.Tests.Integration;
+
+public class WebhookEventProcessorDriverBehaviorIntegrationTests
+{
+    [Theory]
+    [InlineData("telemetry-harsh-braking.json", DriverBehaviorEventNames.HarshBraking)]
+    public async Task Should_process_driver_behavior_events(string fileName, string eventName)
+    {
+        // Lê o JSON do arquivo
+        var attrJson = await File.ReadAllTextAsync($"../../../../examples/payloads/events/driver-behavior-events/{fileName}");
+
+        // Desserializa e re-serializa para garantir JSON válido
+        var attributes = JsonSerializer.Deserialize<object[]>(attrJson);
+        var jsonObj = new
+        {
+            id = "hook-1",
+            created_at = "2024-07-29T15:51:28.071Z",
+            attributes
+        };
+        var json = JsonSerializer.Serialize(jsonObj);
+
+        var handled = false;
+
+        var processor = new WebhookEventProcessorBuilder()
+            .OnDriverBehaviorEvent(eventName, async (ctx, evt) =>
+            {
+                handled = true;
+                await Task.CompletedTask; // Pode ser omitido se quiser
+            })
+            .Build();
+
+        await processor.ProcessWebhookAsync(json);
+
+        Assert.True(handled);
+    }
+}

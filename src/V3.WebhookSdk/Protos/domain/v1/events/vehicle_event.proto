@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "VehicleEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message BlockEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "BLOCK_START" or "BLOCK_END"
+  string reason = 2 [(buf.validate.field).string.min_len = 1];
+  domain.location.v1.Location location = 3;
+  
+}
+
+message Vehicle {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "BLOCK_EVENT"
+  oneof event {
+    BlockEvent block = 3;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

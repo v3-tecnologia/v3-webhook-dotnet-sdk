@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "HealthEventProto";
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message HealthCheckEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "HEALTH_CHECK_EVENT"
+  domain.location.v1.Location location = 2;
+}
+
+message Health {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "HEALTH_CHECK_EVENT"
+  oneof event {
+    HealthCheckEvent health_check = 3;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

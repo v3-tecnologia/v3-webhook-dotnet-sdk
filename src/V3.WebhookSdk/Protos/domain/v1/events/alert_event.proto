@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "AlertEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+message CollisionEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "COLLISION_EVENT"
+    domain.location.v1.Location location = 2;
+}
+
+message ImpactEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "COLLISION_EVENT"
+    domain.location.v1.Location location = 2;
+}
+
+message PanicButtonEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "PANIC_BUTTON_EVENT"
+    domain.location.v1.Location location = 2;
+}
+
+message SDCardMountedEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SD_CARD_MOUNTED_EVENT"
+    domain.location.v1.Location location = 2;
+}
+
+message SDCardUnmountedEvent {
+    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SD_CARD_UNMOUNTED_EVENT"
+    domain.location.v1.Location location = 2;
+}
+
+message Alert {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "COLLISION", "PANIC_BUTTON", etc.
+  oneof event {
+    CollisionEvent collision = 3;
+    ImpactEvent impact = 4;
+    PanicButtonEvent panic = 5;
+    SDCardMountedEvent sd_card_mounted = 6;
+    SDCardUnmountedEvent sd_card_unmounted = 7;
+  }
+
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

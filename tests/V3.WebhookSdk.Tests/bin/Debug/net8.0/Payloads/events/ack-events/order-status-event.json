@@ -1,0 +1,54 @@
+{
+  "id": "01KCHKKDN1CP40M1S8MJV2QZHW",
+  "status": "STATUS_RECEIVED",
+  "created_at": "2025-12-15T19:14:46.007732107Z",
+  "type": "EVENT_TYPE_GENERAL",
+  "category": "EVENT_CATEGORY_ORDER",
+  "sub": "EVENT_SUB_ORDER_STATUS",
+  "attributes": {
+    "device": {
+      "id": "01KBZJ4WWBE5N78S4F3DASW1WJ",
+      "correlation_id": "01KBZJ4WWBEA7TK7JGR5CD7S20",
+      "uid": "862798051074124",
+      "account_id": "01GZXXCVVPEKM7E830XAMJKA14"
+    },
+    "data": {
+      "telemetry": {
+        "id": "01KCHKKDN1CP40M1S8MJV2QZHW",
+        "status": "IGNITION_STATUS_OFF",
+        "hardware": {
+          "model": {
+            "name": "JC400",
+            "vendor": "jimi-iot",
+            "version": {},
+            "attributes": {
+              "orderResponse": "",
+              "timeStamp": "1765822543521"
+            }
+          },
+          "firmware_version": {
+            "name": "KMC28_JC400_WABA_GOL_V1.1.8_240408.1440",
+            "version": {}
+          },
+          "pid": {},
+          "uptime": "-1133535104"
+        },
+        "connection": {
+          "type": "CONNECTION_TYPE_WIFI",
+          "area": -1,
+          "cell_id": -1,
+          "mcc": "-1",
+          "mnc": "-1",
+          "imei": "862798051074124",
+          "signal_strength": "-2147483648"
+        },
+        "connectivity": {
+          "signal_strength": -2147483648
+        },
+        "timestamp": "2025-12-15T18:15:43.521Z"
+      },
+      "group_name": "STANDALONE_EVENT",
+      "standalone_event": {}
+    }
+  }
+}

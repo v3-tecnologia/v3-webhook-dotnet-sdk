@@ -1,0 +1,75 @@
+{
+  "id": "01D03BDZ81PC7W1NQT2NHVTWM0",
+  "status": "STATUS_RECEIVED",
+  "type": "EVENT_TYPE_GENERAL",
+  "category": "EVENT_CATEGORY_VEHICLE",
+  "sub": "EVENT_SUB_TELEMETRY_IGNITION",
+  "created_at": "2025-12-15T19:02:30.461749741Z",
+  "attributes": {
+    "device": {
+      "id": "01KBZJ4WWBE5N78S4F3DASW1WJ",
+      "correlation_id": "01KBZJ4WWBEA7TK7JGR5CD7S20",
+      "uid": "862798051074124",
+      "account_id": "01GZXXCVVPEKM7E830XAMJKA14"
+    },
+    "data": {
+      "telemetry": {
+        "id": "01D03BDZ81PC7W1NQT2NHVTWM0",
+        "status": "IGNITION_STATUS_OFF",
+        "hardware": {
+          "model": {
+            "vendor": "jimi-iot",
+            "version": {}
+          },
+          "firmware_version": {},
+          "pid": {}
+        },
+        "connection": {
+          "type": "CONNECTION_TYPE_WIFI",
+          "area": -1,
+          "cell_id": -1,
+          "mcc": "-1",
+          "mnc": "-1",
+          "imei": "862798051074124",
+          "signal_strength": "-2147483648"
+        },
+        "connectivity": {
+          "signal_strength": -2147483648
+        },
+        "timestamp": "2019-01-01T00:01:22.177Z"
+      },
+      "group_name": "TRIP_EVENT",
+      "trip_event": {
+        "trip_id": "vtrip_01KCHP924V1T68AY4WDTHT190H",
+        "event_group_name": "TELEMETRY",
+        "telemetry": {
+          "id": "01D03BDZ81PC7W1NQT2NHVTWM0",
+          "event_name": "IGNITION",
+          "ignition": {
+            "name": "IGNITION",
+            "status": "IGNITION_STATUS_OFF",
+            "location": {
+              "method": "LOCATION_METHOD_GPS",
+              "coordinates": {
+                "altitude": 604.114990234375
+              },
+              "gnss": {
+                "hdop": 127
+              },
+              "connectivity": {
+                "connection_type": "20",
+                "signal_strength": -2147483648,
+                "cell_id": "18446744073709551615",
+                "timing_advance": -1
+              },
+              "fix": {
+                "timestamp": "1546300882177"
+              }
+            }
+          },
+          "timestamp": "2019-01-01T00:01:22.177Z"
+        }
+      }
+    }
+  }
+}

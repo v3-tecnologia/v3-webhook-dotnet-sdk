@@ -1,0 +1,123 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.vision";
+option java_outer_classname = "FileVisionProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/vision;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.vision.v1;
+
+message BoundingBox {
+  float x = 1;       // Top-left X (normalized 0–1)
+  float y = 2;       // Top-left Y
+  float width = 3;   // Width (normalized 0–1)
+  float height = 4;  // Height (normalized 0–1)
+  string label = 5 [(buf.validate.field).string.min_len = 1]; // e.g., "face", "person", "hand", "phone", "seatbelt"
+}
+
+enum VehicleOccupantPosition {
+  VEHICLE_OCCUPANT_POSITION_UNSPECIFIED = 0;
+  OCCUPANT_DRIVER = 1;
+  OCCUPANT_FRONT_PASSENGER = 2;
+  OCCUPANT_REAR_LEFT = 3;
+  OCCUPANT_REAR_CENTER = 4;
+  OCCUPANT_REAR_RIGHT = 5;
+}
+
+enum FileType {
+  option allow_alias = true;
+  FILE_TYPE_UNSPECIFIED = 0;
+  FILE_TYPE_IMAGE = 1;
+  FILE_TYPE_VIDEO = 2;
+  FILE_TYPE_AUDIO = 3;
+  FILE_TYPE_TEXT = 4;
+  FILE_TYPE_BINARY = 5;
+
+  // For compatibility with JSON naming conventions
+  IMAGE = 1;
+  VIDEO = 2;
+  AUDIO = 3;
+  TEXT = 4;
+  BINARY = 5;
+}
+
+message FileMetadata {
+
+  string name = 2;
+
+  FileType type = 3;
+
+  string mime_type = 4;
+
+  uint64 bytes_size = 5;
+
+  string checksum = 6;
+
+  google.protobuf.Timestamp created_at = 7;
+}
+
+message FileChunk {
+
+  string id = 1;
+
+  uint32 chunk_index = 2; 
+
+  uint64 data_length = 4;
+
+  bytes data = 5;
+
+  uint64 total_size = 6;
+}
+
+message File {
+
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+
+  FileMetadata metadata = 2;
+
+  uint32 total_chunks = 3;
+
+  repeated FileChunk chunks = 4;
+
+  google.protobuf.Timestamp created_at = 5;
+
+  google.protobuf.Timestamp updated_at = 6;
+}
+
+message FileDescriptorMetadata {
+
+    string cam_channel = 1;
+
+    string compression = 2;
+
+    string content_type = 3;
+
+    int64 file_size = 4;
+
+    string quality = 5;
+
+    int32 width = 6;
+
+    int32 height = 7;
+
+    string checksum = 8;
+}
+
+message FileAddress {
+
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+
+  string source_id = 2 [(buf.validate.field).string.min_len = 1];
+
+  string url = 3 [(buf.validate.field).string.min_len = 1];
+
+  FileDescriptorMetadata metadata = 4;
+
+  google.protobuf.Timestamp created_at = 5;
+
+  google.protobuf.Timestamp updated_at = 6;
+}

@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "DriverBehaviorEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+enum DriverBehaviorProfileType {
+  DRIVER_BEHAVIOR_PROFILE_TYPE_UNSPECIFIED = 0;
+  DRIVER_BEHAVIOR_PROFILE_TYPE_BASIC = 1;
+  DRIVER_BEHAVIOR_PROFILE_TYPE_ADVANCED = 2;
+}
+
+message ExceededMaxSpeedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "EXCEEDED_MAX_SPEED_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message PersistentMaxSpeedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "PERSISTENT_MAX_SPEED_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message ReturnToNormalSpeedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "RETURN_TO_NORMAL_SPEED_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message StartOvertakingSpeedEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "START_OVERTAKING_SPEED_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message AccelerationHarshEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ACCELERATION_HARSH_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message BrakingHarshEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "BRAKING_HARSH_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message CorneringHarshEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "CORNERING_HARSH_EVENT"
+  DriverBehaviorProfileType profile_type = 2;
+  domain.location.v1.Location location = 3;
+}
+
+message DriverBehavior {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+  string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "CORNERING_HARSH_EVENT" or "EXCEEDED_MAX_SPEED_EVENT" etc...
+  oneof event {
+    ExceededMaxSpeedEvent exceeded_max_speed = 3;
+    PersistentMaxSpeedEvent persistent_max_speed = 4;
+    ReturnToNormalSpeedEvent return_to_normal_speed = 5;
+    StartOvertakingSpeedEvent start_overtaking_speed = 6;
+    AccelerationHarshEvent acceleration_harsh = 7;
+    BrakingHarshEvent braking_harsh = 8;
+    CorneringHarshEvent cornering_harsh = 9;
+  }
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

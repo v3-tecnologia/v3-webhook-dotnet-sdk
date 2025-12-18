@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/vision/vision.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.faces";
+option java_outer_classname = "FaceEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/faces;faces";
+option optimize_for = CODE_SIZE;
+
+package domain.faces.v1;
+
+message OccupantIdentity {
+  string known_id = 1 [(buf.validate.field).string.min_len = 1];
+
+  repeated string team_ids = 2 [(buf.validate.field).string.min_len = 1];
+
+  // e.g., "face_recognition", "rfid", "manual"
+  string source = 3;
+}
+
+message Occupant {
+  OccupantIdentity identity = 1;
+
+  float confidence = 2;
+
+  float similarity = 3;
+
+  domain.vision.v1.VehicleOccupantPosition occupant_position = 4;
+
+  domain.vision.v1.BoundingBox bounding_box = 5;
+
+  map<string, string> attributes = 6;
+}
+
+message FirmwareOccupant {
+  domain.vision.v1.VehicleOccupantPosition occupant_position = 1;
+
+  float confidence = 2;
+
+  domain.vision.v1.BoundingBox bounding_box = 3;
+  
+  map<string, string> attributes = 4; // eye_state, yaw, etc.
+
+  // Campos opcionais que Cloud ignora se não vierem
+  string provisional_label = 5; // e.g. "driver_candidate"
+}
+
+message FaceDetectionPending {
+  string reason = 1; // e.g., "AWAITING_INFERENCE"
+  repeated FirmwareOccupant occupants = 2;
+}
+
+message FaceDetectionSuccess {
+  repeated Occupant occupants = 1;
+}
+
+message FaceDetectionFailure {
+  string error_code = 1;   // e.g., "MODEL_ERROR", "TIMEOUT", "INVALID_FRAME"
+  string error_message = 2;
+}
+
+message FaceDetectionAwaitTimeout {
+  // When the system decided to give up
+  google.protobuf.Timestamp expired_at = 1 [(buf.validate.field).timestamp.lt_now = true];
+
+  // How long the pipeline waited before expiring (ms)
+  uint32 waited_ms = 2;
+
+  // Whether the detection was permanently aborted
+  bool aborted = 3;
+}
+
+message FaceDetectionNoAction {}
+
+message FaceDetectState {
+  oneof state {
+    FaceDetectionPending pending = 1;
+    FaceDetectionSuccess success = 2;
+    FaceDetectionFailure failure = 3;
+    FaceDetectionAwaitTimeout timeout = 4;
+    FaceDetectionNoAction no_action = 5;
+  }
+}
