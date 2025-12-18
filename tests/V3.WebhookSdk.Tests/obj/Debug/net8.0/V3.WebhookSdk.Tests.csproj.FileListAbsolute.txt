@@ -137,8 +137,6 @@
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-r2-restart.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-reboot.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-report-sent.json
-/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-sdcard-mounted.json
-/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-sdcard-unmounted.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-simcard-inserted.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-simcard-present.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-simcard-removed.json
@@ -148,12 +146,15 @@
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/hardware-events/hardware-wifi-disconnected.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/telemetry-device-battery.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/telemetry-ignition.json
-/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/telemetry-impact.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/telemetry-periodic.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/telemetry-vehicle-battery.json
-/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/telemetry-events/vehicle-ignition-off.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/vision-basic-events/vision-camera-obstructed.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/vision-basic-events/vision-face-detected.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/vision-basic-events/vision-face-lost.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/vision-basic-events/vision-face-tracked.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/payloads/events/vision-basic-events/vision-no-face-detected.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/V3.WebhookSdk.Tests.sourcelink.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/alert-events/alert-impact.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/alert-events/alert-sdcard-mounted.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/alert-events/alert-sdcard-unmounted.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/telemetry-events/telemetry-ignition-off.json

@@ -119,15 +119,12 @@ namespace V3.WebhookSdk.Processing
                         var statusValue = statusProp.GetValue(orderObj);
                         if (statusValue != null)
                         {
-                            // Monta o nome do evento no padrão "ORDER_STATUS_" + sufixo do enum
                             name = $"ORDER_STATUS_{statusValue.ToString().ToUpper()}";
                         }
                     }
-                    Console.WriteLine($"[PROCESSOR] Procurando handler para (group: '{group}', name: '{name}')");
 
                     if (_handlers.TryGetValue((group, name), out var handler))
                     {
-                        Console.WriteLine($"[PROCESSOR] Handler encontrado para (group: '{group}', name: '{name}')");
                         var context = new EventContext
                         {
                             Id = evt.Id,
@@ -150,10 +147,7 @@ namespace V3.WebhookSdk.Processing
 
                         await task;
                     }
-                    else
-                    {
-                        Console.WriteLine($"[PROCESSOR] Handler NÃO encontrado para (group: '{group}', name: '{name}')");
-                    }
+     
                 }
 
             }
@@ -166,12 +160,16 @@ namespace V3.WebhookSdk.Processing
                 return null;
 
             object? envelope =
-                GetProperty(container, "Vision")
-                ?? GetProperty(container, "Telemetry")
-                ?? GetProperty(container, "Vehicle")
-                ?? GetProperty(container, "DriverBehavior")
+                GetProperty(container, "Adas")
+                ?? GetProperty(container, "Alert")
+                ?? GetProperty(container, "Connection")
                 ?? GetProperty(container, "Dms")
-                ?? GetProperty(container, "Adas");
+                ?? GetProperty(container, "DriverBehavior")
+                ?? GetProperty(container, "Health")
+                ?? GetProperty(container, "Vehicle")
+                ?? GetProperty(container, "Vision")
+                ?? GetProperty(container, "System")
+                ?? GetProperty(container, "Telemetry");
 
             if (envelope is null)
                 return null;

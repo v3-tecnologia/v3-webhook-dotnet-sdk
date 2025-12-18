@@ -1332,8 +1332,8 @@
     },
     "V3.WebhookSdk/1.0.0": {
       "type": "project",
-      "path": "../../V3.WebhookSdk/V3.WebhookSdk.csproj",
-      "msbuildProject": "../../V3.WebhookSdk/V3.WebhookSdk.csproj"
+      "path": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+      "msbuildProject": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1367,8 +1367,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj": {
-              "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj"
+            "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+              "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
             }
           }
         }

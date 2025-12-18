@@ -43,3 +43,4 @@
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/Debug/net8.0/WebhookExample.pdb
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/Debug/net8.0/WebhookExample.genruntimeconfig.cache
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/Debug/net8.0/ref/WebhookExample.dll
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/Debug/net8.0/WebhookExample.sourcelink.json

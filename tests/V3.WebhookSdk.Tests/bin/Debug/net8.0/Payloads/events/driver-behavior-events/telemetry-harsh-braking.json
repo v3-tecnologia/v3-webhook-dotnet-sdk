@@ -44,9 +44,9 @@
         "event_group_name": "DRIVER_BEHAVIOR",
         "driver_behavior": {
           "id": "01KCHNFZWN4YPSM0A4YFMH09T2",
-          "event_name": "HARSH_BRAKING",
+          "event_name": "BRAKING_HARSH",
           "braking_harsh": {
-            "name": "HARSH_BRAKING",
+            "name": "BRAKING_HARSH",
             "profile_type": "DRIVER_BEHAVIOR_PROFILE_TYPE_ADVANCED",
             "location": {
               "method": "LOCATION_METHOD_GPS",

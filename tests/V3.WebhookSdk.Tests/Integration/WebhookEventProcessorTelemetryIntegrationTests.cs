@@ -30,6 +30,7 @@ namespace V3.WebhookSdk.Tests.Integration
 
         [Theory]
         [InlineData("telemetry-ignition.json", "IGNITION")]
+        [InlineData("telemetry-ignition-off.json", "IGNITION")]
         [InlineData("telemetry-device-battery.json", "BATTERY")]
         [InlineData("telemetry-periodic.json", "PERIODIC")]
         [InlineData("telemetry-vehicle-battery.json", "BATTERY")]
@@ -52,16 +53,14 @@ namespace V3.WebhookSdk.Tests.Integration
                 .OnTelemetryEvent(eventName, async (ctx, evt) =>
                 {
                     handled = true;
-                    Console.WriteLine("[TEST] Handler chamado!");
+                    Console.WriteLine("[TEST] Handler called!");
                     Console.WriteLine($"[TEST] ctx: {System.Text.Json.JsonSerializer.Serialize(ctx)}");
                     Console.WriteLine($"[TEST] evt: {System.Text.Json.JsonSerializer.Serialize(evt)}");
                     await Task.CompletedTask;
                 })
                 .Build();
 
-            Console.WriteLine("[TEST] Payload enviado para processor:");
-            Console.WriteLine(payload);
-
+            Console.WriteLine("[TEST] Payload sent to processor: " + payload);
             await processor.ProcessWebhookAsync(payload);
 
             Assert.True(handled);

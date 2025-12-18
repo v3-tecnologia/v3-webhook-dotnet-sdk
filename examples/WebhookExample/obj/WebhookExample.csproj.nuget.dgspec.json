@@ -4,14 +4,80 @@
     "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj": {}
   },
   "projects": {
-    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj",
-        "projectName": "V3.WebhookSdk",
-        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj",
+        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
+        "projectName": "WebhookExample",
+        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
         "packagesPath": "/home/adrianosantos/.nuget/packages/",
-        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/obj/",
+        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+                "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+        "projectName": "V3.WebhookSdk",
+        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+        "packagesPath": "/home/adrianosantos/.nuget/packages/",
+        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
@@ -69,72 +135,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
-        "projectName": "WebhookExample",
-        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
-        "packagesPath": "/home/adrianosantos/.nuget/packages/",
-        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj": {
-                "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/V3.WebhookSdk/V3.WebhookSdk.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[8.0.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

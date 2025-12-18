@@ -141,7 +141,7 @@ public class WebhookEventProcessorIntegrationTests
                     "trip_event": {
                         "event_group_name": "DRIVER_BEHAVIOR",
                         "driver_behavior": {
-                        "event_name": "HARSH_BRAKING"
+                        "event_name": "BRAKING_HARSH"
                         }
                     }
                     }
