@@ -20,3 +20,6 @@ run:
 
 migrate:
 	dotnet ef database update --project $(EXAMPLE_PATH)
+
+test:
+	dotnet test ./tests/V3.WebhookSdk.Tests --logger "console;verbosity=detailed"
