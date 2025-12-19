@@ -2,8 +2,40 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
+
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>V3.WebhookSdk</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>V3 Tecnologia</Authors>
+    <Company>V3 Tecnologia</Company>
+
+    <Title>V3 Webhook .NET SDK</Title>
+    <Description>
+      A .NET SDK for processing V3 Tecnologia IoT Webhooks using strongly-typed Protobuf models.
+      Transport-agnostic, signature validation, persistence support, and modular event handlers.
+    </Description>
+
+    <PackageProjectUrl>https://github.com/v3-tecnologia/v3-webhook-dotnet-sdk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/v3-tecnologia/v3-webhook-dotnet-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <PackageTags>
+      webhook;protobuf;iot;events;v3;telemetry
+    </PackageTags>
+
+    <!-- License -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +48,17 @@
     <PackageReference Include="System.Text.Json" Version="10.0.1" />
   </ItemGroup>
 
-    <ItemGroup>
-      <Protobuf Include="Protos/**/*.proto" CompileOutputs="false" OutputDir="Generated" GrpcServices="None" AdditionalImportDirs="Protos" />
-    </ItemGroup>
+  <ItemGroup>
+    <Protobuf
+      Include="Protos/**/*.proto"
+      CompileOutputs="false"
+      OutputDir="Generated"
+      GrpcServices="None"
+      AdditionalImportDirs="Protos" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
