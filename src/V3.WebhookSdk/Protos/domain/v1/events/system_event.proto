@@ -26,8 +26,9 @@ enum PingType {
 
 message UploadEvent {
   string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "UPLOAD_EVENT"
-  repeated domain.vision.v1.FileAddress files = 2;
-  domain.location.v1.Location location = 3;
+  string source_id = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "12345"
+  repeated domain.vision.v1.FileAddress files = 3;
+  domain.location.v1.Location location = 4;
 }
 
 message PingEvent {
