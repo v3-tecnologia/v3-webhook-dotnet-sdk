@@ -21,17 +21,17 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore src/V3.WebhookSdk/V3.WebhookSdk.csproj
 
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build src/V3.WebhookSdk/V3.WebhookSdk.csproj -c Release --no-restore
 
       - name: Pack
-        run: dotnet pack -c Release --no-build
+        run: dotnet pack src/V3.WebhookSdk/V3.WebhookSdk.csproj -c Release --no-build
 
       - name: Publish to NuGet
         run: |
-          dotnet nuget push **/*.nupkg \
+          dotnet nuget push src/V3.WebhookSdk/bin/Release/*.nupkg \
             --api-key ${{ secrets.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
