@@ -26,6 +26,14 @@ namespace V3.WebhookSdk.Processing
             return this;
         }
 
+        
+        public WebhookEventProcessorBuilder WithPersistence(IEventReader reader, IEventWriter writer)
+        {
+            _eventReader = reader;
+            _eventWriter = writer;
+            return this;
+        }
+
         public WebhookEventProcessorBuilder WithEventWriter(IEventWriter writer)
         {
             _eventWriter = writer;

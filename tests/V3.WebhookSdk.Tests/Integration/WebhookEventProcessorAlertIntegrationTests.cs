@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using V3.WebhookSdk.Handlers;
 using V3.WebhookSdk.Processing;
+using V3.WebhookSdk.Persistence;
 using Domain.Events.V1;
 
 namespace V3.WebhookSdk.Tests.Integration
@@ -13,10 +14,17 @@ namespace V3.WebhookSdk.Tests.Integration
     public class WebhookEventProcessorAlertIntegrationTests
     {
         private readonly WebhookEventProcessorBuilder _builder;
+        private readonly InMemoryEventWriter _writer = new InMemoryEventWriter();
+        private readonly InMemoryEventReader _reader;
 
         public WebhookEventProcessorAlertIntegrationTests()
         {
-            _builder = new WebhookEventProcessorBuilder();
+            _reader = new InMemoryEventReader(_writer);
+            _builder = new WebhookEventProcessorBuilder()
+                .WithPersistence(
+                   _reader,
+                   _writer
+                );
         }
 
         private async Task<string> ReadPayloadAsync(string fileName)
@@ -66,7 +74,7 @@ namespace V3.WebhookSdk.Tests.Integration
                         Console.WriteLine($"[TEST] Context: {JsonSerializer.Serialize(ctx)}");
                         Console.WriteLine($"[TEST] Event: {JsonSerializer.Serialize(evt)}");
 
-                        await Task.CompletedTask;
+                        await ctx.SaveAsync(evt);
                         return EventHandlingResult.Success();
                     }
                 )
@@ -75,7 +83,13 @@ namespace V3.WebhookSdk.Tests.Integration
             var result = await processor.ProcessWebhookAsync(payload);
 
             Assert.True(result.IsSuccess, result.ErrorMessage);
-        }
 
+            var persisted = await _reader.GetEventsAsync<ImpactEvent>();
+            Console.WriteLine($"[TEST] Persisted Impact Events Count: {persisted.Count}");
+            Console.WriteLine($"[TEST] Persisted Impact Events: {JsonSerializer.Serialize(persisted)}");
+
+            Assert.Single(persisted);
+            Assert.NotNull(persisted[0]);
+        }
     }
 }

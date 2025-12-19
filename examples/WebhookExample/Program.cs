@@ -7,8 +7,11 @@ using V3.WebhookSdk.Processing;
 using V3.WebhookSdk.Security;
 using WebhookExample;
 using WebhookExample.Data;
+using WebhookExample.Persistence;
+using WebhookExample.Factories;
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddDbContext<WebhookDbContext>(options =>
     options.UseNpgsql(
@@ -17,13 +20,24 @@ builder.Services.AddDbContext<WebhookDbContext>(options =>
     )
 );
 
+builder.Services.AddScoped<PostgresEventWriter>();
+builder.Services.AddScoped<PostgresEventReader>();
+
 builder.Services.AddSingleton<WebhookEventProcessor>(sp =>
 {
     var secret =
         builder.Configuration["Webhook:Secret"]
         ?? throw new InvalidOperationException("Webhook:Secret not configured");
 
-    return WebhookProcessorFactory.Create(sp, secret);
+    var dbContext = sp.GetRequiredService<WebhookDbContext>();
+    var writer = new PostgresEventWriter(dbContext);
+    var reader = new PostgresEventReader(dbContext);
+
+    return new WebhookEventProcessorBuilder()
+        .WithSignatureValidator(new HmacSha256SignatureValidator(secret))
+        .WithPersistence(reader, writer)
+        // Adicione handlers conforme necessário
+        .Build();
 });
 
 var app = builder.Build();
@@ -34,41 +48,49 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-app.MapPost("/webhook", async (
-    string body,
-    WebhookEventProcessor processor
-) =>
+app.MapGet("/health", () => Results.Ok("ok"));
+
+app.MapPost("/hooks/callback/dms", async (string body, IServiceProvider sp) =>
 {
-    try
+    var secret = builder.Configuration["Webhook:Secret"] ?? throw new InvalidOperationException("Webhook:Secret not configured");
+    var processor = DmsWebhookProcessorFactory.Create(sp, secret);
+    var result = await processor.ProcessWebhookAsync(body);
+    return result switch
     {
-        await processor.ProcessWebhookAsync(body);
-        return Results.Accepted();
-    }
-    catch (WebhookSignatureException ex)
-    {
-        return Results.Problem(
-            title: "Unauthorized",
-            detail: ex.Message,
-            statusCode: StatusCodes.Status401Unauthorized
-        );
-    }
-    catch (InvalidOperationException ex)
-    {
-        return Results.BadRequest(new
-        {
-            error = ex.Message
-        });
-    }
-    catch (Exception ex)
-    {
-        return Results.Problem(
-            title: "Internal Server Error",
-            detail: ex.Message,
-            statusCode: StatusCodes.Status500InternalServerError
-        );
-    }
+        { IsSuccess: true } => Results.Accepted(),
+        { Exception: WebhookSignatureException } => Results.Problem(title: "Unauthorized", detail: result.ErrorMessage, statusCode: StatusCodes.Status401Unauthorized),
+        { Exception: InvalidOperationException } => Results.BadRequest(new { error = result.ErrorMessage }),
+        _ => Results.Problem(title: "Internal Server Error", detail: result.ErrorMessage, statusCode: StatusCodes.Status500InternalServerError)
+    };
 });
 
-app.MapGet("/health", () => Results.Ok("ok"));
+app.MapPost("/hooks/callback/orders", async (string body, IServiceProvider sp) =>
+{
+    var secret = builder.Configuration["Webhook:Secret"] ?? throw new InvalidOperationException("Webhook:Secret not configured");
+    var processor = OrderWebhookProcessorFactory.Create(sp, secret);
+    var result = await processor.ProcessWebhookAsync(body);
+    return result switch
+    {
+        { IsSuccess: true } => Results.Accepted(),
+        { Exception: WebhookSignatureException } => Results.Problem(title: "Unauthorized", detail: result.ErrorMessage, statusCode: StatusCodes.Status401Unauthorized),
+        { Exception: InvalidOperationException } => Results.BadRequest(new { error = result.ErrorMessage }),
+        _ => Results.Problem(title: "Internal Server Error", detail: result.ErrorMessage, statusCode: StatusCodes.Status500InternalServerError)
+    };
+});
+
+// Endpoint ALERT
+app.MapPost("/hooks/callback/alerts", async (string body, IServiceProvider sp) =>
+{
+    var secret = builder.Configuration["Webhook:Secret"] ?? throw new InvalidOperationException("Webhook:Secret not configured");
+    var processor = AlertWebhookProcessorFactory.Create(sp, secret);
+    var result = await processor.ProcessWebhookAsync(body);
+    return result switch
+    {
+        { IsSuccess: true } => Results.Accepted(),
+        { Exception: WebhookSignatureException } => Results.Problem(title: "Unauthorized", detail: result.ErrorMessage, statusCode: StatusCodes.Status401Unauthorized),
+        { Exception: InvalidOperationException } => Results.BadRequest(new { error = result.ErrorMessage }),
+        _ => Results.Problem(title: "Internal Server Error", detail: result.ErrorMessage, statusCode: StatusCodes.Status500InternalServerError)
+    };
+});
 
 app.Run();
