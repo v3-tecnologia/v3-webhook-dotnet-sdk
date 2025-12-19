@@ -28,31 +28,31 @@ namespace Domain.Events.V1 {
             "LmV2ZW50cy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxob",
             "YnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGh1kb21haW4vdjEvdmlzaW9u",
             "L3Zpc2lvbi5wcm90bxohZG9tYWluL3YxL2xvY2F0aW9uL2xvY2F0aW9uLnBy",
-            "b3RvIoIBCgtVcGxvYWRFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEiwK",
-            "BWZpbGVzGAIgAygLMh0uZG9tYWluLnZpc2lvbi52MS5GaWxlQWRkcmVzcxIu",
-            "Cghsb2NhdGlvbhgDIAEoCzIcLmRvbWFpbi5sb2NhdGlvbi52MS5Mb2NhdGlv",
-            "biJ8CglQaW5nRXZlbnQSFQoEbmFtZRgBIAEoCUIHukgEcgIQARIoCgR0eXBl",
-            "GAIgASgOMhouZG9tYWluLmV2ZW50cy52MS5QaW5nVHlwZRIuCghsb2NhdGlv",
-            "bhgDIAEoCzIcLmRvbWFpbi5sb2NhdGlvbi52MS5Mb2NhdGlvbiJkCgtSZWJv",
-            "b3RFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEg4KBnJlYXNvbhgCIAEo",
-            "CRIuCghsb2NhdGlvbhgDIAEoCzIcLmRvbWFpbi5sb2NhdGlvbi52MS5Mb2Nh",
-            "dGlvbiKLAgoGU3lzdGVtEhMKAmlkGAEgASgJQge6SARyAhABEhsKCmV2ZW50",
-            "X25hbWUYAiABKAlCB7pIBHICEAESLwoGdXBsb2FkGAMgASgLMh0uZG9tYWlu",
-            "LmV2ZW50cy52MS5VcGxvYWRFdmVudEgAEi8KBnJlYm9vdBgEIAEoCzIdLmRv",
-            "bWFpbi5ldmVudHMudjEuUmVib290RXZlbnRIABIrCgRwaW5nGAUgASgLMhsu",
-            "ZG9tYWluLmV2ZW50cy52MS5QaW5nRXZlbnRIABI3Cgl0aW1lc3RhbXAYZCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgi6SAWyAQI4AUIHCgVl",
-            "dmVudCqBAQoIUGluZ1R5cGUSGQoVUElOR19UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "GwoXUElOR19UWVBFX0VDT05PTUlDX01PREUQARIXChNQSU5HX1RZUEVfVEVT",
-            "VF9NT0RFEAISEQoNRUNPTk9NSUNfTU9ERRABEg0KCVRFU1RfTU9ERRACGgIQ",
-            "AUJ/CiBici5jb20udjMucHJvdG9jb2wuZG9tYWluLmV2ZW50c0IQU3lzdGVt",
-            "RXZlbnRQcm90b0gCUAFaRWdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90",
-            "b2NvbC1jbG91ZC9wcm90by9nZW4vZG9tYWluL3YxL2V2ZW50czt2MWIGcHJv",
-            "dG8z"));
+            "b3RvIp4BCgtVcGxvYWRFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEhoK",
+            "CXNvdXJjZV9pZBgCIAEoCUIHukgEcgIQARIsCgVmaWxlcxgDIAMoCzIdLmRv",
+            "bWFpbi52aXNpb24udjEuRmlsZUFkZHJlc3MSLgoIbG9jYXRpb24YBCABKAsy",
+            "HC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24ifAoJUGluZ0V2ZW50EhUK",
+            "BG5hbWUYASABKAlCB7pIBHICEAESKAoEdHlwZRgCIAEoDjIaLmRvbWFpbi5l",
+            "dmVudHMudjEuUGluZ1R5cGUSLgoIbG9jYXRpb24YAyABKAsyHC5kb21haW4u",
+            "bG9jYXRpb24udjEuTG9jYXRpb24iZAoLUmVib290RXZlbnQSFQoEbmFtZRgB",
+            "IAEoCUIHukgEcgIQARIOCgZyZWFzb24YAiABKAkSLgoIbG9jYXRpb24YAyAB",
+            "KAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24iiwIKBlN5c3RlbRIT",
+            "CgJpZBgBIAEoCUIHukgEcgIQARIbCgpldmVudF9uYW1lGAIgASgJQge6SARy",
+            "AhABEi8KBnVwbG9hZBgDIAEoCzIdLmRvbWFpbi5ldmVudHMudjEuVXBsb2Fk",
+            "RXZlbnRIABIvCgZyZWJvb3QYBCABKAsyHS5kb21haW4uZXZlbnRzLnYxLlJl",
+            "Ym9vdEV2ZW50SAASKwoEcGluZxgFIAEoCzIbLmRvbWFpbi5ldmVudHMudjEu",
+            "UGluZ0V2ZW50SAASNwoJdGltZXN0YW1wGGQgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEIIukgFsgECOAFCBwoFZXZlbnQqgQEKCFBpbmdUeXBl",
+            "EhkKFVBJTkdfVFlQRV9VTlNQRUNJRklFRBAAEhsKF1BJTkdfVFlQRV9FQ09O",
+            "T01JQ19NT0RFEAESFwoTUElOR19UWVBFX1RFU1RfTU9ERRACEhEKDUVDT05P",
+            "TUlDX01PREUQARINCglURVNUX01PREUQAhoCEAFCfwogYnIuY29tLnYzLnBy",
+            "b3RvY29sLmRvbWFpbi5ldmVudHNCEFN5c3RlbUV2ZW50UHJvdG9IAlABWkVn",
+            "aXRodWIuY29tL3YzLXRlY25vbG9naWEvcHJvdG9jb2wtY2xvdWQvcHJvdG8v",
+            "Z2VuL2RvbWFpbi92MS9ldmVudHM7djFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Vision.V1.VisionReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.PingType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.UploadEvent), global::Domain.Events.V1.UploadEvent.Parser, new[]{ "Name", "Files", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.UploadEvent), global::Domain.Events.V1.UploadEvent.Parser, new[]{ "Name", "SourceId", "Files", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.PingEvent), global::Domain.Events.V1.PingEvent.Parser, new[]{ "Name", "Type", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.RebootEvent), global::Domain.Events.V1.RebootEvent.Parser, new[]{ "Name", "Reason", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.System), global::Domain.Events.V1.System.Parser, new[]{ "Id", "EventName", "Upload", "Reboot", "Ping", "Timestamp" }, new[]{ "Event" }, null, null, null)
@@ -118,6 +118,7 @@ namespace Domain.Events.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UploadEvent(UploadEvent other) : this() {
       name_ = other.name_;
+      sourceId_ = other.sourceId_;
       files_ = other.files_.Clone();
       location_ = other.location_ != null ? other.location_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -144,10 +145,25 @@ namespace Domain.Events.V1 {
       }
     }
 
+    /// <summary>Field number for the "source_id" field.</summary>
+    public const int SourceIdFieldNumber = 2;
+    private string sourceId_ = "";
+    /// <summary>
+    /// e.g., "12345"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceId {
+      get { return sourceId_; }
+      set {
+        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "files" field.</summary>
-    public const int FilesFieldNumber = 2;
+    public const int FilesFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Domain.Vision.V1.FileAddress> _repeated_files_codec
-        = pb::FieldCodec.ForMessage(18, global::Domain.Vision.V1.FileAddress.Parser);
+        = pb::FieldCodec.ForMessage(26, global::Domain.Vision.V1.FileAddress.Parser);
     private readonly pbc::RepeatedField<global::Domain.Vision.V1.FileAddress> files_ = new pbc::RepeatedField<global::Domain.Vision.V1.FileAddress>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +172,7 @@ namespace Domain.Events.V1 {
     }
 
     /// <summary>Field number for the "location" field.</summary>
-    public const int LocationFieldNumber = 3;
+    public const int LocationFieldNumber = 4;
     private global::Domain.Location.V1.Location location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,6 +199,7 @@ namespace Domain.Events.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (SourceId != other.SourceId) return false;
       if(!files_.Equals(other.files_)) return false;
       if (!object.Equals(Location, other.Location)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -193,6 +210,7 @@ namespace Domain.Events.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
       hash ^= files_.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
       if (_unknownFields != null) {
@@ -217,9 +235,13 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceId);
+      }
       files_.WriteTo(output, _repeated_files_codec);
       if (location_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Location);
       }
       if (_unknownFields != null) {
@@ -236,9 +258,13 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceId);
+      }
       files_.WriteTo(ref output, _repeated_files_codec);
       if (location_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Location);
       }
       if (_unknownFields != null) {
@@ -253,6 +279,9 @@ namespace Domain.Events.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
       }
       size += files_.CalculateSize(_repeated_files_codec);
       if (location_ != null) {
@@ -272,6 +301,9 @@ namespace Domain.Events.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.SourceId.Length != 0) {
+        SourceId = other.SourceId;
       }
       files_.Add(other.files_);
       if (other.location_ != null) {
@@ -304,10 +336,14 @@ namespace Domain.Events.V1 {
             break;
           }
           case 18: {
-            files_.AddEntriesFrom(input, _repeated_files_codec);
+            SourceId = input.ReadString();
             break;
           }
           case 26: {
+            files_.AddEntriesFrom(input, _repeated_files_codec);
+            break;
+          }
+          case 34: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }
@@ -338,10 +374,14 @@ namespace Domain.Events.V1 {
             break;
           }
           case 18: {
-            files_.AddEntriesFrom(ref input, _repeated_files_codec);
+            SourceId = input.ReadString();
             break;
           }
           case 26: {
+            files_.AddEntriesFrom(ref input, _repeated_files_codec);
+            break;
+          }
+          case 34: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }

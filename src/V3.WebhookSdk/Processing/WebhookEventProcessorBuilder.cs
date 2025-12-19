@@ -5,10 +5,13 @@ using V3.WebhookSdk.Security;
 
 namespace V3.WebhookSdk.Processing
 {
-    public class WebhookEventProcessorBuilder
+    public sealed class WebhookEventProcessorBuilder
     {
         private readonly Dictionary<(string group, string name), Delegate> _handlers = new();
+
         private IWebhookSignatureValidator? _signatureValidator;
+        private IEventWriter? _eventWriter;
+        private IEventReader? _eventReader;
 
         public WebhookEventProcessorBuilder WithHmacSha256(string secret)
         {
@@ -23,83 +26,27 @@ namespace V3.WebhookSdk.Processing
             return this;
         }
 
-        public WebhookEventProcessorBuilder OnDmsEvent(
-            string eventName,
-            DmsEventHandler handler)
+        public WebhookEventProcessorBuilder WithEventWriter(IEventWriter writer)
         {
-            _handlers[("DMS", eventName)] = handler;
+            _eventWriter = writer;
             return this;
         }
 
-        public WebhookEventProcessorBuilder OnOrderEvent(
-            string eventName,
-            OrderEventHandler handler)
+        public WebhookEventProcessorBuilder WithEventReader(IEventReader reader)
         {
-            _handlers[("ORDER", eventName)] = handler;
+            _eventReader = reader;
             return this;
         }
 
-        public WebhookEventProcessorBuilder OnConnectionEvent(
-            string eventName,
-            ConnectionEventHandler handler)
+        public WebhookEventProcessorBuilder OnEvent<TEvent>(
+            EventSelector selector,
+            Func<EventContext, TEvent, Task<EventHandlingResult>> handler)
+            where TEvent : class
         {
-            _handlers[("CONNECTION", eventName)] = handler;
-            return this;
-        }
+            if (selector is null)
+                throw new ArgumentNullException(nameof(selector));
 
-        public WebhookEventProcessorBuilder OnVisionEvent(
-            string eventName,
-            VisionEventHandler handler)
-        {
-            _handlers[("VISION", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnHardwareEvent(
-            string eventName,
-            HardwareEventHandler handler)
-        {
-            _handlers[("HEALTH", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnSystemEvent(
-            string eventName,
-            SystemEventHandler handler)
-        {
-            _handlers[("SYSTEM", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnTelemetryEvent(
-            string eventName,
-            TelemetryEventHandler handler)
-        {
-            _handlers[("TELEMETRY", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnAlertEvent(
-            string eventName,
-            AlertEventHandler handler)
-        {
-            _handlers[("ALERT", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnDriverBehaviorEvent(
-            string eventName,
-            DriverBehaviorEventHandler handler)
-        {
-            _handlers[("DRIVER_BEHAVIOR", eventName)] = handler;
-            return this;
-        }
-
-        public WebhookEventProcessorBuilder OnVehicleEvent(
-            string eventName,
-            VehicleEventHandler handler)
-        {
-            _handlers[("VEHICLE", eventName)] = handler;
+            _handlers[(selector.Group, selector.EventName)] = handler;
             return this;
         }
 
@@ -107,7 +54,9 @@ namespace V3.WebhookSdk.Processing
         {
             return new WebhookEventProcessor(
                 _handlers,
-                _signatureValidator
+                _signatureValidator,
+                _eventWriter,
+                _eventReader
             );
         }
     }

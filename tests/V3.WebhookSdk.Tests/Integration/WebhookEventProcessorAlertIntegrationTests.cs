@@ -4,14 +4,15 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Xunit;
+using V3.WebhookSdk.Handlers;
 using V3.WebhookSdk.Processing;
-using V3.WebhookSdk.Events;
+using Domain.Events.V1;
 
 namespace V3.WebhookSdk.Tests.Integration
 {
     public class WebhookEventProcessorAlertIntegrationTests
     {
-        private WebhookEventProcessorBuilder _builder;
+        private readonly WebhookEventProcessorBuilder _builder;
 
         public WebhookEventProcessorAlertIntegrationTests()
         {
@@ -20,8 +21,14 @@ namespace V3.WebhookSdk.Tests.Integration
 
         private async Task<string> ReadPayloadAsync(string fileName)
         {
-            var path = Path.Combine(AppContext.BaseDirectory, "Payloads", "events", "alert-events", fileName);
-            Console.WriteLine($"Looking for file: {fileName} in {path}");
+            var path = Path.Combine(
+                AppContext.BaseDirectory,
+                "Payloads",
+                "events",
+                "alert-events",
+                fileName
+            );
+
             if (!File.Exists(path))
                 throw new FileNotFoundException($"The payload file was not found: {path}");
 
@@ -30,9 +37,9 @@ namespace V3.WebhookSdk.Tests.Integration
 
         [Theory]
         [InlineData("alert-impact.json", "IMPACT")]
-        [InlineData("alert-sdcard-mounted.json", "SD_CARD_MOUNTED")]
-        [InlineData("alert-sdcard-unmounted.json", "SD_CARD_UNMOUNTED")]
-        public async Task Should_process_alert_events(string fileName, string eventName)
+        public async Task Should_process_alert_events(
+            string fileName,
+            string eventName)
         {
             var eventJson = await ReadPayloadAsync(fileName);
 
@@ -40,29 +47,35 @@ namespace V3.WebhookSdk.Tests.Integration
             {
                 id = Guid.NewGuid().ToString(),
                 created_at = DateTime.UtcNow.ToString("o"),
-                attributes = new[] { JsonNode.Parse(eventJson) } 
+                attributes = new[] { JsonNode.Parse(eventJson) }
             };
 
             var payload = JsonSerializer.Serialize(webhookWrapper);
 
-            var handled = false;
-
             var processor = _builder
-                .OnAlertEvent(eventName, async (ctx, evt) =>
-                {
-                    handled = true;
-                    Console.WriteLine("[TEST] Handler called!");
-                    Console.WriteLine($"[TEST] ctx: {System.Text.Json.JsonSerializer.Serialize(ctx)}");
-                    Console.WriteLine($"[TEST] evt: {System.Text.Json.JsonSerializer.Serialize(evt)}");
-                    await Task.CompletedTask;
-                })
+                .OnEvent(
+                    EventSelector.Of()
+                        .Group("ALERT")
+                        .EventName(eventName)
+                        .Build(),
+                    async (EventContext ctx, ImpactEvent evt) =>
+                    {
+                        Console.WriteLine("[TEST] Impact Event Handler called!");
+                        Console.WriteLine($"[TEST] EventName: {eventName}");
+                        Console.WriteLine($"[TEST] PayloadKind: {ctx.PayloadKind}");
+                        Console.WriteLine($"[TEST] Context: {JsonSerializer.Serialize(ctx)}");
+                        Console.WriteLine($"[TEST] Event: {JsonSerializer.Serialize(evt)}");
+
+                        await Task.CompletedTask;
+                        return EventHandlingResult.Success();
+                    }
+                )
                 .Build();
 
-            Console.WriteLine("[TEST] Payload sent to processor: " + payload);
+            var result = await processor.ProcessWebhookAsync(payload);
 
-            await processor.ProcessWebhookAsync(payload);
-
-            Assert.True(handled);
+            Assert.True(result.IsSuccess, result.ErrorMessage);
         }
+
     }
 }

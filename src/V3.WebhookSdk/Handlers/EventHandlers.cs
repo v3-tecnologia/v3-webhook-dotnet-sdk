@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Domain.Events.V1;
 using Domain.Orders.V1;
@@ -8,32 +12,159 @@ using OrderEventStatus = Domain.Events.V1.OrderStatus;
 
 namespace V3.WebhookSdk.Handlers
 {
-    public class EventContext
+    public enum EventPayloadKind
     {
-        public string Id { get; set; } = default!;
-        public Status Status { get; set; }
-        public Timestamp CreatedAt { get; set; } = default!;
-        public EventType Type { get; set; }
-        public EventCategory Category { get; set; }
-        public EventSub Sub { get; set; }
-
-        public Device? Device { get; set; }
-
-        public OrderEventStatus? Order { get; set; }
-
-        public Location? Location { get; set; }
+        Dms,
+        Order,
+        Connection,
+        Vision,
+        Hardware,
+        System,
+        Telemetry,
+        Alert,
+        DriverBehavior,
+        Vehicle
     }
 
-    public delegate Task DmsEventHandler(EventContext context, Dms dmsEvent);
-    public delegate Task OrderEventHandler(EventContext context, OrderEventStatus orderEvent);
-    public delegate Task ConnectionEventHandler(EventContext context, Connection connectionEvent);
-    public delegate Task VisionEventHandler(EventContext context, Vision visionEvent);
-    public delegate Task HardwareEventHandler(EventContext context, Health hardwareEvent);
+    /// <summary>
+    /// Responsible for persisting protobuf events.
+    /// Implemented by the SDK consumer.
+    /// </summary>
+    public interface IEventWriter
+    {
+        Task SaveAsync<TEvent>(
+            EventContext context,
+            TEvent evt)
+            where TEvent : IMessage;
+    }
 
-    public delegate Task SystemEventHandler(EventContext context, Domain.Events.V1.System systemEvent);
+    /// <summary>
+    /// Responsible for reading persisted protobuf events and their relationships.
+    /// Implemented by the SDK consumer.
+    /// </summary>
+    public interface IEventReader
+    {
+        Task<TEvent?> GetEventByIdAsync<TEvent>(string id)
+            where TEvent : class, IMessage;
 
-    public delegate Task TelemetryEventHandler(EventContext context, Telemetry telemetryEvent);
-    public delegate Task AlertEventHandler(EventContext context, Alert alertEvent);
-    public delegate Task DriverBehaviorEventHandler(EventContext context, DriverBehavior driverBehaviorEvent);
-    public delegate Task VehicleEventHandler(EventContext context, Vehicle vehicleEvent);
+        Task<IReadOnlyList<TEvent>> GetEventsAsync<TEvent>(int max = 10)
+            where TEvent : class, IMessage;
+
+        Task<TEvent?> GetRootEventAsync<TEvent>(TEvent childEvent)
+            where TEvent : class, IMessage;
+    }
+
+    /// <summary>
+    /// Rich execution context passed to every event handler.
+    /// Provides metadata and persistence helpers.
+    /// </summary>
+    public sealed class EventContext
+    {
+        private readonly IEventWriter? _writer;
+        private readonly IEventReader? _reader;
+
+        public string Id { get; }
+        public EventPayloadKind PayloadKind { get; }
+        public Status Status { get; }
+        public Timestamp CreatedAt { get; }
+        public EventType Type { get; }
+        public EventCategory Category { get; }
+        public EventSub Sub { get; }
+
+        public Device? Device { get; }
+        public Location? Location { get; }
+
+        internal EventContext(
+            string id,
+            Status status,
+            Timestamp createdAt,
+            EventType type,
+            EventCategory category,
+            EventSub sub,
+            Device? device,
+            Location? location,
+            EventPayloadKind payloadKind,
+            IEventWriter? writer,
+            IEventReader? reader)
+        {
+            Id = id;
+            Status = status;
+            CreatedAt = createdAt;
+            Type = type;
+            Category = category;
+            Sub = sub;
+            Device = device;
+            Location = location;
+            PayloadKind = payloadKind;
+            _writer = writer;
+            _reader = reader;
+        }
+
+        /// <summary>
+        /// Persists the given protobuf event.
+        /// </summary>
+        public Task SaveAsync<TEvent>(TEvent evt)
+            where TEvent : IMessage
+        {
+            if (_writer is null)
+                throw new InvalidOperationException("No IEventWriter configured.");
+
+            return _writer.SaveAsync(this, evt);
+        }
+
+        public Task<TEvent?> GetEventByIdAsync<TEvent>(string id)
+            where TEvent : class, IMessage
+        {
+            if (_reader is null)
+                throw new InvalidOperationException("No IEventReader configured.");
+
+            return _reader.GetEventByIdAsync<TEvent>(id);
+        }
+
+        public Task<IReadOnlyList<TEvent>> GetEventsAsync<TEvent>(int max = 10)
+            where TEvent : class, IMessage
+        {
+            if (_reader is null)
+                throw new InvalidOperationException("No IEventReader configured.");
+
+            return _reader.GetEventsAsync<TEvent>(max);
+        }
+
+        public Task<TEvent?> GetRootEventAsync<TEvent>(TEvent evt)
+            where TEvent : class, IMessage
+        {
+            if (_reader is null)
+                throw new InvalidOperationException("No IEventReader configured.");
+
+            return _reader.GetRootEventAsync(evt);
+        }
+    }
+
+    /// <summary>
+    /// Represents the result of a webhook event handler execution.
+    /// </summary>
+    public sealed class EventHandlingResult
+    {
+        public bool IsSuccess { get; }
+        public string? ErrorMessage { get; }
+        public Exception? Exception { get; }
+
+        private EventHandlingResult(
+            bool success,
+            string? errorMessage,
+            Exception? exception)
+        {
+            IsSuccess = success;
+            ErrorMessage = errorMessage;
+            Exception = exception;
+        }
+
+        public static EventHandlingResult Success()
+            => new(true, null, null);
+
+        public static EventHandlingResult Failure(
+            string errorMessage,
+            Exception? exception = null)
+            => new(false, errorMessage, exception);
+    }
 }
