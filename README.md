@@ -68,8 +68,7 @@ var processor = new WebhookEventProcessorBuilder()
     .Build();
 ```
 
-➡️ You can declare **multiple `OnEvent` handlers** in the same builder.  
-➡️ Dispatch is resolved dynamically using metadata + reflection, not a giant switch/case.
+>__NOTE__: You can declare **multiple `OnEvent` handlers** in the same builder.  
 
 ---
 
@@ -137,18 +136,6 @@ public class EventContext
 
 ## Event Payloads
 
-The webhook attribute `attributes` is an **array of Protobuf `Event` messages**:
-
-```proto
-repeated domain.events.v1.Event attributes = 1;
-```
-
-In C#, this maps to:
-
-```csharp
-using Domain.Events.V1;
-```
-
 Each handler receives the **concrete Protobuf type** associated with the selector.
 
 ---
@@ -167,8 +154,6 @@ The SDK currently supports the following event groups:
 - ALERT
 - DRIVER_BEHAVIOR
 - VEHICLE
-
-Each domain maps directly to a Protobuf message and handler delegate.
 
 ---
 
