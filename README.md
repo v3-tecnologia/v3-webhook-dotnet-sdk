@@ -15,7 +15,8 @@ This SDK is **transport-agnostic** (no HTTP server dependency) and can be integr
 - ✅ Strongly-typed event models generated from V3 Protobuf definitions
 - ✅ Native JSON → Protobuf parsing (snake_case JSON → camelCase proto)
 - ✅ Modular event processor with **group + event name routing**
-- ✅ Explicit handler registration per event domain
+- ✅ Fluent, declarative API (no giant switch/case)
+- ✅ Multiple handlers registered via builder pattern
 - ✅ Optional webhook signature validation (HMAC SHA256)
 - ✅ No HTTP framework coupling
 - ✅ Integration tests covering real payloads
@@ -28,7 +29,7 @@ Clone this repository and reference the SDK project:
 
 ```bash
 dotnet add reference V3.WebhookSdk/V3.WebhookSdk.csproj
-``` 
+```
 
 ---
 
@@ -36,33 +37,39 @@ dotnet add reference V3.WebhookSdk/V3.WebhookSdk.csproj
 
 ### 1. Create the Event Processor
 
-Use WebhookEventProcessorBuilder to register handlers for the events you want to process.
+Use `WebhookEventProcessorBuilder` to register handlers for the events you want to process.
 
-Each handler is registered using:
-
-* Event Group (SYSTEM, ORDER, TELEMETRY, etc.)
-
-* Event Name (REBOOT, DEVICE_STATE, ORDER_STATUS_ACK, …)
+Handlers are registered using a **selector-based API**, avoiding procedural dispatch and large switch statements.
 
 ```csharp
 var processor = new WebhookEventProcessorBuilder()
-    .OnOrderEvent("ORDER_STATUS_ACK", async (ctx, evt) =>
-    {
-        Console.WriteLine($"Order ACK received: {evt.Id}");
-        await Task.CompletedTask;
-    })
-    .OnSystemEvent("REBOOT", async (ctx, evt) =>
-    {
-        Console.WriteLine("System reboot event received");
-        await Task.CompletedTask;
-    })
-    .OnTelemetryEvent("IGNITION_STATUS", async (ctx, evt) =>
-    {
-        Console.WriteLine($"Ignition status: {evt.Status}");
-        await Task.CompletedTask;
-    })
+    .OnEvent(
+        EventSelector
+            .Of()
+            .Group("SYSTEM")
+            .EventName("UPLOAD"),
+        async (EventContext ctx, UploadEvent evt) =>
+        {
+            Console.WriteLine($"Upload event received: {evt.Id}");
+            await Task.CompletedTask;
+        }
+    )
+    .OnEvent(
+        EventSelector
+            .Of()
+            .Group("ORDER")
+            .EventName("ORDER_STATUS_ACK"),
+        async (EventContext ctx, OrderStatusAckEvent evt) =>
+        {
+            Console.WriteLine($"Order ACK received: {evt.Id}");
+            await Task.CompletedTask;
+        }
+    )
     .Build();
 ```
+
+➡️ You can declare **multiple `OnEvent` handlers** in the same builder.  
+➡️ Dispatch is resolved dynamically using metadata + reflection, not a giant switch/case.
 
 ---
 
@@ -73,12 +80,19 @@ If you wish to validate the payload signature:
 ```csharp
 var processor = new WebhookEventProcessorBuilder()
     .WithHmacSha256("your-secret-key")
-    .OnSystemEvent("REBOOT", async (ctx, evt) =>
-    {
-        await Task.CompletedTask;
-    })
+    .OnEvent(
+        EventSelector
+            .Of()
+            .Group("SYSTEM")
+            .EventName("REBOOT"),
+        async (ctx, evt) =>
+        {
+            await Task.CompletedTask;
+        }
+    )
     .Build();
 ```
+
 ---
 
 ### 3. Process Incoming Webhooks
@@ -87,20 +101,20 @@ Pass the **raw JSON payload** directly to the processor:
 
 ```csharp
 await processor.ProcessWebhookAsync(jsonPayload, signature);
-``` 
+```
 
-* The SDK will:
+The SDK will:
 
-  * Parse JSON into Protobuf
-  * Resolve the event group and event name
-  * Select the correct handler
-  * Invoke the handler with a typed payload
+- Parse JSON into Protobuf
+- Resolve the event group and event name
+- Locate the correct handler via the selector
+- Invoke the handler with a **strongly-typed Protobuf event**
 
 ---
 
-### Event Context
+## Event Context
 
-Every handler receives an EventContext object with common metadata:
+Every handler receives an `EventContext` object with common metadata:
 
 ```csharp
 public class EventContext
@@ -121,33 +135,51 @@ public class EventContext
 
 ---
 
-### Supported Event Domains
+## Event Payloads
+
+The webhook attribute `attributes` is an **array of Protobuf `Event` messages**:
+
+```proto
+repeated domain.events.v1.Event attributes = 1;
+```
+
+In C#, this maps to:
+
+```csharp
+using Domain.Events.V1;
+```
+
+Each handler receives the **concrete Protobuf type** associated with the selector.
+
+---
+
+## Supported Event Domains
 
 The SDK currently supports the following event groups:
 
-* ORDER
-* DMS (Driver Monitoring System)
-* CONNECTION
-* VISION
-* HEALTH / HARDWARE
-* SYSTEM
-* TELEMETRY
-* ALERT
-* DRIVER_BEHAVIOR
-* VEHICLE
+- ORDER
+- DMS (Driver Monitoring System)
+- CONNECTION
+- VISION
+- HEALTH / HARDWARE
+- SYSTEM
+- TELEMETRY
+- ALERT
+- DRIVER_BEHAVIOR
+- VEHICLE
 
 Each domain maps directly to a Protobuf message and handler delegate.
 
 ---
 
-### Example Project
+## Example Project
 
 See `examples/WebhookExample` for a full **ASP.NET Minimal API** example that:
 
-* Receives webhooks
-* Validates signatures
-* Processes events using this SDK
-* Persists data to PostgreSQL
+- Receives webhooks
+- Validates signatures
+- Processes events using this SDK
+- Persists data to PostgreSQL
 
 You can run it with:
 
@@ -156,3 +188,12 @@ make db-up
 make migrate
 make run
 ```
+
+---
+
+## Design Notes
+
+- Declarative, non-procedural event routing
+- No framework lock-in
+- Reflection-based dispatch using Protobuf descriptors
+- Safe extensibility for new event types without SDK changes
