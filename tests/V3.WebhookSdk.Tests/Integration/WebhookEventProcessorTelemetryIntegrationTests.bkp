@@ -1,3 +1,5 @@
+using Domain.Events.V1;
+using V3.WebhookSdk.Handlers;
 using System;
 using System.IO;
 using System.Text.Json;
@@ -5,7 +7,6 @@ using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Xunit;
 using V3.WebhookSdk.Processing;
-using V3.WebhookSdk.Events;
 
 namespace V3.WebhookSdk.Tests.Integration
 {
@@ -21,10 +22,8 @@ namespace V3.WebhookSdk.Tests.Integration
         private async Task<string> ReadPayloadAsync(string fileName)
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Payloads", "events", "telemetry-events", fileName);
-            Console.WriteLine($"Looking for file: {fileName} in {path}");
             if (!File.Exists(path))
                 throw new FileNotFoundException($"The payload file was not found: {path}");
-
             return await File.ReadAllTextAsync(path);
         }
 
@@ -37,33 +36,38 @@ namespace V3.WebhookSdk.Tests.Integration
         public async Task Should_process_telemetry_events(string fileName, string eventName)
         {
             var eventJson = await ReadPayloadAsync(fileName);
-
             var webhookWrapper = new
             {
                 id = Guid.NewGuid().ToString(),
                 created_at = DateTime.UtcNow.ToString("o"),
-                attributes = new[] { JsonNode.Parse(eventJson) } 
+                attributes = new[] { JsonNode.Parse(eventJson) }
             };
-
             var payload = JsonSerializer.Serialize(webhookWrapper);
-
             var handled = false;
-
             var processor = _builder
-                .OnTelemetryEvent(eventName, async (ctx, evt) =>
-                {
-                    handled = true;
-                    Console.WriteLine("[TEST] Handler called!");
-                    Console.WriteLine($"[TEST] ctx: {System.Text.Json.JsonSerializer.Serialize(ctx)}");
-                    Console.WriteLine($"[TEST] evt: {System.Text.Json.JsonSerializer.Serialize(evt)}");
-                    await Task.CompletedTask;
-                })
+                .OnEvent(
+                    EventSelector.Of().Group("TELEMETRY").EventName(eventName).Build(),
+                    async (EventContext ctx, TelemetryEvent evt) =>
+                    {
+                        handled = true;
+                        Console.WriteLine("[TEST] Handler called!");
+                        Console.WriteLine($"[TEST] ctx: {System.Text.Json.JsonSerializer.Serialize(ctx)}");
+                        Console.WriteLine($"[TEST] evt: {System.Text.Json.JsonSerializer.Serialize(evt)}");
+                        await Task.CompletedTask;
+                    })
                 .Build();
-
-            Console.WriteLine("[TEST] Payload sent to processor: " + payload);
-            await processor.ProcessWebhookAsync(payload);
-
-            Assert.True(handled);
+            var result = await processor.ProcessWebhookAsync(payload);
+            if (!result.IsSuccess)
+            {
+                Console.WriteLine("[TEST][ERROR] Error message: " + result.ErrorMessage);
+                if (result.Exception != null)
+                {
+                    Console.WriteLine("[TEST][ERROR] Exception: " + result.Exception);
+                }
+                Console.WriteLine("[TEST][ERROR] Payload: " + payload);
+            }
+            Assert.True(result.IsSuccess, result.ErrorMessage);
+            Assert.True(handled, "Handler was not called");
         }
     }
 }

@@ -1,39 +1,29 @@
 using Domain.Events.V1;
 using V3.WebhookSdk.Handlers;
+using V3.WebhookSdk.Processing;
+using V3.WebhookSdk.Events;
 using System;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using Xunit;
-using V3.WebhookSdk.Processing;
 
 namespace V3.WebhookSdk.Tests.Integration
 {
-    public class WebhookEventProcessorVisionIntegrationTests
+    public class WebhookEventProcessorOrderIntegrationTests
     {
-        private WebhookEventProcessorBuilder _builder;
-
-        public WebhookEventProcessorVisionIntegrationTests()
-        {
-            _builder = new WebhookEventProcessorBuilder();
-        }
-
         private async Task<string> ReadPayloadAsync(string fileName)
         {
-            var path = Path.Combine(AppContext.BaseDirectory, "Payloads", "events", "vision-basic-events", fileName);
+            var path = Path.Combine(AppContext.BaseDirectory, "Payloads", "orders", fileName);
             if (!File.Exists(path))
                 throw new FileNotFoundException($"The payload file was not found: {path}");
             return await File.ReadAllTextAsync(path);
         }
 
         [Theory]
-        [InlineData("vision-camera-obstructed.json", "CAMERA_OBSTRUCTED")]
-        [InlineData("vision-face-detected.json", "FACE_DETECTED")]
-        [InlineData("vision-face-lost.json", "FACE_LOST")]
-        [InlineData("vision-face-tracked.json", "FACE_TRACKED")]
-        [InlineData("vision-no-face-detected.json", "NO_FACE_DETECTED")]
-        public async Task Should_process_vision_events(string fileName, string eventName)
+        [InlineData("order_status.json", OrderEventNames.Ack)]
+        public async Task Should_process_order_status_events(string fileName, string eventName)
         {
             var eventJson = await ReadPayloadAsync(fileName);
             var webhookWrapper = new
@@ -44,17 +34,18 @@ namespace V3.WebhookSdk.Tests.Integration
             };
             var payload = JsonSerializer.Serialize(webhookWrapper);
             var handled = false;
-            var processor = _builder
-                    .OnEvent(
-                        EventSelector.Of().Group("VISION").EventName(eventName).Build(),
-                        async (EventContext ctx, VisionEvent evt) =>
-                {
-                    handled = true;
-                    Console.WriteLine("[TEST] Handler called!");
-                    Console.WriteLine($"[TEST] ctx: {System.Text.Json.JsonSerializer.Serialize(ctx)}");
-                    Console.WriteLine($"[TEST] evt: {System.Text.Json.JsonSerializer.Serialize(evt)}");
-                    await Task.CompletedTask;
-                })
+            var processor = new WebhookEventProcessorBuilder()
+                .OnEvent(
+                    EventSelector.Of().Group("ORDER").EventName(eventName).Build(),
+                    async (EventContext ctx, OrderStatus evt) =>
+                    {
+                        handled = true;
+                        Console.WriteLine("[TEST] Handler called!");
+                        Console.WriteLine($"[TEST] ctx: {JsonSerializer.Serialize(ctx)}");
+                        Console.WriteLine($"[TEST] evt: {JsonSerializer.Serialize(evt)}");
+                        await Task.CompletedTask;
+                        return EventHandlingResult.Success();
+                    })
                 .Build();
             var result = await processor.ProcessWebhookAsync(payload);
             if (!result.IsSuccess)
