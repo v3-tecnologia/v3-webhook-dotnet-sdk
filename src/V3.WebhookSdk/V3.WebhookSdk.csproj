@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>V3.WebhookSdk</PackageId>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <Authors>V3 Tecnologia</Authors>
     <Company>V3 Tecnologia</Company>
 
