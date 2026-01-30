@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B5A+T/n1A4IkN0M5V0e89z3K0Asq/v2281lS5at7VxqsIBEimxFhaOd54Du0r+ybSDQgriLJpag+rj7v9Jdh4A==",
+  "dgSpecHash": "yZ6Gel7R1iNvqy7EEmBesNkeJcB0rwjF/u1POUyHrdryMITKZDW7YsrZmaDaugcAPHoclEa/RSAF/WkJaqJx9g==",
   "success": true,
   "projectFilePath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
   "expectedPackageFiles": [

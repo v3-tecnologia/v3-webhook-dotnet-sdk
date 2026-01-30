@@ -118,17 +118,18 @@ Every handler receives an `EventContext` object with common metadata:
 ```csharp
 public class EventContext
 {
-    public string Id { get; set; }
-    public Status Status { get; set; }
-    public Timestamp CreatedAt { get; set; }
+    public string Id { get; }
+    public bool HasMedia { get; }
+    public Status Status { get; }
+    public Timestamp CreatedAt { get; }
 
-    public EventType Type { get; set; }
-    public EventCategory Category { get; set; }
-    public EventSub Sub { get; set; }
+    public EventType Type { get; }
+    public EventCategory Category { get; }
+    public EventSub Sub { get; }
 
-    public Device? Device { get; set; }
-    public OrderStatus? Order { get; set; }
-    public Location? Location { get; set; }
+    public Device? Device { get; }
+    public OrderStatus? Order { get; }
+    public Location? Location { get; }
 }
 ```
 

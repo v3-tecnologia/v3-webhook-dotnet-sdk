@@ -9,7 +9,7 @@
       "V3.WebhookSdk.Tests/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.6.0",
-          "V3.WebhookSdk": "1.0.0",
+          "V3.WebhookSdk": "0.1.2",
           "coverlet.collector": "6.0.0",
           "xunit": "2.4.2",
           "xunit.abstractions": "2.0.3",
@@ -1140,7 +1140,7 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
-      "V3.WebhookSdk/1.0.0": {
+      "V3.WebhookSdk/0.1.2": {
         "dependencies": {
           "Google.Protobuf": "3.33.2",
           "System.Text.Json": "10.0.1",
@@ -1858,7 +1858,7 @@
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
-    "V3.WebhookSdk/1.0.0": {
+    "V3.WebhookSdk/0.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

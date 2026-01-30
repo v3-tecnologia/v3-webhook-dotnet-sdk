@@ -1,5 +1,6 @@
 {
   "id": "01HXXXXXXXXXXXXXXXXXXXXX",
+  "has_media": false,
   "status": "STATUS_RECEIVED",
   "type": "EVENT_TYPE_GENERAL",
   "category": "EVENT_CATEGORY_ALERT",
@@ -53,7 +54,7 @@
           "mcc": "724",
           "mnc": "10",
           "imei": "IMEI123456789012345",
-          "signal_strength": "-75dBm"
+          "signal_strength": -75
         },
         "connectivity": {
           "ssid": "CompanyWiFi",

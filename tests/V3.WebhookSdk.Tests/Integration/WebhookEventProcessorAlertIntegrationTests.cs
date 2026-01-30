@@ -80,8 +80,18 @@ namespace V3.WebhookSdk.Tests.Integration
                 )
                 .Build();
 
+
             var result = await processor.ProcessWebhookAsync(payload);
 
+            if (!result.IsSuccess)
+            {
+                Console.WriteLine("[TEST][ERROR] Error message: " + result.ErrorMessage);
+                if (result.Exception != null)
+                {
+                    Console.WriteLine("[TEST][ERROR] Exception: " + result.Exception);
+                }
+                Console.WriteLine("[TEST][ERROR] Payload: " + payload);
+            }
             Assert.True(result.IsSuccess, result.ErrorMessage);
 
             var persisted = await _reader.GetEventsAsync<ImpactEvent>();
