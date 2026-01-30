@@ -140,6 +140,7 @@ namespace V3.WebhookSdk.Processing
 
             var context = new EventContext(
                 id: evt.Id,
+                hasMedia: evt.HasMedia,
                 status: evt.Status,
                 createdAt: evt.CreatedAt,
                 type: evt.Type,

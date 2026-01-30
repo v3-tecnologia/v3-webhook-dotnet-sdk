@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
+package domain.events.v1;
+
 import "buf/validate/validate.proto";
-import "domain/v1/orders/device.proto";
+import "domain/v1/events/adas_event.proto";
 import "domain/v1/events/alert_event.proto";
 import "domain/v1/events/connection_event.proto";
 import "domain/v1/events/dms_event.proto";
@@ -13,16 +14,15 @@ import "domain/v1/events/system_event.proto";
 import "domain/v1/events/telemetry_event.proto";
 import "domain/v1/events/vehicle_event.proto";
 import "domain/v1/events/vision_event.proto";
-import "domain/v1/events/adas_event.proto";
 import "domain/v1/location/location.proto";
+import "domain/v1/orders/device.proto";
+import "google/protobuf/timestamp.proto";
 
-option java_multiple_files = true;
-option java_package = "br.com.v3.protocol.domain.events";
-option java_outer_classname = "EventProto";
 option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option java_multiple_files = true;
+option java_outer_classname = "EventProto";
+option java_package = "br.com.v3.protocol.domain.events";
 option optimize_for = CODE_SIZE;
-
-package domain.events.v1;
 
 enum Status {
   // Default status, used when no specific status is assigned
@@ -47,7 +47,7 @@ enum EventType {
   EVENT_TYPE_ORDER = 1;
 
   // General events
-  EVENT_TYPE_GENERAL = 2; 
+  EVENT_TYPE_GENERAL = 2;
 
   // For compatibility with JSON naming conventions
   ORDER = 1;
@@ -60,35 +60,35 @@ enum EventCategory {
   EVENT_CATEGORY_UNSPECIFIED = 0;
 
   // Advanced Driver Assistance System events
-  EVENT_CATEGORY_ADAS = 1; 
+  EVENT_CATEGORY_ADAS = 1;
 
   // Alert events
-  EVENT_CATEGORY_ALERT = 2; 
-  
+  EVENT_CATEGORY_ALERT = 2;
+
   // Connection-related events
-  EVENT_CATEGORY_CONNECTION = 3; 
-  
+  EVENT_CATEGORY_CONNECTION = 3;
+
   // Driver Monitoring System events
   EVENT_CATEGORY_DMS = 4;
 
   // Driver behavior events
-  EVENT_CATEGORY_DRIVER_BEHAVIOR = 5; 
+  EVENT_CATEGORY_DRIVER_BEHAVIOR = 5;
 
   // Health-related events
-  EVENT_CATEGORY_HEALTH = 6; 
-  
+  EVENT_CATEGORY_HEALTH = 6;
+
   // Order-related events
-  EVENT_CATEGORY_ORDER = 7; 
-  
+  EVENT_CATEGORY_ORDER = 7;
+
   // System events
-  EVENT_CATEGORY_SYSTEM = 8; 
-  
+  EVENT_CATEGORY_SYSTEM = 8;
+
   // Telemetry events
-  EVENT_CATEGORY_TELEMETRY = 9; 
-  
+  EVENT_CATEGORY_TELEMETRY = 9;
+
   // Vehicle-related events
-  EVENT_CATEGORY_VEHICLE = 10; 
-  
+  EVENT_CATEGORY_VEHICLE = 10;
+
   // Vision-related events
   EVENT_CATEGORY_VISION = 11;
 
@@ -114,7 +114,7 @@ enum EventSub {
   EVENT_SUB_ALERT_INFO = 1;
   EVENT_SUB_ALERT_CRITICAL = 2;
   EVENT_SUB_ALERT_WARNING = 3;
-  
+
   EVENT_SUB_CONNECTION_STATUS_CHANGED = 4;
 
   EVENT_SUB_DMS_ADVANCED = 5;
@@ -203,9 +203,11 @@ message Event {
   // Unique identifier for the Event.
   string id = 1 [(buf.validate.field).string.min_len = 1];
 
+  bool has_media = 8;
+
   Status status = 7;
 
-  google.protobuf.Timestamp created_at = 2 [(buf.validate.field).timestamp.lt_now = true]; 
+  google.protobuf.Timestamp created_at = 2 [(buf.validate.field).timestamp.lt_now = true];
 
   // ORDER, EVENT
   EventType type = 3;

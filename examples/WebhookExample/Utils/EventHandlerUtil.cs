@@ -21,6 +21,7 @@ namespace WebhookExample.Utils
 Type:    {typeof(TEvent).Name}
 Kind:    {ctx.PayloadKind}
 Context: {contextJson}
+HasMedia: {ctx.HasMedia}
 Event:   {eventJson}
 ==========================================================
 """);

@@ -25,61 +25,63 @@ namespace Domain.Events.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidkb21haW4vdjEvZXZlbnRzL2Nvbm5lY3Rpb25fZXZlbnQucHJvdG8SEGRv",
-            "bWFpbi5ldmVudHMudjEaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8aG2J1Zi92YWxpZGF0ZS92YWxpZGF0ZS5wcm90bxohZG9tYWluL3YxL2xv",
-            "Y2F0aW9uL2xvY2F0aW9uLnByb3RvIqMBChFDb25uZWN0aW9uRGV0YWlscxIu",
-            "CgR0eXBlGAEgASgOMiAuZG9tYWluLmV2ZW50cy52MS5Db25uZWN0aW9uVHlw",
-            "ZRIMCgRhcmVhGAIgASgFEg8KB2NlbGxfaWQYAyABKAUSCwoDbWNjGAQgASgJ",
-            "EgsKA21uYxgFIAEoCRIMCgRpbWVpGAYgASgJEhcKD3NpZ25hbF9zdHJlbmd0",
-            "aBgHIAEoCSI9CgtXaWZpRGV0YWlscxIVCgRzc2lkGAEgASgJQge6SARyAhAB",
-            "EhcKD3NpZ25hbF9zdHJlbmd0aBgCIAEoBSKpAQoZRGF0YVBsYW5lQ29uc3Vt",
-            "cHRpb25FdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEg0KBXRvdGFsGAIg",
-            "ASgDEi4KCGxvY2F0aW9uGAMgASgLMhwuZG9tYWluLmxvY2F0aW9uLnYxLkxv",
-            "Y2F0aW9uEjYKCHJlc2V0X2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEIIukgFsgECOAEihgEKDFNpbUNhcmRFdmVudBIVCgRuYW1lGAEg",
-            "ASgJQge6SARyAhABEi8KBnN0YXR1cxgCIAEoDjIfLmRvbWFpbi5ldmVudHMu",
-            "djEuU2ltQ2FyZFN0YXR1cxIuCghsb2NhdGlvbhgDIAEoCzIcLmRvbWFpbi5s",
-            "b2NhdGlvbi52MS5Mb2NhdGlvbiK/AQoTV2lmaUNvbm5lY3Rpb25FdmVudBIV",
-            "CgRuYW1lGAEgASgJQge6SARyAhABEjMKDHdpZmlfZGV0YWlscxgCIAEoCzId",
-            "LmRvbWFpbi5ldmVudHMudjEuV2lmaURldGFpbHMSLAoGc3RhdHVzGAMgASgO",
-            "MhwuZG9tYWluLmV2ZW50cy52MS5XaWZpU3RhdHVzEi4KCGxvY2F0aW9uGAQg",
-            "ASgLMhwuZG9tYWluLmxvY2F0aW9uLnYxLkxvY2F0aW9uIvsCCgpDb25uZWN0",
-            "aW9uEhMKAmlkGAEgASgJQge6SARyAhABEjQKB2RldGFpbHMYAiABKAsyIy5k",
-            "b21haW4uZXZlbnRzLnYxLkNvbm5lY3Rpb25EZXRhaWxzEhsKCmV2ZW50X25h",
-            "bWUYAyABKAlCB7pIBHICEAESTQoWZGF0YV9wbGFuZV9jb25zdW1wdGlvbhgE",
-            "IAEoCzIrLmRvbWFpbi5ldmVudHMudjEuRGF0YVBsYW5lQ29uc3VtcHRpb25F",
-            "dmVudEgAEjIKCHNpbV9jYXJkGAUgASgLMh4uZG9tYWluLmV2ZW50cy52MS5T",
-            "aW1DYXJkRXZlbnRIABJACg93aWZpX2Nvbm5lY3Rpb24YBiABKAsyJS5kb21h",
-            "aW4uZXZlbnRzLnYxLldpZmlDb25uZWN0aW9uRXZlbnRIABI3Cgl0aW1lc3Rh",
-            "bXAYZCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgi6SAWyAQI4",
-            "AUIHCgVldmVudCqNAgoOQ29ubmVjdGlvblR5cGUSHwobQ09OTkVDVElPTl9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASHAoYQ09OTkVDVElPTl9UWVBFX0NFTExVTEFS",
-            "EAESGAoUQ09OTkVDVElPTl9UWVBFX1dJRkkQAhIcChhDT05ORUNUSU9OX1RZ",
-            "UEVfRVRIRVJORVQQAxIdChlDT05ORUNUSU9OX1RZUEVfQkxVRVRPT1RIEAQS",
-            "HQoZQ09OTkVDVElPTl9UWVBFX1NBVEVMTElURRAFEgwKCENFTExVTEFSEAES",
-            "CAoEV0lGSRACEgwKCEVUSEVSTkVUEAMSDQoJQkxVRVRPT1RIEAQSDQoJU0FU",
-            "RUxMSVRFEAUaAhABKqwBCg1TaW1DYXJkU3RhdHVzEh8KG1NJTV9DQVJEX1NU",
-            "QVRVU19VTlNQRUNJRklFRBAAEhsKF1NJTV9DQVJEX1NUQVRVU19QUkVTRU5U",
-            "EAESGgoWU0lNX0NBUkRfU1RBVFVTX0FCU0VOVBACEhkKFVNJTV9DQVJEX1NU",
-            "QVRVU19FUlJPUhADEgsKB1BSRVNFTlQQARIKCgZBQlNFTlQQAhIJCgVFUlJP",
-            "UhADGgIQASrXAQoKV2lmaVN0YXR1cxIbChdXSUZJX1NUQVRVU19VTlNQRUNJ",
-            "RklFRBAAEhkKFVdJRklfU1RBVFVTX0NPTk5FQ1RFRBABEhwKGFdJRklfU1RB",
-            "VFVTX0RJU0NPTk5FQ1RFRBACEhoKFldJRklfU1RBVFVTX0NPTk5FQ1RJTkcQ",
-            "AxIWChJXSUZJX1NUQVRVU19GQUlMRUQQBBINCglDT05ORUNURUQQARIQCgxE",
-            "SVNDT05ORUNURUQQAhIOCgpDT05ORUNUSU5HEAMSCgoGRkFJTEVEEAQaAhAB",
-            "QoMBCiBici5jb20udjMucHJvdG9jb2wuZG9tYWluLmV2ZW50c0IUQ29ubmVj",
-            "dGlvbkV2ZW50UHJvdG9IAlABWkVnaXRodWIuY29tL3YzLXRlY25vbG9naWEv",
-            "cHJvdG9jb2wtY2xvdWQvcHJvdG8vZ2VuL2RvbWFpbi92MS9ldmVudHM7djFi",
-            "BnByb3RvMw=="));
+            "bWFpbi5ldmVudHMudjEaG2J1Zi92YWxpZGF0ZS92YWxpZGF0ZS5wcm90bxoh",
+            "ZG9tYWluL3YxL2xvY2F0aW9uL2xvY2F0aW9uLnByb3RvGh9kb21haW4vdjEv",
+            "bmV0d29yay9uZXR3b3JrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
+            "YW1wLnByb3RvIvIBChFDb25uZWN0aW9uRGV0YWlscxIuCgR0eXBlGAEgASgO",
+            "MiAuZG9tYWluLmV2ZW50cy52MS5Db25uZWN0aW9uVHlwZRIMCgRhcmVhGAIg",
+            "ASgFEg8KB2NlbGxfaWQYAyABKAUSCwoDbWNjGAQgASgJEgsKA21uYxgFIAEo",
+            "CRIMCgRpbWVpGAYgASgJEhcKD3NpZ25hbF9zdHJlbmd0aBgHIAEoBRINCgVp",
+            "Y2NpZBgIIAEoCRISCgppcF9hZGRyZXNzGAkgASgJEhQKDGNhcnJpZXJfbmFt",
+            "ZRgKIAEoCRIUCgxjYXJyaWVyX2NvZGUYCyABKAkiPQoLV2lmaURldGFpbHMS",
+            "FQoEc3NpZBgBIAEoCUIHukgEcgIQARIXCg9zaWduYWxfc3RyZW5ndGgYAiAB",
+            "KAUitwEKDE5ldHdvcmtFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEi4K",
+            "CWRhdGFfcGxhbhgCIAEoCzIbLmRvbWFpbi5uZXR3b3JrLnYxLkRhdGFQbGFu",
+            "EjAKCmRhdGFfdXNhZ2UYAyABKAsyHC5kb21haW4ubmV0d29yay52MS5EYXRh",
+            "VXNhZ2USLgoIbG9jYXRpb24YBCABKAsyHC5kb21haW4ubG9jYXRpb24udjEu",
+            "TG9jYXRpb24ihgEKDFNpbUNhcmRFdmVudBIVCgRuYW1lGAEgASgJQge6SARy",
+            "AhABEi8KBnN0YXR1cxgCIAEoDjIfLmRvbWFpbi5ldmVudHMudjEuU2ltQ2Fy",
+            "ZFN0YXR1cxIuCghsb2NhdGlvbhgDIAEoCzIcLmRvbWFpbi5sb2NhdGlvbi52",
+            "MS5Mb2NhdGlvbiK/AQoTV2lmaUNvbm5lY3Rpb25FdmVudBIVCgRuYW1lGAEg",
+            "ASgJQge6SARyAhABEjMKDHdpZmlfZGV0YWlscxgCIAEoCzIdLmRvbWFpbi5l",
+            "dmVudHMudjEuV2lmaURldGFpbHMSLAoGc3RhdHVzGAMgASgOMhwuZG9tYWlu",
+            "LmV2ZW50cy52MS5XaWZpU3RhdHVzEi4KCGxvY2F0aW9uGAQgASgLMhwuZG9t",
+            "YWluLmxvY2F0aW9uLnYxLkxvY2F0aW9uIt8CCgpDb25uZWN0aW9uEhMKAmlk",
+            "GAEgASgJQge6SARyAhABEjQKB2RldGFpbHMYAiABKAsyIy5kb21haW4uZXZl",
+            "bnRzLnYxLkNvbm5lY3Rpb25EZXRhaWxzEhsKCmV2ZW50X25hbWUYAyABKAlC",
+            "B7pIBHICEAESMQoHbmV0d29yaxgEIAEoCzIeLmRvbWFpbi5ldmVudHMudjEu",
+            "TmV0d29ya0V2ZW50SAASMgoIc2ltX2NhcmQYBSABKAsyHi5kb21haW4uZXZl",
+            "bnRzLnYxLlNpbUNhcmRFdmVudEgAEkAKD3dpZmlfY29ubmVjdGlvbhgGIAEo",
+            "CzIlLmRvbWFpbi5ldmVudHMudjEuV2lmaUNvbm5lY3Rpb25FdmVudEgAEjcK",
+            "CXRpbWVzdGFtcBhkIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "CLpIBbIBAjgBQgcKBWV2ZW50Ko0CCg5Db25uZWN0aW9uVHlwZRIfChtDT05O",
+            "RUNUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIcChhDT05ORUNUSU9OX1RZUEVf",
+            "Q0VMTFVMQVIQARIYChRDT05ORUNUSU9OX1RZUEVfV0lGSRACEhwKGENPTk5F",
+            "Q1RJT05fVFlQRV9FVEhFUk5FVBADEh0KGUNPTk5FQ1RJT05fVFlQRV9CTFVF",
+            "VE9PVEgQBBIdChlDT05ORUNUSU9OX1RZUEVfU0FURUxMSVRFEAUSDAoIQ0VM",
+            "TFVMQVIQARIICgRXSUZJEAISDAoIRVRIRVJORVQQAxINCglCTFVFVE9PVEgQ",
+            "BBINCglTQVRFTExJVEUQBRoCEAEqrAEKDVNpbUNhcmRTdGF0dXMSHwobU0lN",
+            "X0NBUkRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASGwoXU0lNX0NBUkRfU1RBVFVT",
+            "X1BSRVNFTlQQARIaChZTSU1fQ0FSRF9TVEFUVVNfQUJTRU5UEAISGQoVU0lN",
+            "X0NBUkRfU1RBVFVTX0VSUk9SEAMSCwoHUFJFU0VOVBABEgoKBkFCU0VOVBAC",
+            "EgkKBUVSUk9SEAMaAhABKtcBCgpXaWZpU3RhdHVzEhsKF1dJRklfU1RBVFVT",
+            "X1VOU1BFQ0lGSUVEEAASGQoVV0lGSV9TVEFUVVNfQ09OTkVDVEVEEAESHAoY",
+            "V0lGSV9TVEFUVVNfRElTQ09OTkVDVEVEEAISGgoWV0lGSV9TVEFUVVNfQ09O",
+            "TkVDVElORxADEhYKEldJRklfU1RBVFVTX0ZBSUxFRBAEEg0KCUNPTk5FQ1RF",
+            "RBABEhAKDERJU0NPTk5FQ1RFRBACEg4KCkNPTk5FQ1RJTkcQAxIKCgZGQUlM",
+            "RUQQBBoCEAFCgwEKIGJyLmNvbS52My5wcm90b2NvbC5kb21haW4uZXZlbnRz",
+            "QhRDb25uZWN0aW9uRXZlbnRQcm90b0gCUAFaRWdpdGh1Yi5jb20vdjMtdGVj",
+            "bm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90by9nZW4vZG9tYWluL3YxL2V2",
+            "ZW50czt2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Network.V1.NetworkReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.ConnectionType), typeof(global::Domain.Events.V1.SimCardStatus), typeof(global::Domain.Events.V1.WifiStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.ConnectionDetails), global::Domain.Events.V1.ConnectionDetails.Parser, new[]{ "Type", "Area", "CellId", "Mcc", "Mnc", "Imei", "SignalStrength" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.ConnectionDetails), global::Domain.Events.V1.ConnectionDetails.Parser, new[]{ "Type", "Area", "CellId", "Mcc", "Mnc", "Imei", "SignalStrength", "Iccid", "IpAddress", "CarrierName", "CarrierCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.WifiDetails), global::Domain.Events.V1.WifiDetails.Parser, new[]{ "Ssid", "SignalStrength" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.DataPlaneConsumptionEvent), global::Domain.Events.V1.DataPlaneConsumptionEvent.Parser, new[]{ "Name", "Total", "Location", "ResetAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.NetworkEvent), global::Domain.Events.V1.NetworkEvent.Parser, new[]{ "Name", "DataPlan", "DataUsage", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.SimCardEvent), global::Domain.Events.V1.SimCardEvent.Parser, new[]{ "Name", "Status", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.WifiConnectionEvent), global::Domain.Events.V1.WifiConnectionEvent.Parser, new[]{ "Name", "WifiDetails", "Status", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Connection), global::Domain.Events.V1.Connection.Parser, new[]{ "Id", "Details", "EventName", "DataPlaneConsumption", "SimCard", "WifiConnection", "Timestamp" }, new[]{ "Event" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Connection), global::Domain.Events.V1.Connection.Parser, new[]{ "Id", "Details", "EventName", "Network", "SimCard", "WifiConnection", "Timestamp" }, new[]{ "Event" }, null, null, null)
           }));
     }
     #endregion
@@ -176,6 +178,10 @@ namespace Domain.Events.V1 {
       mnc_ = other.mnc_;
       imei_ = other.imei_;
       signalStrength_ = other.signalStrength_;
+      iccid_ = other.iccid_;
+      ipAddress_ = other.ipAddress_;
+      carrierName_ = other.carrierName_;
+      carrierCode_ = other.carrierCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -265,13 +271,61 @@ namespace Domain.Events.V1 {
 
     /// <summary>Field number for the "signal_strength" field.</summary>
     public const int SignalStrengthFieldNumber = 7;
-    private string signalStrength_ = "";
+    private int signalStrength_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SignalStrength {
+    public int SignalStrength {
       get { return signalStrength_; }
       set {
-        signalStrength_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        signalStrength_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "iccid" field.</summary>
+    public const int IccidFieldNumber = 8;
+    private string iccid_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Iccid {
+      get { return iccid_; }
+      set {
+        iccid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 9;
+    private string ipAddress_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "carrier_name" field.</summary>
+    public const int CarrierNameFieldNumber = 10;
+    private string carrierName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CarrierName {
+      get { return carrierName_; }
+      set {
+        carrierName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "carrier_code" field.</summary>
+    public const int CarrierCodeFieldNumber = 11;
+    private string carrierCode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CarrierCode {
+      get { return carrierCode_; }
+      set {
+        carrierCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -297,6 +351,10 @@ namespace Domain.Events.V1 {
       if (Mnc != other.Mnc) return false;
       if (Imei != other.Imei) return false;
       if (SignalStrength != other.SignalStrength) return false;
+      if (Iccid != other.Iccid) return false;
+      if (IpAddress != other.IpAddress) return false;
+      if (CarrierName != other.CarrierName) return false;
+      if (CarrierCode != other.CarrierCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -310,7 +368,11 @@ namespace Domain.Events.V1 {
       if (Mcc.Length != 0) hash ^= Mcc.GetHashCode();
       if (Mnc.Length != 0) hash ^= Mnc.GetHashCode();
       if (Imei.Length != 0) hash ^= Imei.GetHashCode();
-      if (SignalStrength.Length != 0) hash ^= SignalStrength.GetHashCode();
+      if (SignalStrength != 0) hash ^= SignalStrength.GetHashCode();
+      if (Iccid.Length != 0) hash ^= Iccid.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (CarrierName.Length != 0) hash ^= CarrierName.GetHashCode();
+      if (CarrierCode.Length != 0) hash ^= CarrierCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -353,9 +415,25 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(50);
         output.WriteString(Imei);
       }
-      if (SignalStrength.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(SignalStrength);
+      if (SignalStrength != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SignalStrength);
+      }
+      if (Iccid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Iccid);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(IpAddress);
+      }
+      if (CarrierName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CarrierName);
+      }
+      if (CarrierCode.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CarrierCode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -391,9 +469,25 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(50);
         output.WriteString(Imei);
       }
-      if (SignalStrength.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(SignalStrength);
+      if (SignalStrength != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SignalStrength);
+      }
+      if (Iccid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Iccid);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(IpAddress);
+      }
+      if (CarrierName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CarrierName);
+      }
+      if (CarrierCode.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CarrierCode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -423,8 +517,20 @@ namespace Domain.Events.V1 {
       if (Imei.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Imei);
       }
-      if (SignalStrength.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SignalStrength);
+      if (SignalStrength != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SignalStrength);
+      }
+      if (Iccid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Iccid);
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (CarrierName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CarrierName);
+      }
+      if (CarrierCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CarrierCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -456,8 +562,20 @@ namespace Domain.Events.V1 {
       if (other.Imei.Length != 0) {
         Imei = other.Imei;
       }
-      if (other.SignalStrength.Length != 0) {
+      if (other.SignalStrength != 0) {
         SignalStrength = other.SignalStrength;
+      }
+      if (other.Iccid.Length != 0) {
+        Iccid = other.Iccid;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      if (other.CarrierName.Length != 0) {
+        CarrierName = other.CarrierName;
+      }
+      if (other.CarrierCode.Length != 0) {
+        CarrierCode = other.CarrierCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -502,8 +620,24 @@ namespace Domain.Events.V1 {
             Imei = input.ReadString();
             break;
           }
-          case 58: {
-            SignalStrength = input.ReadString();
+          case 56: {
+            SignalStrength = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            Iccid = input.ReadString();
+            break;
+          }
+          case 74: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 82: {
+            CarrierName = input.ReadString();
+            break;
+          }
+          case 90: {
+            CarrierCode = input.ReadString();
             break;
           }
         }
@@ -549,8 +683,24 @@ namespace Domain.Events.V1 {
             Imei = input.ReadString();
             break;
           }
-          case 58: {
-            SignalStrength = input.ReadString();
+          case 56: {
+            SignalStrength = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            Iccid = input.ReadString();
+            break;
+          }
+          case 74: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 82: {
+            CarrierName = input.ReadString();
+            break;
+          }
+          case 90: {
+            CarrierCode = input.ReadString();
             break;
           }
         }
@@ -799,16 +949,16 @@ namespace Domain.Events.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class DataPlaneConsumptionEvent : pb::IMessage<DataPlaneConsumptionEvent>
+  public sealed partial class NetworkEvent : pb::IMessage<NetworkEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<DataPlaneConsumptionEvent> _parser = new pb::MessageParser<DataPlaneConsumptionEvent>(() => new DataPlaneConsumptionEvent());
+    private static readonly pb::MessageParser<NetworkEvent> _parser = new pb::MessageParser<NetworkEvent>(() => new NetworkEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<DataPlaneConsumptionEvent> Parser { get { return _parser; } }
+    public static pb::MessageParser<NetworkEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -824,7 +974,7 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataPlaneConsumptionEvent() {
+    public NetworkEvent() {
       OnConstruction();
     }
 
@@ -832,25 +982,25 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataPlaneConsumptionEvent(DataPlaneConsumptionEvent other) : this() {
+    public NetworkEvent(NetworkEvent other) : this() {
       name_ = other.name_;
-      total_ = other.total_;
+      dataPlan_ = other.dataPlan_ != null ? other.dataPlan_.Clone() : null;
+      dataUsage_ = other.dataUsage_ != null ? other.dataUsage_.Clone() : null;
       location_ = other.location_ != null ? other.location_.Clone() : null;
-      resetAt_ = other.resetAt_ != null ? other.resetAt_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataPlaneConsumptionEvent Clone() {
-      return new DataPlaneConsumptionEvent(this);
+    public NetworkEvent Clone() {
+      return new NetworkEvent(this);
     }
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// e.g., "DATA_PLANE_CONSUMPTION"
+    /// e.g., "NETWORK_EVENT"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -861,23 +1011,32 @@ namespace Domain.Events.V1 {
       }
     }
 
-    /// <summary>Field number for the "total" field.</summary>
-    public const int TotalFieldNumber = 2;
-    private long total_;
-    /// <summary>
-    /// Total bytes sent
-    /// </summary>
+    /// <summary>Field number for the "data_plan" field.</summary>
+    public const int DataPlanFieldNumber = 2;
+    private global::Domain.Network.V1.DataPlan dataPlan_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Total {
-      get { return total_; }
+    public global::Domain.Network.V1.DataPlan DataPlan {
+      get { return dataPlan_; }
       set {
-        total_ = value;
+        dataPlan_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_usage" field.</summary>
+    public const int DataUsageFieldNumber = 3;
+    private global::Domain.Network.V1.DataUsage dataUsage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Network.V1.DataUsage DataUsage {
+      get { return dataUsage_; }
+      set {
+        dataUsage_ = value;
       }
     }
 
     /// <summary>Field number for the "location" field.</summary>
-    public const int LocationFieldNumber = 3;
+    public const int LocationFieldNumber = 4;
     private global::Domain.Location.V1.Location location_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -888,27 +1047,15 @@ namespace Domain.Events.V1 {
       }
     }
 
-    /// <summary>Field number for the "reset_at" field.</summary>
-    public const int ResetAtFieldNumber = 4;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp resetAt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp ResetAt {
-      get { return resetAt_; }
-      set {
-        resetAt_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as DataPlaneConsumptionEvent);
+      return Equals(other as NetworkEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(DataPlaneConsumptionEvent other) {
+    public bool Equals(NetworkEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -916,9 +1063,9 @@ namespace Domain.Events.V1 {
         return true;
       }
       if (Name != other.Name) return false;
-      if (Total != other.Total) return false;
+      if (!object.Equals(DataPlan, other.DataPlan)) return false;
+      if (!object.Equals(DataUsage, other.DataUsage)) return false;
       if (!object.Equals(Location, other.Location)) return false;
-      if (!object.Equals(ResetAt, other.ResetAt)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -927,9 +1074,9 @@ namespace Domain.Events.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Total != 0L) hash ^= Total.GetHashCode();
+      if (dataPlan_ != null) hash ^= DataPlan.GetHashCode();
+      if (dataUsage_ != null) hash ^= DataUsage.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
-      if (resetAt_ != null) hash ^= ResetAt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -952,17 +1099,17 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Total != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(Total);
+      if (dataPlan_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DataPlan);
+      }
+      if (dataUsage_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DataUsage);
       }
       if (location_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Location);
-      }
-      if (resetAt_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(ResetAt);
+        output.WriteMessage(Location);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -978,17 +1125,17 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Total != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(Total);
+      if (dataPlan_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DataPlan);
+      }
+      if (dataUsage_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DataUsage);
       }
       if (location_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Location);
-      }
-      if (resetAt_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(ResetAt);
+        output.WriteMessage(Location);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1003,14 +1150,14 @@ namespace Domain.Events.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Total != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Total);
+      if (dataPlan_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataPlan);
+      }
+      if (dataUsage_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataUsage);
       }
       if (location_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
-      }
-      if (resetAt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResetAt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1020,27 +1167,30 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(DataPlaneConsumptionEvent other) {
+    public void MergeFrom(NetworkEvent other) {
       if (other == null) {
         return;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.Total != 0L) {
-        Total = other.Total;
+      if (other.dataPlan_ != null) {
+        if (dataPlan_ == null) {
+          DataPlan = new global::Domain.Network.V1.DataPlan();
+        }
+        DataPlan.MergeFrom(other.DataPlan);
+      }
+      if (other.dataUsage_ != null) {
+        if (dataUsage_ == null) {
+          DataUsage = new global::Domain.Network.V1.DataUsage();
+        }
+        DataUsage.MergeFrom(other.DataUsage);
       }
       if (other.location_ != null) {
         if (location_ == null) {
           Location = new global::Domain.Location.V1.Location();
         }
         Location.MergeFrom(other.Location);
-      }
-      if (other.resetAt_ != null) {
-        if (resetAt_ == null) {
-          ResetAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        ResetAt.MergeFrom(other.ResetAt);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1065,22 +1215,25 @@ namespace Domain.Events.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            Total = input.ReadInt64();
+          case 18: {
+            if (dataPlan_ == null) {
+              DataPlan = new global::Domain.Network.V1.DataPlan();
+            }
+            input.ReadMessage(DataPlan);
             break;
           }
           case 26: {
+            if (dataUsage_ == null) {
+              DataUsage = new global::Domain.Network.V1.DataUsage();
+            }
+            input.ReadMessage(DataUsage);
+            break;
+          }
+          case 34: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }
             input.ReadMessage(Location);
-            break;
-          }
-          case 34: {
-            if (resetAt_ == null) {
-              ResetAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(ResetAt);
             break;
           }
         }
@@ -1106,22 +1259,25 @@ namespace Domain.Events.V1 {
             Name = input.ReadString();
             break;
           }
-          case 16: {
-            Total = input.ReadInt64();
+          case 18: {
+            if (dataPlan_ == null) {
+              DataPlan = new global::Domain.Network.V1.DataPlan();
+            }
+            input.ReadMessage(DataPlan);
             break;
           }
           case 26: {
+            if (dataUsage_ == null) {
+              DataUsage = new global::Domain.Network.V1.DataUsage();
+            }
+            input.ReadMessage(DataUsage);
+            break;
+          }
+          case 34: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }
             input.ReadMessage(Location);
-            break;
-          }
-          case 34: {
-            if (resetAt_ == null) {
-              ResetAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(ResetAt);
             break;
           }
         }
@@ -1785,8 +1941,8 @@ namespace Domain.Events.V1 {
       eventName_ = other.eventName_;
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       switch (other.EventCase) {
-        case EventOneofCase.DataPlaneConsumption:
-          DataPlaneConsumption = other.DataPlaneConsumption.Clone();
+        case EventOneofCase.Network:
+          Network = other.Network.Clone();
           break;
         case EventOneofCase.SimCard:
           SimCard = other.SimCard.Clone();
@@ -1844,15 +2000,15 @@ namespace Domain.Events.V1 {
       }
     }
 
-    /// <summary>Field number for the "data_plane_consumption" field.</summary>
-    public const int DataPlaneConsumptionFieldNumber = 4;
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.DataPlaneConsumptionEvent DataPlaneConsumption {
-      get { return eventCase_ == EventOneofCase.DataPlaneConsumption ? (global::Domain.Events.V1.DataPlaneConsumptionEvent) event_ : null; }
+    public global::Domain.Events.V1.NetworkEvent Network {
+      get { return eventCase_ == EventOneofCase.Network ? (global::Domain.Events.V1.NetworkEvent) event_ : null; }
       set {
         event_ = value;
-        eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.DataPlaneConsumption;
+        eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.Network;
       }
     }
 
@@ -1896,7 +2052,7 @@ namespace Domain.Events.V1 {
     /// <summary>Enum of possible cases for the "event" oneof.</summary>
     public enum EventOneofCase {
       None = 0,
-      DataPlaneConsumption = 4,
+      Network = 4,
       SimCard = 5,
       WifiConnection = 6,
     }
@@ -1932,7 +2088,7 @@ namespace Domain.Events.V1 {
       if (Id != other.Id) return false;
       if (!object.Equals(Details, other.Details)) return false;
       if (EventName != other.EventName) return false;
-      if (!object.Equals(DataPlaneConsumption, other.DataPlaneConsumption)) return false;
+      if (!object.Equals(Network, other.Network)) return false;
       if (!object.Equals(SimCard, other.SimCard)) return false;
       if (!object.Equals(WifiConnection, other.WifiConnection)) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
@@ -1947,7 +2103,7 @@ namespace Domain.Events.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (details_ != null) hash ^= Details.GetHashCode();
       if (EventName.Length != 0) hash ^= EventName.GetHashCode();
-      if (eventCase_ == EventOneofCase.DataPlaneConsumption) hash ^= DataPlaneConsumption.GetHashCode();
+      if (eventCase_ == EventOneofCase.Network) hash ^= Network.GetHashCode();
       if (eventCase_ == EventOneofCase.SimCard) hash ^= SimCard.GetHashCode();
       if (eventCase_ == EventOneofCase.WifiConnection) hash ^= WifiConnection.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
@@ -1982,9 +2138,9 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(26);
         output.WriteString(EventName);
       }
-      if (eventCase_ == EventOneofCase.DataPlaneConsumption) {
+      if (eventCase_ == EventOneofCase.Network) {
         output.WriteRawTag(34);
-        output.WriteMessage(DataPlaneConsumption);
+        output.WriteMessage(Network);
       }
       if (eventCase_ == EventOneofCase.SimCard) {
         output.WriteRawTag(42);
@@ -2020,9 +2176,9 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(26);
         output.WriteString(EventName);
       }
-      if (eventCase_ == EventOneofCase.DataPlaneConsumption) {
+      if (eventCase_ == EventOneofCase.Network) {
         output.WriteRawTag(34);
-        output.WriteMessage(DataPlaneConsumption);
+        output.WriteMessage(Network);
       }
       if (eventCase_ == EventOneofCase.SimCard) {
         output.WriteRawTag(42);
@@ -2055,8 +2211,8 @@ namespace Domain.Events.V1 {
       if (EventName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
       }
-      if (eventCase_ == EventOneofCase.DataPlaneConsumption) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataPlaneConsumption);
+      if (eventCase_ == EventOneofCase.Network) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Network);
       }
       if (eventCase_ == EventOneofCase.SimCard) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SimCard);
@@ -2098,11 +2254,11 @@ namespace Domain.Events.V1 {
         Timestamp.MergeFrom(other.Timestamp);
       }
       switch (other.EventCase) {
-        case EventOneofCase.DataPlaneConsumption:
-          if (DataPlaneConsumption == null) {
-            DataPlaneConsumption = new global::Domain.Events.V1.DataPlaneConsumptionEvent();
+        case EventOneofCase.Network:
+          if (Network == null) {
+            Network = new global::Domain.Events.V1.NetworkEvent();
           }
-          DataPlaneConsumption.MergeFrom(other.DataPlaneConsumption);
+          Network.MergeFrom(other.Network);
           break;
         case EventOneofCase.SimCard:
           if (SimCard == null) {
@@ -2153,12 +2309,12 @@ namespace Domain.Events.V1 {
             break;
           }
           case 34: {
-            global::Domain.Events.V1.DataPlaneConsumptionEvent subBuilder = new global::Domain.Events.V1.DataPlaneConsumptionEvent();
-            if (eventCase_ == EventOneofCase.DataPlaneConsumption) {
-              subBuilder.MergeFrom(DataPlaneConsumption);
+            global::Domain.Events.V1.NetworkEvent subBuilder = new global::Domain.Events.V1.NetworkEvent();
+            if (eventCase_ == EventOneofCase.Network) {
+              subBuilder.MergeFrom(Network);
             }
             input.ReadMessage(subBuilder);
-            DataPlaneConsumption = subBuilder;
+            Network = subBuilder;
             break;
           }
           case 42: {
@@ -2221,12 +2377,12 @@ namespace Domain.Events.V1 {
             break;
           }
           case 34: {
-            global::Domain.Events.V1.DataPlaneConsumptionEvent subBuilder = new global::Domain.Events.V1.DataPlaneConsumptionEvent();
-            if (eventCase_ == EventOneofCase.DataPlaneConsumption) {
-              subBuilder.MergeFrom(DataPlaneConsumption);
+            global::Domain.Events.V1.NetworkEvent subBuilder = new global::Domain.Events.V1.NetworkEvent();
+            if (eventCase_ == EventOneofCase.Network) {
+              subBuilder.MergeFrom(Network);
             }
             input.ReadMessage(subBuilder);
-            DataPlaneConsumption = subBuilder;
+            Network = subBuilder;
             break;
           }
           case 42: {

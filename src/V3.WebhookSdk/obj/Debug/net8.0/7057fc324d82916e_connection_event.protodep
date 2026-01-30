@@ -1,6 +1,7 @@
-Generated/Protos/domain/v1/events/ConnectionEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
- /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
+Generated/Protos/domain/v1/events/ConnectionEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
  /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/duration.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
  Protos/buf/validate/validate.proto\
  Protos/domain/v1/location/location.proto\
+ Protos/domain/v1/network/network.proto\
  Protos/domain/v1/events/connection_event.proto
