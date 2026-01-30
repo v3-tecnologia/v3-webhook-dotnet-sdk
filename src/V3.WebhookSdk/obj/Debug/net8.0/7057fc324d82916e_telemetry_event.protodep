@@ -6,5 +6,6 @@ Generated/Protos/domain/v1/events/TelemetryEvent.cs: /home/adrianosantos/.nuget/
  Protos/domain/v1/orders/order.proto\
  Protos/domain/v1/orders/device.proto\
  Protos/domain/v1/location/location.proto\
+ Protos/domain/v1/network/network.proto\
  Protos/domain/v1/events/connection_event.proto\
  Protos/domain/v1/events/telemetry_event.proto

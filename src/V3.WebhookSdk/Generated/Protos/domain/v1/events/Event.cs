@@ -25,19 +25,19 @@ namespace Domain.Events.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxkb21haW4vdjEvZXZlbnRzL2V2ZW50LnByb3RvEhBkb21haW4uZXZlbnRz",
-            "LnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhtidWYvdmFs",
-            "aWRhdGUvdmFsaWRhdGUucHJvdG8aHWRvbWFpbi92MS9vcmRlcnMvZGV2aWNl",
-            "LnByb3RvGiJkb21haW4vdjEvZXZlbnRzL2FsZXJ0X2V2ZW50LnByb3RvGidk",
-            "b21haW4vdjEvZXZlbnRzL2Nvbm5lY3Rpb25fZXZlbnQucHJvdG8aIGRvbWFp",
-            "bi92MS9ldmVudHMvZG1zX2V2ZW50LnByb3RvGixkb21haW4vdjEvZXZlbnRz",
-            "L2RyaXZlcl9iZWhhdmlvcl9ldmVudC5wcm90bxojZG9tYWluL3YxL2V2ZW50",
-            "cy9oZWFsdGhfZXZlbnQucHJvdG8aKWRvbWFpbi92MS9ldmVudHMvb3JkZXJf",
-            "c3RhdHVzX2V2ZW50LnByb3RvGiNkb21haW4vdjEvZXZlbnRzL3N5c3RlbV9l",
-            "dmVudC5wcm90bxomZG9tYWluL3YxL2V2ZW50cy90ZWxlbWV0cnlfZXZlbnQu",
-            "cHJvdG8aJGRvbWFpbi92MS9ldmVudHMvdmVoaWNsZV9ldmVudC5wcm90bxoj",
-            "ZG9tYWluL3YxL2V2ZW50cy92aXNpb25fZXZlbnQucHJvdG8aIWRvbWFpbi92",
-            "MS9ldmVudHMvYWRhc19ldmVudC5wcm90bxohZG9tYWluL3YxL2xvY2F0aW9u",
-            "L2xvY2F0aW9uLnByb3RvItkBCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEg",
+            "LnYxGhtidWYvdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8aIWRvbWFpbi92MS9l",
+            "dmVudHMvYWRhc19ldmVudC5wcm90bxoiZG9tYWluL3YxL2V2ZW50cy9hbGVy",
+            "dF9ldmVudC5wcm90bxonZG9tYWluL3YxL2V2ZW50cy9jb25uZWN0aW9uX2V2",
+            "ZW50LnByb3RvGiBkb21haW4vdjEvZXZlbnRzL2Rtc19ldmVudC5wcm90bxos",
+            "ZG9tYWluL3YxL2V2ZW50cy9kcml2ZXJfYmVoYXZpb3JfZXZlbnQucHJvdG8a",
+            "I2RvbWFpbi92MS9ldmVudHMvaGVhbHRoX2V2ZW50LnByb3RvGilkb21haW4v",
+            "djEvZXZlbnRzL29yZGVyX3N0YXR1c19ldmVudC5wcm90bxojZG9tYWluL3Yx",
+            "L2V2ZW50cy9zeXN0ZW1fZXZlbnQucHJvdG8aJmRvbWFpbi92MS9ldmVudHMv",
+            "dGVsZW1ldHJ5X2V2ZW50LnByb3RvGiRkb21haW4vdjEvZXZlbnRzL3ZlaGlj",
+            "bGVfZXZlbnQucHJvdG8aI2RvbWFpbi92MS9ldmVudHMvdmlzaW9uX2V2ZW50",
+            "LnByb3RvGiFkb21haW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJvdG8aHWRv",
+            "bWFpbi92MS9vcmRlcnMvZGV2aWNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
+            "dGltZXN0YW1wLnByb3RvItkBCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEg",
             "ASgLMiIuZG9tYWluLmV2ZW50cy52MS5UZWxlbWV0cnlEZXRhaWxzEhsKCmdy",
             "b3VwX25hbWUYAiABKAlCB7pIBHICEAESMQoKdHJpcF9ldmVudBgDIAEoCzIb",
             "LmRvbWFpbi5ldmVudHMudjEuVHJpcEV2ZW50SAASPQoQc3RhbmRhbG9uZV9l",
@@ -62,65 +62,65 @@ namespace Domain.Events.V1 {
             "C2V2ZW50X2dyb3VwIo8BCgpBdHRyaWJ1dGVzEigKBmRldmljZRgBIAEoCzIY",
             "LmRvbWFpbi5vcmRlcnMudjEuRGV2aWNlEiwKBW9yZGVyGAIgASgLMh0uZG9t",
             "YWluLmV2ZW50cy52MS5PcmRlclN0YXR1cxIpCgRkYXRhGAMgASgLMhsuZG9t",
-            "YWluLmV2ZW50cy52MS5FdmVudERhdGEiuQIKBUV2ZW50EhMKAmlkGAEgASgJ",
-            "Qge6SARyAhABEigKBnN0YXR1cxgHIAEoDjIYLmRvbWFpbi5ldmVudHMudjEu",
-            "U3RhdHVzEjgKCmNyZWF0ZWRfYXQYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgi6SAWyAQI4ARIpCgR0eXBlGAMgASgOMhsuZG9tYWluLmV2",
-            "ZW50cy52MS5FdmVudFR5cGUSMQoIY2F0ZWdvcnkYBCABKA4yHy5kb21haW4u",
-            "ZXZlbnRzLnYxLkV2ZW50Q2F0ZWdvcnkSJwoDc3ViGAUgASgOMhouZG9tYWlu",
-            "LmV2ZW50cy52MS5FdmVudFN1YhIwCgphdHRyaWJ1dGVzGAYgASgLMhwuZG9t",
-            "YWluLmV2ZW50cy52MS5BdHRyaWJ1dGVzKl4KBlN0YXR1cxIWChJTVEFUVVNf",
-            "VU5TUEVDSUZJRUQQABITCg9TVEFUVVNfUkVDRUlWRUQQARIUChBTVEFUVVNf",
-            "REVMSVZFUkVEEAISEQoNU1RBVFVTX0ZBSUxFRBADKnEKCUV2ZW50VHlwZRIa",
-            "ChZFVkVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQRVZFTlRfVFlQRV9PUkRF",
-            "UhABEhYKEkVWRU5UX1RZUEVfR0VORVJBTBACEgkKBU9SREVSEAESCwoHR0VO",
-            "RVJBTBACGgIQASrXBAoNRXZlbnRDYXRlZ29yeRIeChpFVkVOVF9DQVRFR09S",
-            "WV9VTlNQRUNJRklFRBAAEhcKE0VWRU5UX0NBVEVHT1JZX0FEQVMQARIYChRF",
-            "VkVOVF9DQVRFR09SWV9BTEVSVBACEh0KGUVWRU5UX0NBVEVHT1JZX0NPTk5F",
-            "Q1RJT04QAxIWChJFVkVOVF9DQVRFR09SWV9ETVMQBBIiCh5FVkVOVF9DQVRF",
-            "R09SWV9EUklWRVJfQkVIQVZJT1IQBRIZChVFVkVOVF9DQVRFR09SWV9IRUFM",
-            "VEgQBhIYChRFVkVOVF9DQVRFR09SWV9PUkRFUhAHEhkKFUVWRU5UX0NBVEVH",
-            "T1JZX1NZU1RFTRAIEhwKGEVWRU5UX0NBVEVHT1JZX1RFTEVNRVRSWRAJEhoK",
-            "FkVWRU5UX0NBVEVHT1JZX1ZFSElDTEUQChIZChVFVkVOVF9DQVRFR09SWV9W",
-            "SVNJT04QCxIRCg1DQVRFR09SWV9BREFTEAESEgoOQ0FURUdPUllfQUxFUlQQ",
-            "AhIXChNDQVRFR09SWV9DT05ORUNUSU9OEAMSEAoMQ0FURUdPUllfRE1TEAQS",
-            "HAoYQ0FURUdPUllfRFJJVkVSX0JFSEFWSU9SEAUSEwoPQ0FURUdPUllfSEVB",
-            "TFRIEAYSEgoOQ0FURUdPUllfT1JERVIQBxITCg9DQVRFR09SWV9TWVNURU0Q",
-            "CBIWChJDQVRFR09SWV9URUxFTUVUUlkQCRIUChBDQVRFR09SWV9WRUhJQ0xF",
-            "EAoSEwoPQ0FURUdPUllfVklTSU9OEAsaAhABKtsHCghFdmVudFN1YhIZChVF",
-            "VkVOVF9TVUJfVU5TUEVDSUZJRUQQABIYChRFVkVOVF9TVUJfQUxFUlRfSU5G",
-            "TxABEhwKGEVWRU5UX1NVQl9BTEVSVF9DUklUSUNBTBACEhsKF0VWRU5UX1NV",
-            "Ql9BTEVSVF9XQVJOSU5HEAMSJwojRVZFTlRfU1VCX0NPTk5FQ1RJT05fU1RB",
-            "VFVTX0NIQU5HRUQQBBIaChZFVkVOVF9TVUJfRE1TX0FEVkFOQ0VEEAUSFwoT",
-            "RVZFTlRfU1VCX0RNU19CQVNJQxAGEiYKIkVWRU5UX1NVQl9EUklWRVJfQkVI",
-            "QVZJT1JfQURWQU5DRUQQBxIjCh9FVkVOVF9TVUJfRFJJVkVSX0JFSEFWSU9S",
-            "X0JBU0lDEAgSFAoQRVZFTlRfU1VCX0hFQUxUSBAJEhoKFkVWRU5UX1NVQl9P",
-            "UkRFUl9TVEFUVVMQChIbChdFVkVOVF9TVUJfU1lTVEVNX1VQTE9BRBALEh8K",
-            "G0VWRU5UX1NVQl9URUxFTUVUUllfQkFUVEVSWRAMEiAKHEVWRU5UX1NVQl9U",
-            "RUxFTUVUUllfSUdOSVRJT04QDRIgChxFVkVOVF9TVUJfVEVMRU1FVFJZX0xP",
-            "Q0FUSU9OEA4SGwoXRVZFTlRfU1VCX1ZFSElDTEVfQkxPQ0sQDxIdChlFVkVO",
-            "VF9TVUJfVklTSU9OX0FEVkFOQ0VEEBASGgoWRVZFTlRfU1VCX1ZJU0lPTl9C",
-            "QVNJQxAREhIKDlNVQl9BTEVSVF9JTkZPEAESFgoSU1VCX0FMRVJUX0NSSVRJ",
-            "Q0FMEAISFQoRU1VCX0FMRVJUX1dBUk5JTkcQAxIhCh1TVUJfQ09OTkVDVElP",
-            "Tl9TVEFUVVNfQ0hBTkdFRBAEEhQKEFNVQl9ETVNfQURWQU5DRUQQBRIRCg1T",
-            "VUJfRE1TX0JBU0lDEAYSIAocU1VCX0RSSVZFUl9CRUhBVklPUl9BRFZBTkNF",
-            "RBAHEh0KGVNVQl9EUklWRVJfQkVIQVZJT1JfQkFTSUMQCBIOCgpTVUJfSEVB",
-            "TFRIEAkSFAoQU1VCX09SREVSX1NUQVRVUxAKEhUKEVNVQl9TWVNURU1fVVBM",
-            "T0FEEAsSGQoVU1VCX1RFTEVNRVRSWV9CQVRURVJZEAwSGgoWU1VCX1RFTEVN",
-            "RVRSWV9JR05JVElPThANEhoKFlNVQl9URUxFTUVUUllfTE9DQVRJT04QDhIV",
-            "ChFTVUJfVkVISUNMRV9CTE9DSxAPEhcKE1NVQl9WSVNJT05fQURWQU5DRUQQ",
-            "EBIUChBTVUJfVklTSU9OX0JBU0lDEBEaAhABQnkKIGJyLmNvbS52My5wcm90",
-            "b2NvbC5kb21haW4uZXZlbnRzQgpFdmVudFByb3RvSAJQAVpFZ2l0aHViLmNv",
-            "bS92My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3Byb3RvL2dlbi9kb21h",
-            "aW4vdjEvZXZlbnRzO3YxYgZwcm90bzM="));
+            "YWluLmV2ZW50cy52MS5FdmVudERhdGEizAIKBUV2ZW50EhMKAmlkGAEgASgJ",
+            "Qge6SARyAhABEhEKCWhhc19tZWRpYRgIIAEoCBIoCgZzdGF0dXMYByABKA4y",
+            "GC5kb21haW4uZXZlbnRzLnYxLlN0YXR1cxI4CgpjcmVhdGVkX2F0GAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIIukgFsgECOAESKQoEdHlw",
+            "ZRgDIAEoDjIbLmRvbWFpbi5ldmVudHMudjEuRXZlbnRUeXBlEjEKCGNhdGVn",
+            "b3J5GAQgASgOMh8uZG9tYWluLmV2ZW50cy52MS5FdmVudENhdGVnb3J5EicK",
+            "A3N1YhgFIAEoDjIaLmRvbWFpbi5ldmVudHMudjEuRXZlbnRTdWISMAoKYXR0",
+            "cmlidXRlcxgGIAEoCzIcLmRvbWFpbi5ldmVudHMudjEuQXR0cmlidXRlcype",
+            "CgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASEwoPU1RBVFVTX1JF",
+            "Q0VJVkVEEAESFAoQU1RBVFVTX0RFTElWRVJFRBACEhEKDVNUQVRVU19GQUlM",
+            "RUQQAypxCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EhQKEEVWRU5UX1RZUEVfT1JERVIQARIWChJFVkVOVF9UWVBFX0dFTkVSQUwQ",
+            "AhIJCgVPUkRFUhABEgsKB0dFTkVSQUwQAhoCEAEq1wQKDUV2ZW50Q2F0ZWdv",
+            "cnkSHgoaRVZFTlRfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIXChNFVkVOVF9D",
+            "QVRFR09SWV9BREFTEAESGAoURVZFTlRfQ0FURUdPUllfQUxFUlQQAhIdChlF",
+            "VkVOVF9DQVRFR09SWV9DT05ORUNUSU9OEAMSFgoSRVZFTlRfQ0FURUdPUllf",
+            "RE1TEAQSIgoeRVZFTlRfQ0FURUdPUllfRFJJVkVSX0JFSEFWSU9SEAUSGQoV",
+            "RVZFTlRfQ0FURUdPUllfSEVBTFRIEAYSGAoURVZFTlRfQ0FURUdPUllfT1JE",
+            "RVIQBxIZChVFVkVOVF9DQVRFR09SWV9TWVNURU0QCBIcChhFVkVOVF9DQVRF",
+            "R09SWV9URUxFTUVUUlkQCRIaChZFVkVOVF9DQVRFR09SWV9WRUhJQ0xFEAoS",
+            "GQoVRVZFTlRfQ0FURUdPUllfVklTSU9OEAsSEQoNQ0FURUdPUllfQURBUxAB",
+            "EhIKDkNBVEVHT1JZX0FMRVJUEAISFwoTQ0FURUdPUllfQ09OTkVDVElPThAD",
+            "EhAKDENBVEVHT1JZX0RNUxAEEhwKGENBVEVHT1JZX0RSSVZFUl9CRUhBVklP",
+            "UhAFEhMKD0NBVEVHT1JZX0hFQUxUSBAGEhIKDkNBVEVHT1JZX09SREVSEAcS",
+            "EwoPQ0FURUdPUllfU1lTVEVNEAgSFgoSQ0FURUdPUllfVEVMRU1FVFJZEAkS",
+            "FAoQQ0FURUdPUllfVkVISUNMRRAKEhMKD0NBVEVHT1JZX1ZJU0lPThALGgIQ",
+            "ASrbBwoIRXZlbnRTdWISGQoVRVZFTlRfU1VCX1VOU1BFQ0lGSUVEEAASGAoU",
+            "RVZFTlRfU1VCX0FMRVJUX0lORk8QARIcChhFVkVOVF9TVUJfQUxFUlRfQ1JJ",
+            "VElDQUwQAhIbChdFVkVOVF9TVUJfQUxFUlRfV0FSTklORxADEicKI0VWRU5U",
+            "X1NVQl9DT05ORUNUSU9OX1NUQVRVU19DSEFOR0VEEAQSGgoWRVZFTlRfU1VC",
+            "X0RNU19BRFZBTkNFRBAFEhcKE0VWRU5UX1NVQl9ETVNfQkFTSUMQBhImCiJF",
+            "VkVOVF9TVUJfRFJJVkVSX0JFSEFWSU9SX0FEVkFOQ0VEEAcSIwofRVZFTlRf",
+            "U1VCX0RSSVZFUl9CRUhBVklPUl9CQVNJQxAIEhQKEEVWRU5UX1NVQl9IRUFM",
+            "VEgQCRIaChZFVkVOVF9TVUJfT1JERVJfU1RBVFVTEAoSGwoXRVZFTlRfU1VC",
+            "X1NZU1RFTV9VUExPQUQQCxIfChtFVkVOVF9TVUJfVEVMRU1FVFJZX0JBVFRF",
+            "UlkQDBIgChxFVkVOVF9TVUJfVEVMRU1FVFJZX0lHTklUSU9OEA0SIAocRVZF",
+            "TlRfU1VCX1RFTEVNRVRSWV9MT0NBVElPThAOEhsKF0VWRU5UX1NVQl9WRUhJ",
+            "Q0xFX0JMT0NLEA8SHQoZRVZFTlRfU1VCX1ZJU0lPTl9BRFZBTkNFRBAQEhoK",
+            "FkVWRU5UX1NVQl9WSVNJT05fQkFTSUMQERISCg5TVUJfQUxFUlRfSU5GTxAB",
+            "EhYKElNVQl9BTEVSVF9DUklUSUNBTBACEhUKEVNVQl9BTEVSVF9XQVJOSU5H",
+            "EAMSIQodU1VCX0NPTk5FQ1RJT05fU1RBVFVTX0NIQU5HRUQQBBIUChBTVUJf",
+            "RE1TX0FEVkFOQ0VEEAUSEQoNU1VCX0RNU19CQVNJQxAGEiAKHFNVQl9EUklW",
+            "RVJfQkVIQVZJT1JfQURWQU5DRUQQBxIdChlTVUJfRFJJVkVSX0JFSEFWSU9S",
+            "X0JBU0lDEAgSDgoKU1VCX0hFQUxUSBAJEhQKEFNVQl9PUkRFUl9TVEFUVVMQ",
+            "ChIVChFTVUJfU1lTVEVNX1VQTE9BRBALEhkKFVNVQl9URUxFTUVUUllfQkFU",
+            "VEVSWRAMEhoKFlNVQl9URUxFTUVUUllfSUdOSVRJT04QDRIaChZTVUJfVEVM",
+            "RU1FVFJZX0xPQ0FUSU9OEA4SFQoRU1VCX1ZFSElDTEVfQkxPQ0sQDxIXChNT",
+            "VUJfVklTSU9OX0FEVkFOQ0VEEBASFAoQU1VCX1ZJU0lPTl9CQVNJQxARGgIQ",
+            "AUJ5CiBici5jb20udjMucHJvdG9jb2wuZG9tYWluLmV2ZW50c0IKRXZlbnRQ",
+            "cm90b0gCUAFaRWdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1j",
+            "bG91ZC9wcm90by9nZW4vZG9tYWluL3YxL2V2ZW50czt2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.Status), typeof(global::Domain.Events.V1.EventType), typeof(global::Domain.Events.V1.EventCategory), typeof(global::Domain.Events.V1.EventSub), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.EventData), global::Domain.Events.V1.EventData.Parser, new[]{ "Telemetry", "GroupName", "TripEvent", "StandaloneEvent" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TripEvent), global::Domain.Events.V1.TripEvent.Parser, new[]{ "TripId", "EventGroupName", "Location", "Adas", "Dms", "DriverBehavior", "Telemetry", "Vehicle", "Vision" }, new[]{ "EventGroup" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.StandaloneEvent), global::Domain.Events.V1.StandaloneEvent.Parser, new[]{ "EventGroupName", "Location", "Alert", "Connection", "Health", "Telemetry", "System" }, new[]{ "EventGroup" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Attributes), global::Domain.Events.V1.Attributes.Parser, new[]{ "Device", "Order", "Data" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Event), global::Domain.Events.V1.Event.Parser, new[]{ "Id", "Status", "CreatedAt", "Type", "Category", "Sub", "Attributes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Event), global::Domain.Events.V1.Event.Parser, new[]{ "Id", "HasMedia", "Status", "CreatedAt", "Type", "Category", "Sub", "Attributes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2161,6 +2161,7 @@ namespace Domain.Events.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Event(Event other) : this() {
       id_ = other.id_;
+      hasMedia_ = other.hasMedia_;
       status_ = other.status_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       type_ = other.type_;
@@ -2188,6 +2189,18 @@ namespace Domain.Events.V1 {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "has_media" field.</summary>
+    public const int HasMediaFieldNumber = 8;
+    private bool hasMedia_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMedia {
+      get { return hasMedia_; }
+      set {
+        hasMedia_ = value;
       }
     }
 
@@ -2282,6 +2295,7 @@ namespace Domain.Events.V1 {
         return true;
       }
       if (Id != other.Id) return false;
+      if (HasMedia != other.HasMedia) return false;
       if (Status != other.Status) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (Type != other.Type) return false;
@@ -2296,6 +2310,7 @@ namespace Domain.Events.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (HasMedia != false) hash ^= HasMedia.GetHashCode();
       if (Status != global::Domain.Events.V1.Status.Unspecified) hash ^= Status.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (Type != global::Domain.Events.V1.EventType.Unspecified) hash ^= Type.GetHashCode();
@@ -2348,6 +2363,10 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
+      if (HasMedia != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HasMedia);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2386,6 +2405,10 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) Status);
       }
+      if (HasMedia != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HasMedia);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2398,6 +2421,9 @@ namespace Domain.Events.V1 {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (HasMedia != false) {
+        size += 1 + 1;
       }
       if (Status != global::Domain.Events.V1.Status.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
@@ -2431,6 +2457,9 @@ namespace Domain.Events.V1 {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.HasMedia != false) {
+        HasMedia = other.HasMedia;
       }
       if (other.Status != global::Domain.Events.V1.Status.Unspecified) {
         Status = other.Status;
@@ -2509,6 +2538,10 @@ namespace Domain.Events.V1 {
             Status = (global::Domain.Events.V1.Status) input.ReadEnum();
             break;
           }
+          case 64: {
+            HasMedia = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2560,6 +2593,10 @@ namespace Domain.Events.V1 {
           }
           case 56: {
             Status = (global::Domain.Events.V1.Status) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            HasMedia = input.ReadBool();
             break;
           }
         }

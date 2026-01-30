@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package domain.network.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/network;v1";
+option java_multiple_files = true;
+option java_outer_classname = "NetworkProto";
+option java_package = "br.com.v3.protocol.domain";
+option optimize_for = CODE_SIZE;
+
+message DataUsage {
+  // Usage during the period (in megabytes)
+  uint64 used_mb = 1;
+
+  // Total accumulated usage in the current cycle (in megabytes)
+  uint64 total_used_mb = 2;
+
+  // Percentage of the allowance already consumed (0–100)
+  double usage_percentage = 3;
+}
+
+message DataPlan {
+  // Total data allowance in megabytes
+  uint64 total_mb = 1;
+
+  // Current cycle start date
+  google.protobuf.Timestamp cycle_start = 2;
+
+  // Franchise renewal date
+  google.protobuf.Timestamp cycle_end = 3;
+}

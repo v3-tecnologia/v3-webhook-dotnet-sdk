@@ -1,16 +1,17 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
+package domain.events.v1;
+
 import "buf/validate/validate.proto";
 import "domain/v1/location/location.proto";
+import "domain/v1/network/network.proto";
+import "google/protobuf/timestamp.proto";
 
-option java_multiple_files = true;
-option java_package = "br.com.v3.protocol.domain.events";
-option java_outer_classname = "ConnectionEventProto";
 option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option java_multiple_files = true;
+option java_outer_classname = "ConnectionEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
 option optimize_for = CODE_SIZE;
-
-package domain.events.v1;
 
 enum ConnectionType {
   option allow_alias = true;
@@ -64,7 +65,11 @@ message ConnectionDetails {
   string mcc = 4;
   string mnc = 5;
   string imei = 6;
-  string signal_strength = 7;
+  int32 signal_strength = 7;
+  string iccid = 8;
+  string ip_address = 9;
+  string carrier_name = 10;
+  string carrier_code = 11;
 }
 
 message WifiDetails {
@@ -72,17 +77,17 @@ message WifiDetails {
   int32 signal_strength = 2; // Signal strength in dBm
 }
 
-message DataPlaneConsumptionEvent {
-  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "DATA_PLANE_CONSUMPTION"
-  int64 total = 2; // Total bytes sent
-  domain.location.v1.Location location = 3;
-  google.protobuf.Timestamp reset_at = 4 [(buf.validate.field).timestamp.lt_now = true];
+message NetworkEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "NETWORK_EVENT"
+  domain.network.v1.DataPlan data_plan = 2;
+  domain.network.v1.DataUsage data_usage = 3;
+  domain.location.v1.Location location = 4;
 }
 
 message SimCardEvent {
-    string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SIM_CARD_EVENT"
-    SimCardStatus status = 2;
-    domain.location.v1.Location location = 3;
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "SIM_CARD_EVENT"
+  SimCardStatus status = 2;
+  domain.location.v1.Location location = 3;
 }
 
 message WifiConnectionEvent {
@@ -97,7 +102,7 @@ message Connection {
   ConnectionDetails details = 2;
   string event_name = 3 [(buf.validate.field).string.min_len = 1]; // e.g., "WIFI_CONNECTION_EVENT"
   oneof event {
-    DataPlaneConsumptionEvent data_plane_consumption = 4;
+    NetworkEvent network = 4;
     SimCardEvent sim_card = 5;
     WifiConnectionEvent wifi_connection = 6;
   }

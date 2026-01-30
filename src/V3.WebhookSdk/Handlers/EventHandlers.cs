@@ -64,6 +64,7 @@ namespace V3.WebhookSdk.Handlers
         private readonly IEventReader? _reader;
 
         public string Id { get; }
+        public bool HasMedia { get; }
         public EventPayloadKind PayloadKind { get; }
         public Status Status { get; }
         public Timestamp CreatedAt { get; }
@@ -76,6 +77,7 @@ namespace V3.WebhookSdk.Handlers
 
         internal EventContext(
             string id,
+            bool hasMedia,
             Status status,
             Timestamp createdAt,
             EventType type,
@@ -88,6 +90,7 @@ namespace V3.WebhookSdk.Handlers
             IEventReader? reader)
         {
             Id = id;
+            HasMedia = hasMedia;
             Status = status;
             CreatedAt = createdAt;
             Type = type;

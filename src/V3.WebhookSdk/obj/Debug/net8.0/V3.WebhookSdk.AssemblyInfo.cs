@@ -10,13 +10,17 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("V3.WebhookSdk")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("V3 Tecnologia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+794ab4522c8c1fb524633b71627cdbd69b989cc0")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\n      A .NET SDK for processing V3 Tecnologia IoT Webhooks using strongly-typed " +
+    "Protobuf models.\n      Transport-agnostic, signature validation, persistence sup" +
+    "port, and modular event handlers.\n    ")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.1+bc465853fc65083375dc9e7ffe41cf098d3d5351")]
 [assembly: System.Reflection.AssemblyProductAttribute("V3.WebhookSdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("V3.WebhookSdk")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.1.1.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/v3-tecnologia/v3-webhook-dotnet-sdk")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 
