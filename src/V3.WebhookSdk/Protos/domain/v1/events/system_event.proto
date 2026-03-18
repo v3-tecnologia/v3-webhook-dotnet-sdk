@@ -1,17 +1,17 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
-import "buf/validate/validate.proto";
-import "domain/v1/vision/vision.proto";
-import "domain/v1/location/location.proto";
-
-option java_multiple_files = true;
-option java_package = "br.com.v3.protocol.domain.events";
-option java_outer_classname = "SystemEventProto";
-option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
-option optimize_for = CODE_SIZE;
-
 package domain.events.v1;
+
+import "buf/validate/validate.proto";
+import "domain/v1/location/location.proto";
+import "domain/v1/vision/vision.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option java_multiple_files = true;
+option java_outer_classname = "SystemEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
+option optimize_for = CODE_SIZE;
 
 enum PingType {
   option allow_alias = true;
@@ -43,6 +43,19 @@ message RebootEvent {
   domain.location.v1.Location location = 3;
 }
 
+message ReportSentEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "REPORT_SENT_EVENT"
+  string reason = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "report_123"
+  domain.location.v1.Location location = 3;
+}
+
+message DeviceStateEvent {
+  string name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "DEVICE_STATE_EVENT"
+  string source_id = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "12345"
+  string state = 3 [(buf.validate.field).string.min_len = 1]; // e.g., "ONLINE", "OFFLINE"
+  domain.location.v1.Location location = 4;
+}
+
 message System {
   string id = 1 [(buf.validate.field).string.min_len = 1];
   string event_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "SYSTEM_EVENT"
@@ -50,6 +63,8 @@ message System {
     UploadEvent upload = 3;
     RebootEvent reboot = 4;
     PingEvent ping = 5;
+    ReportSentEvent report_sent = 6;
+    DeviceStateEvent device_state = 7;
   }
   google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
 }

@@ -9,7 +9,7 @@
       "WebhookExample/1.0.0": {
         "dependencies": {
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
-          "V3.WebhookSdk": "0.1.1"
+          "V3.WebhookSdk": "0.1.2"
         },
         "runtime": {
           "WebhookExample.dll": {}
@@ -238,7 +238,7 @@
           }
         }
       },
-      "V3.WebhookSdk/0.1.1": {
+      "V3.WebhookSdk/0.1.2": {
         "dependencies": {
           "Google.Protobuf": "3.33.2",
           "System.Text.Json": "10.0.1",
@@ -445,7 +445,7 @@
       "path": "system.text.json/10.0.1",
       "hashPath": "system.text.json.10.0.1.nupkg.sha512"
     },
-    "V3.WebhookSdk/0.1.1": {
+    "V3.WebhookSdk/0.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

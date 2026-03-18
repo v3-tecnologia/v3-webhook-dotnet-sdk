@@ -1,7 +1,7 @@
-Generated/Protos/domain/v1/events/SystemEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
- /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
+Generated/Protos/domain/v1/events/SystemEvent.cs: /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/descriptor.proto\
  /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/duration.proto\
+ /home/adrianosantos/.nuget/packages/grpc.tools/2.76.0/build/native/include/google/protobuf/timestamp.proto\
  Protos/buf/validate/validate.proto\
- Protos/domain/v1/vision/vision.proto\
  Protos/domain/v1/location/location.proto\
+ Protos/domain/v1/vision/vision.proto\
  Protos/domain/v1/events/system_event.proto
