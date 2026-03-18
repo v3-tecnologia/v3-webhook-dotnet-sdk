@@ -25,26 +25,26 @@ namespace Domain.Events.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZkb21haW4vdjEvZXZlbnRzL3RlbGVtZXRyeV9ldmVudC5wcm90bxIQZG9t",
-            "YWluLmV2ZW50cy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "bxobYnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGh1kb21haW4vdjEvb3Jk",
-            "ZXJzL2RldmljZS5wcm90bxonZG9tYWluL3YxL2V2ZW50cy9jb25uZWN0aW9u",
-            "X2V2ZW50LnByb3RvGiFkb21haW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJv",
-            "dG8i4AIKEFRlbGVtZXRyeURldGFpbHMSEwoCaWQYASABKAlCB7pIBHICEAES",
-            "MAoGc3RhdHVzGAIgASgOMiAuZG9tYWluLmV2ZW50cy52MS5JZ25pdGlvblN0",
-            "YXR1cxIyCghoYXJkd2FyZRgDIAEoCzIgLmRvbWFpbi5vcmRlcnMudjEuRGV2",
-            "aWNlTWV0YWRhdGESNwoKY29ubmVjdGlvbhgEIAEoCzIjLmRvbWFpbi5ldmVu",
-            "dHMudjEuQ29ubmVjdGlvbkRldGFpbHMSMwoMY29ubmVjdGl2aXR5GAUgASgL",
-            "Mh0uZG9tYWluLmV2ZW50cy52MS5XaWZpRGV0YWlscxIqCgdtZXRyaWNzGAcg",
-            "ASgLMhkuZG9tYWluLmV2ZW50cy52MS5NZXRyaWNzEjcKCXRpbWVzdGFtcBhk",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCLpIBbIBAjgBIokB",
-            "Cg5CYXR0ZXJ5TWVhc3VyZRI1Cgljb21wb25lbnQYASABKA4yIi5kb21haW4u",
-            "ZXZlbnRzLnYxLkJhdHRlcnlDb21wb25lbnQSLwoGc3RhdHVzGAIgASgOMh8u",
-            "ZG9tYWluLmV2ZW50cy52MS5CYXR0ZXJ5U3RhdHVzEg8KB3ZvbHRhZ2UYAyAB",
-            "KAIiIAoPT2RvbWV0ZXJNZWFzdXJlEg0KBXZhbHVlGAEgASgEIrMBCgdNZXRy",
-            "aWNzEjgKDmRldmljZV9iYXR0ZXJ5GAEgASgLMiAuZG9tYWluLmV2ZW50cy52",
-            "MS5CYXR0ZXJ5TWVhc3VyZRI5Cg92ZWhpY2xlX2JhdHRlcnkYAiABKAsyIC5k",
-            "b21haW4uZXZlbnRzLnYxLkJhdHRlcnlNZWFzdXJlEjMKCG9kb21ldGVyGAMg",
-            "ASgLMiEuZG9tYWluLmV2ZW50cy52MS5PZG9tZXRlck1lYXN1cmUivQEKDEJh",
+            "YWluLmV2ZW50cy52MRobYnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGidk",
+            "b21haW4vdjEvZXZlbnRzL2Nvbm5lY3Rpb25fZXZlbnQucHJvdG8aIWRvbWFp",
+            "bi92MS9sb2NhdGlvbi9sb2NhdGlvbi5wcm90bxodZG9tYWluL3YxL29yZGVy",
+            "cy9kZXZpY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8iiQEKDkJhdHRlcnlNZWFzdXJlEjUKCWNvbXBvbmVudBgBIAEoDjIiLmRv",
+            "bWFpbi5ldmVudHMudjEuQmF0dGVyeUNvbXBvbmVudBIvCgZzdGF0dXMYAiAB",
+            "KA4yHy5kb21haW4uZXZlbnRzLnYxLkJhdHRlcnlTdGF0dXMSDwoHdm9sdGFn",
+            "ZRgDIAEoAiIgCg9PZG9tZXRlck1lYXN1cmUSDQoFdmFsdWUYASABKAQiswEK",
+            "B01ldHJpY3MSOAoOZGV2aWNlX2JhdHRlcnkYASABKAsyIC5kb21haW4uZXZl",
+            "bnRzLnYxLkJhdHRlcnlNZWFzdXJlEjkKD3ZlaGljbGVfYmF0dGVyeRgCIAEo",
+            "CzIgLmRvbWFpbi5ldmVudHMudjEuQmF0dGVyeU1lYXN1cmUSMwoIb2RvbWV0",
+            "ZXIYAyABKAsyIS5kb21haW4uZXZlbnRzLnYxLk9kb21ldGVyTWVhc3VyZSLg",
+            "AgoQVGVsZW1ldHJ5RGV0YWlscxITCgJpZBgBIAEoCUIHukgEcgIQARIwCgZz",
+            "dGF0dXMYAiABKA4yIC5kb21haW4uZXZlbnRzLnYxLklnbml0aW9uU3RhdHVz",
+            "EjIKCGhhcmR3YXJlGAMgASgLMiAuZG9tYWluLm9yZGVycy52MS5EZXZpY2VN",
+            "ZXRhZGF0YRI3Cgpjb25uZWN0aW9uGAQgASgLMiMuZG9tYWluLmV2ZW50cy52",
+            "MS5Db25uZWN0aW9uRGV0YWlscxIzCgxjb25uZWN0aXZpdHkYBSABKAsyHS5k",
+            "b21haW4uZXZlbnRzLnYxLldpZmlEZXRhaWxzEioKB21ldHJpY3MYBiABKAsy",
+            "GS5kb21haW4uZXZlbnRzLnYxLk1ldHJpY3MSNwoJdGltZXN0YW1wGGQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIIukgFsgECOAEivQEKDEJh",
             "dHRlcnlFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEi8KBnN0YXR1cxgC",
             "IAEoDjIfLmRvbWFpbi5ldmVudHMudjEuQmF0dGVyeVN0YXR1cxI1Cgljb21w",
             "b25lbnQYAyABKA4yIi5kb21haW4uZXZlbnRzLnYxLkJhdHRlcnlDb21wb25l",
@@ -82,12 +82,12 @@ namespace Domain.Events.V1 {
             "bS92My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3Byb3RvL2dlbi9kb21h",
             "aW4vdjEvZXZlbnRzO3YxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.BatteryComponent), typeof(global::Domain.Events.V1.BatteryEventType), typeof(global::Domain.Events.V1.BatteryStatus), typeof(global::Domain.Events.V1.IgnitionStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TelemetryDetails), global::Domain.Events.V1.TelemetryDetails.Parser, new[]{ "Id", "Status", "Hardware", "Connection", "Connectivity", "Metrics", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.BatteryMeasure), global::Domain.Events.V1.BatteryMeasure.Parser, new[]{ "Component", "Status", "Voltage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.OdometerMeasure), global::Domain.Events.V1.OdometerMeasure.Parser, new[]{ "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Metrics), global::Domain.Events.V1.Metrics.Parser, new[]{ "DeviceBattery", "VehicleBattery", "Odometer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TelemetryDetails), global::Domain.Events.V1.TelemetryDetails.Parser, new[]{ "Id", "Status", "Hardware", "Connection", "Connectivity", "Metrics", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.BatteryEvent), global::Domain.Events.V1.BatteryEvent.Parser, new[]{ "Name", "Status", "Component", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.IgnitionEvent), global::Domain.Events.V1.IgnitionEvent.Parser, new[]{ "Name", "Status", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.PeriodicEvent), global::Domain.Events.V1.PeriodicEvent.Parser, new[]{ "Name", "Location" }, null, null, null, null),
@@ -178,471 +178,6 @@ namespace Domain.Events.V1 {
   #endregion
 
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class TelemetryDetails : pb::IMessage<TelemetryDetails>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<TelemetryDetails> _parser = new pb::MessageParser<TelemetryDetails>(() => new TelemetryDetails());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<TelemetryDetails> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TelemetryDetails() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TelemetryDetails(TelemetryDetails other) : this() {
-      id_ = other.id_;
-      status_ = other.status_;
-      hardware_ = other.hardware_ != null ? other.hardware_.Clone() : null;
-      connection_ = other.connection_ != null ? other.connection_.Clone() : null;
-      connectivity_ = other.connectivity_ != null ? other.connectivity_.Clone() : null;
-      metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
-      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public TelemetryDetails Clone() {
-      return new TelemetryDetails(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 2;
-    private global::Domain.Events.V1.IgnitionStatus status_ = global::Domain.Events.V1.IgnitionStatus.Unspecified;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.IgnitionStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hardware" field.</summary>
-    public const int HardwareFieldNumber = 3;
-    private global::Domain.Orders.V1.DeviceMetadata hardware_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Orders.V1.DeviceMetadata Hardware {
-      get { return hardware_; }
-      set {
-        hardware_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "connection" field.</summary>
-    public const int ConnectionFieldNumber = 4;
-    private global::Domain.Events.V1.ConnectionDetails connection_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.ConnectionDetails Connection {
-      get { return connection_; }
-      set {
-        connection_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "connectivity" field.</summary>
-    public const int ConnectivityFieldNumber = 5;
-    private global::Domain.Events.V1.WifiDetails connectivity_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.WifiDetails Connectivity {
-      get { return connectivity_; }
-      set {
-        connectivity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "metrics" field.</summary>
-    public const int MetricsFieldNumber = 7;
-    private global::Domain.Events.V1.Metrics metrics_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.Metrics Metrics {
-      get { return metrics_; }
-      set {
-        metrics_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 100;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
-      get { return timestamp_; }
-      set {
-        timestamp_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as TelemetryDetails);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(TelemetryDetails other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Status != other.Status) return false;
-      if (!object.Equals(Hardware, other.Hardware)) return false;
-      if (!object.Equals(Connection, other.Connection)) return false;
-      if (!object.Equals(Connectivity, other.Connectivity)) return false;
-      if (!object.Equals(Metrics, other.Metrics)) return false;
-      if (!object.Equals(Timestamp, other.Timestamp)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) hash ^= Status.GetHashCode();
-      if (hardware_ != null) hash ^= Hardware.GetHashCode();
-      if (connection_ != null) hash ^= Connection.GetHashCode();
-      if (connectivity_ != null) hash ^= Connectivity.GetHashCode();
-      if (metrics_ != null) hash ^= Metrics.GetHashCode();
-      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Status);
-      }
-      if (hardware_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Hardware);
-      }
-      if (connection_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Connection);
-      }
-      if (connectivity_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Connectivity);
-      }
-      if (metrics_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Metrics);
-      }
-      if (timestamp_ != null) {
-        output.WriteRawTag(162, 6);
-        output.WriteMessage(Timestamp);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Status);
-      }
-      if (hardware_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Hardware);
-      }
-      if (connection_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Connection);
-      }
-      if (connectivity_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Connectivity);
-      }
-      if (metrics_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(Metrics);
-      }
-      if (timestamp_ != null) {
-        output.WriteRawTag(162, 6);
-        output.WriteMessage(Timestamp);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
-      }
-      if (hardware_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Hardware);
-      }
-      if (connection_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connection);
-      }
-      if (connectivity_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connectivity);
-      }
-      if (metrics_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metrics);
-      }
-      if (timestamp_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(TelemetryDetails other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      if (other.Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
-        Status = other.Status;
-      }
-      if (other.hardware_ != null) {
-        if (hardware_ == null) {
-          Hardware = new global::Domain.Orders.V1.DeviceMetadata();
-        }
-        Hardware.MergeFrom(other.Hardware);
-      }
-      if (other.connection_ != null) {
-        if (connection_ == null) {
-          Connection = new global::Domain.Events.V1.ConnectionDetails();
-        }
-        Connection.MergeFrom(other.Connection);
-      }
-      if (other.connectivity_ != null) {
-        if (connectivity_ == null) {
-          Connectivity = new global::Domain.Events.V1.WifiDetails();
-        }
-        Connectivity.MergeFrom(other.Connectivity);
-      }
-      if (other.metrics_ != null) {
-        if (metrics_ == null) {
-          Metrics = new global::Domain.Events.V1.Metrics();
-        }
-        Metrics.MergeFrom(other.Metrics);
-      }
-      if (other.timestamp_ != null) {
-        if (timestamp_ == null) {
-          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        Timestamp.MergeFrom(other.Timestamp);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 16: {
-            Status = (global::Domain.Events.V1.IgnitionStatus) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            if (hardware_ == null) {
-              Hardware = new global::Domain.Orders.V1.DeviceMetadata();
-            }
-            input.ReadMessage(Hardware);
-            break;
-          }
-          case 34: {
-            if (connection_ == null) {
-              Connection = new global::Domain.Events.V1.ConnectionDetails();
-            }
-            input.ReadMessage(Connection);
-            break;
-          }
-          case 42: {
-            if (connectivity_ == null) {
-              Connectivity = new global::Domain.Events.V1.WifiDetails();
-            }
-            input.ReadMessage(Connectivity);
-            break;
-          }
-          case 58: {
-            if (metrics_ == null) {
-              Metrics = new global::Domain.Events.V1.Metrics();
-            }
-            input.ReadMessage(Metrics);
-            break;
-          }
-          case 802: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 16: {
-            Status = (global::Domain.Events.V1.IgnitionStatus) input.ReadEnum();
-            break;
-          }
-          case 26: {
-            if (hardware_ == null) {
-              Hardware = new global::Domain.Orders.V1.DeviceMetadata();
-            }
-            input.ReadMessage(Hardware);
-            break;
-          }
-          case 34: {
-            if (connection_ == null) {
-              Connection = new global::Domain.Events.V1.ConnectionDetails();
-            }
-            input.ReadMessage(Connection);
-            break;
-          }
-          case 42: {
-            if (connectivity_ == null) {
-              Connectivity = new global::Domain.Events.V1.WifiDetails();
-            }
-            input.ReadMessage(Connectivity);
-            break;
-          }
-          case 58: {
-            if (metrics_ == null) {
-              Metrics = new global::Domain.Events.V1.Metrics();
-            }
-            input.ReadMessage(Metrics);
-            break;
-          }
-          case 802: {
-            if (timestamp_ == null) {
-              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(Timestamp);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   /// <summary>
   /// Metrics
   /// </summary>
@@ -661,7 +196,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -933,7 +468,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1131,7 +666,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1406,6 +941,471 @@ namespace Domain.Events.V1 {
               Odometer = new global::Domain.Events.V1.OdometerMeasure();
             }
             input.ReadMessage(Odometer);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TelemetryDetails : pb::IMessage<TelemetryDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TelemetryDetails> _parser = new pb::MessageParser<TelemetryDetails>(() => new TelemetryDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TelemetryDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.TelemetryEventReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelemetryDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelemetryDetails(TelemetryDetails other) : this() {
+      id_ = other.id_;
+      status_ = other.status_;
+      hardware_ = other.hardware_ != null ? other.hardware_.Clone() : null;
+      connection_ = other.connection_ != null ? other.connection_.Clone() : null;
+      connectivity_ = other.connectivity_ != null ? other.connectivity_.Clone() : null;
+      metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
+      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelemetryDetails Clone() {
+      return new TelemetryDetails(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 2;
+    private global::Domain.Events.V1.IgnitionStatus status_ = global::Domain.Events.V1.IgnitionStatus.Unspecified;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.IgnitionStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hardware" field.</summary>
+    public const int HardwareFieldNumber = 3;
+    private global::Domain.Orders.V1.DeviceMetadata hardware_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Orders.V1.DeviceMetadata Hardware {
+      get { return hardware_; }
+      set {
+        hardware_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connection" field.</summary>
+    public const int ConnectionFieldNumber = 4;
+    private global::Domain.Events.V1.ConnectionDetails connection_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.ConnectionDetails Connection {
+      get { return connection_; }
+      set {
+        connection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connectivity" field.</summary>
+    public const int ConnectivityFieldNumber = 5;
+    private global::Domain.Events.V1.WifiDetails connectivity_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.WifiDetails Connectivity {
+      get { return connectivity_; }
+      set {
+        connectivity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 6;
+    private global::Domain.Events.V1.Metrics metrics_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Metrics Metrics {
+      get { return metrics_; }
+      set {
+        metrics_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 100;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TelemetryDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TelemetryDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Status != other.Status) return false;
+      if (!object.Equals(Hardware, other.Hardware)) return false;
+      if (!object.Equals(Connection, other.Connection)) return false;
+      if (!object.Equals(Connectivity, other.Connectivity)) return false;
+      if (!object.Equals(Metrics, other.Metrics)) return false;
+      if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (hardware_ != null) hash ^= Hardware.GetHashCode();
+      if (connection_ != null) hash ^= Connection.GetHashCode();
+      if (connectivity_ != null) hash ^= Connectivity.GetHashCode();
+      if (metrics_ != null) hash ^= Metrics.GetHashCode();
+      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Status);
+      }
+      if (hardware_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Hardware);
+      }
+      if (connection_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Connection);
+      }
+      if (connectivity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Connectivity);
+      }
+      if (metrics_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Metrics);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Timestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Status);
+      }
+      if (hardware_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Hardware);
+      }
+      if (connection_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Connection);
+      }
+      if (connectivity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Connectivity);
+      }
+      if (metrics_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Metrics);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Timestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (hardware_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Hardware);
+      }
+      if (connection_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connection);
+      }
+      if (connectivity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connectivity);
+      }
+      if (metrics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metrics);
+      }
+      if (timestamp_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TelemetryDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Status != global::Domain.Events.V1.IgnitionStatus.Unspecified) {
+        Status = other.Status;
+      }
+      if (other.hardware_ != null) {
+        if (hardware_ == null) {
+          Hardware = new global::Domain.Orders.V1.DeviceMetadata();
+        }
+        Hardware.MergeFrom(other.Hardware);
+      }
+      if (other.connection_ != null) {
+        if (connection_ == null) {
+          Connection = new global::Domain.Events.V1.ConnectionDetails();
+        }
+        Connection.MergeFrom(other.Connection);
+      }
+      if (other.connectivity_ != null) {
+        if (connectivity_ == null) {
+          Connectivity = new global::Domain.Events.V1.WifiDetails();
+        }
+        Connectivity.MergeFrom(other.Connectivity);
+      }
+      if (other.metrics_ != null) {
+        if (metrics_ == null) {
+          Metrics = new global::Domain.Events.V1.Metrics();
+        }
+        Metrics.MergeFrom(other.Metrics);
+      }
+      if (other.timestamp_ != null) {
+        if (timestamp_ == null) {
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Timestamp.MergeFrom(other.Timestamp);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Status = (global::Domain.Events.V1.IgnitionStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (hardware_ == null) {
+              Hardware = new global::Domain.Orders.V1.DeviceMetadata();
+            }
+            input.ReadMessage(Hardware);
+            break;
+          }
+          case 34: {
+            if (connection_ == null) {
+              Connection = new global::Domain.Events.V1.ConnectionDetails();
+            }
+            input.ReadMessage(Connection);
+            break;
+          }
+          case 42: {
+            if (connectivity_ == null) {
+              Connectivity = new global::Domain.Events.V1.WifiDetails();
+            }
+            input.ReadMessage(Connectivity);
+            break;
+          }
+          case 50: {
+            if (metrics_ == null) {
+              Metrics = new global::Domain.Events.V1.Metrics();
+            }
+            input.ReadMessage(Metrics);
+            break;
+          }
+          case 802: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 16: {
+            Status = (global::Domain.Events.V1.IgnitionStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (hardware_ == null) {
+              Hardware = new global::Domain.Orders.V1.DeviceMetadata();
+            }
+            input.ReadMessage(Hardware);
+            break;
+          }
+          case 34: {
+            if (connection_ == null) {
+              Connection = new global::Domain.Events.V1.ConnectionDetails();
+            }
+            input.ReadMessage(Connection);
+            break;
+          }
+          case 42: {
+            if (connectivity_ == null) {
+              Connectivity = new global::Domain.Events.V1.WifiDetails();
+            }
+            input.ReadMessage(Connectivity);
+            break;
+          }
+          case 50: {
+            if (metrics_ == null) {
+              Metrics = new global::Domain.Events.V1.Metrics();
+            }
+            input.ReadMessage(Metrics);
+            break;
+          }
+          case 802: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
             break;
           }
         }

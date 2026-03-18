@@ -16,7 +16,7 @@ using System.Reflection;
     "Protobuf models.\n      Transport-agnostic, signature validation, persistence sup" +
     "port, and modular event handlers.\n    ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.2+c1d2b9af2bf0840833f039df9babd6d715dc8bf1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.2+5f2858a28cdfacc23d4b831a434577d0e3ca949f")]
 [assembly: System.Reflection.AssemblyProductAttribute("V3.WebhookSdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("V3.WebhookSdk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.2.0")]

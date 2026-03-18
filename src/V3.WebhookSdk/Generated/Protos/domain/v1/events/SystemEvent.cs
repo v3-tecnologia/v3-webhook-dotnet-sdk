@@ -25,9 +25,9 @@ namespace Domain.Events.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNkb21haW4vdjEvZXZlbnRzL3N5c3RlbV9ldmVudC5wcm90bxIQZG9tYWlu",
-            "LmV2ZW50cy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxob",
-            "YnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGh1kb21haW4vdjEvdmlzaW9u",
-            "L3Zpc2lvbi5wcm90bxohZG9tYWluL3YxL2xvY2F0aW9uL2xvY2F0aW9uLnBy",
+            "LmV2ZW50cy52MRobYnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGiFkb21h",
+            "aW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJvdG8aHWRvbWFpbi92MS92aXNp",
+            "b24vdmlzaW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
             "b3RvIp4BCgtVcGxvYWRFdmVudBIVCgRuYW1lGAEgASgJQge6SARyAhABEhoK",
             "CXNvdXJjZV9pZBgCIAEoCUIHukgEcgIQARIsCgVmaWxlcxgDIAMoCzIdLmRv",
             "bWFpbi52aXNpb24udjEuRmlsZUFkZHJlc3MSLgoIbG9jYXRpb24YBCABKAsy",
@@ -36,26 +36,37 @@ namespace Domain.Events.V1 {
             "dmVudHMudjEuUGluZ1R5cGUSLgoIbG9jYXRpb24YAyABKAsyHC5kb21haW4u",
             "bG9jYXRpb24udjEuTG9jYXRpb24iZAoLUmVib290RXZlbnQSFQoEbmFtZRgB",
             "IAEoCUIHukgEcgIQARIOCgZyZWFzb24YAiABKAkSLgoIbG9jYXRpb24YAyAB",
-            "KAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24iiwIKBlN5c3RlbRIT",
-            "CgJpZBgBIAEoCUIHukgEcgIQARIbCgpldmVudF9uYW1lGAIgASgJQge6SARy",
-            "AhABEi8KBnVwbG9hZBgDIAEoCzIdLmRvbWFpbi5ldmVudHMudjEuVXBsb2Fk",
-            "RXZlbnRIABIvCgZyZWJvb3QYBCABKAsyHS5kb21haW4uZXZlbnRzLnYxLlJl",
-            "Ym9vdEV2ZW50SAASKwoEcGluZxgFIAEoCzIbLmRvbWFpbi5ldmVudHMudjEu",
-            "UGluZ0V2ZW50SAASNwoJdGltZXN0YW1wGGQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEIIukgFsgECOAFCBwoFZXZlbnQqgQEKCFBpbmdUeXBl",
-            "EhkKFVBJTkdfVFlQRV9VTlNQRUNJRklFRBAAEhsKF1BJTkdfVFlQRV9FQ09O",
-            "T01JQ19NT0RFEAESFwoTUElOR19UWVBFX1RFU1RfTU9ERRACEhEKDUVDT05P",
-            "TUlDX01PREUQARINCglURVNUX01PREUQAhoCEAFCfwogYnIuY29tLnYzLnBy",
-            "b3RvY29sLmRvbWFpbi5ldmVudHNCEFN5c3RlbUV2ZW50UHJvdG9IAlABWkVn",
-            "aXRodWIuY29tL3YzLXRlY25vbG9naWEvcHJvdG9jb2wtY2xvdWQvcHJvdG8v",
-            "Z2VuL2RvbWFpbi92MS9ldmVudHM7djFiBnByb3RvMw=="));
+            "KAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24icQoPUmVwb3J0U2Vu",
+            "dEV2ZW50EhUKBG5hbWUYASABKAlCB7pIBHICEAESFwoGcmVhc29uGAIgASgJ",
+            "Qge6SARyAhABEi4KCGxvY2F0aW9uGAMgASgLMhwuZG9tYWluLmxvY2F0aW9u",
+            "LnYxLkxvY2F0aW9uIo0BChBEZXZpY2VTdGF0ZUV2ZW50EhUKBG5hbWUYASAB",
+            "KAlCB7pIBHICEAESGgoJc291cmNlX2lkGAIgASgJQge6SARyAhABEhYKBXN0",
+            "YXRlGAMgASgJQge6SARyAhABEi4KCGxvY2F0aW9uGAQgASgLMhwuZG9tYWlu",
+            "LmxvY2F0aW9uLnYxLkxvY2F0aW9uIoEDCgZTeXN0ZW0SEwoCaWQYASABKAlC",
+            "B7pIBHICEAESGwoKZXZlbnRfbmFtZRgCIAEoCUIHukgEcgIQARIvCgZ1cGxv",
+            "YWQYAyABKAsyHS5kb21haW4uZXZlbnRzLnYxLlVwbG9hZEV2ZW50SAASLwoG",
+            "cmVib290GAQgASgLMh0uZG9tYWluLmV2ZW50cy52MS5SZWJvb3RFdmVudEgA",
+            "EisKBHBpbmcYBSABKAsyGy5kb21haW4uZXZlbnRzLnYxLlBpbmdFdmVudEgA",
+            "EjgKC3JlcG9ydF9zZW50GAYgASgLMiEuZG9tYWluLmV2ZW50cy52MS5SZXBv",
+            "cnRTZW50RXZlbnRIABI6CgxkZXZpY2Vfc3RhdGUYByABKAsyIi5kb21haW4u",
+            "ZXZlbnRzLnYxLkRldmljZVN0YXRlRXZlbnRIABI3Cgl0aW1lc3RhbXAYZCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgi6SAWyAQI4AUIHCgVl",
+            "dmVudCqBAQoIUGluZ1R5cGUSGQoVUElOR19UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "GwoXUElOR19UWVBFX0VDT05PTUlDX01PREUQARIXChNQSU5HX1RZUEVfVEVT",
+            "VF9NT0RFEAISEQoNRUNPTk9NSUNfTU9ERRABEg0KCVRFU1RfTU9ERRACGgIQ",
+            "AUJ/CiBici5jb20udjMucHJvdG9jb2wuZG9tYWluLmV2ZW50c0IQU3lzdGVt",
+            "RXZlbnRQcm90b0gCUAFaRWdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90",
+            "b2NvbC1jbG91ZC9wcm90by9nZW4vZG9tYWluL3YxL2V2ZW50czt2MWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Vision.V1.VisionReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Vision.V1.VisionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.PingType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.UploadEvent), global::Domain.Events.V1.UploadEvent.Parser, new[]{ "Name", "SourceId", "Files", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.PingEvent), global::Domain.Events.V1.PingEvent.Parser, new[]{ "Name", "Type", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.RebootEvent), global::Domain.Events.V1.RebootEvent.Parser, new[]{ "Name", "Reason", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.System), global::Domain.Events.V1.System.Parser, new[]{ "Id", "EventName", "Upload", "Reboot", "Ping", "Timestamp" }, new[]{ "Event" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.ReportSentEvent), global::Domain.Events.V1.ReportSentEvent.Parser, new[]{ "Name", "Reason", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.DeviceStateEvent), global::Domain.Events.V1.DeviceStateEvent.Parser, new[]{ "Name", "SourceId", "State", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.System), global::Domain.Events.V1.System.Parser, new[]{ "Id", "EventName", "Upload", "Reboot", "Ping", "ReportSent", "DeviceState", "Timestamp" }, new[]{ "Event" }, null, null, null)
           }));
     }
     #endregion
@@ -967,6 +978,620 @@ namespace Domain.Events.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReportSentEvent : pb::IMessage<ReportSentEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReportSentEvent> _parser = new pb::MessageParser<ReportSentEvent>(() => new ReportSentEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReportSentEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.SystemEventReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportSentEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportSentEvent(ReportSentEvent other) : this() {
+      name_ = other.name_;
+      reason_ = other.reason_;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReportSentEvent Clone() {
+      return new ReportSentEvent(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// e.g., "REPORT_SENT_EVENT"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 2;
+    private string reason_ = "";
+    /// <summary>
+    /// e.g., "report_123"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reason {
+      get { return reason_; }
+      set {
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 3;
+    private global::Domain.Location.V1.Location location_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Location.V1.Location Location {
+      get { return location_; }
+      set {
+        location_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReportSentEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReportSentEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Reason != other.Reason) return false;
+      if (!object.Equals(Location, other.Location)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
+      if (location_ != null) hash ^= Location.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Reason);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Reason);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Reason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
+      }
+      if (location_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReportSentEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
+      }
+      if (other.location_ != null) {
+        if (location_ == null) {
+          Location = new global::Domain.Location.V1.Location();
+        }
+        Location.MergeFrom(other.Location);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Reason = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Reason = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeviceStateEvent : pb::IMessage<DeviceStateEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeviceStateEvent> _parser = new pb::MessageParser<DeviceStateEvent>(() => new DeviceStateEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeviceStateEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.SystemEventReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceStateEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceStateEvent(DeviceStateEvent other) : this() {
+      name_ = other.name_;
+      sourceId_ = other.sourceId_;
+      state_ = other.state_;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeviceStateEvent Clone() {
+      return new DeviceStateEvent(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// e.g., "DEVICE_STATE_EVENT"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_id" field.</summary>
+    public const int SourceIdFieldNumber = 2;
+    private string sourceId_ = "";
+    /// <summary>
+    /// e.g., "12345"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceId {
+      get { return sourceId_; }
+      set {
+        sourceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private string state_ = "";
+    /// <summary>
+    /// e.g., "ONLINE", "OFFLINE"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string State {
+      get { return state_; }
+      set {
+        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 4;
+    private global::Domain.Location.V1.Location location_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Location.V1.Location Location {
+      get { return location_; }
+      set {
+        location_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeviceStateEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeviceStateEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (SourceId != other.SourceId) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(Location, other.Location)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
+      if (State.Length != 0) hash ^= State.GetHashCode();
+      if (location_ != null) hash ^= Location.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceId);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(State);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceId);
+      }
+      if (State.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(State);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SourceId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceId);
+      }
+      if (State.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      }
+      if (location_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeviceStateEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.SourceId.Length != 0) {
+        SourceId = other.SourceId;
+      }
+      if (other.State.Length != 0) {
+        State = other.State;
+      }
+      if (other.location_ != null) {
+        if (location_ == null) {
+          Location = new global::Domain.Location.V1.Location();
+        }
+        Location.MergeFrom(other.Location);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            State = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            State = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class System : pb::IMessage<System>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -981,7 +1606,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.SystemEventReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Domain.Events.V1.SystemEventReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1013,6 +1638,12 @@ namespace Domain.Events.V1 {
           break;
         case EventOneofCase.Ping:
           Ping = other.Ping.Clone();
+          break;
+        case EventOneofCase.ReportSent:
+          ReportSent = other.ReportSent.Clone();
+          break;
+        case EventOneofCase.DeviceState:
+          DeviceState = other.DeviceState.Clone();
           break;
       }
 
@@ -1088,6 +1719,30 @@ namespace Domain.Events.V1 {
       }
     }
 
+    /// <summary>Field number for the "report_sent" field.</summary>
+    public const int ReportSentFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.ReportSentEvent ReportSent {
+      get { return eventCase_ == EventOneofCase.ReportSent ? (global::Domain.Events.V1.ReportSentEvent) event_ : null; }
+      set {
+        event_ = value;
+        eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.ReportSent;
+      }
+    }
+
+    /// <summary>Field number for the "device_state" field.</summary>
+    public const int DeviceStateFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.DeviceStateEvent DeviceState {
+      get { return eventCase_ == EventOneofCase.DeviceState ? (global::Domain.Events.V1.DeviceStateEvent) event_ : null; }
+      set {
+        event_ = value;
+        eventCase_ = value == null ? EventOneofCase.None : EventOneofCase.DeviceState;
+      }
+    }
+
     /// <summary>Field number for the "timestamp" field.</summary>
     public const int TimestampFieldNumber = 100;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
@@ -1107,6 +1762,8 @@ namespace Domain.Events.V1 {
       Upload = 3,
       Reboot = 4,
       Ping = 5,
+      ReportSent = 6,
+      DeviceState = 7,
     }
     private EventOneofCase eventCase_ = EventOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1142,6 +1799,8 @@ namespace Domain.Events.V1 {
       if (!object.Equals(Upload, other.Upload)) return false;
       if (!object.Equals(Reboot, other.Reboot)) return false;
       if (!object.Equals(Ping, other.Ping)) return false;
+      if (!object.Equals(ReportSent, other.ReportSent)) return false;
+      if (!object.Equals(DeviceState, other.DeviceState)) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
       if (EventCase != other.EventCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1156,6 +1815,8 @@ namespace Domain.Events.V1 {
       if (eventCase_ == EventOneofCase.Upload) hash ^= Upload.GetHashCode();
       if (eventCase_ == EventOneofCase.Reboot) hash ^= Reboot.GetHashCode();
       if (eventCase_ == EventOneofCase.Ping) hash ^= Ping.GetHashCode();
+      if (eventCase_ == EventOneofCase.ReportSent) hash ^= ReportSent.GetHashCode();
+      if (eventCase_ == EventOneofCase.DeviceState) hash ^= DeviceState.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       hash ^= (int) eventCase_;
       if (_unknownFields != null) {
@@ -1196,6 +1857,14 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Ping);
       }
+      if (eventCase_ == EventOneofCase.ReportSent) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ReportSent);
+      }
+      if (eventCase_ == EventOneofCase.DeviceState) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeviceState);
+      }
       if (timestamp_ != null) {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Timestamp);
@@ -1230,6 +1899,14 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Ping);
       }
+      if (eventCase_ == EventOneofCase.ReportSent) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ReportSent);
+      }
+      if (eventCase_ == EventOneofCase.DeviceState) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DeviceState);
+      }
       if (timestamp_ != null) {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Timestamp);
@@ -1258,6 +1935,12 @@ namespace Domain.Events.V1 {
       }
       if (eventCase_ == EventOneofCase.Ping) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ping);
+      }
+      if (eventCase_ == EventOneofCase.ReportSent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReportSent);
+      }
+      if (eventCase_ == EventOneofCase.DeviceState) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceState);
       }
       if (timestamp_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
@@ -1304,6 +1987,18 @@ namespace Domain.Events.V1 {
             Ping = new global::Domain.Events.V1.PingEvent();
           }
           Ping.MergeFrom(other.Ping);
+          break;
+        case EventOneofCase.ReportSent:
+          if (ReportSent == null) {
+            ReportSent = new global::Domain.Events.V1.ReportSentEvent();
+          }
+          ReportSent.MergeFrom(other.ReportSent);
+          break;
+        case EventOneofCase.DeviceState:
+          if (DeviceState == null) {
+            DeviceState = new global::Domain.Events.V1.DeviceStateEvent();
+          }
+          DeviceState.MergeFrom(other.DeviceState);
           break;
       }
 
@@ -1359,6 +2054,24 @@ namespace Domain.Events.V1 {
             }
             input.ReadMessage(subBuilder);
             Ping = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Domain.Events.V1.ReportSentEvent subBuilder = new global::Domain.Events.V1.ReportSentEvent();
+            if (eventCase_ == EventOneofCase.ReportSent) {
+              subBuilder.MergeFrom(ReportSent);
+            }
+            input.ReadMessage(subBuilder);
+            ReportSent = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Domain.Events.V1.DeviceStateEvent subBuilder = new global::Domain.Events.V1.DeviceStateEvent();
+            if (eventCase_ == EventOneofCase.DeviceState) {
+              subBuilder.MergeFrom(DeviceState);
+            }
+            input.ReadMessage(subBuilder);
+            DeviceState = subBuilder;
             break;
           }
           case 802: {
@@ -1420,6 +2133,24 @@ namespace Domain.Events.V1 {
             }
             input.ReadMessage(subBuilder);
             Ping = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Domain.Events.V1.ReportSentEvent subBuilder = new global::Domain.Events.V1.ReportSentEvent();
+            if (eventCase_ == EventOneofCase.ReportSent) {
+              subBuilder.MergeFrom(ReportSent);
+            }
+            input.ReadMessage(subBuilder);
+            ReportSent = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Domain.Events.V1.DeviceStateEvent subBuilder = new global::Domain.Events.V1.DeviceStateEvent();
+            if (eventCase_ == EventOneofCase.DeviceState) {
+              subBuilder.MergeFrom(DeviceState);
+            }
+            input.ReadMessage(subBuilder);
+            DeviceState = subBuilder;
             break;
           }
           case 802: {
