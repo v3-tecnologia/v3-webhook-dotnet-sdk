@@ -12,13 +12,13 @@ option optimize_for = CODE_SIZE;
 
 message DataUsage {
   // Usage during the period (in megabytes)
-  uint64 used_mb = 1;
+  optional double used_mb = 1;
 
   // Total accumulated usage in the current cycle (in megabytes)
-  uint64 total_used_mb = 2;
+  optional double total_used_mb = 2;
 
   // Percentage of the allowance already consumed (0–100)
-  double usage_percentage = 3;
+  optional double usage_percentage = 3;
 }
 
 message DataPlan {

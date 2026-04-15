@@ -25,19 +25,20 @@ namespace Domain.Network.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9kb21haW4vdjEvbmV0d29yay9uZXR3b3JrLnByb3RvEhFkb21haW4ubmV0",
-            "d29yay52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJNCglE",
-            "YXRhVXNhZ2USDwoHdXNlZF9tYhgBIAEoBBIVCg10b3RhbF91c2VkX21iGAIg",
-            "ASgEEhgKEHVzYWdlX3BlcmNlbnRhZ2UYAyABKAEifAoIRGF0YVBsYW4SEAoI",
-            "dG90YWxfbWIYASABKAQSLwoLY3ljbGVfc3RhcnQYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEi0KCWN5Y2xlX2VuZBgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCdQoZYnIuY29tLnYzLnByb3RvY29sLmRv",
-            "bWFpbkIMTmV0d29ya1Byb3RvSAJQAVpGZ2l0aHViLmNvbS92My10ZWNub2xv",
-            "Z2lhL3Byb3RvY29sLWNsb3VkL3Byb3RvL2dlbi9kb21haW4vdjEvbmV0d29y",
-            "azt2MWIGcHJvdG8z"));
+            "d29yay52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKPAQoJ",
+            "RGF0YVVzYWdlEhQKB3VzZWRfbWIYASABKAFIAIgBARIaCg10b3RhbF91c2Vk",
+            "X21iGAIgASgBSAGIAQESHQoQdXNhZ2VfcGVyY2VudGFnZRgDIAEoAUgCiAEB",
+            "QgoKCF91c2VkX21iQhAKDl90b3RhbF91c2VkX21iQhMKEV91c2FnZV9wZXJj",
+            "ZW50YWdlInwKCERhdGFQbGFuEhAKCHRvdGFsX21iGAEgASgEEi8KC2N5Y2xl",
+            "X3N0YXJ0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglj",
+            "eWNsZV9lbmQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQnUK",
+            "GWJyLmNvbS52My5wcm90b2NvbC5kb21haW5CDE5ldHdvcmtQcm90b0gCUAFa",
+            "RmdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90",
+            "by9nZW4vZG9tYWluL3YxL25ldHdvcms7djFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataUsage), global::Domain.Network.V1.DataUsage.Parser, new[]{ "UsedMb", "TotalUsedMb", "UsagePercentage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataUsage), global::Domain.Network.V1.DataUsage.Parser, new[]{ "UsedMb", "TotalUsedMb", "UsagePercentage" }, new[]{ "UsedMb", "TotalUsedMb", "UsagePercentage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataPlan), global::Domain.Network.V1.DataPlan.Parser, new[]{ "TotalMb", "CycleStart", "CycleEnd" }, null, null, null, null)
           }));
     }
@@ -53,6 +54,7 @@ namespace Domain.Network.V1 {
   {
     private static readonly pb::MessageParser<DataUsage> _parser = new pb::MessageParser<DataUsage>(() => new DataUsage());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataUsage> Parser { get { return _parser; } }
@@ -80,6 +82,7 @@ namespace Domain.Network.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataUsage(DataUsage other) : this() {
+      _hasBits0 = other._hasBits0;
       usedMb_ = other.usedMb_;
       totalUsedMb_ = other.totalUsedMb_;
       usagePercentage_ = other.usagePercentage_;
@@ -94,36 +97,68 @@ namespace Domain.Network.V1 {
 
     /// <summary>Field number for the "used_mb" field.</summary>
     public const int UsedMbFieldNumber = 1;
-    private ulong usedMb_;
+    private readonly static double UsedMbDefaultValue = 0D;
+
+    private double usedMb_;
     /// <summary>
     /// Usage during the period (in megabytes)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong UsedMb {
-      get { return usedMb_; }
+    public double UsedMb {
+      get { if ((_hasBits0 & 1) != 0) { return usedMb_; } else { return UsedMbDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         usedMb_ = value;
       }
+    }
+    /// <summary>Gets whether the "used_mb" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUsedMb {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "used_mb" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUsedMb() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "total_used_mb" field.</summary>
     public const int TotalUsedMbFieldNumber = 2;
-    private ulong totalUsedMb_;
+    private readonly static double TotalUsedMbDefaultValue = 0D;
+
+    private double totalUsedMb_;
     /// <summary>
     /// Total accumulated usage in the current cycle (in megabytes)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong TotalUsedMb {
-      get { return totalUsedMb_; }
+    public double TotalUsedMb {
+      get { if ((_hasBits0 & 2) != 0) { return totalUsedMb_; } else { return TotalUsedMbDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         totalUsedMb_ = value;
       }
+    }
+    /// <summary>Gets whether the "total_used_mb" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalUsedMb {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "total_used_mb" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalUsedMb() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "usage_percentage" field.</summary>
     public const int UsagePercentageFieldNumber = 3;
+    private readonly static double UsagePercentageDefaultValue = 0D;
+
     private double usagePercentage_;
     /// <summary>
     /// Percentage of the allowance already consumed (0–100)
@@ -131,10 +166,23 @@ namespace Domain.Network.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double UsagePercentage {
-      get { return usagePercentage_; }
+      get { if ((_hasBits0 & 4) != 0) { return usagePercentage_; } else { return UsagePercentageDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         usagePercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "usage_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUsagePercentage {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "usage_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUsagePercentage() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,8 +200,8 @@ namespace Domain.Network.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UsedMb != other.UsedMb) return false;
-      if (TotalUsedMb != other.TotalUsedMb) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(UsedMb, other.UsedMb)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalUsedMb, other.TotalUsedMb)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(UsagePercentage, other.UsagePercentage)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -162,9 +210,9 @@ namespace Domain.Network.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (UsedMb != 0UL) hash ^= UsedMb.GetHashCode();
-      if (TotalUsedMb != 0UL) hash ^= TotalUsedMb.GetHashCode();
-      if (UsagePercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UsagePercentage);
+      if (HasUsedMb) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UsedMb);
+      if (HasTotalUsedMb) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalUsedMb);
+      if (HasUsagePercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UsagePercentage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,15 +231,15 @@ namespace Domain.Network.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UsedMb != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(UsedMb);
+      if (HasUsedMb) {
+        output.WriteRawTag(9);
+        output.WriteDouble(UsedMb);
       }
-      if (TotalUsedMb != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(TotalUsedMb);
+      if (HasTotalUsedMb) {
+        output.WriteRawTag(17);
+        output.WriteDouble(TotalUsedMb);
       }
-      if (UsagePercentage != 0D) {
+      if (HasUsagePercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(UsagePercentage);
       }
@@ -205,15 +253,15 @@ namespace Domain.Network.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UsedMb != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(UsedMb);
+      if (HasUsedMb) {
+        output.WriteRawTag(9);
+        output.WriteDouble(UsedMb);
       }
-      if (TotalUsedMb != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(TotalUsedMb);
+      if (HasTotalUsedMb) {
+        output.WriteRawTag(17);
+        output.WriteDouble(TotalUsedMb);
       }
-      if (UsagePercentage != 0D) {
+      if (HasUsagePercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(UsagePercentage);
       }
@@ -227,13 +275,13 @@ namespace Domain.Network.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (UsedMb != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UsedMb);
+      if (HasUsedMb) {
+        size += 1 + 8;
       }
-      if (TotalUsedMb != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TotalUsedMb);
+      if (HasTotalUsedMb) {
+        size += 1 + 8;
       }
-      if (UsagePercentage != 0D) {
+      if (HasUsagePercentage) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -248,13 +296,13 @@ namespace Domain.Network.V1 {
       if (other == null) {
         return;
       }
-      if (other.UsedMb != 0UL) {
+      if (other.HasUsedMb) {
         UsedMb = other.UsedMb;
       }
-      if (other.TotalUsedMb != 0UL) {
+      if (other.HasTotalUsedMb) {
         TotalUsedMb = other.TotalUsedMb;
       }
-      if (other.UsagePercentage != 0D) {
+      if (other.HasUsagePercentage) {
         UsagePercentage = other.UsagePercentage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -276,12 +324,12 @@ namespace Domain.Network.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            UsedMb = input.ReadUInt64();
+          case 9: {
+            UsedMb = input.ReadDouble();
             break;
           }
-          case 16: {
-            TotalUsedMb = input.ReadUInt64();
+          case 17: {
+            TotalUsedMb = input.ReadDouble();
             break;
           }
           case 25: {
@@ -307,12 +355,12 @@ namespace Domain.Network.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            UsedMb = input.ReadUInt64();
+          case 9: {
+            UsedMb = input.ReadDouble();
             break;
           }
-          case 16: {
-            TotalUsedMb = input.ReadUInt64();
+          case 17: {
+            TotalUsedMb = input.ReadDouble();
             break;
           }
           case 25: {
