@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+import "domain/v1/files/file.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.v3.protocol.domain.events";
+option java_outer_classname = "FileEventProto";
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option optimize_for = CODE_SIZE;
+
+package domain.events.v1;
+
+enum MediaBucketType {
+  MEDIA_BUCKET_TYPE_UNSPECIFIED = 0;
+
+  MEDIA_BUCKET_TYPE_FACES = 1;
+
+  MEDIA_BUCKET_TYPE_IMAGES = 2;
+
+  MEDIA_BUCKET_TYPE_VIDEOS = 3;
+
+  MEDIA_BUCKET_TYPE_ASSETS = 4;
+
+  MEDIA_BUCKET_TYPE_AUDIOS = 5;
+
+  MEDIA_BUCKET_TYPE_UPLOADS = 6;
+}
+
+// Image file event
+message ImageFileEvent {
+  domain.file.v1.File file = 1 [(buf.validate.field).required = true];
+
+  domain.file.v1.ImageType image_type = 2;
+
+  MediaBucketType bucket_type = 3;
+}
+
+// Video file event
+message VideoFileEvent {
+  domain.file.v1.File file = 1 [(buf.validate.field).required = true];
+
+  domain.file.v1.VideoCodec video_codec = 2;
+
+  domain.file.v1.AudioCodec audio_codec = 3;
+
+  MediaBucketType bucket_type = 4;
+}
+
+// Raw/generic file event
+message RawFileEvent {
+  domain.file.v1.File file = 1 [(buf.validate.field).required = true];
+
+  MediaBucketType bucket_type = 2;
+}
+
+// File event supporting multiple domain types
+message Media {
+  string id = 1  [(buf.validate.field).string.min_len = 1];
+  
+  string event_name = 2 [(buf.validate.field).string.min_len = 1];
+
+  oneof type {
+    ImageFileEvent image = 3;
+    VideoFileEvent video = 4;
+    RawFileEvent raw = 5;
+  }
+
+  google.protobuf.Timestamp timestamp = 100 
+      [(buf.validate.field).timestamp.lt_now = true];
+}

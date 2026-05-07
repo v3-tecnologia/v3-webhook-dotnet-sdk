@@ -35,90 +35,96 @@ namespace Domain.Events.V1 {
             "L2V2ZW50cy9zeXN0ZW1fZXZlbnQucHJvdG8aJmRvbWFpbi92MS9ldmVudHMv",
             "dGVsZW1ldHJ5X2V2ZW50LnByb3RvGiRkb21haW4vdjEvZXZlbnRzL3ZlaGlj",
             "bGVfZXZlbnQucHJvdG8aI2RvbWFpbi92MS9ldmVudHMvdmlzaW9uX2V2ZW50",
-            "LnByb3RvGiFkb21haW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJvdG8aHWRv",
-            "bWFpbi92MS9vcmRlcnMvZGV2aWNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
-            "dGltZXN0YW1wLnByb3RvItkBCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEg",
-            "ASgLMiIuZG9tYWluLmV2ZW50cy52MS5UZWxlbWV0cnlEZXRhaWxzEhsKCmdy",
-            "b3VwX25hbWUYAiABKAlCB7pIBHICEAESMQoKdHJpcF9ldmVudBgDIAEoCzIb",
-            "LmRvbWFpbi5ldmVudHMudjEuVHJpcEV2ZW50SAASPQoQc3RhbmRhbG9uZV9l",
-            "dmVudBgEIAEoCzIhLmRvbWFpbi5ldmVudHMudjEuU3RhbmRhbG9uZUV2ZW50",
-            "SABCBgoEZGF0YSKeAwoJVHJpcEV2ZW50EhgKB3RyaXBfaWQYASABKAlCB7pI",
-            "BHICEAESIQoQZXZlbnRfZ3JvdXBfbmFtZRgCIAEoCUIHukgEcgIQARIuCghs",
-            "b2NhdGlvbhhkIAEoCzIcLmRvbWFpbi5sb2NhdGlvbi52MS5Mb2NhdGlvbhIm",
-            "CgRhZGFzGAMgASgLMhYuZG9tYWluLmV2ZW50cy52MS5BZGFzSAASJAoDZG1z",
-            "GAQgASgLMhUuZG9tYWluLmV2ZW50cy52MS5EbXNIABI7Cg9kcml2ZXJfYmVo",
-            "YXZpb3IYBSABKAsyIC5kb21haW4uZXZlbnRzLnYxLkRyaXZlckJlaGF2aW9y",
-            "SAASMAoJdGVsZW1ldHJ5GAYgASgLMhsuZG9tYWluLmV2ZW50cy52MS5UZWxl",
-            "bWV0cnlIABIsCgd2ZWhpY2xlGAcgASgLMhkuZG9tYWluLmV2ZW50cy52MS5W",
-            "ZWhpY2xlSAASKgoGdmlzaW9uGAggASgLMhguZG9tYWluLmV2ZW50cy52MS5W",
-            "aXNpb25IAEINCgtldmVudF9ncm91cCLbAgoPU3RhbmRhbG9uZUV2ZW50EiEK",
-            "EGV2ZW50X2dyb3VwX25hbWUYASABKAlCB7pIBHICEAESLgoIbG9jYXRpb24Y",
-            "ZCABKAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24SKAoFYWxlcnQY",
-            "AiABKAsyFy5kb21haW4uZXZlbnRzLnYxLkFsZXJ0SAASMgoKY29ubmVjdGlv",
-            "bhgDIAEoCzIcLmRvbWFpbi5ldmVudHMudjEuQ29ubmVjdGlvbkgAEioKBmhl",
-            "YWx0aBgEIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuSGVhbHRoSAASMAoJdGVs",
-            "ZW1ldHJ5GAUgASgLMhsuZG9tYWluLmV2ZW50cy52MS5UZWxlbWV0cnlIABIq",
-            "CgZzeXN0ZW0YBiABKAsyGC5kb21haW4uZXZlbnRzLnYxLlN5c3RlbUgAQg0K",
-            "C2V2ZW50X2dyb3VwIo8BCgpBdHRyaWJ1dGVzEigKBmRldmljZRgBIAEoCzIY",
-            "LmRvbWFpbi5vcmRlcnMudjEuRGV2aWNlEiwKBW9yZGVyGAIgASgLMh0uZG9t",
-            "YWluLmV2ZW50cy52MS5PcmRlclN0YXR1cxIpCgRkYXRhGAMgASgLMhsuZG9t",
-            "YWluLmV2ZW50cy52MS5FdmVudERhdGEizAIKBUV2ZW50EhMKAmlkGAEgASgJ",
-            "Qge6SARyAhABEhEKCWhhc19tZWRpYRgIIAEoCBIoCgZzdGF0dXMYByABKA4y",
-            "GC5kb21haW4uZXZlbnRzLnYxLlN0YXR1cxI4CgpjcmVhdGVkX2F0GAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIIukgFsgECOAESKQoEdHlw",
-            "ZRgDIAEoDjIbLmRvbWFpbi5ldmVudHMudjEuRXZlbnRUeXBlEjEKCGNhdGVn",
-            "b3J5GAQgASgOMh8uZG9tYWluLmV2ZW50cy52MS5FdmVudENhdGVnb3J5EicK",
-            "A3N1YhgFIAEoDjIaLmRvbWFpbi5ldmVudHMudjEuRXZlbnRTdWISMAoKYXR0",
-            "cmlidXRlcxgGIAEoCzIcLmRvbWFpbi5ldmVudHMudjEuQXR0cmlidXRlcype",
-            "CgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASEwoPU1RBVFVTX1JF",
-            "Q0VJVkVEEAESFAoQU1RBVFVTX0RFTElWRVJFRBACEhEKDVNUQVRVU19GQUlM",
-            "RUQQAypxCglFdmVudFR5cGUSGgoWRVZFTlRfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhQKEEVWRU5UX1RZUEVfT1JERVIQARIWChJFVkVOVF9UWVBFX0dFTkVSQUwQ",
-            "AhIJCgVPUkRFUhABEgsKB0dFTkVSQUwQAhoCEAEq1wQKDUV2ZW50Q2F0ZWdv",
-            "cnkSHgoaRVZFTlRfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIXChNFVkVOVF9D",
-            "QVRFR09SWV9BREFTEAESGAoURVZFTlRfQ0FURUdPUllfQUxFUlQQAhIdChlF",
-            "VkVOVF9DQVRFR09SWV9DT05ORUNUSU9OEAMSFgoSRVZFTlRfQ0FURUdPUllf",
-            "RE1TEAQSIgoeRVZFTlRfQ0FURUdPUllfRFJJVkVSX0JFSEFWSU9SEAUSGQoV",
-            "RVZFTlRfQ0FURUdPUllfSEVBTFRIEAYSGAoURVZFTlRfQ0FURUdPUllfT1JE",
-            "RVIQBxIZChVFVkVOVF9DQVRFR09SWV9TWVNURU0QCBIcChhFVkVOVF9DQVRF",
-            "R09SWV9URUxFTUVUUlkQCRIaChZFVkVOVF9DQVRFR09SWV9WRUhJQ0xFEAoS",
-            "GQoVRVZFTlRfQ0FURUdPUllfVklTSU9OEAsSEQoNQ0FURUdPUllfQURBUxAB",
-            "EhIKDkNBVEVHT1JZX0FMRVJUEAISFwoTQ0FURUdPUllfQ09OTkVDVElPThAD",
-            "EhAKDENBVEVHT1JZX0RNUxAEEhwKGENBVEVHT1JZX0RSSVZFUl9CRUhBVklP",
-            "UhAFEhMKD0NBVEVHT1JZX0hFQUxUSBAGEhIKDkNBVEVHT1JZX09SREVSEAcS",
-            "EwoPQ0FURUdPUllfU1lTVEVNEAgSFgoSQ0FURUdPUllfVEVMRU1FVFJZEAkS",
-            "FAoQQ0FURUdPUllfVkVISUNMRRAKEhMKD0NBVEVHT1JZX1ZJU0lPThALGgIQ",
-            "ASrbBwoIRXZlbnRTdWISGQoVRVZFTlRfU1VCX1VOU1BFQ0lGSUVEEAASGAoU",
-            "RVZFTlRfU1VCX0FMRVJUX0lORk8QARIcChhFVkVOVF9TVUJfQUxFUlRfQ1JJ",
-            "VElDQUwQAhIbChdFVkVOVF9TVUJfQUxFUlRfV0FSTklORxADEicKI0VWRU5U",
-            "X1NVQl9DT05ORUNUSU9OX1NUQVRVU19DSEFOR0VEEAQSGgoWRVZFTlRfU1VC",
-            "X0RNU19BRFZBTkNFRBAFEhcKE0VWRU5UX1NVQl9ETVNfQkFTSUMQBhImCiJF",
-            "VkVOVF9TVUJfRFJJVkVSX0JFSEFWSU9SX0FEVkFOQ0VEEAcSIwofRVZFTlRf",
-            "U1VCX0RSSVZFUl9CRUhBVklPUl9CQVNJQxAIEhQKEEVWRU5UX1NVQl9IRUFM",
-            "VEgQCRIaChZFVkVOVF9TVUJfT1JERVJfU1RBVFVTEAoSGwoXRVZFTlRfU1VC",
-            "X1NZU1RFTV9VUExPQUQQCxIfChtFVkVOVF9TVUJfVEVMRU1FVFJZX0JBVFRF",
-            "UlkQDBIgChxFVkVOVF9TVUJfVEVMRU1FVFJZX0lHTklUSU9OEA0SIAocRVZF",
-            "TlRfU1VCX1RFTEVNRVRSWV9MT0NBVElPThAOEhsKF0VWRU5UX1NVQl9WRUhJ",
-            "Q0xFX0JMT0NLEA8SHQoZRVZFTlRfU1VCX1ZJU0lPTl9BRFZBTkNFRBAQEhoK",
-            "FkVWRU5UX1NVQl9WSVNJT05fQkFTSUMQERISCg5TVUJfQUxFUlRfSU5GTxAB",
-            "EhYKElNVQl9BTEVSVF9DUklUSUNBTBACEhUKEVNVQl9BTEVSVF9XQVJOSU5H",
-            "EAMSIQodU1VCX0NPTk5FQ1RJT05fU1RBVFVTX0NIQU5HRUQQBBIUChBTVUJf",
-            "RE1TX0FEVkFOQ0VEEAUSEQoNU1VCX0RNU19CQVNJQxAGEiAKHFNVQl9EUklW",
-            "RVJfQkVIQVZJT1JfQURWQU5DRUQQBxIdChlTVUJfRFJJVkVSX0JFSEFWSU9S",
-            "X0JBU0lDEAgSDgoKU1VCX0hFQUxUSBAJEhQKEFNVQl9PUkRFUl9TVEFUVVMQ",
-            "ChIVChFTVUJfU1lTVEVNX1VQTE9BRBALEhkKFVNVQl9URUxFTUVUUllfQkFU",
-            "VEVSWRAMEhoKFlNVQl9URUxFTUVUUllfSUdOSVRJT04QDRIaChZTVUJfVEVM",
-            "RU1FVFJZX0xPQ0FUSU9OEA4SFQoRU1VCX1ZFSElDTEVfQkxPQ0sQDxIXChNT",
-            "VUJfVklTSU9OX0FEVkFOQ0VEEBASFAoQU1VCX1ZJU0lPTl9CQVNJQxARGgIQ",
-            "AUJ5CiBici5jb20udjMucHJvdG9jb2wuZG9tYWluLmV2ZW50c0IKRXZlbnRQ",
-            "cm90b0gCUAFaRWdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1j",
-            "bG91ZC9wcm90by9nZW4vZG9tYWluL3YxL2V2ZW50czt2MWIGcHJvdG8z"));
+            "LnByb3RvGiJkb21haW4vdjEvZXZlbnRzL21lZGlhX2V2ZW50LnByb3RvGiFk",
+            "b21haW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJvdG8aHWRvbWFpbi92MS9v",
+            "cmRlcnMvZGV2aWNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvIpQCCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEgASgLMiIuZG9t",
+            "YWluLmV2ZW50cy52MS5UZWxlbWV0cnlEZXRhaWxzEhsKCmdyb3VwX25hbWUY",
+            "AiABKAlCB7pIBHICEAESMQoKdHJpcF9ldmVudBgDIAEoCzIbLmRvbWFpbi5l",
+            "dmVudHMudjEuVHJpcEV2ZW50SAASPQoQc3RhbmRhbG9uZV9ldmVudBgEIAEo",
+            "CzIhLmRvbWFpbi5ldmVudHMudjEuU3RhbmRhbG9uZUV2ZW50SAASOQoOaW50",
+            "ZXJuYWxfZXZlbnQYBSABKAsyHy5kb21haW4uZXZlbnRzLnYxLkludGVybmFs",
+            "RXZlbnRIAEIGCgRkYXRhItsCCg9TdGFuZGFsb25lRXZlbnQSIQoQZXZlbnRf",
+            "Z3JvdXBfbmFtZRgBIAEoCUIHukgEcgIQARIuCghsb2NhdGlvbhhkIAEoCzIc",
+            "LmRvbWFpbi5sb2NhdGlvbi52MS5Mb2NhdGlvbhIoCgVhbGVydBgCIAEoCzIX",
+            "LmRvbWFpbi5ldmVudHMudjEuQWxlcnRIABIyCgpjb25uZWN0aW9uGAMgASgL",
+            "MhwuZG9tYWluLmV2ZW50cy52MS5Db25uZWN0aW9uSAASKgoGaGVhbHRoGAQg",
+            "ASgLMhguZG9tYWluLmV2ZW50cy52MS5IZWFsdGhIABIwCgl0ZWxlbWV0cnkY",
+            "BSABKAsyGy5kb21haW4uZXZlbnRzLnYxLlRlbGVtZXRyeUgAEioKBnN5c3Rl",
+            "bRgGIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuU3lzdGVtSABCDQoLZXZlbnRf",
+            "Z3JvdXAingMKCVRyaXBFdmVudBIYCgd0cmlwX2lkGAEgASgJQge6SARyAhAB",
+            "EiEKEGV2ZW50X2dyb3VwX25hbWUYAiABKAlCB7pIBHICEAESLgoIbG9jYXRp",
+            "b24YZCABKAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24SJgoEYWRh",
+            "cxgDIAEoCzIWLmRvbWFpbi5ldmVudHMudjEuQWRhc0gAEiQKA2RtcxgEIAEo",
+            "CzIVLmRvbWFpbi5ldmVudHMudjEuRG1zSAASOwoPZHJpdmVyX2JlaGF2aW9y",
+            "GAUgASgLMiAuZG9tYWluLmV2ZW50cy52MS5Ecml2ZXJCZWhhdmlvckgAEjAK",
+            "CXRlbGVtZXRyeRgGIAEoCzIbLmRvbWFpbi5ldmVudHMudjEuVGVsZW1ldHJ5",
+            "SAASLAoHdmVoaWNsZRgHIAEoCzIZLmRvbWFpbi5ldmVudHMudjEuVmVoaWNs",
+            "ZUgAEioKBnZpc2lvbhgIIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuVmlzaW9u",
+            "SABCDQoLZXZlbnRfZ3JvdXAiawoNSW50ZXJuYWxFdmVudBIhChBldmVudF9n",
+            "cm91cF9uYW1lGAEgASgJQge6SARyAhABEigKBW1lZGlhGAIgASgLMhcuZG9t",
+            "YWluLmV2ZW50cy52MS5NZWRpYUgAQg0KC2V2ZW50X2dyb3VwIo8BCgpBdHRy",
+            "aWJ1dGVzEigKBmRldmljZRgBIAEoCzIYLmRvbWFpbi5vcmRlcnMudjEuRGV2",
+            "aWNlEiwKBW9yZGVyGAIgASgLMh0uZG9tYWluLmV2ZW50cy52MS5PcmRlclN0",
+            "YXR1cxIpCgRkYXRhGAMgASgLMhsuZG9tYWluLmV2ZW50cy52MS5FdmVudERh",
+            "dGEizAIKBUV2ZW50EhMKAmlkGAEgASgJQge6SARyAhABEhEKCWhhc19tZWRp",
+            "YRgIIAEoCBIoCgZzdGF0dXMYByABKA4yGC5kb21haW4uZXZlbnRzLnYxLlN0",
+            "YXR1cxI4CgpjcmVhdGVkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEIIukgFsgECOAESKQoEdHlwZRgDIAEoDjIbLmRvbWFpbi5ldmVu",
+            "dHMudjEuRXZlbnRUeXBlEjEKCGNhdGVnb3J5GAQgASgOMh8uZG9tYWluLmV2",
+            "ZW50cy52MS5FdmVudENhdGVnb3J5EicKA3N1YhgFIAEoDjIaLmRvbWFpbi5l",
+            "dmVudHMudjEuRXZlbnRTdWISMAoKYXR0cmlidXRlcxgGIAEoCzIcLmRvbWFp",
+            "bi5ldmVudHMudjEuQXR0cmlidXRlcypeCgZTdGF0dXMSFgoSU1RBVFVTX1VO",
+            "U1BFQ0lGSUVEEAASEwoPU1RBVFVTX1JFQ0VJVkVEEAESFAoQU1RBVFVTX0RF",
+            "TElWRVJFRBACEhEKDVNUQVRVU19GQUlMRUQQAypxCglFdmVudFR5cGUSGgoW",
+            "RVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEhQKEEVWRU5UX1RZUEVfT1JERVIQ",
+            "ARIWChJFVkVOVF9UWVBFX0dFTkVSQUwQAhIJCgVPUkRFUhABEgsKB0dFTkVS",
+            "QUwQAhoCEAEq1wQKDUV2ZW50Q2F0ZWdvcnkSHgoaRVZFTlRfQ0FURUdPUllf",
+            "VU5TUEVDSUZJRUQQABIXChNFVkVOVF9DQVRFR09SWV9BREFTEAESGAoURVZF",
+            "TlRfQ0FURUdPUllfQUxFUlQQAhIdChlFVkVOVF9DQVRFR09SWV9DT05ORUNU",
+            "SU9OEAMSFgoSRVZFTlRfQ0FURUdPUllfRE1TEAQSIgoeRVZFTlRfQ0FURUdP",
+            "UllfRFJJVkVSX0JFSEFWSU9SEAUSGQoVRVZFTlRfQ0FURUdPUllfSEVBTFRI",
+            "EAYSGAoURVZFTlRfQ0FURUdPUllfT1JERVIQBxIZChVFVkVOVF9DQVRFR09S",
+            "WV9TWVNURU0QCBIcChhFVkVOVF9DQVRFR09SWV9URUxFTUVUUlkQCRIaChZF",
+            "VkVOVF9DQVRFR09SWV9WRUhJQ0xFEAoSGQoVRVZFTlRfQ0FURUdPUllfVklT",
+            "SU9OEAsSEQoNQ0FURUdPUllfQURBUxABEhIKDkNBVEVHT1JZX0FMRVJUEAIS",
+            "FwoTQ0FURUdPUllfQ09OTkVDVElPThADEhAKDENBVEVHT1JZX0RNUxAEEhwK",
+            "GENBVEVHT1JZX0RSSVZFUl9CRUhBVklPUhAFEhMKD0NBVEVHT1JZX0hFQUxU",
+            "SBAGEhIKDkNBVEVHT1JZX09SREVSEAcSEwoPQ0FURUdPUllfU1lTVEVNEAgS",
+            "FgoSQ0FURUdPUllfVEVMRU1FVFJZEAkSFAoQQ0FURUdPUllfVkVISUNMRRAK",
+            "EhMKD0NBVEVHT1JZX1ZJU0lPThALGgIQASrbBwoIRXZlbnRTdWISGQoVRVZF",
+            "TlRfU1VCX1VOU1BFQ0lGSUVEEAASGAoURVZFTlRfU1VCX0FMRVJUX0lORk8Q",
+            "ARIcChhFVkVOVF9TVUJfQUxFUlRfQ1JJVElDQUwQAhIbChdFVkVOVF9TVUJf",
+            "QUxFUlRfV0FSTklORxADEicKI0VWRU5UX1NVQl9DT05ORUNUSU9OX1NUQVRV",
+            "U19DSEFOR0VEEAQSGgoWRVZFTlRfU1VCX0RNU19BRFZBTkNFRBAFEhcKE0VW",
+            "RU5UX1NVQl9ETVNfQkFTSUMQBhImCiJFVkVOVF9TVUJfRFJJVkVSX0JFSEFW",
+            "SU9SX0FEVkFOQ0VEEAcSIwofRVZFTlRfU1VCX0RSSVZFUl9CRUhBVklPUl9C",
+            "QVNJQxAIEhQKEEVWRU5UX1NVQl9IRUFMVEgQCRIaChZFVkVOVF9TVUJfT1JE",
+            "RVJfU1RBVFVTEAoSGwoXRVZFTlRfU1VCX1NZU1RFTV9VUExPQUQQCxIfChtF",
+            "VkVOVF9TVUJfVEVMRU1FVFJZX0JBVFRFUlkQDBIgChxFVkVOVF9TVUJfVEVM",
+            "RU1FVFJZX0lHTklUSU9OEA0SIAocRVZFTlRfU1VCX1RFTEVNRVRSWV9MT0NB",
+            "VElPThAOEhsKF0VWRU5UX1NVQl9WRUhJQ0xFX0JMT0NLEA8SHQoZRVZFTlRf",
+            "U1VCX1ZJU0lPTl9BRFZBTkNFRBAQEhoKFkVWRU5UX1NVQl9WSVNJT05fQkFT",
+            "SUMQERISCg5TVUJfQUxFUlRfSU5GTxABEhYKElNVQl9BTEVSVF9DUklUSUNB",
+            "TBACEhUKEVNVQl9BTEVSVF9XQVJOSU5HEAMSIQodU1VCX0NPTk5FQ1RJT05f",
+            "U1RBVFVTX0NIQU5HRUQQBBIUChBTVUJfRE1TX0FEVkFOQ0VEEAUSEQoNU1VC",
+            "X0RNU19CQVNJQxAGEiAKHFNVQl9EUklWRVJfQkVIQVZJT1JfQURWQU5DRUQQ",
+            "BxIdChlTVUJfRFJJVkVSX0JFSEFWSU9SX0JBU0lDEAgSDgoKU1VCX0hFQUxU",
+            "SBAJEhQKEFNVQl9PUkRFUl9TVEFUVVMQChIVChFTVUJfU1lTVEVNX1VQTE9B",
+            "RBALEhkKFVNVQl9URUxFTUVUUllfQkFUVEVSWRAMEhoKFlNVQl9URUxFTUVU",
+            "UllfSUdOSVRJT04QDRIaChZTVUJfVEVMRU1FVFJZX0xPQ0FUSU9OEA4SFQoR",
+            "U1VCX1ZFSElDTEVfQkxPQ0sQDxIXChNTVUJfVklTSU9OX0FEVkFOQ0VEEBAS",
+            "FAoQU1VCX1ZJU0lPTl9CQVNJQxARGgIQAUJ5CiBici5jb20udjMucHJvdG9j",
+            "b2wuZG9tYWluLmV2ZW50c0IKRXZlbnRQcm90b0gCUAFaRWdpdGh1Yi5jb20v",
+            "djMtdGVjbm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90by9nZW4vZG9tYWlu",
+            "L3YxL2V2ZW50czt2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Events.V1.MediaEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.Status), typeof(global::Domain.Events.V1.EventType), typeof(global::Domain.Events.V1.EventCategory), typeof(global::Domain.Events.V1.EventSub), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.EventData), global::Domain.Events.V1.EventData.Parser, new[]{ "Telemetry", "GroupName", "TripEvent", "StandaloneEvent" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TripEvent), global::Domain.Events.V1.TripEvent.Parser, new[]{ "TripId", "EventGroupName", "Location", "Adas", "Dms", "DriverBehavior", "Telemetry", "Vehicle", "Vision" }, new[]{ "EventGroup" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.EventData), global::Domain.Events.V1.EventData.Parser, new[]{ "Telemetry", "GroupName", "TripEvent", "StandaloneEvent", "InternalEvent" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.StandaloneEvent), global::Domain.Events.V1.StandaloneEvent.Parser, new[]{ "EventGroupName", "Location", "Alert", "Connection", "Health", "Telemetry", "System" }, new[]{ "EventGroup" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TripEvent), global::Domain.Events.V1.TripEvent.Parser, new[]{ "TripId", "EventGroupName", "Location", "Adas", "Dms", "DriverBehavior", "Telemetry", "Vehicle", "Vision" }, new[]{ "EventGroup" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.InternalEvent), global::Domain.Events.V1.InternalEvent.Parser, new[]{ "EventGroupName", "Media" }, new[]{ "EventGroup" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Attributes), global::Domain.Events.V1.Attributes.Parser, new[]{ "Device", "Order", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Event), global::Domain.Events.V1.Event.Parser, new[]{ "Id", "HasMedia", "Status", "CreatedAt", "Type", "Category", "Sub", "Attributes" }, null, null, null, null)
           }));
@@ -322,6 +328,9 @@ namespace Domain.Events.V1 {
         case DataOneofCase.StandaloneEvent:
           StandaloneEvent = other.StandaloneEvent.Clone();
           break;
+        case DataOneofCase.InternalEvent:
+          InternalEvent = other.InternalEvent.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -384,12 +393,25 @@ namespace Domain.Events.V1 {
       }
     }
 
+    /// <summary>Field number for the "internal_event" field.</summary>
+    public const int InternalEventFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.InternalEvent InternalEvent {
+      get { return dataCase_ == DataOneofCase.InternalEvent ? (global::Domain.Events.V1.InternalEvent) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.InternalEvent;
+      }
+    }
+
     private object data_;
     /// <summary>Enum of possible cases for the "data" oneof.</summary>
     public enum DataOneofCase {
       None = 0,
       TripEvent = 3,
       StandaloneEvent = 4,
+      InternalEvent = 5,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -424,6 +446,7 @@ namespace Domain.Events.V1 {
       if (GroupName != other.GroupName) return false;
       if (!object.Equals(TripEvent, other.TripEvent)) return false;
       if (!object.Equals(StandaloneEvent, other.StandaloneEvent)) return false;
+      if (!object.Equals(InternalEvent, other.InternalEvent)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -436,6 +459,7 @@ namespace Domain.Events.V1 {
       if (GroupName.Length != 0) hash ^= GroupName.GetHashCode();
       if (dataCase_ == DataOneofCase.TripEvent) hash ^= TripEvent.GetHashCode();
       if (dataCase_ == DataOneofCase.StandaloneEvent) hash ^= StandaloneEvent.GetHashCode();
+      if (dataCase_ == DataOneofCase.InternalEvent) hash ^= InternalEvent.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -471,6 +495,10 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(StandaloneEvent);
       }
+      if (dataCase_ == DataOneofCase.InternalEvent) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InternalEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -497,6 +525,10 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(StandaloneEvent);
       }
+      if (dataCase_ == DataOneofCase.InternalEvent) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InternalEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -518,6 +550,9 @@ namespace Domain.Events.V1 {
       }
       if (dataCase_ == DataOneofCase.StandaloneEvent) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StandaloneEvent);
+      }
+      if (dataCase_ == DataOneofCase.InternalEvent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InternalEvent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -552,6 +587,12 @@ namespace Domain.Events.V1 {
             StandaloneEvent = new global::Domain.Events.V1.StandaloneEvent();
           }
           StandaloneEvent.MergeFrom(other.StandaloneEvent);
+          break;
+        case DataOneofCase.InternalEvent:
+          if (InternalEvent == null) {
+            InternalEvent = new global::Domain.Events.V1.InternalEvent();
+          }
+          InternalEvent.MergeFrom(other.InternalEvent);
           break;
       }
 
@@ -603,6 +644,15 @@ namespace Domain.Events.V1 {
             StandaloneEvent = subBuilder;
             break;
           }
+          case 42: {
+            global::Domain.Events.V1.InternalEvent subBuilder = new global::Domain.Events.V1.InternalEvent();
+            if (dataCase_ == DataOneofCase.InternalEvent) {
+              subBuilder.MergeFrom(InternalEvent);
+            }
+            input.ReadMessage(subBuilder);
+            InternalEvent = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -651,6 +701,554 @@ namespace Domain.Events.V1 {
             StandaloneEvent = subBuilder;
             break;
           }
+          case 42: {
+            global::Domain.Events.V1.InternalEvent subBuilder = new global::Domain.Events.V1.InternalEvent();
+            if (dataCase_ == DataOneofCase.InternalEvent) {
+              subBuilder.MergeFrom(InternalEvent);
+            }
+            input.ReadMessage(subBuilder);
+            InternalEvent = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StandaloneEvent : pb::IMessage<StandaloneEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StandaloneEvent> _parser = new pb::MessageParser<StandaloneEvent>(() => new StandaloneEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StandaloneEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StandaloneEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StandaloneEvent(StandaloneEvent other) : this() {
+      eventGroupName_ = other.eventGroupName_;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
+      switch (other.EventGroupCase) {
+        case EventGroupOneofCase.Alert:
+          Alert = other.Alert.Clone();
+          break;
+        case EventGroupOneofCase.Connection:
+          Connection = other.Connection.Clone();
+          break;
+        case EventGroupOneofCase.Health:
+          Health = other.Health.Clone();
+          break;
+        case EventGroupOneofCase.Telemetry:
+          Telemetry = other.Telemetry.Clone();
+          break;
+        case EventGroupOneofCase.System:
+          System = other.System.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StandaloneEvent Clone() {
+      return new StandaloneEvent(this);
+    }
+
+    /// <summary>Field number for the "event_group_name" field.</summary>
+    public const int EventGroupNameFieldNumber = 1;
+    private string eventGroupName_ = "";
+    /// <summary>
+    /// e.g., "ALERT"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventGroupName {
+      get { return eventGroupName_; }
+      set {
+        eventGroupName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 100;
+    private global::Domain.Location.V1.Location location_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Location.V1.Location Location {
+      get { return location_; }
+      set {
+        location_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alert" field.</summary>
+    public const int AlertFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Alert Alert {
+      get { return eventGroupCase_ == EventGroupOneofCase.Alert ? (global::Domain.Events.V1.Alert) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Alert;
+      }
+    }
+
+    /// <summary>Field number for the "connection" field.</summary>
+    public const int ConnectionFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Connection Connection {
+      get { return eventGroupCase_ == EventGroupOneofCase.Connection ? (global::Domain.Events.V1.Connection) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Connection;
+      }
+    }
+
+    /// <summary>Field number for the "health" field.</summary>
+    public const int HealthFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Health Health {
+      get { return eventGroupCase_ == EventGroupOneofCase.Health ? (global::Domain.Events.V1.Health) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Health;
+      }
+    }
+
+    /// <summary>Field number for the "telemetry" field.</summary>
+    public const int TelemetryFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Telemetry Telemetry {
+      get { return eventGroupCase_ == EventGroupOneofCase.Telemetry ? (global::Domain.Events.V1.Telemetry) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Telemetry;
+      }
+    }
+
+    /// <summary>Field number for the "system" field.</summary>
+    public const int SystemFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.System System {
+      get { return eventGroupCase_ == EventGroupOneofCase.System ? (global::Domain.Events.V1.System) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.System;
+      }
+    }
+
+    private object eventGroup_;
+    /// <summary>Enum of possible cases for the "event_group" oneof.</summary>
+    public enum EventGroupOneofCase {
+      None = 0,
+      Alert = 2,
+      Connection = 3,
+      Health = 4,
+      Telemetry = 5,
+      System = 6,
+    }
+    private EventGroupOneofCase eventGroupCase_ = EventGroupOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventGroupOneofCase EventGroupCase {
+      get { return eventGroupCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEventGroup() {
+      eventGroupCase_ = EventGroupOneofCase.None;
+      eventGroup_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StandaloneEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StandaloneEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EventGroupName != other.EventGroupName) return false;
+      if (!object.Equals(Location, other.Location)) return false;
+      if (!object.Equals(Alert, other.Alert)) return false;
+      if (!object.Equals(Connection, other.Connection)) return false;
+      if (!object.Equals(Health, other.Health)) return false;
+      if (!object.Equals(Telemetry, other.Telemetry)) return false;
+      if (!object.Equals(System, other.System)) return false;
+      if (EventGroupCase != other.EventGroupCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EventGroupName.Length != 0) hash ^= EventGroupName.GetHashCode();
+      if (location_ != null) hash ^= Location.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Alert) hash ^= Alert.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Connection) hash ^= Connection.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Health) hash ^= Health.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) hash ^= Telemetry.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.System) hash ^= System.GetHashCode();
+      hash ^= (int) eventGroupCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EventGroupName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventGroupName);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Alert);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Connection);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Health) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Health);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Telemetry);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.System) {
+        output.WriteRawTag(50);
+        output.WriteMessage(System);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventGroupName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventGroupName);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Alert);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Connection);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Health) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Health);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Telemetry);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.System) {
+        output.WriteRawTag(50);
+        output.WriteMessage(System);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EventGroupName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventGroupName);
+      }
+      if (location_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Location);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Alert);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connection);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Health) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Health);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.System) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(System);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StandaloneEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EventGroupName.Length != 0) {
+        EventGroupName = other.EventGroupName;
+      }
+      if (other.location_ != null) {
+        if (location_ == null) {
+          Location = new global::Domain.Location.V1.Location();
+        }
+        Location.MergeFrom(other.Location);
+      }
+      switch (other.EventGroupCase) {
+        case EventGroupOneofCase.Alert:
+          if (Alert == null) {
+            Alert = new global::Domain.Events.V1.Alert();
+          }
+          Alert.MergeFrom(other.Alert);
+          break;
+        case EventGroupOneofCase.Connection:
+          if (Connection == null) {
+            Connection = new global::Domain.Events.V1.Connection();
+          }
+          Connection.MergeFrom(other.Connection);
+          break;
+        case EventGroupOneofCase.Health:
+          if (Health == null) {
+            Health = new global::Domain.Events.V1.Health();
+          }
+          Health.MergeFrom(other.Health);
+          break;
+        case EventGroupOneofCase.Telemetry:
+          if (Telemetry == null) {
+            Telemetry = new global::Domain.Events.V1.Telemetry();
+          }
+          Telemetry.MergeFrom(other.Telemetry);
+          break;
+        case EventGroupOneofCase.System:
+          if (System == null) {
+            System = new global::Domain.Events.V1.System();
+          }
+          System.MergeFrom(other.System);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EventGroupName = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Domain.Events.V1.Alert subBuilder = new global::Domain.Events.V1.Alert();
+            if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+              subBuilder.MergeFrom(Alert);
+            }
+            input.ReadMessage(subBuilder);
+            Alert = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Domain.Events.V1.Connection subBuilder = new global::Domain.Events.V1.Connection();
+            if (eventGroupCase_ == EventGroupOneofCase.Connection) {
+              subBuilder.MergeFrom(Connection);
+            }
+            input.ReadMessage(subBuilder);
+            Connection = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Domain.Events.V1.Health subBuilder = new global::Domain.Events.V1.Health();
+            if (eventGroupCase_ == EventGroupOneofCase.Health) {
+              subBuilder.MergeFrom(Health);
+            }
+            input.ReadMessage(subBuilder);
+            Health = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Domain.Events.V1.Telemetry subBuilder = new global::Domain.Events.V1.Telemetry();
+            if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
+            }
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Domain.Events.V1.System subBuilder = new global::Domain.Events.V1.System();
+            if (eventGroupCase_ == EventGroupOneofCase.System) {
+              subBuilder.MergeFrom(System);
+            }
+            input.ReadMessage(subBuilder);
+            System = subBuilder;
+            break;
+          }
+          case 802: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventGroupName = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Domain.Events.V1.Alert subBuilder = new global::Domain.Events.V1.Alert();
+            if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+              subBuilder.MergeFrom(Alert);
+            }
+            input.ReadMessage(subBuilder);
+            Alert = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Domain.Events.V1.Connection subBuilder = new global::Domain.Events.V1.Connection();
+            if (eventGroupCase_ == EventGroupOneofCase.Connection) {
+              subBuilder.MergeFrom(Connection);
+            }
+            input.ReadMessage(subBuilder);
+            Connection = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Domain.Events.V1.Health subBuilder = new global::Domain.Events.V1.Health();
+            if (eventGroupCase_ == EventGroupOneofCase.Health) {
+              subBuilder.MergeFrom(Health);
+            }
+            input.ReadMessage(subBuilder);
+            Health = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Domain.Events.V1.Telemetry subBuilder = new global::Domain.Events.V1.Telemetry();
+            if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
+            }
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Domain.Events.V1.System subBuilder = new global::Domain.Events.V1.System();
+            if (eventGroupCase_ == EventGroupOneofCase.System) {
+              subBuilder.MergeFrom(System);
+            }
+            input.ReadMessage(subBuilder);
+            System = subBuilder;
+            break;
+          }
+          case 802: {
+            if (location_ == null) {
+              Location = new global::Domain.Location.V1.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
         }
       }
     }
@@ -673,7 +1271,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1288,21 +1886,21 @@ namespace Domain.Events.V1 {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class StandaloneEvent : pb::IMessage<StandaloneEvent>
+  public sealed partial class InternalEvent : pb::IMessage<InternalEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<StandaloneEvent> _parser = new pb::MessageParser<StandaloneEvent>(() => new StandaloneEvent());
+    private static readonly pb::MessageParser<InternalEvent> _parser = new pb::MessageParser<InternalEvent>(() => new InternalEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StandaloneEvent> Parser { get { return _parser; } }
+    public static pb::MessageParser<InternalEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1313,7 +1911,7 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StandaloneEvent() {
+    public InternalEvent() {
       OnConstruction();
     }
 
@@ -1321,24 +1919,11 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StandaloneEvent(StandaloneEvent other) : this() {
+    public InternalEvent(InternalEvent other) : this() {
       eventGroupName_ = other.eventGroupName_;
-      location_ = other.location_ != null ? other.location_.Clone() : null;
       switch (other.EventGroupCase) {
-        case EventGroupOneofCase.Alert:
-          Alert = other.Alert.Clone();
-          break;
-        case EventGroupOneofCase.Connection:
-          Connection = other.Connection.Clone();
-          break;
-        case EventGroupOneofCase.Health:
-          Health = other.Health.Clone();
-          break;
-        case EventGroupOneofCase.Telemetry:
-          Telemetry = other.Telemetry.Clone();
-          break;
-        case EventGroupOneofCase.System:
-          System = other.System.Clone();
+        case EventGroupOneofCase.Media:
+          Media = other.Media.Clone();
           break;
       }
 
@@ -1347,8 +1932,8 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StandaloneEvent Clone() {
-      return new StandaloneEvent(this);
+    public InternalEvent Clone() {
+      return new InternalEvent(this);
     }
 
     /// <summary>Field number for the "event_group_name" field.</summary>
@@ -1366,75 +1951,15 @@ namespace Domain.Events.V1 {
       }
     }
 
-    /// <summary>Field number for the "location" field.</summary>
-    public const int LocationFieldNumber = 100;
-    private global::Domain.Location.V1.Location location_;
+    /// <summary>Field number for the "media" field.</summary>
+    public const int MediaFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Location.V1.Location Location {
-      get { return location_; }
-      set {
-        location_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "alert" field.</summary>
-    public const int AlertFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.Alert Alert {
-      get { return eventGroupCase_ == EventGroupOneofCase.Alert ? (global::Domain.Events.V1.Alert) eventGroup_ : null; }
+    public global::Domain.Events.V1.Media Media {
+      get { return eventGroupCase_ == EventGroupOneofCase.Media ? (global::Domain.Events.V1.Media) eventGroup_ : null; }
       set {
         eventGroup_ = value;
-        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Alert;
-      }
-    }
-
-    /// <summary>Field number for the "connection" field.</summary>
-    public const int ConnectionFieldNumber = 3;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.Connection Connection {
-      get { return eventGroupCase_ == EventGroupOneofCase.Connection ? (global::Domain.Events.V1.Connection) eventGroup_ : null; }
-      set {
-        eventGroup_ = value;
-        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Connection;
-      }
-    }
-
-    /// <summary>Field number for the "health" field.</summary>
-    public const int HealthFieldNumber = 4;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.Health Health {
-      get { return eventGroupCase_ == EventGroupOneofCase.Health ? (global::Domain.Events.V1.Health) eventGroup_ : null; }
-      set {
-        eventGroup_ = value;
-        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Health;
-      }
-    }
-
-    /// <summary>Field number for the "telemetry" field.</summary>
-    public const int TelemetryFieldNumber = 5;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.Telemetry Telemetry {
-      get { return eventGroupCase_ == EventGroupOneofCase.Telemetry ? (global::Domain.Events.V1.Telemetry) eventGroup_ : null; }
-      set {
-        eventGroup_ = value;
-        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Telemetry;
-      }
-    }
-
-    /// <summary>Field number for the "system" field.</summary>
-    public const int SystemFieldNumber = 6;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Domain.Events.V1.System System {
-      get { return eventGroupCase_ == EventGroupOneofCase.System ? (global::Domain.Events.V1.System) eventGroup_ : null; }
-      set {
-        eventGroup_ = value;
-        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.System;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Media;
       }
     }
 
@@ -1442,11 +1967,7 @@ namespace Domain.Events.V1 {
     /// <summary>Enum of possible cases for the "event_group" oneof.</summary>
     public enum EventGroupOneofCase {
       None = 0,
-      Alert = 2,
-      Connection = 3,
-      Health = 4,
-      Telemetry = 5,
-      System = 6,
+      Media = 2,
     }
     private EventGroupOneofCase eventGroupCase_ = EventGroupOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1465,12 +1986,12 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as StandaloneEvent);
+      return Equals(other as InternalEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StandaloneEvent other) {
+    public bool Equals(InternalEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1478,12 +1999,7 @@ namespace Domain.Events.V1 {
         return true;
       }
       if (EventGroupName != other.EventGroupName) return false;
-      if (!object.Equals(Location, other.Location)) return false;
-      if (!object.Equals(Alert, other.Alert)) return false;
-      if (!object.Equals(Connection, other.Connection)) return false;
-      if (!object.Equals(Health, other.Health)) return false;
-      if (!object.Equals(Telemetry, other.Telemetry)) return false;
-      if (!object.Equals(System, other.System)) return false;
+      if (!object.Equals(Media, other.Media)) return false;
       if (EventGroupCase != other.EventGroupCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1493,12 +2009,7 @@ namespace Domain.Events.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (EventGroupName.Length != 0) hash ^= EventGroupName.GetHashCode();
-      if (location_ != null) hash ^= Location.GetHashCode();
-      if (eventGroupCase_ == EventGroupOneofCase.Alert) hash ^= Alert.GetHashCode();
-      if (eventGroupCase_ == EventGroupOneofCase.Connection) hash ^= Connection.GetHashCode();
-      if (eventGroupCase_ == EventGroupOneofCase.Health) hash ^= Health.GetHashCode();
-      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) hash ^= Telemetry.GetHashCode();
-      if (eventGroupCase_ == EventGroupOneofCase.System) hash ^= System.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Media) hash ^= Media.GetHashCode();
       hash ^= (int) eventGroupCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1522,29 +2033,9 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(EventGroupName);
       }
-      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+      if (eventGroupCase_ == EventGroupOneofCase.Media) {
         output.WriteRawTag(18);
-        output.WriteMessage(Alert);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Connection);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Health) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Health);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Telemetry);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.System) {
-        output.WriteRawTag(50);
-        output.WriteMessage(System);
-      }
-      if (location_ != null) {
-        output.WriteRawTag(162, 6);
-        output.WriteMessage(Location);
+        output.WriteMessage(Media);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1560,29 +2051,9 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(10);
         output.WriteString(EventGroupName);
       }
-      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
+      if (eventGroupCase_ == EventGroupOneofCase.Media) {
         output.WriteRawTag(18);
-        output.WriteMessage(Alert);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Connection);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Health) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Health);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Telemetry);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.System) {
-        output.WriteRawTag(50);
-        output.WriteMessage(System);
-      }
-      if (location_ != null) {
-        output.WriteRawTag(162, 6);
-        output.WriteMessage(Location);
+        output.WriteMessage(Media);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1597,23 +2068,8 @@ namespace Domain.Events.V1 {
       if (EventGroupName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EventGroupName);
       }
-      if (location_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Location);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Alert) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Alert);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Connection) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Connection);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Health) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Health);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
-      }
-      if (eventGroupCase_ == EventGroupOneofCase.System) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(System);
+      if (eventGroupCase_ == EventGroupOneofCase.Media) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Media);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1623,49 +2079,19 @@ namespace Domain.Events.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StandaloneEvent other) {
+    public void MergeFrom(InternalEvent other) {
       if (other == null) {
         return;
       }
       if (other.EventGroupName.Length != 0) {
         EventGroupName = other.EventGroupName;
       }
-      if (other.location_ != null) {
-        if (location_ == null) {
-          Location = new global::Domain.Location.V1.Location();
-        }
-        Location.MergeFrom(other.Location);
-      }
       switch (other.EventGroupCase) {
-        case EventGroupOneofCase.Alert:
-          if (Alert == null) {
-            Alert = new global::Domain.Events.V1.Alert();
+        case EventGroupOneofCase.Media:
+          if (Media == null) {
+            Media = new global::Domain.Events.V1.Media();
           }
-          Alert.MergeFrom(other.Alert);
-          break;
-        case EventGroupOneofCase.Connection:
-          if (Connection == null) {
-            Connection = new global::Domain.Events.V1.Connection();
-          }
-          Connection.MergeFrom(other.Connection);
-          break;
-        case EventGroupOneofCase.Health:
-          if (Health == null) {
-            Health = new global::Domain.Events.V1.Health();
-          }
-          Health.MergeFrom(other.Health);
-          break;
-        case EventGroupOneofCase.Telemetry:
-          if (Telemetry == null) {
-            Telemetry = new global::Domain.Events.V1.Telemetry();
-          }
-          Telemetry.MergeFrom(other.Telemetry);
-          break;
-        case EventGroupOneofCase.System:
-          if (System == null) {
-            System = new global::Domain.Events.V1.System();
-          }
-          System.MergeFrom(other.System);
+          Media.MergeFrom(other.Media);
           break;
       }
 
@@ -1693,55 +2119,12 @@ namespace Domain.Events.V1 {
             break;
           }
           case 18: {
-            global::Domain.Events.V1.Alert subBuilder = new global::Domain.Events.V1.Alert();
-            if (eventGroupCase_ == EventGroupOneofCase.Alert) {
-              subBuilder.MergeFrom(Alert);
+            global::Domain.Events.V1.Media subBuilder = new global::Domain.Events.V1.Media();
+            if (eventGroupCase_ == EventGroupOneofCase.Media) {
+              subBuilder.MergeFrom(Media);
             }
             input.ReadMessage(subBuilder);
-            Alert = subBuilder;
-            break;
-          }
-          case 26: {
-            global::Domain.Events.V1.Connection subBuilder = new global::Domain.Events.V1.Connection();
-            if (eventGroupCase_ == EventGroupOneofCase.Connection) {
-              subBuilder.MergeFrom(Connection);
-            }
-            input.ReadMessage(subBuilder);
-            Connection = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Domain.Events.V1.Health subBuilder = new global::Domain.Events.V1.Health();
-            if (eventGroupCase_ == EventGroupOneofCase.Health) {
-              subBuilder.MergeFrom(Health);
-            }
-            input.ReadMessage(subBuilder);
-            Health = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Domain.Events.V1.Telemetry subBuilder = new global::Domain.Events.V1.Telemetry();
-            if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
-              subBuilder.MergeFrom(Telemetry);
-            }
-            input.ReadMessage(subBuilder);
-            Telemetry = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Domain.Events.V1.System subBuilder = new global::Domain.Events.V1.System();
-            if (eventGroupCase_ == EventGroupOneofCase.System) {
-              subBuilder.MergeFrom(System);
-            }
-            input.ReadMessage(subBuilder);
-            System = subBuilder;
-            break;
-          }
-          case 802: {
-            if (location_ == null) {
-              Location = new global::Domain.Location.V1.Location();
-            }
-            input.ReadMessage(Location);
+            Media = subBuilder;
             break;
           }
         }
@@ -1768,55 +2151,12 @@ namespace Domain.Events.V1 {
             break;
           }
           case 18: {
-            global::Domain.Events.V1.Alert subBuilder = new global::Domain.Events.V1.Alert();
-            if (eventGroupCase_ == EventGroupOneofCase.Alert) {
-              subBuilder.MergeFrom(Alert);
+            global::Domain.Events.V1.Media subBuilder = new global::Domain.Events.V1.Media();
+            if (eventGroupCase_ == EventGroupOneofCase.Media) {
+              subBuilder.MergeFrom(Media);
             }
             input.ReadMessage(subBuilder);
-            Alert = subBuilder;
-            break;
-          }
-          case 26: {
-            global::Domain.Events.V1.Connection subBuilder = new global::Domain.Events.V1.Connection();
-            if (eventGroupCase_ == EventGroupOneofCase.Connection) {
-              subBuilder.MergeFrom(Connection);
-            }
-            input.ReadMessage(subBuilder);
-            Connection = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Domain.Events.V1.Health subBuilder = new global::Domain.Events.V1.Health();
-            if (eventGroupCase_ == EventGroupOneofCase.Health) {
-              subBuilder.MergeFrom(Health);
-            }
-            input.ReadMessage(subBuilder);
-            Health = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Domain.Events.V1.Telemetry subBuilder = new global::Domain.Events.V1.Telemetry();
-            if (eventGroupCase_ == EventGroupOneofCase.Telemetry) {
-              subBuilder.MergeFrom(Telemetry);
-            }
-            input.ReadMessage(subBuilder);
-            Telemetry = subBuilder;
-            break;
-          }
-          case 50: {
-            global::Domain.Events.V1.System subBuilder = new global::Domain.Events.V1.System();
-            if (eventGroupCase_ == EventGroupOneofCase.System) {
-              subBuilder.MergeFrom(System);
-            }
-            input.ReadMessage(subBuilder);
-            System = subBuilder;
-            break;
-          }
-          case 802: {
-            if (location_ == null) {
-              Location = new global::Domain.Location.V1.Location();
-            }
-            input.ReadMessage(Location);
+            Media = subBuilder;
             break;
           }
         }
@@ -1841,7 +2181,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2140,7 +2480,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

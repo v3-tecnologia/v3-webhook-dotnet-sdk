@@ -21,5 +21,7 @@ Generated/Protos/domain/v1/notifications/Webhook.cs: /home/adrianosantos/.nuget/
  Protos/domain/v1/orders/device.proto\
  Protos/domain/v1/events/telemetry_event.proto\
  Protos/domain/v1/events/vehicle_event.proto\
+ Protos/domain/v1/files/file.proto\
+ Protos/domain/v1/events/media_event.proto\
  Protos/domain/v1/events/event.proto\
  Protos/domain/v1/notifications/webhook.proto

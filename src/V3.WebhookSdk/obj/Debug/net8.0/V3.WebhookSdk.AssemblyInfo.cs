@@ -15,11 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("\n      A .NET SDK for processing V3 Tecnologia IoT Webhooks using strongly-typed " +
     "Protobuf models.\n      Transport-agnostic, signature validation, persistence sup" +
     "port, and modular event handlers.\n    "))]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.3+2b63639d0a21560833fc89f0aa87ba9407ac1a0d")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.4.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.4+3c89962a6909509276a068384d5b73b32f62b268")]
 [assembly: System.Reflection.AssemblyProductAttribute("V3.WebhookSdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("V3.WebhookSdk")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.1.3.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.1.4.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/v3-tecnologia/v3-webhook-dotnet-sdk")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

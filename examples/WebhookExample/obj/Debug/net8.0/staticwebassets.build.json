@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "GDdXhlwwYzHU7B81ZqusTKnRzq2rKeVknZQVvfngHdY=",
-  "Source": "WebhookExample",
-  "BasePath": "_content/WebhookExample",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"flXPNVLwcUwmO7k8MKWMVdRunHDjfsC7qnHQIIolRQ8=","Source":"WebhookExample","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
