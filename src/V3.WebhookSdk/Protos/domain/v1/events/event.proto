@@ -14,6 +14,7 @@ import "domain/v1/events/system_event.proto";
 import "domain/v1/events/telemetry_event.proto";
 import "domain/v1/events/vehicle_event.proto";
 import "domain/v1/events/vision_event.proto";
+import "domain/v1/events/media_event.proto";
 import "domain/v1/location/location.proto";
 import "domain/v1/orders/device.proto";
 import "google/protobuf/timestamp.proto";
@@ -164,6 +165,19 @@ message EventData {
   oneof data {
     TripEvent trip_event = 3;
     StandaloneEvent standalone_event = 4;
+    InternalEvent internal_event = 5;
+  }
+}
+
+message StandaloneEvent {
+  string event_group_name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
+  domain.location.v1.Location location = 100;
+  oneof event_group {
+    domain.events.v1.Alert alert = 2;
+    domain.events.v1.Connection connection = 3;
+    domain.events.v1.Health health = 4;
+    domain.events.v1.Telemetry telemetry = 5;
+    domain.events.v1.System system = 6;
   }
 }
 
@@ -181,15 +195,10 @@ message TripEvent {
   }
 }
 
-message StandaloneEvent {
+message InternalEvent {
   string event_group_name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
-  domain.location.v1.Location location = 100;
   oneof event_group {
-    domain.events.v1.Alert alert = 2;
-    domain.events.v1.Connection connection = 3;
-    domain.events.v1.Health health = 4;
-    domain.events.v1.Telemetry telemetry = 5;
-    domain.events.v1.System system = 6;
+    domain.events.v1.Media media = 2;
   }
 }
 

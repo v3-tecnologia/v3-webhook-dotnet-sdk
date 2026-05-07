@@ -10,6 +10,14 @@ option java_outer_classname = "NetworkProto";
 option java_package = "br.com.v3.protocol.domain";
 option optimize_for = CODE_SIZE;
 
+enum DataPlanStatus {
+  DATA_PLAN_STATUS_UNSPECIFIED = 0;
+
+  DATA_PLAN_STATUS_ACTIVE = 1;
+
+  DATA_PLAN_STATUS_BLOCKED = 2;
+}
+
 message DataUsage {
   // Usage during the period (in megabytes)
   optional double used_mb = 1;
@@ -22,6 +30,11 @@ message DataUsage {
 }
 
 message DataPlan {
+  // Name of the data plan (e.g., "default", "quectel", "custom", etc...)
+  string plan_name = 4;
+
+  DataPlanStatus status = 5;
+
   // Total data allowance in megabytes
   uint64 total_mb = 1;
 

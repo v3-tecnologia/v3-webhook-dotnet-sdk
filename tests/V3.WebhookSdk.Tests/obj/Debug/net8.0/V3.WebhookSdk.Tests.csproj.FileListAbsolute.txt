@@ -105,7 +105,6 @@
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/V3.WebhookSdk.dll
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/V3.WebhookSdk.pdb
-/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/V3.WebhookSdk.Tests.csproj.CopyComplete
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/V3.WebhookSdk.Tests.dll
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/refint/V3.WebhookSdk.Tests.dll
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/V3.WebhookSdk.Tests.pdb
@@ -158,3 +157,4 @@
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/alert-events/alert-sdcard-mounted.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/alert-events/alert-sdcard-unmounted.json
 /home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/bin/Debug/net8.0/Payloads/events/telemetry-events/telemetry-ignition-off.json
+/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/Debug/net8.0/V3.Webho.99ED5A60.Up2Date

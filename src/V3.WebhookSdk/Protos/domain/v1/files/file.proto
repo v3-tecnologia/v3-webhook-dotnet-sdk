@@ -1,0 +1,148 @@
+syntax = "proto3";
+
+package domain.file.v1;
+
+import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/files;files";
+option java_multiple_files = true;
+option java_outer_classname = "FileProto";
+option java_package = "br.com.v3.protocol.domain.file";
+option optimize_for = CODE_SIZE;
+
+// Video codec enumeration
+enum VideoCodec {
+  VIDEO_CODEC_UNSPECIFIED = 0;
+
+  VIDEO_CODEC_H264 = 1;
+
+  VIDEO_CODEC_H265 = 2;
+
+  VIDEO_CODEC_MP4 = 3;
+
+  VIDEO_CODEC_CUSTOM = 4;
+}
+
+// Audio codec enumeration
+enum AudioCodec {
+  AUDIO_CODEC_UNSPECIFIED = 0;
+
+  AUDIO_CODEC_AAC = 1;
+
+  AUDIO_CODEC_OPUS = 2;
+
+  AUDIO_CODEC_CUSTOM = 3;
+}
+
+// Image type enumeration
+enum ImageType {
+  IMAGE_TYPE_UNSPECIFIED = 0;
+
+  IMAGE_TYPE_GIF = 1;
+
+  IMAGE_TYPE_JPEG = 2;
+
+  IMAGE_TYPE_JPG = 3;
+
+  IMAGE_TYPE_PNG = 4;
+
+  IMAGE_TYPE_WEBP = 5;
+}
+
+// MIME type enumeration
+enum MimeType {
+  MIME_TYPE_UNSPECIFIED = 0;
+
+  MIME_TYPE_JPEG = 1;
+
+  MIME_TYPE_PNG = 2;
+
+  MIME_TYPE_WEBP = 3;
+
+  MIME_TYPE_MP4 = 4;
+
+  MIME_TYPE_WEBM = 5;
+
+  MIME_TYPE_MOV = 6;
+
+  MIME_TYPE_AVI = 7;
+
+  MIME_TYPE_OCTET_STREAM = 8;
+}
+
+// Checksum algorithm enumeration
+enum ChecksumAlgorithm {
+  CHECKSUM_ALGORITHM_UNSPECIFIED = 0;
+
+  CHECKSUM_ALGORITHM_SHA256 = 1;
+
+  CHECKSUM_ALGORITHM_MD5 = 2;
+
+  CHECKSUM_ALGORITHM_SHA1 = 3;
+
+  CHECKSUM_ALGORITHM_SHA512 = 4;
+}
+
+message Checksum {
+  // Checksum value of the chunk
+  string value = 1 [(buf.validate.field).string.min_len = 1];  
+  
+  // Algorithm used for the checksum
+  ChecksumAlgorithm checksum_algorithm = 2 [(buf.validate.field).required = true];  
+}
+
+// Represents an individual file chunk
+message Chunk {
+  int32 sequence = 1 [(buf.validate.field).int32.gte = 0];
+
+  bytes data = 2 [(buf.validate.field).bytes.min_len = 1];
+
+  Checksum checksum = 3 [(buf.validate.field).required = true];
+
+  int32 size = 4 [(buf.validate.field).int32.gt = 0];
+
+  // Timestamp when the chunk was created
+  google.protobuf.Timestamp created_at = 5;
+
+  // Timestamp when the chunk was received
+  google.protobuf.Timestamp received_at = 6;
+}
+
+// Complete file metadata with reconstruction information
+message FileMetadata {
+  // Unique file identifier
+  string id = 1 [(buf.validate.field).string.min_len = 1];           
+
+  // ID of the event that generated the file
+  string event_id = 2 [(buf.validate.field).string.min_len = 1];
+
+  // Original file name
+  string name = 3 [(buf.validate.field).string.min_len = 1];
+
+  MimeType mime_type = 4;
+
+  // Total file size in bytes
+  int64 total_size = 5 [(buf.validate.field).int64.gt = 0];
+
+  // Standard size of each chunk in bytes
+  int32 chunk_size = 6 [(buf.validate.field).int32.gt = 0];
+
+  // Total number of chunks expected
+  int32 total_chunks = 7 [(buf.validate.field).int32.gt = 0];
+
+  // SHA256 of the complete file
+  Checksum archive_checksum = 8 [(buf.validate.field).required = true];
+
+  // File creation timestamp
+  google.protobuf.Timestamp created_at = 9;
+}
+
+// Message that encapsulates a file with its chunks
+message File {
+  // Metadata about the file, including reconstruction details
+  FileMetadata metadata = 1 [(buf.validate.field).required = true];
+
+  // List of chunks already received
+  repeated Chunk chunks = 2;
+}

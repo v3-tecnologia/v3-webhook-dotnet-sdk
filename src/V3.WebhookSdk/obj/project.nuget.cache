@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4dHFeAV/mVo=",
+  "dgSpecHash": "+geqJQxQYog=",
   "success": true,
   "projectFilePath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
   "expectedPackageFiles": [
@@ -17,8 +17,8 @@
     "/home/adrianosantos/.nuget/packages/system.servicemodel.primitives/4.5.3/system.servicemodel.primitives.4.5.3.nupkg.sha512",
     "/home/adrianosantos/.nuget/packages/system.text.encodings.web/10.0.1/system.text.encodings.web.10.0.1.nupkg.sha512",
     "/home/adrianosantos/.nuget/packages/system.text.json/10.0.1/system.text.json.10.0.1.nupkg.sha512",
-    "/home/adrianosantos/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
-    "/home/adrianosantos/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+    "/home/adrianosantos/.nuget/packages/microsoft.netcore.app.ref/8.0.26/microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.26/microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512"
   ],
   "logs": []
 }

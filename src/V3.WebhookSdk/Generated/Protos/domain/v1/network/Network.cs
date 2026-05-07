@@ -29,22 +29,35 @@ namespace Domain.Network.V1 {
             "RGF0YVVzYWdlEhQKB3VzZWRfbWIYASABKAFIAIgBARIaCg10b3RhbF91c2Vk",
             "X21iGAIgASgBSAGIAQESHQoQdXNhZ2VfcGVyY2VudGFnZRgDIAEoAUgCiAEB",
             "QgoKCF91c2VkX21iQhAKDl90b3RhbF91c2VkX21iQhMKEV91c2FnZV9wZXJj",
-            "ZW50YWdlInwKCERhdGFQbGFuEhAKCHRvdGFsX21iGAEgASgEEi8KC2N5Y2xl",
-            "X3N0YXJ0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBItCglj",
-            "eWNsZV9lbmQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQnUK",
-            "GWJyLmNvbS52My5wcm90b2NvbC5kb21haW5CDE5ldHdvcmtQcm90b0gCUAFa",
-            "RmdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90",
-            "by9nZW4vZG9tYWluL3YxL25ldHdvcms7djFiBnByb3RvMw=="));
+            "ZW50YWdlIsIBCghEYXRhUGxhbhIRCglwbGFuX25hbWUYBCABKAkSMQoGc3Rh",
+            "dHVzGAUgASgOMiEuZG9tYWluLm5ldHdvcmsudjEuRGF0YVBsYW5TdGF0dXMS",
+            "EAoIdG90YWxfbWIYASABKAQSLwoLY3ljbGVfc3RhcnQYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEi0KCWN5Y2xlX2VuZBgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAqbQoORGF0YVBsYW5TdGF0dXMSIAoc",
+            "REFUQV9QTEFOX1NUQVRVU19VTlNQRUNJRklFRBAAEhsKF0RBVEFfUExBTl9T",
+            "VEFUVVNfQUNUSVZFEAESHAoYREFUQV9QTEFOX1NUQVRVU19CTE9DS0VEEAJC",
+            "dQoZYnIuY29tLnYzLnByb3RvY29sLmRvbWFpbkIMTmV0d29ya1Byb3RvSAJQ",
+            "AVpGZ2l0aHViLmNvbS92My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3By",
+            "b3RvL2dlbi9kb21haW4vdjEvbmV0d29yazt2MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Network.V1.DataPlanStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataUsage), global::Domain.Network.V1.DataUsage.Parser, new[]{ "UsedMb", "TotalUsedMb", "UsagePercentage" }, new[]{ "UsedMb", "TotalUsedMb", "UsagePercentage" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataPlan), global::Domain.Network.V1.DataPlan.Parser, new[]{ "TotalMb", "CycleStart", "CycleEnd" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Network.V1.DataPlan), global::Domain.Network.V1.DataPlan.Parser, new[]{ "PlanName", "Status", "TotalMb", "CycleStart", "CycleEnd" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  public enum DataPlanStatus {
+    [pbr::OriginalName("DATA_PLAN_STATUS_UNSPECIFIED")] Unspecified = 0,
+    [pbr::OriginalName("DATA_PLAN_STATUS_ACTIVE")] Active = 1,
+    [pbr::OriginalName("DATA_PLAN_STATUS_BLOCKED")] Blocked = 2,
+  }
+
+  #endregion
+
   #region Messages
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataUsage : pb::IMessage<DataUsage>
@@ -409,6 +422,8 @@ namespace Domain.Network.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataPlan(DataPlan other) : this() {
+      planName_ = other.planName_;
+      status_ = other.status_;
       totalMb_ = other.totalMb_;
       cycleStart_ = other.cycleStart_ != null ? other.cycleStart_.Clone() : null;
       cycleEnd_ = other.cycleEnd_ != null ? other.cycleEnd_.Clone() : null;
@@ -419,6 +434,33 @@ namespace Domain.Network.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataPlan Clone() {
       return new DataPlan(this);
+    }
+
+    /// <summary>Field number for the "plan_name" field.</summary>
+    public const int PlanNameFieldNumber = 4;
+    private string planName_ = "";
+    /// <summary>
+    /// Name of the data plan (e.g., "default", "quectel", "custom", etc...)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlanName {
+      get { return planName_; }
+      set {
+        planName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 5;
+    private global::Domain.Network.V1.DataPlanStatus status_ = global::Domain.Network.V1.DataPlanStatus.Unspecified;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Network.V1.DataPlanStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
     }
 
     /// <summary>Field number for the "total_mb" field.</summary>
@@ -481,6 +523,8 @@ namespace Domain.Network.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PlanName != other.PlanName) return false;
+      if (Status != other.Status) return false;
       if (TotalMb != other.TotalMb) return false;
       if (!object.Equals(CycleStart, other.CycleStart)) return false;
       if (!object.Equals(CycleEnd, other.CycleEnd)) return false;
@@ -491,6 +535,8 @@ namespace Domain.Network.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PlanName.Length != 0) hash ^= PlanName.GetHashCode();
+      if (Status != global::Domain.Network.V1.DataPlanStatus.Unspecified) hash ^= Status.GetHashCode();
       if (TotalMb != 0UL) hash ^= TotalMb.GetHashCode();
       if (cycleStart_ != null) hash ^= CycleStart.GetHashCode();
       if (cycleEnd_ != null) hash ^= CycleEnd.GetHashCode();
@@ -524,6 +570,14 @@ namespace Domain.Network.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(CycleEnd);
       }
+      if (PlanName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PlanName);
+      }
+      if (Status != global::Domain.Network.V1.DataPlanStatus.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -546,6 +600,14 @@ namespace Domain.Network.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(CycleEnd);
       }
+      if (PlanName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PlanName);
+      }
+      if (Status != global::Domain.Network.V1.DataPlanStatus.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -556,6 +618,12 @@ namespace Domain.Network.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PlanName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlanName);
+      }
+      if (Status != global::Domain.Network.V1.DataPlanStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
       if (TotalMb != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TotalMb);
       }
@@ -576,6 +644,12 @@ namespace Domain.Network.V1 {
     public void MergeFrom(DataPlan other) {
       if (other == null) {
         return;
+      }
+      if (other.PlanName.Length != 0) {
+        PlanName = other.PlanName;
+      }
+      if (other.Status != global::Domain.Network.V1.DataPlanStatus.Unspecified) {
+        Status = other.Status;
       }
       if (other.TotalMb != 0UL) {
         TotalMb = other.TotalMb;
@@ -629,6 +703,14 @@ namespace Domain.Network.V1 {
             input.ReadMessage(CycleEnd);
             break;
           }
+          case 34: {
+            PlanName = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::Domain.Network.V1.DataPlanStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -664,6 +746,14 @@ namespace Domain.Network.V1 {
               CycleEnd = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CycleEnd);
+            break;
+          }
+          case 34: {
+            PlanName = input.ReadString();
+            break;
+          }
+          case 40: {
+            Status = (global::Domain.Network.V1.DataPlanStatus) input.ReadEnum();
             break;
           }
         }

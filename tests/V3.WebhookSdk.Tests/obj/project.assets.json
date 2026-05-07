@@ -1901,7 +1901,7 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "V3.WebhookSdk/0.1.2": {
+      "V3.WebhookSdk/0.1.4": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -6106,7 +6106,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "V3.WebhookSdk/0.1.2": {
+    "V3.WebhookSdk/0.1.4": {
       "type": "project",
       "path": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj",
       "msbuildProject": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj"
@@ -6115,7 +6115,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.NET.Test.Sdk >= 17.6.0",
-      "V3.WebhookSdk >= 0.1.2",
+      "V3.WebhookSdk >= 0.1.4",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.4.2",
       "xunit.abstractions >= 2.0.3",
@@ -6141,6 +6141,7 @@
         "net8.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6157,7 +6158,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -6199,12 +6206,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.26, 8.0.26]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.26, 8.0.26]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

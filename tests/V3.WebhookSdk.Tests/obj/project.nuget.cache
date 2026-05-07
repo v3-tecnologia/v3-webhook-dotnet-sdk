@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yZ6Gel7R1iNvqy7EEmBesNkeJcB0rwjF/u1POUyHrdryMITKZDW7YsrZmaDaugcAPHoclEa/RSAF/WkJaqJx9g==",
+  "dgSpecHash": "vtngsnjphPs=",
   "success": true,
   "projectFilePath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
   "expectedPackageFiles": [
@@ -103,7 +103,9 @@
     "/home/adrianosantos/.nuget/packages/xunit.core/2.4.2/xunit.core.2.4.2.nupkg.sha512",
     "/home/adrianosantos/.nuget/packages/xunit.extensibility.core/2.4.2/xunit.extensibility.core.2.4.2.nupkg.sha512",
     "/home/adrianosantos/.nuget/packages/xunit.extensibility.execution/2.4.2/xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "/home/adrianosantos/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "/home/adrianosantos/.nuget/packages/xunit.runner.visualstudio/2.4.5/xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/microsoft.netcore.app.ref/8.0.26/microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "/home/adrianosantos/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.26/microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512"
   ],
   "logs": []
 }
