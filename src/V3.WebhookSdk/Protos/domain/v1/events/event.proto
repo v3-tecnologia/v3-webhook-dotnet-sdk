@@ -8,13 +8,15 @@ import "domain/v1/events/alert_event.proto";
 import "domain/v1/events/connection_event.proto";
 import "domain/v1/events/dms_event.proto";
 import "domain/v1/events/driver_behavior_event.proto";
+import "domain/v1/events/driver_identification.proto";
 import "domain/v1/events/health_event.proto";
+import "domain/v1/events/media_event.proto";
 import "domain/v1/events/order_status_event.proto";
 import "domain/v1/events/system_event.proto";
 import "domain/v1/events/telemetry_event.proto";
 import "domain/v1/events/vehicle_event.proto";
 import "domain/v1/events/vision_event.proto";
-import "domain/v1/events/media_event.proto";
+import "domain/v1/events/geofence_event.proto";
 import "domain/v1/location/location.proto";
 import "domain/v1/orders/device.proto";
 import "google/protobuf/timestamp.proto";
@@ -92,6 +94,9 @@ enum EventCategory {
 
   // Vision-related events
   EVENT_CATEGORY_VISION = 11;
+  EVENT_CATEGORY_DRIVER_IDENTIFICATION = 12;
+
+  EVENT_CATEGORY_GEOFENCE = 13;
 
   // For compatibility with JSON naming conventions
   CATEGORY_ADAS = 1;
@@ -105,6 +110,8 @@ enum EventCategory {
   CATEGORY_TELEMETRY = 9;
   CATEGORY_VEHICLE = 10;
   CATEGORY_VISION = 11;
+  CATEGORY_DRIVER_IDENTIFICATION = 12;
+  CATEGORY_GEOFENCE = 13;
 }
 
 enum EventSub {
@@ -139,6 +146,10 @@ enum EventSub {
   EVENT_SUB_VISION_ADVANCED = 16;
   EVENT_SUB_VISION_BASIC = 17;
 
+  EVENT_SUB_DRIVER_IDENTIFICATION = 18;
+  EVENT_SUB_DRIVER_UNIDENTIFIED = 19;
+  EVENT_SUB_GEOFENCE = 20;
+
   // For compatibility with JSON naming conventions
   SUB_ALERT_INFO = 1;
   SUB_ALERT_CRITICAL = 2;
@@ -157,11 +168,30 @@ enum EventSub {
   SUB_VEHICLE_BLOCK = 15;
   SUB_VISION_ADVANCED = 16;
   SUB_VISION_BASIC = 17;
+  SUB_DRIVER_IDENTIFICATION = 18;
+  SUB_DRIVER_UNIDENTIFIED = 19;
+  SUB_GEOFENCE = 20;
+}
+
+message Insight {
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+
+  string text = 2 [(buf.validate.field).string.min_len = 1];
+
+  string locale = 3; // e.g "pt_BR" "en_US" and so on
+
+  double confidence = 4 [(buf.validate.field).double.gt = 0.0, (buf.validate.field).double.lt = 1.0];
+
+  double threshold = 5 [(buf.validate.field).double.gt = 0.0, (buf.validate.field).double.lt = 1.0];
+
+  map<string, string> metadata = 6;
 }
 
 message EventData {
   domain.events.v1.TelemetryDetails telemetry = 1;
+  
   string group_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "TRIP_EVENT"
+  
   oneof data {
     TripEvent trip_event = 3;
     StandaloneEvent standalone_event = 4;
@@ -171,7 +201,11 @@ message EventData {
 
 message StandaloneEvent {
   string event_group_name = 1 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
+  
   domain.location.v1.Location location = 100;
+  
+  repeated Insight insights = 101;
+  
   oneof event_group {
     domain.events.v1.Alert alert = 2;
     domain.events.v1.Connection connection = 3;
@@ -183,8 +217,13 @@ message StandaloneEvent {
 
 message TripEvent {
   string trip_id = 1 [(buf.validate.field).string.min_len = 1];
+  
   string event_group_name = 2 [(buf.validate.field).string.min_len = 1]; // e.g., "ALERT"
+  
   domain.location.v1.Location location = 100;
+
+  repeated Insight insights = 101;
+
   oneof event_group {
     domain.events.v1.Adas adas = 3;
     domain.events.v1.Dms dms = 4;
@@ -192,6 +231,8 @@ message TripEvent {
     domain.events.v1.Telemetry telemetry = 6;
     domain.events.v1.Vehicle vehicle = 7;
     domain.events.v1.Vision vision = 8;
+    domain.events.v1.DriverIdentification driver_identification = 9;
+    domain.events.v1.Geofence geofence = 10;
   }
 }
 

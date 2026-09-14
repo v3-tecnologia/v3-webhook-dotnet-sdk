@@ -25,9 +25,9 @@ namespace Domain.Events.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJkb21haW4vdjEvZXZlbnRzL21lZGlhX2V2ZW50LnByb3RvEhBkb21haW4u",
-            "ZXZlbnRzLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhti",
-            "dWYvdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8aGmRvbWFpbi92MS9maWxlcy9m",
-            "aWxlLnByb3RvIqMBCg5JbWFnZUZpbGVFdmVudBIqCgRmaWxlGAEgASgLMhQu",
+            "ZXZlbnRzLnYxGhtidWYvdmFsaWRhdGUvdmFsaWRhdGUucHJvdG8aGmRvbWFp",
+            "bi92MS9maWxlcy9maWxlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
+            "YW1wLnByb3RvIqMBCg5JbWFnZUZpbGVFdmVudBIqCgRmaWxlGAEgASgLMhQu",
             "ZG9tYWluLmZpbGUudjEuRmlsZUIGukgDyAEBEi0KCmltYWdlX3R5cGUYAiAB",
             "KA4yGS5kb21haW4uZmlsZS52MS5JbWFnZVR5cGUSNgoLYnVja2V0X3R5cGUY",
             "AyABKA4yIS5kb21haW4uZXZlbnRzLnYxLk1lZGlhQnVja2V0VHlwZSLWAQoO",
@@ -44,22 +44,29 @@ namespace Domain.Events.V1 {
             "IAEoCzIgLmRvbWFpbi5ldmVudHMudjEuVmlkZW9GaWxlRXZlbnRIABItCgNy",
             "YXcYBSABKAsyHi5kb21haW4uZXZlbnRzLnYxLlJhd0ZpbGVFdmVudEgAEjcK",
             "CXRpbWVzdGFtcBhkIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "CLpIBbIBAjgBQgYKBHR5cGUq6AEKD01lZGlhQnVja2V0VHlwZRIhCh1NRURJ",
-            "QV9CVUNLRVRfVFlQRV9VTlNQRUNJRklFRBAAEhsKF01FRElBX0JVQ0tFVF9U",
-            "WVBFX0ZBQ0VTEAESHAoYTUVESUFfQlVDS0VUX1RZUEVfSU1BR0VTEAISHAoY",
-            "TUVESUFfQlVDS0VUX1RZUEVfVklERU9TEAMSHAoYTUVESUFfQlVDS0VUX1RZ",
-            "UEVfQVNTRVRTEAQSHAoYTUVESUFfQlVDS0VUX1RZUEVfQVVESU9TEAUSHQoZ",
-            "TUVESUFfQlVDS0VUX1RZUEVfVVBMT0FEUxAGQn0KIGJyLmNvbS52My5wcm90",
-            "b2NvbC5kb21haW4uZXZlbnRzQg5GaWxlRXZlbnRQcm90b0gCUAFaRWdpdGh1",
-            "Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90by9nZW4v",
-            "ZG9tYWluL3YxL2V2ZW50czt2MWIGcHJvdG8z"));
+            "CLpIBbIBAjgBQgYKBHR5cGUikwIKEk1lZGlhVXBsb2FkZWRFdmVudBIZCghl",
+            "dmVudF9pZBgBIAEoCUIHukgEcgIQARIZCghtZWRpYV9pZBgCIAEoCUIHukgE",
+            "cgIQARIbCgptZWRpYV9wYXRoGAMgASgJQge6SARyAhABEhkKCGZpbGVuYW1l",
+            "GAQgASgJQge6SARyAhABEhEKCW1pbWVfdHlwZRgFIAEoCRIaCglmaWxlX3Np",
+            "emUYBiABKANCB7pIBCICKAASJwoEZmlsZRgHIAEoCzIZLmRvbWFpbi5maWxl",
+            "LnYxLkZpbGVCeXRlcxI3Cgl0aW1lc3RhbXAYZCABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgi6SAWyAQI4ASroAQoPTWVkaWFCdWNrZXRUeXBl",
+            "EiEKHU1FRElBX0JVQ0tFVF9UWVBFX1VOU1BFQ0lGSUVEEAASGwoXTUVESUFf",
+            "QlVDS0VUX1RZUEVfRkFDRVMQARIcChhNRURJQV9CVUNLRVRfVFlQRV9JTUFH",
+            "RVMQAhIcChhNRURJQV9CVUNLRVRfVFlQRV9WSURFT1MQAxIcChhNRURJQV9C",
+            "VUNLRVRfVFlQRV9BU1NFVFMQBBIcChhNRURJQV9CVUNLRVRfVFlQRV9BVURJ",
+            "T1MQBRIdChlNRURJQV9CVUNLRVRfVFlQRV9VUExPQURTEAZCfQogYnIuY29t",
+            "LnYzLnByb3RvY29sLmRvbWFpbi5ldmVudHNCDkZpbGVFdmVudFByb3RvSAJQ",
+            "AVpFZ2l0aHViLmNvbS92My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3By",
+            "b3RvL2dlbi9kb21haW4vdjEvZXZlbnRzO3YxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.File.V1.FileReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.File.V1.FileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.MediaBucketType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.ImageFileEvent), global::Domain.Events.V1.ImageFileEvent.Parser, new[]{ "File", "ImageType", "BucketType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.VideoFileEvent), global::Domain.Events.V1.VideoFileEvent.Parser, new[]{ "File", "VideoCodec", "AudioCodec", "BucketType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.RawFileEvent), global::Domain.Events.V1.RawFileEvent.Parser, new[]{ "File", "BucketType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Media), global::Domain.Events.V1.Media.Parser, new[]{ "Id", "EventName", "Image", "Video", "Raw", "Timestamp" }, new[]{ "Type" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Media), global::Domain.Events.V1.Media.Parser, new[]{ "Id", "EventName", "Image", "Video", "Raw", "Timestamp" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.MediaUploadedEvent), global::Domain.Events.V1.MediaUploadedEvent.Parser, new[]{ "EventId", "MediaId", "MediaPath", "Filename", "MimeType", "FileSize", "File", "Timestamp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1385,6 +1392,487 @@ namespace Domain.Events.V1 {
             }
             input.ReadMessage(subBuilder);
             Raw = subBuilder;
+            break;
+          }
+          case 802: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Media upload completion event
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MediaUploadedEvent : pb::IMessage<MediaUploadedEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MediaUploadedEvent> _parser = new pb::MessageParser<MediaUploadedEvent>(() => new MediaUploadedEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MediaUploadedEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.MediaEventReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaUploadedEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaUploadedEvent(MediaUploadedEvent other) : this() {
+      eventId_ = other.eventId_;
+      mediaId_ = other.mediaId_;
+      mediaPath_ = other.mediaPath_;
+      filename_ = other.filename_;
+      mimeType_ = other.mimeType_;
+      fileSize_ = other.fileSize_;
+      file_ = other.file_ != null ? other.file_.Clone() : null;
+      timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MediaUploadedEvent Clone() {
+      return new MediaUploadedEvent(this);
+    }
+
+    /// <summary>Field number for the "event_id" field.</summary>
+    public const int EventIdFieldNumber = 1;
+    private string eventId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventId {
+      get { return eventId_; }
+      set {
+        eventId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_id" field.</summary>
+    public const int MediaIdFieldNumber = 2;
+    private string mediaId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MediaId {
+      get { return mediaId_; }
+      set {
+        mediaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "media_path" field.</summary>
+    public const int MediaPathFieldNumber = 3;
+    private string mediaPath_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MediaPath {
+      get { return mediaPath_; }
+      set {
+        mediaPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filename" field.</summary>
+    public const int FilenameFieldNumber = 4;
+    private string filename_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filename {
+      get { return filename_; }
+      set {
+        filename_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 5;
+    private string mimeType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "file_size" field.</summary>
+    public const int FileSizeFieldNumber = 6;
+    private long fileSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FileSize {
+      get { return fileSize_; }
+      set {
+        fileSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "file" field.</summary>
+    public const int FileFieldNumber = 7;
+    private global::Domain.File.V1.FileBytes file_;
+    /// <summary>
+    /// File content with complete bytes - optional, if not provided use media_path to fetch from storage
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.File.V1.FileBytes File {
+      get { return file_; }
+      set {
+        file_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 100;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MediaUploadedEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MediaUploadedEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EventId != other.EventId) return false;
+      if (MediaId != other.MediaId) return false;
+      if (MediaPath != other.MediaPath) return false;
+      if (Filename != other.Filename) return false;
+      if (MimeType != other.MimeType) return false;
+      if (FileSize != other.FileSize) return false;
+      if (!object.Equals(File, other.File)) return false;
+      if (!object.Equals(Timestamp, other.Timestamp)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EventId.Length != 0) hash ^= EventId.GetHashCode();
+      if (MediaId.Length != 0) hash ^= MediaId.GetHashCode();
+      if (MediaPath.Length != 0) hash ^= MediaPath.GetHashCode();
+      if (Filename.Length != 0) hash ^= Filename.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      if (FileSize != 0L) hash ^= FileSize.GetHashCode();
+      if (file_ != null) hash ^= File.GetHashCode();
+      if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EventId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventId);
+      }
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MediaId);
+      }
+      if (MediaPath.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MediaPath);
+      }
+      if (Filename.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filename);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(MimeType);
+      }
+      if (FileSize != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(FileSize);
+      }
+      if (file_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(File);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Timestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventId);
+      }
+      if (MediaId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MediaId);
+      }
+      if (MediaPath.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MediaPath);
+      }
+      if (Filename.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Filename);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(MimeType);
+      }
+      if (FileSize != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(FileSize);
+      }
+      if (file_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(File);
+      }
+      if (timestamp_ != null) {
+        output.WriteRawTag(162, 6);
+        output.WriteMessage(Timestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EventId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventId);
+      }
+      if (MediaId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaId);
+      }
+      if (MediaPath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MediaPath);
+      }
+      if (Filename.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filename);
+      }
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (FileSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FileSize);
+      }
+      if (file_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
+      }
+      if (timestamp_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Timestamp);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MediaUploadedEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EventId.Length != 0) {
+        EventId = other.EventId;
+      }
+      if (other.MediaId.Length != 0) {
+        MediaId = other.MediaId;
+      }
+      if (other.MediaPath.Length != 0) {
+        MediaPath = other.MediaPath;
+      }
+      if (other.Filename.Length != 0) {
+        Filename = other.Filename;
+      }
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
+      if (other.FileSize != 0L) {
+        FileSize = other.FileSize;
+      }
+      if (other.file_ != null) {
+        if (file_ == null) {
+          File = new global::Domain.File.V1.FileBytes();
+        }
+        File.MergeFrom(other.File);
+      }
+      if (other.timestamp_ != null) {
+        if (timestamp_ == null) {
+          Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Timestamp.MergeFrom(other.Timestamp);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EventId = input.ReadString();
+            break;
+          }
+          case 18: {
+            MediaId = input.ReadString();
+            break;
+          }
+          case 26: {
+            MediaPath = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filename = input.ReadString();
+            break;
+          }
+          case 42: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 48: {
+            FileSize = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            if (file_ == null) {
+              File = new global::Domain.File.V1.FileBytes();
+            }
+            input.ReadMessage(File);
+            break;
+          }
+          case 802: {
+            if (timestamp_ == null) {
+              Timestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Timestamp);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventId = input.ReadString();
+            break;
+          }
+          case 18: {
+            MediaId = input.ReadString();
+            break;
+          }
+          case 26: {
+            MediaPath = input.ReadString();
+            break;
+          }
+          case 34: {
+            Filename = input.ReadString();
+            break;
+          }
+          case 42: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 48: {
+            FileSize = input.ReadInt64();
+            break;
+          }
+          case 58: {
+            if (file_ == null) {
+              File = new global::Domain.File.V1.FileBytes();
+            }
+            input.ReadMessage(File);
             break;
           }
           case 802: {

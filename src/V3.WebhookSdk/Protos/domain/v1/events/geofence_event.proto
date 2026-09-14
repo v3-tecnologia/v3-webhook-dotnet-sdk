@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package domain.events.v1;
+
+import "buf/validate/validate.proto";
+import "domain/v1/geofence/geofence.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option java_multiple_files = true;
+option java_outer_classname = "GeofenceEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
+option optimize_for = CODE_SIZE;
+
+// Event emitted when a geofence transition occurs (entering or exiting a geofenced area).
+message Geofence {
+    
+    // Unique identifier for the geofence area being monitored.
+    string id = 1 [(buf.validate.field).string.min_len = 1];
+
+    // Unique identifier of this event instance.
+    string event_name = 2;
+
+    domain.geofence.v1.GeofenceEvent event = 3;
+
+    // Additional context for the geofence event (e.g., speed, heading, zone name).
+    map<string, string> metadata = 4;
+    // Timestamp when the geofence event was produced.
+    google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}

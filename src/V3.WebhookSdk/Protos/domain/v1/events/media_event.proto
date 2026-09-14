@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
+package domain.events.v1;
+
 import "buf/validate/validate.proto";
 import "domain/v1/files/file.proto";
+import "google/protobuf/timestamp.proto";
 
-option java_multiple_files = true;
-option java_package = "br.com.v3.protocol.domain.events";
-option java_outer_classname = "FileEventProto";
 option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/events;v1";
+option java_multiple_files = true;
+option java_outer_classname = "FileEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
 option optimize_for = CODE_SIZE;
-
-package domain.events.v1;
 
 enum MediaBucketType {
   MEDIA_BUCKET_TYPE_UNSPECIFIED = 0;
@@ -57,8 +57,8 @@ message RawFileEvent {
 
 // File event supporting multiple domain types
 message Media {
-  string id = 1  [(buf.validate.field).string.min_len = 1];
-  
+  string id = 1 [(buf.validate.field).string.min_len = 1];
+
   string event_name = 2 [(buf.validate.field).string.min_len = 1];
 
   oneof type {
@@ -67,6 +67,25 @@ message Media {
     RawFileEvent raw = 5;
   }
 
-  google.protobuf.Timestamp timestamp = 100 
-      [(buf.validate.field).timestamp.lt_now = true];
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
+}
+
+// Media upload completion event
+message MediaUploadedEvent {
+  string event_id = 1 [(buf.validate.field).string.min_len = 1];
+
+  string media_id = 2 [(buf.validate.field).string.min_len = 1];
+
+  string media_path = 3 [(buf.validate.field).string.min_len = 1];
+
+  string filename = 4 [(buf.validate.field).string.min_len = 1];
+
+  string mime_type = 5;
+
+  int64 file_size = 6 [(buf.validate.field).int64.gte = 0];
+
+  // File content with complete bytes - optional, if not provided use media_path to fetch from storage
+  domain.file.v1.FileBytes file = 7;
+
+  google.protobuf.Timestamp timestamp = 100 [(buf.validate.field).timestamp.lt_now = true];
 }

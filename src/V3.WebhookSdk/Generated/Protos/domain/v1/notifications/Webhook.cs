@@ -38,29 +38,30 @@ namespace Domain.Notifications.V1 {
             "YXJ5X2RhdGEYBiABKAxIABISCghyYXdfZGF0YRgHIAEoCUgBEiwKCWpzb25f",
             "ZGF0YRgIIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RIARIVCgtiaW5h",
             "cnlfZGF0YRgJIAEoDEgBGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBQgkKB3JlcXVlc3RCCgoIcmVzcG9uc2UioAEK",
+            "DQoFdmFsdWUYAiABKAk6AjgBQgkKB3JlcXVlc3RCCgoIcmVzcG9uc2UitAEK",
             "CUhvb2tFdmVudBIKCgJpZBgBIAEoCRIRCgl0ZW5hbnRfaWQYAiABKAkSEQoJ",
             "c291cmNlX2lkGAMgASgJEi0KCXRpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5UaW1lc3RhbXASMgoHcGF5bG9hZBgFIAEoCzIhLmRvbWFpbi5u",
-            "b3RpZmljYXRpb25zLnYxLkhvb2tEYXRhIoQBChJQZXJzaXN0ZWRIb29rRXZl",
-            "bnQSCgoCaWQYASABKAkSLwoGc3RhdHVzGAIgASgLMh8uZG9tYWluLm5vdGlm",
-            "aWNhdGlvbnMudjEuU3RhdHVzEjEKBWV2ZW50GAMgASgLMiIuZG9tYWluLm5v",
-            "dGlmaWNhdGlvbnMudjEuSG9va0V2ZW50InIKB1dlYmhvb2sSCgoCaWQYASAB",
-            "KAkSLgoKY3JlYXRlZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASKwoKYXR0cmlidXRlcxgDIAMoCzIXLmRvbWFpbi5ldmVudHMudjEu",
-            "RXZlbnQqgwEKCE1pbWVUeXBlEhgKFE1JTUVUWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "HQoZTUlNRVRZUEVfQVBQTElDQVRJT05fSlNPThABEhcKE01JTUVUWVBFX1RF",
-            "WFRfUExBSU4QAhIlCiFNSU1FVFlQRV9BUFBMSUNBVElPTl9PQ1RFVF9TVFJF",
-            "QU0QA0KVAQonYnIuY29tLnYzLnByb3RvY29sLmRvbWFpbi5ub3RpZmljYXRp",
-            "b25zQhhXZWJob29rTm90aWZpY2F0aW9uUHJvdG9IAlABWkxnaXRodWIuY29t",
-            "L3YzLXRlY25vbG9naWEvcHJvdG9jb2wtY2xvdWQvcHJvdG8vZ2VuL2RvbWFp",
-            "bi92MS9ub3RpZmljYXRpb25zO3YxYgZwcm90bzM="));
+            "b3RpZmljYXRpb25zLnYxLkhvb2tEYXRhEhIKCndlYmhvb2tfaWQYBiABKAki",
+            "hAEKElBlcnNpc3RlZEhvb2tFdmVudBIKCgJpZBgBIAEoCRIvCgZzdGF0dXMY",
+            "AiABKAsyHy5kb21haW4ubm90aWZpY2F0aW9ucy52MS5TdGF0dXMSMQoFZXZl",
+            "bnQYAyABKAsyIi5kb21haW4ubm90aWZpY2F0aW9ucy52MS5Ib29rRXZlbnQi",
+            "cgoHV2ViaG9vaxIKCgJpZBgBIAEoCRIuCgpjcmVhdGVkX2F0GAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgphdHRyaWJ1dGVzGAMgAygL",
+            "MhcuZG9tYWluLmV2ZW50cy52MS5FdmVudCqDAQoITWltZVR5cGUSGAoUTUlN",
+            "RVRZUEVfVU5TUEVDSUZJRUQQABIdChlNSU1FVFlQRV9BUFBMSUNBVElPTl9K",
+            "U09OEAESFwoTTUlNRVRZUEVfVEVYVF9QTEFJThACEiUKIU1JTUVUWVBFX0FQ",
+            "UExJQ0FUSU9OX09DVEVUX1NUUkVBTRADQpUBCidici5jb20udjMucHJvdG9j",
+            "b2wuZG9tYWluLm5vdGlmaWNhdGlvbnNCGFdlYmhvb2tOb3RpZmljYXRpb25Q",
+            "cm90b0gCUAFaTGdpdGh1Yi5jb20vdjMtdGVjbm9sb2dpYS9wcm90b2NvbC1j",
+            "bG91ZC9wcm90by9nZW4vZG9tYWluL3YxL25vdGlmaWNhdGlvbnM7djFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Domain.Events.V1.EventReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Notifications.V1.MimeType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.Status), global::Domain.Notifications.V1.Status.Parser, new[]{ "Code", "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.HookData), global::Domain.Notifications.V1.HookData.Parser, new[]{ "RequestMimeType", "ResponseMimeType", "Headers", "TenantRawData", "TenantJsonData", "TenantBinaryData", "RawData", "JsonData", "BinaryData" }, new[]{ "Request", "Response" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.HookEvent), global::Domain.Notifications.V1.HookEvent.Parser, new[]{ "Id", "TenantId", "SourceId", "Timestamp", "Payload" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.HookEvent), global::Domain.Notifications.V1.HookEvent.Parser, new[]{ "Id", "TenantId", "SourceId", "Timestamp", "Payload", "WebhookId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.PersistedHookEvent), global::Domain.Notifications.V1.PersistedHookEvent.Parser, new[]{ "Id", "Status", "Event" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Notifications.V1.Webhook), global::Domain.Notifications.V1.Webhook.Parser, new[]{ "Id", "CreatedAt", "Attributes" }, null, null, null, null)
           }));
@@ -1032,6 +1033,7 @@ namespace Domain.Notifications.V1 {
       sourceId_ = other.sourceId_;
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       payload_ = other.payload_ != null ? other.payload_.Clone() : null;
+      webhookId_ = other.webhookId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1104,6 +1106,21 @@ namespace Domain.Notifications.V1 {
       }
     }
 
+    /// <summary>Field number for the "webhook_id" field.</summary>
+    public const int WebhookIdFieldNumber = 6;
+    private string webhookId_ = "";
+    /// <summary>
+    /// ID of the webhook configuration for URL lookup
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookId {
+      get { return webhookId_; }
+      set {
+        webhookId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1124,6 +1141,7 @@ namespace Domain.Notifications.V1 {
       if (SourceId != other.SourceId) return false;
       if (!object.Equals(Timestamp, other.Timestamp)) return false;
       if (!object.Equals(Payload, other.Payload)) return false;
+      if (WebhookId != other.WebhookId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1136,6 +1154,7 @@ namespace Domain.Notifications.V1 {
       if (SourceId.Length != 0) hash ^= SourceId.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (payload_ != null) hash ^= Payload.GetHashCode();
+      if (WebhookId.Length != 0) hash ^= WebhookId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1174,6 +1193,10 @@ namespace Domain.Notifications.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Payload);
       }
+      if (WebhookId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(WebhookId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1204,6 +1227,10 @@ namespace Domain.Notifications.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Payload);
       }
+      if (WebhookId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(WebhookId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1228,6 +1255,9 @@ namespace Domain.Notifications.V1 {
       }
       if (payload_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Payload);
+      }
+      if (WebhookId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1261,6 +1291,9 @@ namespace Domain.Notifications.V1 {
           Payload = new global::Domain.Notifications.V1.HookData();
         }
         Payload.MergeFrom(other.Payload);
+      }
+      if (other.WebhookId.Length != 0) {
+        WebhookId = other.WebhookId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1307,6 +1340,10 @@ namespace Domain.Notifications.V1 {
             input.ReadMessage(Payload);
             break;
           }
+          case 50: {
+            WebhookId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1350,6 +1387,10 @@ namespace Domain.Notifications.V1 {
               Payload = new global::Domain.Notifications.V1.HookData();
             }
             input.ReadMessage(Payload);
+            break;
+          }
+          case 50: {
+            WebhookId = input.ReadString();
             break;
           }
         }

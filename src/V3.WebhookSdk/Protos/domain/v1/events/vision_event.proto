@@ -3,8 +3,8 @@ syntax = "proto3";
 import "google/protobuf/timestamp.proto";
 import "buf/validate/validate.proto";
 import "domain/v1/vision/vision.proto";
-import "domain/v1/faces/face.proto";
 import "domain/v1/location/location.proto";
+import "domain/v1/faces/face.proto";
 
 option java_multiple_files = true;
 option java_package = "br.com.v3.protocol.domain.events";

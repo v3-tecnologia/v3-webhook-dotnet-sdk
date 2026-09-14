@@ -39,13 +39,14 @@ namespace Domain.Orders.V1 {
             "bi5vcmRlcnMudjEuTW9kZWwSOwoQZmlybXdhcmVfdmVyc2lvbhgCIAEoCzIh",
             "LmRvbWFpbi5vcmRlcnMudjEuRmlybXdhcmVWZXJzaW9uEiIKA3BpZBgDIAEo",
             "CzIVLmRvbWFpbi5vcmRlcnMudjEuUGlkEg8KB2RldGFpbHMYBCABKAkSDgoG",
-            "dXB0aW1lGAUgASgDIpEBCgZEZXZpY2USEwoCaWQYASABKAlCB7pIBHICEAES",
+            "dXB0aW1lGAUgASgDIqsBCgZEZXZpY2USEwoCaWQYASABKAlCB7pIBHICEAES",
             "FgoOY29ycmVsYXRpb25faWQYAiABKAkSFAoDdWlkGAMgASgJQge6SARyAhAB",
             "EhsKCmFjY291bnRfaWQYBCABKAlCB7pIBHICEAESJwoGb3JkZXJzGAUgAygL",
-            "MhcuZG9tYWluLm9yZGVycy52MS5PcmRlckJ4Chlici5jb20udjMucHJvdG9j",
-            "b2wuZG9tYWluQhBEZXZpY2VPcmRlclByb3RvSAJQAVpFZ2l0aHViLmNvbS92",
-            "My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3Byb3RvL2dlbi9kb21haW4v",
-            "djEvb3JkZXJzO3YxYgZwcm90bzM="));
+            "MhcuZG9tYWluLm9yZGVycy52MS5PcmRlchIYChBjb21wYW55X2dyb3VwX2lk",
+            "GAYgASgJQngKGWJyLmNvbS52My5wcm90b2NvbC5kb21haW5CEERldmljZU9y",
+            "ZGVyUHJvdG9IAlABWkVnaXRodWIuY29tL3YzLXRlY25vbG9naWEvcHJvdG9j",
+            "b2wtY2xvdWQvcHJvdG8vZ2VuL2RvbWFpbi92MS9vcmRlcnM7djFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Orders.V1.OrderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +55,7 @@ namespace Domain.Orders.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Orders.V1.FirmwareVersion), global::Domain.Orders.V1.FirmwareVersion.Parser, new[]{ "Name", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Orders.V1.Model), global::Domain.Orders.V1.Model.Parser, new[]{ "Name", "Vendor", "Version", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Orders.V1.DeviceMetadata), global::Domain.Orders.V1.DeviceMetadata.Parser, new[]{ "Model", "FirmwareVersion", "Pid", "Details", "Uptime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Orders.V1.Device), global::Domain.Orders.V1.Device.Parser, new[]{ "Id", "CorrelationId", "Uid", "AccountId", "Orders" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Orders.V1.Device), global::Domain.Orders.V1.Device.Parser, new[]{ "Id", "CorrelationId", "Uid", "AccountId", "Orders", "CompanyGroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1541,6 +1542,7 @@ namespace Domain.Orders.V1 {
       uid_ = other.uid_;
       accountId_ = other.accountId_;
       orders_ = other.orders_.Clone();
+      companyGroupId_ = other.companyGroupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1624,6 +1626,21 @@ namespace Domain.Orders.V1 {
       get { return orders_; }
     }
 
+    /// <summary>Field number for the "company_group_id" field.</summary>
+    public const int CompanyGroupIdFieldNumber = 6;
+    private string companyGroupId_ = "";
+    /// <summary>
+    /// Associated Company group ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CompanyGroupId {
+      get { return companyGroupId_; }
+      set {
+        companyGroupId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1644,6 +1661,7 @@ namespace Domain.Orders.V1 {
       if (Uid != other.Uid) return false;
       if (AccountId != other.AccountId) return false;
       if(!orders_.Equals(other.orders_)) return false;
+      if (CompanyGroupId != other.CompanyGroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1656,6 +1674,7 @@ namespace Domain.Orders.V1 {
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (AccountId.Length != 0) hash ^= AccountId.GetHashCode();
       hash ^= orders_.GetHashCode();
+      if (CompanyGroupId.Length != 0) hash ^= CompanyGroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1691,6 +1710,10 @@ namespace Domain.Orders.V1 {
         output.WriteString(AccountId);
       }
       orders_.WriteTo(output, _repeated_orders_codec);
+      if (CompanyGroupId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CompanyGroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1718,6 +1741,10 @@ namespace Domain.Orders.V1 {
         output.WriteString(AccountId);
       }
       orders_.WriteTo(ref output, _repeated_orders_codec);
+      if (CompanyGroupId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CompanyGroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1741,6 +1768,9 @@ namespace Domain.Orders.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountId);
       }
       size += orders_.CalculateSize(_repeated_orders_codec);
+      if (CompanyGroupId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CompanyGroupId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1766,6 +1796,9 @@ namespace Domain.Orders.V1 {
         AccountId = other.AccountId;
       }
       orders_.Add(other.orders_);
+      if (other.CompanyGroupId.Length != 0) {
+        CompanyGroupId = other.CompanyGroupId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1805,6 +1838,10 @@ namespace Domain.Orders.V1 {
             orders_.AddEntriesFrom(input, _repeated_orders_codec);
             break;
           }
+          case 50: {
+            CompanyGroupId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1842,6 +1879,10 @@ namespace Domain.Orders.V1 {
           }
           case 42: {
             orders_.AddEntriesFrom(ref input, _repeated_orders_codec);
+            break;
+          }
+          case 50: {
+            CompanyGroupId = input.ReadString();
             break;
           }
         }

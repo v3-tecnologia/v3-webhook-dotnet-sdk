@@ -39,4 +39,26 @@ namespace V3.WebhookSdk.Events
         public const string StartOvertaking = "START_OVERTAKING";
 
     }
+
+    public static class DriverIdentificationEventNames
+    {
+        public const string Identified = "DRIVER_IDENTIFICATION";
+        public const string Unidentified = "DRIVER_UNIDENTIFICATION";
+    }
+
+    public static class DriverIdentificationEventGroups
+    {
+        public const string Identified = "DRIVER_IDENTIFICATION";
+        public const string Unidentified = "DRIVER_UNIDENTIFICATION";
+    }
+
+    public static class GeofenceEventNames
+    {
+        public const string Geofence = "GEOFENCE";
+    }
+
+    public static class GeofenceEventGroups
+    {
+        public const string Geofence = "GEOFENCE";
+    }
 }
