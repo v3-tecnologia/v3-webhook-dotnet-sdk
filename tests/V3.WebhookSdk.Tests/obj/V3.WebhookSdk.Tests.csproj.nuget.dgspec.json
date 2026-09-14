@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj": {}
+    "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj": {}
   },
   "projects": {
-    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
-      "version": "0.1.4",
+    "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+      "version": "0.1.5",
       "restore": {
-        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+        "projectUniqueName": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
         "projectName": "V3.WebhookSdk",
-        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
-        "packagesPath": "/home/adrianosantos/.nuget/packages/",
-        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/obj/",
+        "projectPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj",
+        "packagesPath": "/home/kevenmiano/.nuget/packages/",
+        "outputPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
+          "/home/kevenmiano/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -75,50 +73,39 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kevenmiano/.dotnet/sdk/8.0.425/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj": {
+    "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
+        "projectUniqueName": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
         "projectName": "V3.WebhookSdk.Tests",
-        "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
-        "packagesPath": "/home/adrianosantos/.nuget/packages/",
-        "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/",
+        "projectPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/V3.WebhookSdk.Tests.csproj",
+        "packagesPath": "/home/kevenmiano/.nuget/packages/",
+        "outputPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/tests/V3.WebhookSdk.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
+          "/home/kevenmiano/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
-                "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
+              "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+                "projectPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
               }
             }
           }
@@ -132,8 +119,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -175,22 +161,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.26, 8.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kevenmiano/.dotnet/sdk/8.0.425/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

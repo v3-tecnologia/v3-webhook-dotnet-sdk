@@ -467,7 +467,7 @@
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
-      "V3.WebhookSdk/0.1.4": {
+      "V3.WebhookSdk/0.1.5": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1330,7 +1330,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "V3.WebhookSdk/0.1.4": {
+    "V3.WebhookSdk/0.1.5": {
       "type": "project",
       "path": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj",
       "msbuildProject": "../../src/V3.WebhookSdk/V3.WebhookSdk.csproj"
@@ -1339,37 +1339,36 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4",
-      "V3.WebhookSdk >= 0.1.4"
+      "V3.WebhookSdk >= 0.1.5"
     ]
   },
   "packageFolders": {
-    "/home/adrianosantos/.nuget/packages/": {}
+    "/tmp/cursor-sandbox-cache/fa3d5c99e096c93b9c11f6a9cdff23a0/nuget": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
+      "projectUniqueName": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
       "projectName": "WebhookExample",
-      "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
-      "packagesPath": "/home/adrianosantos/.nuget/packages/",
-      "outputPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/",
+      "projectPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/examples/WebhookExample/WebhookExample.csproj",
+      "packagesPath": "/tmp/cursor-sandbox-cache/fa3d5c99e096c93b9c11f6a9cdff23a0/nuget",
+      "outputPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/examples/WebhookExample/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/adrianosantos/.nuget/NuGet/NuGet.Config"
+        "/home/kevenmiano/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
-              "projectPath": "/home/adrianosantos/workspaces/git/v3/cloud/v3go/sdks/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
+            "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj": {
+              "projectPath": "/home/kevenmiano/Documentos/v3-webhook-dotnet-sdk/src/V3.WebhookSdk/V3.WebhookSdk.csproj"
             }
           }
         }
@@ -1383,8 +1382,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1406,20 +1404,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.26, 8.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.26, 8.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1428,7 +1412,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/kevenmiano/.dotnet/sdk/8.0.425/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

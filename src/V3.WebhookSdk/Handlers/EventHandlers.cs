@@ -23,7 +23,10 @@ namespace V3.WebhookSdk.Handlers
         Telemetry,
         Alert,
         DriverBehavior,
-        Vehicle
+        Vehicle,
+        DriverIdentification,
+        Geofence,
+        Adas
     }
 
     /// <summary>

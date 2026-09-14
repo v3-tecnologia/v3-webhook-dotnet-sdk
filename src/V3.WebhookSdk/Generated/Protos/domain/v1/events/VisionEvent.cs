@@ -27,8 +27,8 @@ namespace Domain.Events.V1 {
             "CiNkb21haW4vdjEvZXZlbnRzL3Zpc2lvbl9ldmVudC5wcm90bxIQZG9tYWlu",
             "LmV2ZW50cy52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxob",
             "YnVmL3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvGh1kb21haW4vdjEvdmlzaW9u",
-            "L3Zpc2lvbi5wcm90bxoaZG9tYWluL3YxL2ZhY2VzL2ZhY2UucHJvdG8aIWRv",
-            "bWFpbi92MS9sb2NhdGlvbi9sb2NhdGlvbi5wcm90byKAAgoORGV0ZWN0ZWRP",
+            "L3Zpc2lvbi5wcm90bxohZG9tYWluL3YxL2xvY2F0aW9uL2xvY2F0aW9uLnBy",
+            "b3RvGhpkb21haW4vdjEvZmFjZXMvZmFjZS5wcm90byKAAgoORGV0ZWN0ZWRP",
             "YmplY3QSEwoCaWQYASABKAlCB7pIBHICEAESFQoEbmFtZRgCIAEoCUIHukgE",
             "cgIQARISCgpjb25maWRlbmNlGAMgASgCEjUKDmJvdW5kaW5nX2JveGVzGAQg",
             "AygLMh0uZG9tYWluLnZpc2lvbi52MS5Cb3VuZGluZ0JveBJECgphdHRyaWJ1",
@@ -67,7 +67,7 @@ namespace Domain.Events.V1 {
             "dG9IAlABWkVnaXRodWIuY29tL3YzLXRlY25vbG9naWEvcHJvdG9jb2wtY2xv",
             "dWQvcHJvdG8vZ2VuL2RvbWFpbi92MS9ldmVudHM7djFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Vision.V1.VisionReflection.Descriptor, global::Domain.Faces.V1.FaceReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Vision.V1.VisionReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Faces.V1.FaceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.DetectedObject), global::Domain.Events.V1.DetectedObject.Parser, new[]{ "Id", "Name", "Confidence", "BoundingBoxes", "Attributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.CameraObstructedEvent), global::Domain.Events.V1.CameraObstructedEvent.Parser, new[]{ "Name", "Location" }, null, null, null, null),

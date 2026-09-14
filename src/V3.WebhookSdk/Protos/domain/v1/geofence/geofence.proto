@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package domain.geofence.v1;
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/geofence;v1";
+option java_multiple_files = true;
+option java_outer_classname = "DMSEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
+option optimize_for = CODE_SIZE;
+
+// Geofence shape type for the monitored area.
+enum GeofenceShapeType {
+
+    // Type not specified (default value).
+    GEOFENCE_SHAPE_TYPE_UNSPECIFIED = 0;
+
+    // Geofence defined by center point and radius.
+    GEOFENCE_SHAPE_TYPE_CIRCULAR = 1;
+
+    // Geofence defined by a set of polygon vertices.
+    GEOFENCE_SHAPE_TYPE_POLYGONAL = 2;
+}
+
+// Direction of movement across the geofence boundary.
+enum TransitionType {
+    // Transition type not specified (default value).
+    TRANSITION_TYPE_UNSPECIFIED = 0;
+
+    // Vehicle/asset entering the geofenced area.
+    TRANSITION_TYPE_ENTER = 1;
+
+    // Vehicle/asset exiting the geofenced area.
+    TRANSITION_TYPE_EXIT = 2;
+}
+
+// Event emitted when a geofence transition occurs (entering or exiting a geofenced area).
+message GeofenceEvent {
+    
+    // Unique identifier for the geofence area being monitored.
+    string geofence_id = 1; 
+
+    oneof event {
+        GeofenceEnterEvent enter_event = 2;
+        GeofenceExitEvent exit_event = 3;
+    }
+
+    // Additional context for the geofence event (e.g., speed, heading, zone name).
+    map<string, string> metadata = 4;
+}
+
+message GeofenceEnterEvent {
+    GeofenceShapeType geofence_type = 1;
+    TransitionType transition = 2;
+}
+
+message GeofenceExitEvent {
+    GeofenceShapeType geofence_type = 1;
+    TransitionType transition = 2;
+}

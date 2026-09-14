@@ -77,6 +77,8 @@ message HookEvent {
     google.protobuf.Timestamp timestamp = 4;
 
     HookData payload = 5;
+
+    string webhook_id = 6; // ID of the webhook configuration for URL lookup
 }
 
 // Persisted hook event message.

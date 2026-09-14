@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package domain.driver.v1;
+
+option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/driver;v1";
+option java_multiple_files = true;
+option java_outer_classname = "DMSEventProto";
+option java_package = "br.com.v3.protocol.domain.events";
+option optimize_for = CODE_SIZE;
+
+enum IdentificationTechnology {
+  IDENTIFICATION_TECHNOLOGY_UNSPECIFIED = 0;
+
+  // Physical RFID token/card read by a compatible reader.
+  IDENTIFICATION_TECHNOLOGY_RFID = 1;
+
+  // QR code scanned by camera or external scanner.
+  IDENTIFICATION_TECHNOLOGY_QR_CODE = 2;
+
+  // Near Field Communication credential.
+  IDENTIFICATION_TECHNOLOGY_NFC = 3;
+
+  // Biometric authentication (face, fingerprint, etc.).
+  IDENTIFICATION_TECHNOLOGY_BIOMETRY = 4;
+
+  // Identification performed by mobile app interaction.
+  IDENTIFICATION_TECHNOLOGY_APP = 5;
+
+  // Manual input or operator-assisted identification.
+  IDENTIFICATION_TECHNOLOGY_MANUAL = 6;
+
+  // Any other identification technology not listed above.
+  IDENTIFICATION_TECHNOLOGY_OTHER = 7;
+}
+
+// Component that emitted the timeout event.
+enum TimeoutSource {
+  TIMEOUT_SOURCE_UNSPECIFIED = 0;
+
+  // Timeout reported by the external reader device.
+  TIMEOUT_SOURCE_READER_DEVICE = 1;
+
+  // Timeout generated virtually by the camera/system.
+  TIMEOUT_SOURCE_CAMERA_VIRTUAL = 2;
+}
+
+// Match processing result for the identification attempt.
+enum MatchResult {
+  MATCH_RESULT_UNSPECIFIED = 0;
+
+  // Match was successfully resolved to a known driver.
+  MATCH_RESULT_MATCHED = 1;
+
+  // Match executed but no driver could be resolved.
+  MATCH_RESULT_NOT_MATCHED = 2;
+
+  // Match is still pending (for example waiting cloud processing).
+  MATCH_RESULT_PENDING = 3;
+
+  // Match failed due to processing error.
+  MATCH_RESULT_ERROR = 4;
+}
+
+// Match context and capability flags for the identification pipeline.
+message DriverMatch {
+  // Final or current processing result for this match.
+  MatchResult result = 1;
+
+  // Driver id resolved by match when available.
+  // See https://developer.v3control.com/docs/openapi/management/get-a-driver-by-id for more information about the driver resource.
+  string driver_id = 2;
+
+  // Correlation id for cloud match requests/responses, when available.
+  string correlation_id = 3;
+
+  // Additional match metadata (confidence, provider, reason, etc.).
+  map<string, string> metadata = 4;
+}

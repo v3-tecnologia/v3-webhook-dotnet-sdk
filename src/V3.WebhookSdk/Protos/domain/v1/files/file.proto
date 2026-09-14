@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package domain.file.v1;
 
-import "google/protobuf/timestamp.proto";
 import "buf/validate/validate.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/v3-tecnologia/protocol-cloud/proto/gen/domain/v1/files;files";
 option java_multiple_files = true;
@@ -86,10 +86,10 @@ enum ChecksumAlgorithm {
 
 message Checksum {
   // Checksum value of the chunk
-  string value = 1 [(buf.validate.field).string.min_len = 1];  
-  
+  string value = 1 [(buf.validate.field).string.min_len = 1];
+
   // Algorithm used for the checksum
-  ChecksumAlgorithm checksum_algorithm = 2 [(buf.validate.field).required = true];  
+  ChecksumAlgorithm checksum_algorithm = 2 [(buf.validate.field).required = true];
 }
 
 // Represents an individual file chunk
@@ -112,7 +112,7 @@ message Chunk {
 // Complete file metadata with reconstruction information
 message FileMetadata {
   // Unique file identifier
-  string id = 1 [(buf.validate.field).string.min_len = 1];           
+  string id = 1 [(buf.validate.field).string.min_len = 1];
 
   // ID of the event that generated the file
   string event_id = 2 [(buf.validate.field).string.min_len = 1];
@@ -145,4 +145,22 @@ message File {
 
   // List of chunks already received
   repeated Chunk chunks = 2;
+}
+
+// Complete file with raw bytes - used by pipeline consumers
+message FileBytes {
+  // Original file name
+  string name = 1 [(buf.validate.field).string.min_len = 1];
+
+  // MIME type of the file
+  string mime_type = 2 [(buf.validate.field).string.min_len = 1];
+
+  // Total file size in bytes
+  int64 size = 3 [(buf.validate.field).int64.gt = 0];
+
+  // Raw file contents
+  bytes data = 4 [(buf.validate.field).bytes.min_len = 1];
+
+  // File creation timestamp
+  google.protobuf.Timestamp created_at = 5;
 }

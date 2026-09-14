@@ -185,6 +185,8 @@ namespace V3.WebhookSdk.Processing
                 ?? GetProperty(container, "Connection")
                 ?? GetProperty(container, "Dms")
                 ?? GetProperty(container, "DriverBehavior")
+                ?? GetProperty(container, "DriverIdentification")
+                ?? GetProperty(container, "Geofence")
                 ?? GetProperty(container, "Health")
                 ?? GetProperty(container, "Vehicle")
                 ?? GetProperty(container, "Vision")
@@ -267,6 +269,10 @@ namespace V3.WebhookSdk.Processing
                 "HEALTH" => EventPayloadKind.Hardware,
                 "TELEMETRY" => EventPayloadKind.Telemetry,
                 "DRIVER_BEHAVIOR" => EventPayloadKind.DriverBehavior,
+                "DRIVER_IDENTIFICATION" => EventPayloadKind.DriverIdentification,
+                "DRIVER_UNIDENTIFICATION" => EventPayloadKind.DriverIdentification,
+                "GEOFENCE" => EventPayloadKind.Geofence,
+                "ADAS" => EventPayloadKind.Adas,
                 "VEHICLE" => EventPayloadKind.Vehicle,
                 "SYSTEM" => EventPayloadKind.System,
                 "ORDER" => EventPayloadKind.Order,

@@ -30,100 +30,120 @@ namespace Domain.Events.V1 {
             "dF9ldmVudC5wcm90bxonZG9tYWluL3YxL2V2ZW50cy9jb25uZWN0aW9uX2V2",
             "ZW50LnByb3RvGiBkb21haW4vdjEvZXZlbnRzL2Rtc19ldmVudC5wcm90bxos",
             "ZG9tYWluL3YxL2V2ZW50cy9kcml2ZXJfYmVoYXZpb3JfZXZlbnQucHJvdG8a",
-            "I2RvbWFpbi92MS9ldmVudHMvaGVhbHRoX2V2ZW50LnByb3RvGilkb21haW4v",
-            "djEvZXZlbnRzL29yZGVyX3N0YXR1c19ldmVudC5wcm90bxojZG9tYWluL3Yx",
-            "L2V2ZW50cy9zeXN0ZW1fZXZlbnQucHJvdG8aJmRvbWFpbi92MS9ldmVudHMv",
-            "dGVsZW1ldHJ5X2V2ZW50LnByb3RvGiRkb21haW4vdjEvZXZlbnRzL3ZlaGlj",
-            "bGVfZXZlbnQucHJvdG8aI2RvbWFpbi92MS9ldmVudHMvdmlzaW9uX2V2ZW50",
-            "LnByb3RvGiJkb21haW4vdjEvZXZlbnRzL21lZGlhX2V2ZW50LnByb3RvGiFk",
-            "b21haW4vdjEvbG9jYXRpb24vbG9jYXRpb24ucHJvdG8aHWRvbWFpbi92MS9v",
-            "cmRlcnMvZGV2aWNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIpQCCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEgASgLMiIuZG9t",
-            "YWluLmV2ZW50cy52MS5UZWxlbWV0cnlEZXRhaWxzEhsKCmdyb3VwX25hbWUY",
-            "AiABKAlCB7pIBHICEAESMQoKdHJpcF9ldmVudBgDIAEoCzIbLmRvbWFpbi5l",
-            "dmVudHMudjEuVHJpcEV2ZW50SAASPQoQc3RhbmRhbG9uZV9ldmVudBgEIAEo",
-            "CzIhLmRvbWFpbi5ldmVudHMudjEuU3RhbmRhbG9uZUV2ZW50SAASOQoOaW50",
-            "ZXJuYWxfZXZlbnQYBSABKAsyHy5kb21haW4uZXZlbnRzLnYxLkludGVybmFs",
-            "RXZlbnRIAEIGCgRkYXRhItsCCg9TdGFuZGFsb25lRXZlbnQSIQoQZXZlbnRf",
-            "Z3JvdXBfbmFtZRgBIAEoCUIHukgEcgIQARIuCghsb2NhdGlvbhhkIAEoCzIc",
-            "LmRvbWFpbi5sb2NhdGlvbi52MS5Mb2NhdGlvbhIoCgVhbGVydBgCIAEoCzIX",
-            "LmRvbWFpbi5ldmVudHMudjEuQWxlcnRIABIyCgpjb25uZWN0aW9uGAMgASgL",
-            "MhwuZG9tYWluLmV2ZW50cy52MS5Db25uZWN0aW9uSAASKgoGaGVhbHRoGAQg",
-            "ASgLMhguZG9tYWluLmV2ZW50cy52MS5IZWFsdGhIABIwCgl0ZWxlbWV0cnkY",
-            "BSABKAsyGy5kb21haW4uZXZlbnRzLnYxLlRlbGVtZXRyeUgAEioKBnN5c3Rl",
-            "bRgGIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuU3lzdGVtSABCDQoLZXZlbnRf",
-            "Z3JvdXAingMKCVRyaXBFdmVudBIYCgd0cmlwX2lkGAEgASgJQge6SARyAhAB",
-            "EiEKEGV2ZW50X2dyb3VwX25hbWUYAiABKAlCB7pIBHICEAESLgoIbG9jYXRp",
-            "b24YZCABKAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24SJgoEYWRh",
-            "cxgDIAEoCzIWLmRvbWFpbi5ldmVudHMudjEuQWRhc0gAEiQKA2RtcxgEIAEo",
-            "CzIVLmRvbWFpbi5ldmVudHMudjEuRG1zSAASOwoPZHJpdmVyX2JlaGF2aW9y",
-            "GAUgASgLMiAuZG9tYWluLmV2ZW50cy52MS5Ecml2ZXJCZWhhdmlvckgAEjAK",
-            "CXRlbGVtZXRyeRgGIAEoCzIbLmRvbWFpbi5ldmVudHMudjEuVGVsZW1ldHJ5",
-            "SAASLAoHdmVoaWNsZRgHIAEoCzIZLmRvbWFpbi5ldmVudHMudjEuVmVoaWNs",
-            "ZUgAEioKBnZpc2lvbhgIIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuVmlzaW9u",
-            "SABCDQoLZXZlbnRfZ3JvdXAiawoNSW50ZXJuYWxFdmVudBIhChBldmVudF9n",
-            "cm91cF9uYW1lGAEgASgJQge6SARyAhABEigKBW1lZGlhGAIgASgLMhcuZG9t",
-            "YWluLmV2ZW50cy52MS5NZWRpYUgAQg0KC2V2ZW50X2dyb3VwIo8BCgpBdHRy",
-            "aWJ1dGVzEigKBmRldmljZRgBIAEoCzIYLmRvbWFpbi5vcmRlcnMudjEuRGV2",
-            "aWNlEiwKBW9yZGVyGAIgASgLMh0uZG9tYWluLmV2ZW50cy52MS5PcmRlclN0",
-            "YXR1cxIpCgRkYXRhGAMgASgLMhsuZG9tYWluLmV2ZW50cy52MS5FdmVudERh",
-            "dGEizAIKBUV2ZW50EhMKAmlkGAEgASgJQge6SARyAhABEhEKCWhhc19tZWRp",
-            "YRgIIAEoCBIoCgZzdGF0dXMYByABKA4yGC5kb21haW4uZXZlbnRzLnYxLlN0",
-            "YXR1cxI4CgpjcmVhdGVkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEIIukgFsgECOAESKQoEdHlwZRgDIAEoDjIbLmRvbWFpbi5ldmVu",
-            "dHMudjEuRXZlbnRUeXBlEjEKCGNhdGVnb3J5GAQgASgOMh8uZG9tYWluLmV2",
-            "ZW50cy52MS5FdmVudENhdGVnb3J5EicKA3N1YhgFIAEoDjIaLmRvbWFpbi5l",
-            "dmVudHMudjEuRXZlbnRTdWISMAoKYXR0cmlidXRlcxgGIAEoCzIcLmRvbWFp",
-            "bi5ldmVudHMudjEuQXR0cmlidXRlcypeCgZTdGF0dXMSFgoSU1RBVFVTX1VO",
-            "U1BFQ0lGSUVEEAASEwoPU1RBVFVTX1JFQ0VJVkVEEAESFAoQU1RBVFVTX0RF",
-            "TElWRVJFRBACEhEKDVNUQVRVU19GQUlMRUQQAypxCglFdmVudFR5cGUSGgoW",
-            "RVZFTlRfVFlQRV9VTlNQRUNJRklFRBAAEhQKEEVWRU5UX1RZUEVfT1JERVIQ",
-            "ARIWChJFVkVOVF9UWVBFX0dFTkVSQUwQAhIJCgVPUkRFUhABEgsKB0dFTkVS",
-            "QUwQAhoCEAEq1wQKDUV2ZW50Q2F0ZWdvcnkSHgoaRVZFTlRfQ0FURUdPUllf",
-            "VU5TUEVDSUZJRUQQABIXChNFVkVOVF9DQVRFR09SWV9BREFTEAESGAoURVZF",
-            "TlRfQ0FURUdPUllfQUxFUlQQAhIdChlFVkVOVF9DQVRFR09SWV9DT05ORUNU",
-            "SU9OEAMSFgoSRVZFTlRfQ0FURUdPUllfRE1TEAQSIgoeRVZFTlRfQ0FURUdP",
-            "UllfRFJJVkVSX0JFSEFWSU9SEAUSGQoVRVZFTlRfQ0FURUdPUllfSEVBTFRI",
-            "EAYSGAoURVZFTlRfQ0FURUdPUllfT1JERVIQBxIZChVFVkVOVF9DQVRFR09S",
-            "WV9TWVNURU0QCBIcChhFVkVOVF9DQVRFR09SWV9URUxFTUVUUlkQCRIaChZF",
-            "VkVOVF9DQVRFR09SWV9WRUhJQ0xFEAoSGQoVRVZFTlRfQ0FURUdPUllfVklT",
-            "SU9OEAsSEQoNQ0FURUdPUllfQURBUxABEhIKDkNBVEVHT1JZX0FMRVJUEAIS",
-            "FwoTQ0FURUdPUllfQ09OTkVDVElPThADEhAKDENBVEVHT1JZX0RNUxAEEhwK",
-            "GENBVEVHT1JZX0RSSVZFUl9CRUhBVklPUhAFEhMKD0NBVEVHT1JZX0hFQUxU",
-            "SBAGEhIKDkNBVEVHT1JZX09SREVSEAcSEwoPQ0FURUdPUllfU1lTVEVNEAgS",
-            "FgoSQ0FURUdPUllfVEVMRU1FVFJZEAkSFAoQQ0FURUdPUllfVkVISUNMRRAK",
-            "EhMKD0NBVEVHT1JZX1ZJU0lPThALGgIQASrbBwoIRXZlbnRTdWISGQoVRVZF",
-            "TlRfU1VCX1VOU1BFQ0lGSUVEEAASGAoURVZFTlRfU1VCX0FMRVJUX0lORk8Q",
-            "ARIcChhFVkVOVF9TVUJfQUxFUlRfQ1JJVElDQUwQAhIbChdFVkVOVF9TVUJf",
-            "QUxFUlRfV0FSTklORxADEicKI0VWRU5UX1NVQl9DT05ORUNUSU9OX1NUQVRV",
-            "U19DSEFOR0VEEAQSGgoWRVZFTlRfU1VCX0RNU19BRFZBTkNFRBAFEhcKE0VW",
-            "RU5UX1NVQl9ETVNfQkFTSUMQBhImCiJFVkVOVF9TVUJfRFJJVkVSX0JFSEFW",
-            "SU9SX0FEVkFOQ0VEEAcSIwofRVZFTlRfU1VCX0RSSVZFUl9CRUhBVklPUl9C",
-            "QVNJQxAIEhQKEEVWRU5UX1NVQl9IRUFMVEgQCRIaChZFVkVOVF9TVUJfT1JE",
-            "RVJfU1RBVFVTEAoSGwoXRVZFTlRfU1VCX1NZU1RFTV9VUExPQUQQCxIfChtF",
-            "VkVOVF9TVUJfVEVMRU1FVFJZX0JBVFRFUlkQDBIgChxFVkVOVF9TVUJfVEVM",
-            "RU1FVFJZX0lHTklUSU9OEA0SIAocRVZFTlRfU1VCX1RFTEVNRVRSWV9MT0NB",
-            "VElPThAOEhsKF0VWRU5UX1NVQl9WRUhJQ0xFX0JMT0NLEA8SHQoZRVZFTlRf",
-            "U1VCX1ZJU0lPTl9BRFZBTkNFRBAQEhoKFkVWRU5UX1NVQl9WSVNJT05fQkFT",
-            "SUMQERISCg5TVUJfQUxFUlRfSU5GTxABEhYKElNVQl9BTEVSVF9DUklUSUNB",
-            "TBACEhUKEVNVQl9BTEVSVF9XQVJOSU5HEAMSIQodU1VCX0NPTk5FQ1RJT05f",
-            "U1RBVFVTX0NIQU5HRUQQBBIUChBTVUJfRE1TX0FEVkFOQ0VEEAUSEQoNU1VC",
-            "X0RNU19CQVNJQxAGEiAKHFNVQl9EUklWRVJfQkVIQVZJT1JfQURWQU5DRUQQ",
-            "BxIdChlTVUJfRFJJVkVSX0JFSEFWSU9SX0JBU0lDEAgSDgoKU1VCX0hFQUxU",
-            "SBAJEhQKEFNVQl9PUkRFUl9TVEFUVVMQChIVChFTVUJfU1lTVEVNX1VQTE9B",
-            "RBALEhkKFVNVQl9URUxFTUVUUllfQkFUVEVSWRAMEhoKFlNVQl9URUxFTUVU",
-            "UllfSUdOSVRJT04QDRIaChZTVUJfVEVMRU1FVFJZX0xPQ0FUSU9OEA4SFQoR",
-            "U1VCX1ZFSElDTEVfQkxPQ0sQDxIXChNTVUJfVklTSU9OX0FEVkFOQ0VEEBAS",
-            "FAoQU1VCX1ZJU0lPTl9CQVNJQxARGgIQAUJ5CiBici5jb20udjMucHJvdG9j",
-            "b2wuZG9tYWluLmV2ZW50c0IKRXZlbnRQcm90b0gCUAFaRWdpdGh1Yi5jb20v",
-            "djMtdGVjbm9sb2dpYS9wcm90b2NvbC1jbG91ZC9wcm90by9nZW4vZG9tYWlu",
-            "L3YxL2V2ZW50czt2MWIGcHJvdG8z"));
+            "LGRvbWFpbi92MS9ldmVudHMvZHJpdmVyX2lkZW50aWZpY2F0aW9uLnByb3Rv",
+            "GiNkb21haW4vdjEvZXZlbnRzL2hlYWx0aF9ldmVudC5wcm90bxoiZG9tYWlu",
+            "L3YxL2V2ZW50cy9tZWRpYV9ldmVudC5wcm90bxopZG9tYWluL3YxL2V2ZW50",
+            "cy9vcmRlcl9zdGF0dXNfZXZlbnQucHJvdG8aI2RvbWFpbi92MS9ldmVudHMv",
+            "c3lzdGVtX2V2ZW50LnByb3RvGiZkb21haW4vdjEvZXZlbnRzL3RlbGVtZXRy",
+            "eV9ldmVudC5wcm90bxokZG9tYWluL3YxL2V2ZW50cy92ZWhpY2xlX2V2ZW50",
+            "LnByb3RvGiNkb21haW4vdjEvZXZlbnRzL3Zpc2lvbl9ldmVudC5wcm90bxol",
+            "ZG9tYWluL3YxL2V2ZW50cy9nZW9mZW5jZV9ldmVudC5wcm90bxohZG9tYWlu",
+            "L3YxL2xvY2F0aW9uL2xvY2F0aW9uLnByb3RvGh1kb21haW4vdjEvb3JkZXJz",
+            "L2RldmljZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
+            "byKKAgoHSW5zaWdodBITCgJpZBgBIAEoCUIHukgEcgIQARIVCgR0ZXh0GAIg",
+            "ASgJQge6SARyAhABEg4KBmxvY2FsZRgDIAEoCRIrCgpjb25maWRlbmNlGAQg",
+            "ASgBQhe6SBQSEhEAAAAAAADwPyEAAAAAAAAAABIqCgl0aHJlc2hvbGQYBSAB",
+            "KAFCF7pIFBISEQAAAAAAAPA/IQAAAAAAAAAAEjkKCG1ldGFkYXRhGAYgAygL",
+            "MicuZG9tYWluLmV2ZW50cy52MS5JbnNpZ2h0Lk1ldGFkYXRhRW50cnkaLwoN",
+            "TWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IpQCCglFdmVudERhdGESNQoJdGVsZW1ldHJ5GAEgASgLMiIuZG9tYWluLmV2",
+            "ZW50cy52MS5UZWxlbWV0cnlEZXRhaWxzEhsKCmdyb3VwX25hbWUYAiABKAlC",
+            "B7pIBHICEAESMQoKdHJpcF9ldmVudBgDIAEoCzIbLmRvbWFpbi5ldmVudHMu",
+            "djEuVHJpcEV2ZW50SAASPQoQc3RhbmRhbG9uZV9ldmVudBgEIAEoCzIhLmRv",
+            "bWFpbi5ldmVudHMudjEuU3RhbmRhbG9uZUV2ZW50SAASOQoOaW50ZXJuYWxf",
+            "ZXZlbnQYBSABKAsyHy5kb21haW4uZXZlbnRzLnYxLkludGVybmFsRXZlbnRI",
+            "AEIGCgRkYXRhIogDCg9TdGFuZGFsb25lRXZlbnQSIQoQZXZlbnRfZ3JvdXBf",
+            "bmFtZRgBIAEoCUIHukgEcgIQARIuCghsb2NhdGlvbhhkIAEoCzIcLmRvbWFp",
+            "bi5sb2NhdGlvbi52MS5Mb2NhdGlvbhIrCghpbnNpZ2h0cxhlIAMoCzIZLmRv",
+            "bWFpbi5ldmVudHMudjEuSW5zaWdodBIoCgVhbGVydBgCIAEoCzIXLmRvbWFp",
+            "bi5ldmVudHMudjEuQWxlcnRIABIyCgpjb25uZWN0aW9uGAMgASgLMhwuZG9t",
+            "YWluLmV2ZW50cy52MS5Db25uZWN0aW9uSAASKgoGaGVhbHRoGAQgASgLMhgu",
+            "ZG9tYWluLmV2ZW50cy52MS5IZWFsdGhIABIwCgl0ZWxlbWV0cnkYBSABKAsy",
+            "Gy5kb21haW4uZXZlbnRzLnYxLlRlbGVtZXRyeUgAEioKBnN5c3RlbRgGIAEo",
+            "CzIYLmRvbWFpbi5ldmVudHMudjEuU3lzdGVtSABCDQoLZXZlbnRfZ3JvdXAi",
+            "xAQKCVRyaXBFdmVudBIYCgd0cmlwX2lkGAEgASgJQge6SARyAhABEiEKEGV2",
+            "ZW50X2dyb3VwX25hbWUYAiABKAlCB7pIBHICEAESLgoIbG9jYXRpb24YZCAB",
+            "KAsyHC5kb21haW4ubG9jYXRpb24udjEuTG9jYXRpb24SKwoIaW5zaWdodHMY",
+            "ZSADKAsyGS5kb21haW4uZXZlbnRzLnYxLkluc2lnaHQSJgoEYWRhcxgDIAEo",
+            "CzIWLmRvbWFpbi5ldmVudHMudjEuQWRhc0gAEiQKA2RtcxgEIAEoCzIVLmRv",
+            "bWFpbi5ldmVudHMudjEuRG1zSAASOwoPZHJpdmVyX2JlaGF2aW9yGAUgASgL",
+            "MiAuZG9tYWluLmV2ZW50cy52MS5Ecml2ZXJCZWhhdmlvckgAEjAKCXRlbGVt",
+            "ZXRyeRgGIAEoCzIbLmRvbWFpbi5ldmVudHMudjEuVGVsZW1ldHJ5SAASLAoH",
+            "dmVoaWNsZRgHIAEoCzIZLmRvbWFpbi5ldmVudHMudjEuVmVoaWNsZUgAEioK",
+            "BnZpc2lvbhgIIAEoCzIYLmRvbWFpbi5ldmVudHMudjEuVmlzaW9uSAASRwoV",
+            "ZHJpdmVyX2lkZW50aWZpY2F0aW9uGAkgASgLMiYuZG9tYWluLmV2ZW50cy52",
+            "MS5Ecml2ZXJJZGVudGlmaWNhdGlvbkgAEi4KCGdlb2ZlbmNlGAogASgLMhou",
+            "ZG9tYWluLmV2ZW50cy52MS5HZW9mZW5jZUgAQg0KC2V2ZW50X2dyb3VwImsK",
+            "DUludGVybmFsRXZlbnQSIQoQZXZlbnRfZ3JvdXBfbmFtZRgBIAEoCUIHukgE",
+            "cgIQARIoCgVtZWRpYRgCIAEoCzIXLmRvbWFpbi5ldmVudHMudjEuTWVkaWFI",
+            "AEINCgtldmVudF9ncm91cCKPAQoKQXR0cmlidXRlcxIoCgZkZXZpY2UYASAB",
+            "KAsyGC5kb21haW4ub3JkZXJzLnYxLkRldmljZRIsCgVvcmRlchgCIAEoCzId",
+            "LmRvbWFpbi5ldmVudHMudjEuT3JkZXJTdGF0dXMSKQoEZGF0YRgDIAEoCzIb",
+            "LmRvbWFpbi5ldmVudHMudjEuRXZlbnREYXRhIswCCgVFdmVudBITCgJpZBgB",
+            "IAEoCUIHukgEcgIQARIRCgloYXNfbWVkaWEYCCABKAgSKAoGc3RhdHVzGAcg",
+            "ASgOMhguZG9tYWluLmV2ZW50cy52MS5TdGF0dXMSOAoKY3JlYXRlZF9hdBgC",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCLpIBbIBAjgBEikK",
+            "BHR5cGUYAyABKA4yGy5kb21haW4uZXZlbnRzLnYxLkV2ZW50VHlwZRIxCghj",
+            "YXRlZ29yeRgEIAEoDjIfLmRvbWFpbi5ldmVudHMudjEuRXZlbnRDYXRlZ29y",
+            "eRInCgNzdWIYBSABKA4yGi5kb21haW4uZXZlbnRzLnYxLkV2ZW50U3ViEjAK",
+            "CmF0dHJpYnV0ZXMYBiABKAsyHC5kb21haW4uZXZlbnRzLnYxLkF0dHJpYnV0",
+            "ZXMqXgoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklFRBAAEhMKD1NUQVRV",
+            "U19SRUNFSVZFRBABEhQKEFNUQVRVU19ERUxJVkVSRUQQAhIRCg1TVEFUVVNf",
+            "RkFJTEVEEAMqcQoJRXZlbnRUeXBlEhoKFkVWRU5UX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIUChBFVkVOVF9UWVBFX09SREVSEAESFgoSRVZFTlRfVFlQRV9HRU5F",
+            "UkFMEAISCQoFT1JERVIQARILCgdHRU5FUkFMEAIaAhABKtkFCg1FdmVudENh",
+            "dGVnb3J5Eh4KGkVWRU5UX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASFwoTRVZF",
+            "TlRfQ0FURUdPUllfQURBUxABEhgKFEVWRU5UX0NBVEVHT1JZX0FMRVJUEAIS",
+            "HQoZRVZFTlRfQ0FURUdPUllfQ09OTkVDVElPThADEhYKEkVWRU5UX0NBVEVH",
+            "T1JZX0RNUxAEEiIKHkVWRU5UX0NBVEVHT1JZX0RSSVZFUl9CRUhBVklPUhAF",
+            "EhkKFUVWRU5UX0NBVEVHT1JZX0hFQUxUSBAGEhgKFEVWRU5UX0NBVEVHT1JZ",
+            "X09SREVSEAcSGQoVRVZFTlRfQ0FURUdPUllfU1lTVEVNEAgSHAoYRVZFTlRf",
+            "Q0FURUdPUllfVEVMRU1FVFJZEAkSGgoWRVZFTlRfQ0FURUdPUllfVkVISUNM",
+            "RRAKEhkKFUVWRU5UX0NBVEVHT1JZX1ZJU0lPThALEigKJEVWRU5UX0NBVEVH",
+            "T1JZX0RSSVZFUl9JREVOVElGSUNBVElPThAMEhsKF0VWRU5UX0NBVEVHT1JZ",
+            "X0dFT0ZFTkNFEA0SEQoNQ0FURUdPUllfQURBUxABEhIKDkNBVEVHT1JZX0FM",
+            "RVJUEAISFwoTQ0FURUdPUllfQ09OTkVDVElPThADEhAKDENBVEVHT1JZX0RN",
+            "UxAEEhwKGENBVEVHT1JZX0RSSVZFUl9CRUhBVklPUhAFEhMKD0NBVEVHT1JZ",
+            "X0hFQUxUSBAGEhIKDkNBVEVHT1JZX09SREVSEAcSEwoPQ0FURUdPUllfU1lT",
+            "VEVNEAgSFgoSQ0FURUdPUllfVEVMRU1FVFJZEAkSFAoQQ0FURUdPUllfVkVI",
+            "SUNMRRAKEhMKD0NBVEVHT1JZX1ZJU0lPThALEiIKHkNBVEVHT1JZX0RSSVZF",
+            "Ul9JREVOVElGSUNBVElPThAMEhUKEUNBVEVHT1JZX0dFT0ZFTkNFEA0aAhAB",
+            "KokJCghFdmVudFN1YhIZChVFVkVOVF9TVUJfVU5TUEVDSUZJRUQQABIYChRF",
+            "VkVOVF9TVUJfQUxFUlRfSU5GTxABEhwKGEVWRU5UX1NVQl9BTEVSVF9DUklU",
+            "SUNBTBACEhsKF0VWRU5UX1NVQl9BTEVSVF9XQVJOSU5HEAMSJwojRVZFTlRf",
+            "U1VCX0NPTk5FQ1RJT05fU1RBVFVTX0NIQU5HRUQQBBIaChZFVkVOVF9TVUJf",
+            "RE1TX0FEVkFOQ0VEEAUSFwoTRVZFTlRfU1VCX0RNU19CQVNJQxAGEiYKIkVW",
+            "RU5UX1NVQl9EUklWRVJfQkVIQVZJT1JfQURWQU5DRUQQBxIjCh9FVkVOVF9T",
+            "VUJfRFJJVkVSX0JFSEFWSU9SX0JBU0lDEAgSFAoQRVZFTlRfU1VCX0hFQUxU",
+            "SBAJEhoKFkVWRU5UX1NVQl9PUkRFUl9TVEFUVVMQChIbChdFVkVOVF9TVUJf",
+            "U1lTVEVNX1VQTE9BRBALEh8KG0VWRU5UX1NVQl9URUxFTUVUUllfQkFUVEVS",
+            "WRAMEiAKHEVWRU5UX1NVQl9URUxFTUVUUllfSUdOSVRJT04QDRIgChxFVkVO",
+            "VF9TVUJfVEVMRU1FVFJZX0xPQ0FUSU9OEA4SGwoXRVZFTlRfU1VCX1ZFSElD",
+            "TEVfQkxPQ0sQDxIdChlFVkVOVF9TVUJfVklTSU9OX0FEVkFOQ0VEEBASGgoW",
+            "RVZFTlRfU1VCX1ZJU0lPTl9CQVNJQxAREiMKH0VWRU5UX1NVQl9EUklWRVJf",
+            "SURFTlRJRklDQVRJT04QEhIhCh1FVkVOVF9TVUJfRFJJVkVSX1VOSURFTlRJ",
+            "RklFRBATEhYKEkVWRU5UX1NVQl9HRU9GRU5DRRAUEhIKDlNVQl9BTEVSVF9J",
+            "TkZPEAESFgoSU1VCX0FMRVJUX0NSSVRJQ0FMEAISFQoRU1VCX0FMRVJUX1dB",
+            "Uk5JTkcQAxIhCh1TVUJfQ09OTkVDVElPTl9TVEFUVVNfQ0hBTkdFRBAEEhQK",
+            "EFNVQl9ETVNfQURWQU5DRUQQBRIRCg1TVUJfRE1TX0JBU0lDEAYSIAocU1VC",
+            "X0RSSVZFUl9CRUhBVklPUl9BRFZBTkNFRBAHEh0KGVNVQl9EUklWRVJfQkVI",
+            "QVZJT1JfQkFTSUMQCBIOCgpTVUJfSEVBTFRIEAkSFAoQU1VCX09SREVSX1NU",
+            "QVRVUxAKEhUKEVNVQl9TWVNURU1fVVBMT0FEEAsSGQoVU1VCX1RFTEVNRVRS",
+            "WV9CQVRURVJZEAwSGgoWU1VCX1RFTEVNRVRSWV9JR05JVElPThANEhoKFlNV",
+            "Ql9URUxFTUVUUllfTE9DQVRJT04QDhIVChFTVUJfVkVISUNMRV9CTE9DSxAP",
+            "EhcKE1NVQl9WSVNJT05fQURWQU5DRUQQEBIUChBTVUJfVklTSU9OX0JBU0lD",
+            "EBESHQoZU1VCX0RSSVZFUl9JREVOVElGSUNBVElPThASEhsKF1NVQl9EUklW",
+            "RVJfVU5JREVOVElGSUVEEBMSEAoMU1VCX0dFT0ZFTkNFEBQaAhABQnkKIGJy",
+            "LmNvbS52My5wcm90b2NvbC5kb21haW4uZXZlbnRzQgpFdmVudFByb3RvSAJQ",
+            "AVpFZ2l0aHViLmNvbS92My10ZWNub2xvZ2lhL3Byb3RvY29sLWNsb3VkL3By",
+            "b3RvL2dlbi9kb21haW4vdjEvZXZlbnRzO3YxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Events.V1.MediaEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Domain.Events.V1.AdasEventReflection.Descriptor, global::Domain.Events.V1.AlertEventReflection.Descriptor, global::Domain.Events.V1.ConnectionEventReflection.Descriptor, global::Domain.Events.V1.DmsEventReflection.Descriptor, global::Domain.Events.V1.DriverBehaviorEventReflection.Descriptor, global::Domain.Events.V1.DriverIdentificationReflection.Descriptor, global::Domain.Events.V1.HealthEventReflection.Descriptor, global::Domain.Events.V1.MediaEventReflection.Descriptor, global::Domain.Events.V1.OrderStatusEventReflection.Descriptor, global::Domain.Events.V1.SystemEventReflection.Descriptor, global::Domain.Events.V1.TelemetryEventReflection.Descriptor, global::Domain.Events.V1.VehicleEventReflection.Descriptor, global::Domain.Events.V1.VisionEventReflection.Descriptor, global::Domain.Events.V1.GeofenceEventReflection.Descriptor, global::Domain.Location.V1.LocationReflection.Descriptor, global::Domain.Orders.V1.DeviceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.Events.V1.Status), typeof(global::Domain.Events.V1.EventType), typeof(global::Domain.Events.V1.EventCategory), typeof(global::Domain.Events.V1.EventSub), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Insight), global::Domain.Events.V1.Insight.Parser, new[]{ "Id", "Text", "Locale", "Confidence", "Threshold", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.EventData), global::Domain.Events.V1.EventData.Parser, new[]{ "Telemetry", "GroupName", "TripEvent", "StandaloneEvent", "InternalEvent" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.StandaloneEvent), global::Domain.Events.V1.StandaloneEvent.Parser, new[]{ "EventGroupName", "Location", "Alert", "Connection", "Health", "Telemetry", "System" }, new[]{ "EventGroup" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TripEvent), global::Domain.Events.V1.TripEvent.Parser, new[]{ "TripId", "EventGroupName", "Location", "Adas", "Dms", "DriverBehavior", "Telemetry", "Vehicle", "Vision" }, new[]{ "EventGroup" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.StandaloneEvent), global::Domain.Events.V1.StandaloneEvent.Parser, new[]{ "EventGroupName", "Location", "Insights", "Alert", "Connection", "Health", "Telemetry", "System" }, new[]{ "EventGroup" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.TripEvent), global::Domain.Events.V1.TripEvent.Parser, new[]{ "TripId", "EventGroupName", "Location", "Insights", "Adas", "Dms", "DriverBehavior", "Telemetry", "Vehicle", "Vision", "DriverIdentification", "Geofence" }, new[]{ "EventGroup" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.InternalEvent), global::Domain.Events.V1.InternalEvent.Parser, new[]{ "EventGroupName", "Media" }, new[]{ "EventGroup" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Attributes), global::Domain.Events.V1.Attributes.Parser, new[]{ "Device", "Order", "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.Events.V1.Event), global::Domain.Events.V1.Event.Parser, new[]{ "Id", "HasMedia", "Status", "CreatedAt", "Type", "Category", "Sub", "Attributes" }, null, null, null, null)
@@ -221,6 +241,8 @@ namespace Domain.Events.V1 {
     /// Vision-related events
     /// </summary>
     [pbr::OriginalName("EVENT_CATEGORY_VISION")] Vision = 11,
+    [pbr::OriginalName("EVENT_CATEGORY_DRIVER_IDENTIFICATION")] DriverIdentification = 12,
+    [pbr::OriginalName("EVENT_CATEGORY_GEOFENCE")] Geofence = 13,
     /// <summary>
     /// For compatibility with JSON naming conventions
     /// </summary>
@@ -235,6 +257,8 @@ namespace Domain.Events.V1 {
     [pbr::OriginalName("CATEGORY_TELEMETRY", PreferredAlias = false)] CategoryTelemetry = 9,
     [pbr::OriginalName("CATEGORY_VEHICLE", PreferredAlias = false)] CategoryVehicle = 10,
     [pbr::OriginalName("CATEGORY_VISION", PreferredAlias = false)] CategoryVision = 11,
+    [pbr::OriginalName("CATEGORY_DRIVER_IDENTIFICATION", PreferredAlias = false)] CategoryDriverIdentification = 12,
+    [pbr::OriginalName("CATEGORY_GEOFENCE", PreferredAlias = false)] CategoryGeofence = 13,
   }
 
   public enum EventSub {
@@ -259,6 +283,9 @@ namespace Domain.Events.V1 {
     [pbr::OriginalName("EVENT_SUB_VEHICLE_BLOCK")] VehicleBlock = 15,
     [pbr::OriginalName("EVENT_SUB_VISION_ADVANCED")] VisionAdvanced = 16,
     [pbr::OriginalName("EVENT_SUB_VISION_BASIC")] VisionBasic = 17,
+    [pbr::OriginalName("EVENT_SUB_DRIVER_IDENTIFICATION")] DriverIdentification = 18,
+    [pbr::OriginalName("EVENT_SUB_DRIVER_UNIDENTIFIED")] DriverUnidentified = 19,
+    [pbr::OriginalName("EVENT_SUB_GEOFENCE")] Geofence = 20,
     /// <summary>
     /// For compatibility with JSON naming conventions
     /// </summary>
@@ -279,11 +306,389 @@ namespace Domain.Events.V1 {
     [pbr::OriginalName("SUB_VEHICLE_BLOCK", PreferredAlias = false)] SubVehicleBlock = 15,
     [pbr::OriginalName("SUB_VISION_ADVANCED", PreferredAlias = false)] SubVisionAdvanced = 16,
     [pbr::OriginalName("SUB_VISION_BASIC", PreferredAlias = false)] SubVisionBasic = 17,
+    [pbr::OriginalName("SUB_DRIVER_IDENTIFICATION", PreferredAlias = false)] SubDriverIdentification = 18,
+    [pbr::OriginalName("SUB_DRIVER_UNIDENTIFIED", PreferredAlias = false)] SubDriverUnidentified = 19,
+    [pbr::OriginalName("SUB_GEOFENCE", PreferredAlias = false)] SubGeofence = 20,
   }
 
   #endregion
 
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Insight : pb::IMessage<Insight>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Insight> _parser = new pb::MessageParser<Insight>(() => new Insight());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Insight> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Insight() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Insight(Insight other) : this() {
+      id_ = other.id_;
+      text_ = other.text_;
+      locale_ = other.locale_;
+      confidence_ = other.confidence_;
+      threshold_ = other.threshold_;
+      metadata_ = other.metadata_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Insight Clone() {
+      return new Insight(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 2;
+    private string text_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "locale" field.</summary>
+    public const int LocaleFieldNumber = 3;
+    private string locale_ = "";
+    /// <summary>
+    /// e.g "pt_BR" "en_US" and so on
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Locale {
+      get { return locale_; }
+      set {
+        locale_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 4;
+    private double confidence_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "threshold" field.</summary>
+    public const int ThresholdFieldNumber = 5;
+    private double threshold_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Threshold {
+      get { return threshold_; }
+      set {
+        threshold_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metadata" field.</summary>
+    public const int MetadataFieldNumber = 6;
+    private static readonly pbc::MapField<string, string>.Codec _map_metadata_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+    private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Metadata {
+      get { return metadata_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Insight);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Insight other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Text != other.Text) return false;
+      if (Locale != other.Locale) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Threshold, other.Threshold)) return false;
+      if (!Metadata.Equals(other.Metadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (Locale.Length != 0) hash ^= Locale.GetHashCode();
+      if (Confidence != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Confidence);
+      if (Threshold != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Threshold);
+      hash ^= Metadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (Locale.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Locale);
+      }
+      if (Confidence != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(Confidence);
+      }
+      if (Threshold != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Threshold);
+      }
+      metadata_.WriteTo(output, _map_metadata_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (Locale.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Locale);
+      }
+      if (Confidence != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(Confidence);
+      }
+      if (Threshold != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Threshold);
+      }
+      metadata_.WriteTo(ref output, _map_metadata_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (Locale.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Locale);
+      }
+      if (Confidence != 0D) {
+        size += 1 + 8;
+      }
+      if (Threshold != 0D) {
+        size += 1 + 8;
+      }
+      size += metadata_.CalculateSize(_map_metadata_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Insight other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      if (other.Locale.Length != 0) {
+        Locale = other.Locale;
+      }
+      if (other.Confidence != 0D) {
+        Confidence = other.Confidence;
+      }
+      if (other.Threshold != 0D) {
+        Threshold = other.Threshold;
+      }
+      metadata_.MergeFrom(other.metadata_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            Locale = input.ReadString();
+            break;
+          }
+          case 33: {
+            Confidence = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            Threshold = input.ReadDouble();
+            break;
+          }
+          case 50: {
+            metadata_.AddEntriesFrom(input, _map_metadata_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+          case 26: {
+            Locale = input.ReadString();
+            break;
+          }
+          case 33: {
+            Confidence = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            Threshold = input.ReadDouble();
+            break;
+          }
+          case 50: {
+            metadata_.AddEntriesFrom(ref input, _map_metadata_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventData : pb::IMessage<EventData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -299,7 +704,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -732,7 +1137,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -754,6 +1159,7 @@ namespace Domain.Events.V1 {
     public StandaloneEvent(StandaloneEvent other) : this() {
       eventGroupName_ = other.eventGroupName_;
       location_ = other.location_ != null ? other.location_.Clone() : null;
+      insights_ = other.insights_.Clone();
       switch (other.EventGroupCase) {
         case EventGroupOneofCase.Alert:
           Alert = other.Alert.Clone();
@@ -806,6 +1212,17 @@ namespace Domain.Events.V1 {
       set {
         location_ = value;
       }
+    }
+
+    /// <summary>Field number for the "insights" field.</summary>
+    public const int InsightsFieldNumber = 101;
+    private static readonly pb::FieldCodec<global::Domain.Events.V1.Insight> _repeated_insights_codec
+        = pb::FieldCodec.ForMessage(810, global::Domain.Events.V1.Insight.Parser);
+    private readonly pbc::RepeatedField<global::Domain.Events.V1.Insight> insights_ = new pbc::RepeatedField<global::Domain.Events.V1.Insight>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Domain.Events.V1.Insight> Insights {
+      get { return insights_; }
     }
 
     /// <summary>Field number for the "alert" field.</summary>
@@ -909,6 +1326,7 @@ namespace Domain.Events.V1 {
       }
       if (EventGroupName != other.EventGroupName) return false;
       if (!object.Equals(Location, other.Location)) return false;
+      if(!insights_.Equals(other.insights_)) return false;
       if (!object.Equals(Alert, other.Alert)) return false;
       if (!object.Equals(Connection, other.Connection)) return false;
       if (!object.Equals(Health, other.Health)) return false;
@@ -924,6 +1342,7 @@ namespace Domain.Events.V1 {
       int hash = 1;
       if (EventGroupName.Length != 0) hash ^= EventGroupName.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
+      hash ^= insights_.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Alert) hash ^= Alert.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Connection) hash ^= Connection.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Health) hash ^= Health.GetHashCode();
@@ -976,6 +1395,7 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Location);
       }
+      insights_.WriteTo(output, _repeated_insights_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1014,6 +1434,7 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Location);
       }
+      insights_.WriteTo(ref output, _repeated_insights_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1030,6 +1451,7 @@ namespace Domain.Events.V1 {
       if (location_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
+      size += insights_.CalculateSize(_repeated_insights_codec);
       if (eventGroupCase_ == EventGroupOneofCase.Alert) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Alert);
       }
@@ -1066,6 +1488,7 @@ namespace Domain.Events.V1 {
         }
         Location.MergeFrom(other.Location);
       }
+      insights_.Add(other.insights_);
       switch (other.EventGroupCase) {
         case EventGroupOneofCase.Alert:
           if (Alert == null) {
@@ -1174,6 +1597,10 @@ namespace Domain.Events.V1 {
             input.ReadMessage(Location);
             break;
           }
+          case 810: {
+            insights_.AddEntriesFrom(input, _repeated_insights_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1249,6 +1676,10 @@ namespace Domain.Events.V1 {
             input.ReadMessage(Location);
             break;
           }
+          case 810: {
+            insights_.AddEntriesFrom(ref input, _repeated_insights_codec);
+            break;
+          }
         }
       }
     }
@@ -1271,7 +1702,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1294,6 +1725,7 @@ namespace Domain.Events.V1 {
       tripId_ = other.tripId_;
       eventGroupName_ = other.eventGroupName_;
       location_ = other.location_ != null ? other.location_.Clone() : null;
+      insights_ = other.insights_.Clone();
       switch (other.EventGroupCase) {
         case EventGroupOneofCase.Adas:
           Adas = other.Adas.Clone();
@@ -1312,6 +1744,12 @@ namespace Domain.Events.V1 {
           break;
         case EventGroupOneofCase.Vision:
           Vision = other.Vision.Clone();
+          break;
+        case EventGroupOneofCase.DriverIdentification:
+          DriverIdentification = other.DriverIdentification.Clone();
+          break;
+        case EventGroupOneofCase.Geofence:
+          Geofence = other.Geofence.Clone();
           break;
       }
 
@@ -1361,6 +1799,17 @@ namespace Domain.Events.V1 {
       set {
         location_ = value;
       }
+    }
+
+    /// <summary>Field number for the "insights" field.</summary>
+    public const int InsightsFieldNumber = 101;
+    private static readonly pb::FieldCodec<global::Domain.Events.V1.Insight> _repeated_insights_codec
+        = pb::FieldCodec.ForMessage(810, global::Domain.Events.V1.Insight.Parser);
+    private readonly pbc::RepeatedField<global::Domain.Events.V1.Insight> insights_ = new pbc::RepeatedField<global::Domain.Events.V1.Insight>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Domain.Events.V1.Insight> Insights {
+      get { return insights_; }
     }
 
     /// <summary>Field number for the "adas" field.</summary>
@@ -1435,6 +1884,30 @@ namespace Domain.Events.V1 {
       }
     }
 
+    /// <summary>Field number for the "driver_identification" field.</summary>
+    public const int DriverIdentificationFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.DriverIdentification DriverIdentification {
+      get { return eventGroupCase_ == EventGroupOneofCase.DriverIdentification ? (global::Domain.Events.V1.DriverIdentification) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.DriverIdentification;
+      }
+    }
+
+    /// <summary>Field number for the "geofence" field.</summary>
+    public const int GeofenceFieldNumber = 10;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Domain.Events.V1.Geofence Geofence {
+      get { return eventGroupCase_ == EventGroupOneofCase.Geofence ? (global::Domain.Events.V1.Geofence) eventGroup_ : null; }
+      set {
+        eventGroup_ = value;
+        eventGroupCase_ = value == null ? EventGroupOneofCase.None : EventGroupOneofCase.Geofence;
+      }
+    }
+
     private object eventGroup_;
     /// <summary>Enum of possible cases for the "event_group" oneof.</summary>
     public enum EventGroupOneofCase {
@@ -1445,6 +1918,8 @@ namespace Domain.Events.V1 {
       Telemetry = 6,
       Vehicle = 7,
       Vision = 8,
+      DriverIdentification = 9,
+      Geofence = 10,
     }
     private EventGroupOneofCase eventGroupCase_ = EventGroupOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1478,12 +1953,15 @@ namespace Domain.Events.V1 {
       if (TripId != other.TripId) return false;
       if (EventGroupName != other.EventGroupName) return false;
       if (!object.Equals(Location, other.Location)) return false;
+      if(!insights_.Equals(other.insights_)) return false;
       if (!object.Equals(Adas, other.Adas)) return false;
       if (!object.Equals(Dms, other.Dms)) return false;
       if (!object.Equals(DriverBehavior, other.DriverBehavior)) return false;
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
       if (!object.Equals(Vehicle, other.Vehicle)) return false;
       if (!object.Equals(Vision, other.Vision)) return false;
+      if (!object.Equals(DriverIdentification, other.DriverIdentification)) return false;
+      if (!object.Equals(Geofence, other.Geofence)) return false;
       if (EventGroupCase != other.EventGroupCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1495,12 +1973,15 @@ namespace Domain.Events.V1 {
       if (TripId.Length != 0) hash ^= TripId.GetHashCode();
       if (EventGroupName.Length != 0) hash ^= EventGroupName.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
+      hash ^= insights_.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Adas) hash ^= Adas.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Dms) hash ^= Dms.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.DriverBehavior) hash ^= DriverBehavior.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Telemetry) hash ^= Telemetry.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Vehicle) hash ^= Vehicle.GetHashCode();
       if (eventGroupCase_ == EventGroupOneofCase.Vision) hash ^= Vision.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) hash ^= DriverIdentification.GetHashCode();
+      if (eventGroupCase_ == EventGroupOneofCase.Geofence) hash ^= Geofence.GetHashCode();
       hash ^= (int) eventGroupCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1552,10 +2033,19 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Vision);
       }
+      if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) {
+        output.WriteRawTag(74);
+        output.WriteMessage(DriverIdentification);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Geofence) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Geofence);
+      }
       if (location_ != null) {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Location);
       }
+      insights_.WriteTo(output, _repeated_insights_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1598,10 +2088,19 @@ namespace Domain.Events.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(Vision);
       }
+      if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) {
+        output.WriteRawTag(74);
+        output.WriteMessage(DriverIdentification);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Geofence) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Geofence);
+      }
       if (location_ != null) {
         output.WriteRawTag(162, 6);
         output.WriteMessage(Location);
       }
+      insights_.WriteTo(ref output, _repeated_insights_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1621,6 +2120,7 @@ namespace Domain.Events.V1 {
       if (location_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
+      size += insights_.CalculateSize(_repeated_insights_codec);
       if (eventGroupCase_ == EventGroupOneofCase.Adas) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Adas);
       }
@@ -1638,6 +2138,12 @@ namespace Domain.Events.V1 {
       }
       if (eventGroupCase_ == EventGroupOneofCase.Vision) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vision);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DriverIdentification);
+      }
+      if (eventGroupCase_ == EventGroupOneofCase.Geofence) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Geofence);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1663,6 +2169,7 @@ namespace Domain.Events.V1 {
         }
         Location.MergeFrom(other.Location);
       }
+      insights_.Add(other.insights_);
       switch (other.EventGroupCase) {
         case EventGroupOneofCase.Adas:
           if (Adas == null) {
@@ -1699,6 +2206,18 @@ namespace Domain.Events.V1 {
             Vision = new global::Domain.Events.V1.Vision();
           }
           Vision.MergeFrom(other.Vision);
+          break;
+        case EventGroupOneofCase.DriverIdentification:
+          if (DriverIdentification == null) {
+            DriverIdentification = new global::Domain.Events.V1.DriverIdentification();
+          }
+          DriverIdentification.MergeFrom(other.DriverIdentification);
+          break;
+        case EventGroupOneofCase.Geofence:
+          if (Geofence == null) {
+            Geofence = new global::Domain.Events.V1.Geofence();
+          }
+          Geofence.MergeFrom(other.Geofence);
           break;
       }
 
@@ -1783,11 +2302,33 @@ namespace Domain.Events.V1 {
             Vision = subBuilder;
             break;
           }
+          case 74: {
+            global::Domain.Events.V1.DriverIdentification subBuilder = new global::Domain.Events.V1.DriverIdentification();
+            if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) {
+              subBuilder.MergeFrom(DriverIdentification);
+            }
+            input.ReadMessage(subBuilder);
+            DriverIdentification = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Domain.Events.V1.Geofence subBuilder = new global::Domain.Events.V1.Geofence();
+            if (eventGroupCase_ == EventGroupOneofCase.Geofence) {
+              subBuilder.MergeFrom(Geofence);
+            }
+            input.ReadMessage(subBuilder);
+            Geofence = subBuilder;
+            break;
+          }
           case 802: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }
             input.ReadMessage(Location);
+            break;
+          }
+          case 810: {
+            insights_.AddEntriesFrom(input, _repeated_insights_codec);
             break;
           }
         }
@@ -1871,11 +2412,33 @@ namespace Domain.Events.V1 {
             Vision = subBuilder;
             break;
           }
+          case 74: {
+            global::Domain.Events.V1.DriverIdentification subBuilder = new global::Domain.Events.V1.DriverIdentification();
+            if (eventGroupCase_ == EventGroupOneofCase.DriverIdentification) {
+              subBuilder.MergeFrom(DriverIdentification);
+            }
+            input.ReadMessage(subBuilder);
+            DriverIdentification = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Domain.Events.V1.Geofence subBuilder = new global::Domain.Events.V1.Geofence();
+            if (eventGroupCase_ == EventGroupOneofCase.Geofence) {
+              subBuilder.MergeFrom(Geofence);
+            }
+            input.ReadMessage(subBuilder);
+            Geofence = subBuilder;
+            break;
+          }
           case 802: {
             if (location_ == null) {
               Location = new global::Domain.Location.V1.Location();
             }
             input.ReadMessage(Location);
+            break;
+          }
+          case 810: {
+            insights_.AddEntriesFrom(ref input, _repeated_insights_codec);
             break;
           }
         }
@@ -1900,7 +2463,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2181,7 +2744,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2480,7 +3043,7 @@ namespace Domain.Events.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Domain.Events.V1.EventReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

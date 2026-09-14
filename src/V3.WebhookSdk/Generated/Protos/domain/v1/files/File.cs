@@ -25,8 +25,8 @@ namespace Domain.File.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpkb21haW4vdjEvZmlsZXMvZmlsZS5wcm90bxIOZG9tYWluLmZpbGUudjEa",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aG2J1Zi92YWxpZGF0",
-            "ZS92YWxpZGF0ZS5wcm90byJpCghDaGVja3N1bRIWCgV2YWx1ZRgBIAEoCUIH",
+            "G2J1Zi92YWxpZGF0ZS92YWxpZGF0ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90byJpCghDaGVja3N1bRIWCgV2YWx1ZRgBIAEoCUIH",
             "ukgEcgIQARJFChJjaGVja3N1bV9hbGdvcml0aG0YAiABKA4yIS5kb21haW4u",
             "ZmlsZS52MS5DaGVja3N1bUFsZ29yaXRobUIGukgDyAEBIuUBCgVDaHVuaxIZ",
             "CghzZXF1ZW5jZRgBIAEoBUIHukgEGgIoABIVCgRkYXRhGAIgASgMQge6SAR6",
@@ -43,34 +43,38 @@ namespace Domain.File.V1 {
             "BrpIA8gBARIuCgpjcmVhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcCJlCgRGaWxlEjYKCG1ldGFkYXRhGAEgASgLMhwuZG9tYWlu",
             "LmZpbGUudjEuRmlsZU1ldGFkYXRhQga6SAPIAQESJQoGY2h1bmtzGAIgAygL",
-            "MhUuZG9tYWluLmZpbGUudjEuQ2h1bmsqggEKClZpZGVvQ29kZWMSGwoXVklE",
-            "RU9fQ09ERUNfVU5TUEVDSUZJRUQQABIUChBWSURFT19DT0RFQ19IMjY0EAES",
-            "FAoQVklERU9fQ09ERUNfSDI2NRACEhMKD1ZJREVPX0NPREVDX01QNBADEhYK",
-            "ElZJREVPX0NPREVDX0NVU1RPTRAEKmwKCkF1ZGlvQ29kZWMSGwoXQVVESU9f",
-            "Q09ERUNfVU5TUEVDSUZJRUQQABITCg9BVURJT19DT0RFQ19BQUMQARIUChBB",
-            "VURJT19DT0RFQ19PUFVTEAISFgoSQVVESU9fQ09ERUNfQ1VTVE9NEAMqjQEK",
-            "CUltYWdlVHlwZRIaChZJTUFHRV9UWVBFX1VOU1BFQ0lGSUVEEAASEgoOSU1B",
-            "R0VfVFlQRV9HSUYQARITCg9JTUFHRV9UWVBFX0pQRUcQAhISCg5JTUFHRV9U",
-            "WVBFX0pQRxADEhIKDklNQUdFX1RZUEVfUE5HEAQSEwoPSU1BR0VfVFlQRV9X",
-            "RUJQEAUqyQEKCE1pbWVUeXBlEhkKFU1JTUVfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EhIKDk1JTUVfVFlQRV9KUEVHEAESEQoNTUlNRV9UWVBFX1BORxACEhIKDk1J",
-            "TUVfVFlQRV9XRUJQEAMSEQoNTUlNRV9UWVBFX01QNBAEEhIKDk1JTUVfVFlQ",
-            "RV9XRUJNEAUSEQoNTUlNRV9UWVBFX01PVhAGEhEKDU1JTUVfVFlQRV9BVkkQ",
-            "BxIaChZNSU1FX1RZUEVfT0NURVRfU1RSRUFNEAgqrgEKEUNoZWNrc3VtQWxn",
-            "b3JpdGhtEiIKHkNIRUNLU1VNX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEh0K",
-            "GUNIRUNLU1VNX0FMR09SSVRITV9TSEEyNTYQARIaChZDSEVDS1NVTV9BTEdP",
-            "UklUSE1fTUQ1EAISGwoXQ0hFQ0tTVU1fQUxHT1JJVEhNX1NIQTEQAxIdChlD",
-            "SEVDS1NVTV9BTEdPUklUSE1fU0hBNTEyEARCeAoeYnIuY29tLnYzLnByb3Rv",
-            "Y29sLmRvbWFpbi5maWxlQglGaWxlUHJvdG9IAlABWkdnaXRodWIuY29tL3Yz",
-            "LXRlY25vbG9naWEvcHJvdG9jb2wtY2xvdWQvcHJvdG8vZ2VuL2RvbWFpbi92",
-            "MS9maWxlcztmaWxlc2IGcHJvdG8z"));
+            "MhUuZG9tYWluLmZpbGUudjEuQ2h1bmsinAEKCUZpbGVCeXRlcxIVCgRuYW1l",
+            "GAEgASgJQge6SARyAhABEhoKCW1pbWVfdHlwZRgCIAEoCUIHukgEcgIQARIV",
+            "CgRzaXplGAMgASgDQge6SAQiAiAAEhUKBGRhdGEYBCABKAxCB7pIBHoCEAES",
+            "LgoKY3JlYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXAqggEKClZpZGVvQ29kZWMSGwoXVklERU9fQ09ERUNfVU5TUEVDSUZJRUQQ",
+            "ABIUChBWSURFT19DT0RFQ19IMjY0EAESFAoQVklERU9fQ09ERUNfSDI2NRAC",
+            "EhMKD1ZJREVPX0NPREVDX01QNBADEhYKElZJREVPX0NPREVDX0NVU1RPTRAE",
+            "KmwKCkF1ZGlvQ29kZWMSGwoXQVVESU9fQ09ERUNfVU5TUEVDSUZJRUQQABIT",
+            "Cg9BVURJT19DT0RFQ19BQUMQARIUChBBVURJT19DT0RFQ19PUFVTEAISFgoS",
+            "QVVESU9fQ09ERUNfQ1VTVE9NEAMqjQEKCUltYWdlVHlwZRIaChZJTUFHRV9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASEgoOSU1BR0VfVFlQRV9HSUYQARITCg9JTUFH",
+            "RV9UWVBFX0pQRUcQAhISCg5JTUFHRV9UWVBFX0pQRxADEhIKDklNQUdFX1RZ",
+            "UEVfUE5HEAQSEwoPSU1BR0VfVFlQRV9XRUJQEAUqyQEKCE1pbWVUeXBlEhkK",
+            "FU1JTUVfVFlQRV9VTlNQRUNJRklFRBAAEhIKDk1JTUVfVFlQRV9KUEVHEAES",
+            "EQoNTUlNRV9UWVBFX1BORxACEhIKDk1JTUVfVFlQRV9XRUJQEAMSEQoNTUlN",
+            "RV9UWVBFX01QNBAEEhIKDk1JTUVfVFlQRV9XRUJNEAUSEQoNTUlNRV9UWVBF",
+            "X01PVhAGEhEKDU1JTUVfVFlQRV9BVkkQBxIaChZNSU1FX1RZUEVfT0NURVRf",
+            "U1RSRUFNEAgqrgEKEUNoZWNrc3VtQWxnb3JpdGhtEiIKHkNIRUNLU1VNX0FM",
+            "R09SSVRITV9VTlNQRUNJRklFRBAAEh0KGUNIRUNLU1VNX0FMR09SSVRITV9T",
+            "SEEyNTYQARIaChZDSEVDS1NVTV9BTEdPUklUSE1fTUQ1EAISGwoXQ0hFQ0tT",
+            "VU1fQUxHT1JJVEhNX1NIQTEQAxIdChlDSEVDS1NVTV9BTEdPUklUSE1fU0hB",
+            "NTEyEARCeAoeYnIuY29tLnYzLnByb3RvY29sLmRvbWFpbi5maWxlQglGaWxl",
+            "UHJvdG9IAlABWkdnaXRodWIuY29tL3YzLXRlY25vbG9naWEvcHJvdG9jb2wt",
+            "Y2xvdWQvcHJvdG8vZ2VuL2RvbWFpbi92MS9maWxlcztmaWxlc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Buf.Validate.ValidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Buf.Validate.ValidateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Domain.File.V1.VideoCodec), typeof(global::Domain.File.V1.AudioCodec), typeof(global::Domain.File.V1.ImageType), typeof(global::Domain.File.V1.MimeType), typeof(global::Domain.File.V1.ChecksumAlgorithm), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.Checksum), global::Domain.File.V1.Checksum.Parser, new[]{ "Value", "ChecksumAlgorithm" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.Chunk), global::Domain.File.V1.Chunk.Parser, new[]{ "Sequence", "Data", "Checksum", "Size", "CreatedAt", "ReceivedAt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.FileMetadata), global::Domain.File.V1.FileMetadata.Parser, new[]{ "Id", "EventId", "Name", "MimeType", "TotalSize", "ChunkSize", "TotalChunks", "ArchiveChecksum", "CreatedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.File), global::Domain.File.V1.File.Parser, new[]{ "Metadata", "Chunks" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.File), global::Domain.File.V1.File.Parser, new[]{ "Metadata", "Chunks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Domain.File.V1.FileBytes), global::Domain.File.V1.FileBytes.Parser, new[]{ "Name", "MimeType", "Size", "Data", "CreatedAt" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1571,6 +1575,379 @@ namespace Domain.File.V1 {
           }
           case 18: {
             chunks_.AddEntriesFrom(ref input, _repeated_chunks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Complete file with raw bytes - used by pipeline consumers
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FileBytes : pb::IMessage<FileBytes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FileBytes> _parser = new pb::MessageParser<FileBytes>(() => new FileBytes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FileBytes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Domain.File.V1.FileReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FileBytes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FileBytes(FileBytes other) : this() {
+      name_ = other.name_;
+      mimeType_ = other.mimeType_;
+      size_ = other.size_;
+      data_ = other.data_;
+      createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FileBytes Clone() {
+      return new FileBytes(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Original file name
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 2;
+    private string mimeType_ = "";
+    /// <summary>
+    /// MIME type of the file
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "size" field.</summary>
+    public const int SizeFieldNumber = 3;
+    private long size_;
+    /// <summary>
+    /// Total file size in bytes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Size {
+      get { return size_; }
+      set {
+        size_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 4;
+    private pb::ByteString data_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Raw file contents
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Data {
+      get { return data_; }
+      set {
+        data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "created_at" field.</summary>
+    public const int CreatedAtFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAt_;
+    /// <summary>
+    /// File creation timestamp
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAt {
+      get { return createdAt_; }
+      set {
+        createdAt_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FileBytes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FileBytes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (MimeType != other.MimeType) return false;
+      if (Size != other.Size) return false;
+      if (Data != other.Data) return false;
+      if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      if (Size != 0L) hash ^= Size.GetHashCode();
+      if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MimeType);
+      }
+      if (Size != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Size);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Data);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreatedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MimeType);
+      }
+      if (Size != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Size);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Data);
+      }
+      if (createdAt_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreatedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (Size != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Size);
+      }
+      if (Data.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (createdAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FileBytes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
+      if (other.Size != 0L) {
+        Size = other.Size;
+      }
+      if (other.Data.Length != 0) {
+        Data = other.Data;
+      }
+      if (other.createdAt_ != null) {
+        if (createdAt_ == null) {
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAt.MergeFrom(other.CreatedAt);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 24: {
+            Size = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            Data = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 24: {
+            Size = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            Data = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            if (createdAt_ == null) {
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAt);
             break;
           }
         }

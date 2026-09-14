@@ -12,14 +12,14 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("V3 Tecnologia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute(("\n      A .NET SDK for processing V3 Tecnologia IoT Webhooks using strongly-typed " +
+[assembly: System.Reflection.AssemblyDescriptionAttribute("\n      A .NET SDK for processing V3 Tecnologia IoT Webhooks using strongly-typed " +
     "Protobuf models.\n      Transport-agnostic, signature validation, persistence sup" +
-    "port, and modular event handlers.\n    "))]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.4.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.4+3c89962a6909509276a068384d5b73b32f62b268")]
+    "port, and modular event handlers.\n    ")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.5.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.5+8e9b832614a3c90f7150eb461d6f133d37abb73b")]
 [assembly: System.Reflection.AssemblyProductAttribute("V3.WebhookSdk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("V3.WebhookSdk")]
-[assembly: System.Reflection.AssemblyVersionAttribute("0.1.4.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.1.5.0")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/v3-tecnologia/v3-webhook-dotnet-sdk")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

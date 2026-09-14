@@ -141,4 +141,7 @@ message Device {
 
     // Associated account ID.
     repeated domain.orders.v1.Order orders = 5; // List of pending orders.
+
+    // Associated Company group ID.
+    string company_group_id = 6; // Company group ID.
 }
